@@ -1,5 +1,5 @@
 //
-//  ThirdViewController.swift
+//  HospitalViewController.swift
 //  Dear
 //
 //  Created by 한연희 on 2022/07/17.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ThirdViewController: UIViewController {
+class HospitalViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

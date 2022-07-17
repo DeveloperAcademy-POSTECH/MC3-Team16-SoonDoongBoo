@@ -20,7 +20,7 @@
                                 <rect key="frame" x="30" y="433" width="354" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="마음 카드 작성 및 전송 뷰 1"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Main"/>
                                 <connections>
                                     <segue destination="QDs-LY-oG1" kind="show" id="4Vh-h1-dj1"/>
                                 </connections>
@@ -43,10 +43,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="coC-fc-rNE">
-                                <rect key="frame" x="120" y="433" width="177" height="31"/>
+                                <rect key="frame" x="185" y="382" width="46" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="마음 카드 작성 및 전송 뷰 2"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Ref"/>
                                 <connections>
                                     <segue destination="vdB-a4-b0K" kind="show" id="hn2-As-Tka"/>
                                 </connections>
@@ -59,7 +59,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dxh-IR-GxJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="996" y="644"/>
+            <point key="canvasLocation" x="981" y="98"/>
         </scene>
         <!--ThirdViewController-->
         <scene sceneID="lB4-qM-xqe">
@@ -69,7 +69,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GQ0-yj-RxP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1664" y="644"/>
+            <point key="canvasLocation" x="1799" y="98"/>
         </scene>
     </scenes>
     <resources>
