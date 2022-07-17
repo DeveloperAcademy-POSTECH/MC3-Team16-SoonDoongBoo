@@ -15,6 +15,20 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+<<<<<<< Updated upstream
+=======
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vbj-5a-63t">
+                                <rect key="frame" x="30" y="433" width="354" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="사용자 병원 선택 뷰 1"/>
+                                <connections>
+                                    <segue destination="QDs-LY-oG1" kind="show" id="4Vh-h1-dj1"/>
+                                </connections>
+                            </button>
+                        </subviews>
+>>>>>>> Stashed changes
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
@@ -23,6 +37,46 @@
             </objects>
             <point key="canvasLocation" x="132" y="99"/>
         </scene>
+<<<<<<< Updated upstream
+=======
+        <!--Third View Controller-->
+        <scene sceneID="kXZ-QV-gUo">
+            <objects>
+                <viewController id="QDs-LY-oG1" customClass="ThirdViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eyD-RW-Xsm">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="coC-fc-rNE">
+                                <rect key="frame" x="136" y="433" width="145" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="사용자 병원 선택 뷰 2"/>
+                                <connections>
+                                    <segue destination="vdB-a4-b0K" kind="show" id="hn2-As-Tka"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="frg-JB-zPg"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="xyP-oG-Ox4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dxh-IR-GxJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="996" y="644"/>
+        </scene>
+        <!--ThirdViewController-->
+        <scene sceneID="lB4-qM-xqe">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Third" referencedIdentifier="ThirdViewController" id="vdB-a4-b0K" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="bS2-8a-s2e"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GQ0-yj-RxP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1664" y="644"/>
+        </scene>
+>>>>>>> Stashed changes
     </scenes>
     <resources>
         <systemColor name="systemBackgroundColor">
