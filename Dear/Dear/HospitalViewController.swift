@@ -4,17 +4,14 @@
 //
 //  Created by 한연희 on 2022/07/17.
 //
-
 import UIKit
-
 class HospitalViewController: UIViewController {
     
     @IBOutlet weak var hospitalTextField: UITextField!
     
     let hospitals = ["병원01", "병원02", "병원03", "병원04", "병원05"]
-    
     var pickerView = UIPickerView()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         pickerView.delegate = self
@@ -22,11 +19,8 @@ class HospitalViewController: UIViewController {
         
         hospitalTextField.inputView = pickerView
         hospitalTextField.textAlignment = .left
-        
     }
-
 }
-
 extension HospitalViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
