@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8E1DF04628854B7600B7EE87 /* ViewController1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E1DF04528854B7600B7EE87 /* ViewController1.swift */; };
+		8E1DF04828854B9900B7EE87 /* ViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E1DF04728854B9900B7EE87 /* ViewController2.swift */; };
 		B94C2D5B287FFBC300B3C442 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94C2D5A287FFBC300B3C442 /* AppDelegate.swift */; };
 		B94C2D5D287FFBC300B3C442 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94C2D5C287FFBC300B3C442 /* SceneDelegate.swift */; };
 		B94C2D5F287FFBC300B3C442 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94C2D5E287FFBC300B3C442 /* ViewController.swift */; };
@@ -23,6 +25,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8E1DF04528854B7600B7EE87 /* ViewController1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController1.swift; sourceTree = "<group>"; };
+		8E1DF04728854B9900B7EE87 /* ViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController2.swift; sourceTree = "<group>"; };
 		B94C2D57287FFBC300B3C442 /* Dear.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dear.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B94C2D5A287FFBC300B3C442 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B94C2D5C287FFBC300B3C442 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -77,6 +81,8 @@
 				B94C2D63287FFBC400B3C442 /* Assets.xcassets */,
 				B94C2D65287FFBC400B3C442 /* LaunchScreen.storyboard */,
 				B94C2D68287FFBC400B3C442 /* Info.plist */,
+				8E1DF04528854B7600B7EE87 /* ViewController1.swift */,
+				8E1DF04728854B9900B7EE87 /* ViewController2.swift */,
 				B94C2D6E287FFD5000B3C442 /* GoogleService-Info.plist */,
 			);
 			path = Dear;
@@ -166,6 +172,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E1DF04828854B9900B7EE87 /* ViewController2.swift in Sources */,
+				8E1DF04628854B7600B7EE87 /* ViewController1.swift in Sources */,
 				B94C2D5F287FFBC300B3C442 /* ViewController.swift in Sources */,
 				B94C2D5B287FFBC300B3C442 /* AppDelegate.swift in Sources */,
 				B94C2D5D287FFBC300B3C442 /* SceneDelegate.swift in Sources */,
