@@ -63,6 +63,37 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7B6472322885365F00F0A3BB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B94C2D68287FFBC400B3C442 /* Info.plist */,
+				B94C2D6E287FFD5000B3C442 /* GoogleService-Info.plist */,
+				7B3004642884FB32000E778B /* Data.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		7B6472332885368A00F0A3BB /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B94C2D5E287FFBC300B3C442 /* ViewController.swift */,
+				7B1DF99F2883EEA6000A31F1 /* ThirdViewController.swift */,
+				7B30045E288457F6000E778B /* HospitalViewController.swift */,
+				7B30046028845803000E778B /* LetterViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		7B647234288536A300F0A3BB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B94C2D65287FFBC400B3C442 /* LaunchScreen.storyboard */,
+				B94C2D60287FFBC300B3C442 /* Main.storyboard */,
+				7B1DF9A32883F414000A31F1 /* Third.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		B94C2D4E287FFBC300B3C442 = {
 			isa = PBXGroup;
 			children = (
@@ -84,18 +115,11 @@
 			children = (
 				B94C2D5A287FFBC300B3C442 /* AppDelegate.swift */,
 				B94C2D5C287FFBC300B3C442 /* SceneDelegate.swift */,
-				B94C2D5E287FFBC300B3C442 /* ViewController.swift */,
-				B94C2D60287FFBC300B3C442 /* Main.storyboard */,
-				7B1DF99F2883EEA6000A31F1 /* ThirdViewController.swift */,
-				7B1DF9A32883F414000A31F1 /* Third.storyboard */,
-				7B30045E288457F6000E778B /* HospitalViewController.swift */,
-				7B30046028845803000E778B /* LetterViewController.swift */,
 				7B3004622884FB01000E778B /* UIViewController+Extension.swift */,
-				7B3004642884FB32000E778B /* Data.swift */,
+				7B6472322885365F00F0A3BB /* Model */,
+				7B647234288536A300F0A3BB /* View */,
+				7B6472332885368A00F0A3BB /* Controller */,
 				B94C2D63287FFBC400B3C442 /* Assets.xcassets */,
-				B94C2D65287FFBC400B3C442 /* LaunchScreen.storyboard */,
-				B94C2D68287FFBC400B3C442 /* Info.plist */,
-				B94C2D6E287FFD5000B3C442 /* GoogleService-Info.plist */,
 			);
 			path = Dear;
 			sourceTree = "<group>";
