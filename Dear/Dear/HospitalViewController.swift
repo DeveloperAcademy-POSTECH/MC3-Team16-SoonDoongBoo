@@ -9,24 +9,40 @@ import UIKit
 
 class HospitalViewController: UIViewController {
     
+    @IBOutlet weak var hospitalTextField: UITextField!
     
-    @IBOutlet weak var hospitalPickerView: UIPickerView!
+    let hospitals = ["병원01", "병원02", "병원03", "병원04", "병원05"]
     
-    let userDefaults = UserDefaults.standard
-    let pickerViewSelectList = ["병원01", "병원02", "병원03"]
-    var selectedPicker: String?
+    var pickerView = UIPickerView()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-                
-        /* let tap = UITapGestureRecognizer(target: view, action: #selector(UIView.endEditing))
-        tap.cancelsTouchesInView = false
-        view.addGestureRecognizer(tap)
-        */
-                
-        self.hideKeyboardWhenTappedAround()
+        pickerView.delegate = self
+        pickerView.dataSource = self
+        
+        hospitalTextField.inputView = pickerView
+        hospitalTextField.textAlignment = .left
+        
     }
 
+}
 
+extension HospitalViewController: UIPickerViewDelegate, UIPickerViewDataSource {
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return hospitals.count
+    }
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return hospitals[row]
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        hospitalTextField.text = hospitals[row]
+        hospitalTextField.resignFirstResponder()
+    }
 }
 
