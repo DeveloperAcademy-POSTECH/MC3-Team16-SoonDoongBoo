@@ -11,6 +11,8 @@
 		7B1DF9A42883F414000A31F1 /* Third.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B1DF9A32883F414000A31F1 /* Third.storyboard */; };
 		7B30045F288457F6000E778B /* HospitalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B30045E288457F6000E778B /* HospitalViewController.swift */; };
 		7B30046128845803000E778B /* LetterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B30046028845803000E778B /* LetterViewController.swift */; };
+		7B3004632884FB01000E778B /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3004622884FB01000E778B /* UIViewController+Extension.swift */; };
+		7B3004652884FB32000E778B /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3004642884FB32000E778B /* Data.swift */; };
 		B94C2D5B287FFBC300B3C442 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94C2D5A287FFBC300B3C442 /* AppDelegate.swift */; };
 		B94C2D5D287FFBC300B3C442 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94C2D5C287FFBC300B3C442 /* SceneDelegate.swift */; };
 		B94C2D5F287FFBC300B3C442 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94C2D5E287FFBC300B3C442 /* ViewController.swift */; };
@@ -31,6 +33,8 @@
 		7B1DF9A32883F414000A31F1 /* Third.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Third.storyboard; sourceTree = "<group>"; };
 		7B30045E288457F6000E778B /* HospitalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HospitalViewController.swift; sourceTree = "<group>"; };
 		7B30046028845803000E778B /* LetterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterViewController.swift; sourceTree = "<group>"; };
+		7B3004622884FB01000E778B /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		7B3004642884FB32000E778B /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		B94C2D57287FFBC300B3C442 /* Dear.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dear.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B94C2D5A287FFBC300B3C442 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B94C2D5C287FFBC300B3C442 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -85,6 +89,8 @@
 				7B1DF99F2883EEA6000A31F1 /* ThirdViewController.swift */,
 				7B30045E288457F6000E778B /* HospitalViewController.swift */,
 				7B30046028845803000E778B /* LetterViewController.swift */,
+				7B3004622884FB01000E778B /* UIViewController+Extension.swift */,
+				7B3004642884FB32000E778B /* Data.swift */,
 				7B1DF9A32883F414000A31F1 /* Third.storyboard */,
 				B94C2D63287FFBC400B3C442 /* Assets.xcassets */,
 				B94C2D65287FFBC400B3C442 /* LaunchScreen.storyboard */,
@@ -183,8 +189,10 @@
 				B94C2D5B287FFBC300B3C442 /* AppDelegate.swift in Sources */,
 				B94C2D5D287FFBC300B3C442 /* SceneDelegate.swift in Sources */,
 				7B1DF9A02883EEA6000A31F1 /* ThirdViewController.swift in Sources */,
+				7B3004632884FB01000E778B /* UIViewController+Extension.swift in Sources */,
 				7B30046128845803000E778B /* LetterViewController.swift in Sources */,
 				7B30045F288457F6000E778B /* HospitalViewController.swift in Sources */,
+				7B3004652884FB32000E778B /* Data.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
