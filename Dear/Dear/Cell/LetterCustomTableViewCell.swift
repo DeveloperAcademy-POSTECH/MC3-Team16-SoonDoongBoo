@@ -12,8 +12,4 @@ class LetterCustomTableViewCell: UITableViewCell {
     @IBOutlet weak var letterContentLabel: UILabel!
     @IBOutlet weak var letterDateLabel: UILabel!
     @IBOutlet weak var cellView: UIView!
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-    }
 }

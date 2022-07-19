@@ -8,8 +8,9 @@
 import UIKit
 import SwiftUI
 
-class NurseMainViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class NurseMainViewController: UIViewController {
 
+    //샘플 데이터
     let cheeringText: [String] = [
         "오늘 하루도 수고하셨습니다.가나다라마바사아자차카타파하가나다라마바사아자차카타파하가나다라마바사아자차카타파하",
         "오늘 하루도 수고하셨습니다."
@@ -22,15 +23,11 @@ class NurseMainViewController: UIViewController, UITableViewDelegate, UITableVie
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
-        
-        
-        
         tableView.delegate = self
         tableView.dataSource = self
         
         //tablve view header설정
         let header = UIView(frame: CGRect(x: 0, y: 0, width: view.frame.size.width-40, height: 150))
-//        header.backgroundColor = .systemMint
         
         let headerLabel = UILabel(frame: header.bounds)
         
@@ -56,6 +53,17 @@ class NurseMainViewController: UIViewController, UITableViewDelegate, UITableVie
         print("버튼 클릭 시 이벤트")
     }
     
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
+
+}
+
+extension NurseMainViewController: UITableViewDelegate{
+    //섹션 별 셀 높이 구분
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return indexPath.section==0 ? 50 : 254
+    }
     //sectoin header
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let view = tableView.dequeueReusableHeaderFooterView(withIdentifier:"sectionHeader") as! NurseMainCustomHeader
@@ -67,25 +75,20 @@ class NurseMainViewController: UIViewController, UITableViewDelegate, UITableVie
             view.headerTitle.text = "받은 마음카드"
             view.headerButton.setTitle("더보기", for: .normal)
         }
-
        return view
     }
+}
 
+extension NurseMainViewController: UITableViewDataSource{
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
+    //섹션 수 - dday list, letter list
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 2
     }
-
     //섹션 별 아이템 수 구분
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return section==0 ? dDays.count : letters.count
     }
-    
-    //섹션 별 셀 높이 구분
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return indexPath.section==0 ? 50 : 254
-    }
-
     //section에 따른 셀 종류 구분
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         switch indexPath.section {
@@ -110,9 +113,4 @@ class NurseMainViewController: UIViewController, UITableViewDelegate, UITableVie
             return cell
         }
     }
-    //섹션 수 - dday list, letter list
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 2
-    }
-
 }
