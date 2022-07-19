@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		B92EF31E2886888B00AEC6E9 /* Letter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92EF31D2886888B00AEC6E9 /* Letter.swift */; };
 		B92EF3202886889500AEC6E9 /* Hospital.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92EF31F2886889500AEC6E9 /* Hospital.swift */; };
+		B92EF32328868AE500AEC6E9 /* FirebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92EF32228868AE500AEC6E9 /* FirebaseService.swift */; };
 		B94C2D5B287FFBC300B3C442 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94C2D5A287FFBC300B3C442 /* AppDelegate.swift */; };
 		B94C2D5D287FFBC300B3C442 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94C2D5C287FFBC300B3C442 /* SceneDelegate.swift */; };
 		B94C2D5F287FFBC300B3C442 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94C2D5E287FFBC300B3C442 /* ViewController.swift */; };
@@ -27,6 +28,7 @@
 /* Begin PBXFileReference section */
 		B92EF31D2886888B00AEC6E9 /* Letter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Letter.swift; sourceTree = "<group>"; };
 		B92EF31F2886889500AEC6E9 /* Hospital.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hospital.swift; sourceTree = "<group>"; };
+		B92EF32228868AE500AEC6E9 /* FirebaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseService.swift; sourceTree = "<group>"; };
 		B94C2D57287FFBC300B3C442 /* Dear.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dear.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B94C2D5A287FFBC300B3C442 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B94C2D5C287FFBC300B3C442 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -64,6 +66,14 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		B92EF32128868AD100AEC6E9 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				B92EF32228868AE500AEC6E9 /* FirebaseService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
 		B94C2D4E287FFBC300B3C442 = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +93,7 @@
 		B94C2D59287FFBC300B3C442 /* Dear */ = {
 			isa = PBXGroup;
 			children = (
+				B92EF32128868AD100AEC6E9 /* Service */,
 				B92EF31C2886886800AEC6E9 /* Models */,
 				B94C2D5A287FFBC300B3C442 /* AppDelegate.swift */,
 				B94C2D5C287FFBC300B3C442 /* SceneDelegate.swift */,
@@ -183,6 +194,7 @@
 				B94C2D5B287FFBC300B3C442 /* AppDelegate.swift in Sources */,
 				B94C2D5D287FFBC300B3C442 /* SceneDelegate.swift in Sources */,
 				B92EF3202886889500AEC6E9 /* Hospital.swift in Sources */,
+				B92EF32328868AE500AEC6E9 /* FirebaseService.swift in Sources */,
 				B92EF31E2886888B00AEC6E9 /* Letter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

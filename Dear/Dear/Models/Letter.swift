@@ -27,8 +27,8 @@ extension Letter: DocumentSerializable {
     init?(dictionary: [String : Any]) {
         guard let date = dictionary["Date"] as? String,
               let hospitalName = dictionary["HospitalName"] as? String,
-              let letterTo = dictionary["LetterTo"] as? String,
               let letterContent = dictionary["LetterContent"] as? String,
+              let letterTo = dictionary["LetterTo"] as? String,
               let uid = dictionary["uid"] as? String else { return nil }
         
         self.init(date: date, hospitalName: hospitalName, letterTo: letterTo, letterContent: letterContent, uid: uid)
