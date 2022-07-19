@@ -20,6 +20,14 @@
 		B9BAD976288153D900EE530F /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = B9BAD975288153D900EE530F /* FirebaseAnalytics */; };
 		B9BAD978288153D900EE530F /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = B9BAD977288153D900EE530F /* FirebaseAuth */; };
 		B9BAD97A288153D900EE530F /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = B9BAD979288153D900EE530F /* FirebaseFirestore */; };
+		EC5A16A32885AC0000076A4B /* NurseMainView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC5A16A22885AC0000076A4B /* NurseMainView.storyboard */; };
+		EC5A16A52885ACAC00076A4B /* NurseMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5A16A42885ACAC00076A4B /* NurseMainViewController.swift */; };
+		EC5A16A72885AFBD00076A4B /* LetterCustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5A16A62885AFBD00076A4B /* LetterCustomTableViewCell.swift */; };
+		EC5A16A92885C0C700076A4B /* Letter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5A16A82885C0C700076A4B /* Letter.swift */; };
+		EC5A16B22885D97500076A4B /* DDayCustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5A16B12885D97500076A4B /* DDayCustomTableViewCell.swift */; };
+		EC5A16B42885DA1900076A4B /* CheeringTextTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5A16B32885DA1900076A4B /* CheeringTextTableViewCell.swift */; };
+		EC5A16B92885DAD900076A4B /* DDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5A16B82885DAD900076A4B /* DDay.swift */; };
+		EC5A16DB2885F9FE00076A4B /* NurseMainCustomHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5A16DA2885F9FE00076A4B /* NurseMainCustomHeader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +40,14 @@
 		B94C2D66287FFBC400B3C442 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B94C2D68287FFBC400B3C442 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B94C2D6E287FFD5000B3C442 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		EC5A16A22885AC0000076A4B /* NurseMainView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NurseMainView.storyboard; sourceTree = "<group>"; };
+		EC5A16A42885ACAC00076A4B /* NurseMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NurseMainViewController.swift; sourceTree = "<group>"; };
+		EC5A16A62885AFBD00076A4B /* LetterCustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterCustomTableViewCell.swift; sourceTree = "<group>"; };
+		EC5A16A82885C0C700076A4B /* Letter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Letter.swift; sourceTree = "<group>"; };
+		EC5A16B12885D97500076A4B /* DDayCustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDayCustomTableViewCell.swift; sourceTree = "<group>"; };
+		EC5A16B32885DA1900076A4B /* CheeringTextTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheeringTextTableViewCell.swift; sourceTree = "<group>"; };
+		EC5A16B82885DAD900076A4B /* DDay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDay.swift; sourceTree = "<group>"; };
+		EC5A16DA2885F9FE00076A4B /* NurseMainCustomHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NurseMainCustomHeader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,16 +86,40 @@
 		B94C2D59287FFBC300B3C442 /* Dear */ = {
 			isa = PBXGroup;
 			children = (
+				EC5A16B72885DABE00076A4B /* Models */,
+				EC5A16B02885D93500076A4B /* Cell */,
 				B94C2D5A287FFBC300B3C442 /* AppDelegate.swift */,
 				B94C2D5C287FFBC300B3C442 /* SceneDelegate.swift */,
-				B94C2D5E287FFBC300B3C442 /* ViewController.swift */,
+				EC5A16A22885AC0000076A4B /* NurseMainView.storyboard */,
+				EC5A16A42885ACAC00076A4B /* NurseMainViewController.swift */,
 				B94C2D60287FFBC300B3C442 /* Main.storyboard */,
+				B94C2D5E287FFBC300B3C442 /* ViewController.swift */,
 				B94C2D63287FFBC400B3C442 /* Assets.xcassets */,
 				B94C2D65287FFBC400B3C442 /* LaunchScreen.storyboard */,
 				B94C2D68287FFBC400B3C442 /* Info.plist */,
 				B94C2D6E287FFD5000B3C442 /* GoogleService-Info.plist */,
 			);
 			path = Dear;
+			sourceTree = "<group>";
+		};
+		EC5A16B02885D93500076A4B /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				EC5A16DA2885F9FE00076A4B /* NurseMainCustomHeader.swift */,
+				EC5A16A62885AFBD00076A4B /* LetterCustomTableViewCell.swift */,
+				EC5A16B12885D97500076A4B /* DDayCustomTableViewCell.swift */,
+				EC5A16B32885DA1900076A4B /* CheeringTextTableViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		EC5A16B72885DABE00076A4B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				EC5A16A82885C0C700076A4B /* Letter.swift */,
+				EC5A16B82885DAD900076A4B /* DDay.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -156,6 +196,7 @@
 				B94C2D6F287FFD5000B3C442 /* GoogleService-Info.plist in Resources */,
 				B94C2D64287FFBC400B3C442 /* Assets.xcassets in Resources */,
 				B94C2D62287FFBC300B3C442 /* Main.storyboard in Resources */,
+				EC5A16A32885AC0000076A4B /* NurseMainView.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -166,8 +207,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC5A16DB2885F9FE00076A4B /* NurseMainCustomHeader.swift in Sources */,
+				EC5A16B22885D97500076A4B /* DDayCustomTableViewCell.swift in Sources */,
 				B94C2D5F287FFBC300B3C442 /* ViewController.swift in Sources */,
+				EC5A16B42885DA1900076A4B /* CheeringTextTableViewCell.swift in Sources */,
+				EC5A16A72885AFBD00076A4B /* LetterCustomTableViewCell.swift in Sources */,
+				EC5A16A52885ACAC00076A4B /* NurseMainViewController.swift in Sources */,
+				EC5A16A92885C0C700076A4B /* Letter.swift in Sources */,
 				B94C2D5B287FFBC300B3C442 /* AppDelegate.swift in Sources */,
+				EC5A16B92885DAD900076A4B /* DDay.swift in Sources */,
 				B94C2D5D287FFBC300B3C442 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
