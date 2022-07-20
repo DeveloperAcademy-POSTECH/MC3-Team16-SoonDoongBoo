@@ -10,6 +10,7 @@ import UIKit
 class ViewController: UIViewController {
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     @IBOutlet weak var selectionNurseView: UIView!
     @IBOutlet weak var selectionPatientView: UIView!
     
@@ -53,3 +54,13 @@ class ViewController: UIViewController {
 }
 
 >>>>>>> parent of 87428ad (Merge pull request #9 from DeveloperAcademy-POSTECH/마음카드-작성-및-전송-뷰)
+=======
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view.
+    }
+
+
+}
+
+>>>>>>> parent of f00e9d9 (feat: #16 사용자 선택뷰 + 사용자 선택뷰 구현)
