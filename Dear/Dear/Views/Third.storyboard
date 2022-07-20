@@ -63,9 +63,6 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="완료"/>
-                                <connections>
-                                    <segue destination="dsg-eo-3qc" kind="show" id="Xs8-On-Zaw"/>
-                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qNa-LL-BfN">
                                 <rect key="frame" x="30" y="458" width="354" height="34"/>
@@ -99,16 +96,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="snt-8a-NG1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1853.6231884057972" y="347.54464285714283"/>
-        </scene>
-        <!--NurseMainView-->
-        <scene sceneID="ze2-ve-S6X">
-            <objects>
-                <viewControllerPlaceholder storyboardName="NurseMainView" referencedIdentifier="NurseMainView" id="dsg-eo-3qc" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="Ma5-fr-ZNh"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Yup-ey-u9B" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2601" y="323"/>
         </scene>
         <!--Letter View Controller-->
         <scene sceneID="1Ri-0a-dSK">
