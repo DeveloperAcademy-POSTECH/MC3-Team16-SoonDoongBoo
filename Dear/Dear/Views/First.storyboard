@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--First View Controller-->
         <scene sceneID="6tp-EM-h51">
             <objects>
-                <viewController id="kWm-IB-VGt" customClass="ViewController" customModule="Dear" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="kWm-IB-VGt" customClass="FirstViewController" customModule="Dear" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xME-RU-aT1">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -94,8 +94,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="Zxb-qm-LGr"/>
                     <connections>
-                        <outlet property="selectionNurseView" destination="Hjt-6N-G0t" id="Cmi-yF-Yv9"/>
-                        <outlet property="selectionPatientView" destination="v90-2O-uLq" id="ghe-uS-0Qr"/>
+                        <outlet property="selectionNurseView" destination="Hjt-6N-G0t" id="FCT-wz-Gqr"/>
+                        <outlet property="selectionPatientView" destination="v90-2O-uLq" id="b8J-St-rEB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TEq-1j-RBL" sceneMemberID="firstResponder"/>
@@ -159,7 +159,7 @@
         <!--Navigation Controller-->
         <scene sceneID="aoE-gk-aex">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="8wS-7f-iV2" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="UINavigationController" automaticallyAdjustsScrollViewInsets="NO" id="8wS-7f-iV2" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="uvW-TW-Sdd">
                         <rect key="frame" x="0.0" y="44" width="390" height="44"/>

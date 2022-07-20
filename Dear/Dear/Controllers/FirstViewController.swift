@@ -9,21 +9,34 @@ import UIKit
 
 class FirstViewController: UIViewController {
 
+    @IBOutlet weak var selectionNurseView: UIView!
+    @IBOutlet weak var selectionPatientView: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        selectionNurseView.layer.cornerRadius = 10
+        selectionPatientView.layer.cornerRadius = 10
+        selectionNurseView.layer.borderColor = UIColor(named: "ButtonBorderColor")?.cgColor
+        selectionPatientView.layer.borderColor = UIColor(named: "ButtonBorderColor")?.cgColor
+        selectionNurseView.layer.borderWidth = 2
+        selectionPatientView.layer.borderWidth = 2
+        
+        
+        let nuresTapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(viewSelectionnurseTapped))
+        selectionNurseView.addGestureRecognizer(nuresTapGestureRecognizer)
+        
+        let patientTapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(viewSelectionpatientTapped))
+        selectionPatientView.addGestureRecognizer(patientTapGestureRecognizer)
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @objc func viewSelectionnurseTapped(sender: UITapGestureRecognizer) {
+        guard let vc = storyboard?.instantiateViewController(withIdentifier: "vc1") as? NurseViewController else {return}
+        navigationController?.pushViewController(vc, animated: true)
     }
-    */
-
+    
+    @objc func viewSelectionpatientTapped(sender: UITapGestureRecognizer) {
+        guard let vc = storyboard?.instantiateViewController(withIdentifier: "vc2") as? PatientViewController else {return}
+        navigationController?.pushViewController(vc, animated: true)
+    }
 }
