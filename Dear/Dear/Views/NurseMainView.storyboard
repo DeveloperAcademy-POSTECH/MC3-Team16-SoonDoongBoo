@@ -16,22 +16,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="PCq-ys-Js4">
-                                <rect key="frame" x="20" y="44" width="350" height="766"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="insetGrouped" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="PCq-ys-Js4">
+                                <rect key="frame" x="0.0" y="44" width="390" height="766"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="dDayCustomCell" rowHeight="100" id="OSR-9k-Czn" customClass="DDayCustomTableViewCell" customModule="Dear" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="44.666666030883789" width="350" height="100"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="dDayCustomCell" rowHeight="50" id="OSR-9k-Czn" customClass="DDayCustomTableViewCell" customModule="Dear" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="49" width="350" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="OSR-9k-Czn" id="l3t-Cv-C6A">
-                                            <rect key="frame" x="0.0" y="0.0" width="350" height="100"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="350" height="50"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FiR-Zr-a5V">
-                                                    <rect key="frame" x="0.0" y="17" width="350" height="66.333333333333329"/>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FiR-Zr-a5V" userLabel="Cell DDay View">
+                                                    <rect key="frame" x="0.0" y="-8.3333333333333357" width="350" height="66.666666666666671"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="xZW-pO-lZV">
-                                                            <rect key="frame" x="20" y="20" width="310" height="26.333333333333329"/>
+                                                            <rect key="frame" x="20" y="20.333333333333336" width="310" height="26.333333333333336"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="월급 받는 날" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P7A-8g-TnZ">
                                                                     <rect key="frame" x="0.0" y="0.0" width="181.33333333333334" height="26.333333333333332"/>
@@ -69,24 +69,24 @@
                                         <connections>
                                             <outlet property="DDayDateLabel" destination="T9O-qK-OYr" id="IYZ-NL-9cc"/>
                                             <outlet property="DDayTitleLabel" destination="P7A-8g-TnZ" id="YiW-fT-iGp"/>
-                                            <outlet property="cellView" destination="FiR-Zr-a5V" id="fEx-69-ZmE"/>
+                                            <outlet property="cellView" destination="FiR-Zr-a5V" id="q2F-Ph-abp"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="letterCustomCell" rowHeight="250" id="mBm-7h-BBY" customClass="LetterCustomTableViewCell" customModule="Dear" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="144.66666603088379" width="350" height="250"/>
+                                        <rect key="frame" x="20" y="99" width="350" height="250"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="mBm-7h-BBY" id="UDN-mH-Pdf">
                                             <rect key="frame" x="0.0" y="0.0" width="350" height="250"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zQ6-pP-xg2">
-                                                    <rect key="frame" x="0.0" y="10" width="350" height="230"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="350" height="230"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="48" translatesAutoresizingMaskIntoConstraints="NO" id="afG-L9-mGb">
-                                                            <rect key="frame" x="20" y="36" width="310" height="158.33333333333334"/>
+                                                            <rect key="frame" x="20" y="33" width="310" height="164.33333333333334"/>
                                                             <subviews>
                                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="47" translatesAutoresizingMaskIntoConstraints="NO" id="rBW-FX-H55">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="310" height="158.33333333333334"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="310" height="164.33333333333334"/>
                                                                     <subviews>
                                                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="1zp-1I-eEP">
                                                                             <rect key="frame" x="0.0" y="0.0" width="310" height="21.666666666666668"/>
@@ -109,11 +109,11 @@
                                                                             </constraints>
                                                                         </stackView>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zg0-Ij-sRq">
-                                                                            <rect key="frame" x="0.0" y="68.666666666666657" width="310" height="89.666666666666657"/>
+                                                                            <rect key="frame" x="0.0" y="68.666666666666657" width="310" height="95.666666666666657"/>
                                                                             <attributedString key="attributedText">
                                                                                 <fragment content="가나다라마바사아자차카타파하가나다라마바사아자차카타파하가나다라마바사아자차카타파하가나다라마바사아자차카타파하가나다라마바사아자차카타파하가나다라마바사아자차카타파하가나다라마바사아자차카타파하가나다라마바사아자차카타파하가나다라마바사아자차카타파하">
                                                                                     <attributes>
-                                                                                        <font key="NSFont" size="14" name=".AppleSDGothicNeoI-Regular"/>
+                                                                                        <font key="NSFont" metaFont="system" size="14"/>
                                                                                         <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="3" tighteningFactorForTruncation="0.0"/>
                                                                                     </attributes>
                                                                                 </fragment>
@@ -134,13 +134,15 @@
                                                 </view>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="zQ6-pP-xg2" firstAttribute="leading" secondItem="UDN-mH-Pdf" secondAttribute="leading" id="0n5-f5-Fo6"/>
-                                                <constraint firstItem="zQ6-pP-xg2" firstAttribute="top" secondItem="UDN-mH-Pdf" secondAttribute="top" constant="10" id="2Ju-WD-vc5"/>
                                                 <constraint firstAttribute="trailing" secondItem="zQ6-pP-xg2" secondAttribute="trailing" id="Yb9-Z9-5rR"/>
-                                                <constraint firstAttribute="bottom" secondItem="zQ6-pP-xg2" secondAttribute="bottom" constant="10" id="aG2-rM-5az"/>
+                                                <constraint firstAttribute="bottom" secondItem="zQ6-pP-xg2" secondAttribute="bottom" constant="20" id="f22-OU-NA5"/>
+                                                <constraint firstItem="zQ6-pP-xg2" firstAttribute="top" secondItem="UDN-mH-Pdf" secondAttribute="top" id="qpM-hD-Coq"/>
+                                                <constraint firstAttribute="trailing" secondItem="zQ6-pP-xg2" secondAttribute="trailing" id="x5V-4R-puy"/>
+                                                <constraint firstItem="zQ6-pP-xg2" firstAttribute="leading" secondItem="UDN-mH-Pdf" secondAttribute="leading" id="yPS-Op-Ozm"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="LetterContentView" destination="UDN-mH-Pdf" id="4DC-Zr-ja7"/>
                                             <outlet property="cellView" destination="zQ6-pP-xg2" id="FCd-wW-Zxw"/>
                                             <outlet property="letterContentLabel" destination="zg0-Ij-sRq" id="eb5-qM-Z5D"/>
                                             <outlet property="letterDateLabel" destination="yaf-ch-XHb" id="oET-KA-Raj"/>
@@ -148,15 +150,16 @@
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <sections/>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="PCq-ys-Js4" secondAttribute="bottom" id="0BY-MB-uOW"/>
-                            <constraint firstItem="PCq-ys-Js4" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="6h0-RG-ji6"/>
+                            <constraint firstItem="PCq-ys-Js4" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="6h0-RG-ji6"/>
                             <constraint firstItem="PCq-ys-Js4" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="XRu-h2-aLl"/>
-                            <constraint firstAttribute="trailing" secondItem="PCq-ys-Js4" secondAttribute="trailing" constant="20" id="gGY-7R-xY0"/>
+                            <constraint firstAttribute="trailing" secondItem="PCq-ys-Js4" secondAttribute="trailing" id="gGY-7R-xY0"/>
                         </constraints>
                     </view>
                     <connections>

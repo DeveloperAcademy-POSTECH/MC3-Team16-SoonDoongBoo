@@ -7,7 +7,7 @@
 
 import UIKit
 
-class NurseMainCustomHeader: UITableViewHeaderFooterView {
+class NurseMainSectionHeader: UITableViewHeaderFooterView {
     let headerTitle = UILabel()
     let headerButton = UIButton()
     
@@ -34,14 +34,10 @@ class NurseMainCustomHeader: UITableViewHeaderFooterView {
         
         //TODO: 여백 조절 필요 -> NSLayoutConstraint에 대한 이해 필요
         NSLayoutConstraint.activate([
-            headerTitle.leadingAnchor.constraint(equalTo: contentView.layoutMarginsGuide.leadingAnchor),
-//            headerTitle.widthAnchor.constraint(equalToConstant: 100),
-            headerTitle.heightAnchor.constraint(equalToConstant: 20),
+            headerTitle.leadingAnchor.constraint(equalTo: contentView.layoutMarginsGuide.leadingAnchor, constant: -20),
             headerTitle.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
             
-            headerButton.heightAnchor.constraint(equalToConstant: 20),
-            headerButton.leadingAnchor.constraint(equalTo: headerTitle.trailingAnchor, constant: 10),
-            headerButton.trailingAnchor.constraint(equalTo: contentView.layoutMarginsGuide.trailingAnchor),
+            headerButton.trailingAnchor.constraint(equalTo: contentView.layoutMarginsGuide.trailingAnchor, constant: 20),
             headerButton.centerYAnchor.constraint(equalTo: contentView.centerYAnchor)
             
         ])

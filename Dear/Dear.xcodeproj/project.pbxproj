@@ -34,9 +34,10 @@
 		EC09B6742888387100632D72 /* NurseMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC09B6722888387000632D72 /* NurseMainViewController.swift */; };
 		EC09B6752888387100632D72 /* NurseMainView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC09B6732888387000632D72 /* NurseMainView.storyboard */; };
 		EC09B6792888388F00632D72 /* LetterCustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC09B6762888388F00632D72 /* LetterCustomTableViewCell.swift */; };
-		EC09B67A2888388F00632D72 /* NurseMainCustomHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC09B6772888388F00632D72 /* NurseMainCustomHeader.swift */; };
+		EC09B67A2888388F00632D72 /* NurseMainSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC09B6772888388F00632D72 /* NurseMainSectionHeader.swift */; };
 		EC09B67B2888388F00632D72 /* DDayCustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC09B6782888388F00632D72 /* DDayCustomTableViewCell.swift */; };
 		EC09B67E2888393000632D72 /* DDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC09B67D2888393000632D72 /* DDay.swift */; };
+		EC09B6842888535400632D72 /* NurseMainTableHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC09B6832888535400632D72 /* NurseMainTableHeader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -63,9 +64,10 @@
 		EC09B6722888387000632D72 /* NurseMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NurseMainViewController.swift; sourceTree = "<group>"; };
 		EC09B6732888387000632D72 /* NurseMainView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = NurseMainView.storyboard; sourceTree = "<group>"; };
 		EC09B6762888388F00632D72 /* LetterCustomTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LetterCustomTableViewCell.swift; sourceTree = "<group>"; };
-		EC09B6772888388F00632D72 /* NurseMainCustomHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NurseMainCustomHeader.swift; sourceTree = "<group>"; };
+		EC09B6772888388F00632D72 /* NurseMainSectionHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NurseMainSectionHeader.swift; sourceTree = "<group>"; };
 		EC09B6782888388F00632D72 /* DDayCustomTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DDayCustomTableViewCell.swift; sourceTree = "<group>"; };
 		EC09B67D2888393000632D72 /* DDay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DDay.swift; sourceTree = "<group>"; };
+		EC09B6832888535400632D72 /* NurseMainTableHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NurseMainTableHeader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,7 +170,8 @@
 			children = (
 				EC09B6782888388F00632D72 /* DDayCustomTableViewCell.swift */,
 				EC09B6762888388F00632D72 /* LetterCustomTableViewCell.swift */,
-				EC09B6772888388F00632D72 /* NurseMainCustomHeader.swift */,
+				EC09B6772888388F00632D72 /* NurseMainSectionHeader.swift */,
+				EC09B6832888535400632D72 /* NurseMainTableHeader.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -265,7 +268,8 @@
 				B97645EC2887F0500093FDAA /* FirstViewController.swift in Sources */,
 				EC09B6792888388F00632D72 /* LetterCustomTableViewCell.swift in Sources */,
 				B9A271E62887EAE200B504B1 /* HospitalViewController.swift in Sources */,
-				EC09B67A2888388F00632D72 /* NurseMainCustomHeader.swift in Sources */,
+				EC09B6842888535400632D72 /* NurseMainTableHeader.swift in Sources */,
+				EC09B67A2888388F00632D72 /* NurseMainSectionHeader.swift in Sources */,
 				B94C2D5D287FFBC300B3C442 /* SceneDelegate.swift in Sources */,
 				EC09B67B2888388F00632D72 /* DDayCustomTableViewCell.swift in Sources */,
 				B9A271E42887EACF00B504B1 /* ThirdViewController.swift in Sources */,
