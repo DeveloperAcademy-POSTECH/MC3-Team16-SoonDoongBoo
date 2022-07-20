@@ -7,23 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8E15F7602887CE1D0044029F /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E15F75F2887CE1D0044029F /* FirstViewController.swift */; };
-		8E15F7622887CEAB0044029F /* First.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E15F7612887CEAB0044029F /* First.storyboard */; };
-		8E1DF04628854B7600B7EE87 /* NurseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E1DF04528854B7600B7EE87 /* NurseViewController.swift */; };
-		8E1DF04828854B9900B7EE87 /* PatientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E1DF04728854B9900B7EE87 /* PatientViewController.swift */; };
 		7B1DF9A02883EEA6000A31F1 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B1DF99F2883EEA6000A31F1 /* ThirdViewController.swift */; };
 		7B1DF9A42883F414000A31F1 /* Third.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B1DF9A32883F414000A31F1 /* Third.storyboard */; };
 		7B30045F288457F6000E778B /* HospitalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B30045E288457F6000E778B /* HospitalViewController.swift */; };
 		7B30046128845803000E778B /* LetterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B30046028845803000E778B /* LetterViewController.swift */; };
 		7B3004632884FB01000E778B /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3004622884FB01000E778B /* UIViewController+Extension.swift */; };
 		7B3004652884FB32000E778B /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3004642884FB32000E778B /* Data.swift */; };
+		8E15F7602887CE1D0044029F /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E15F75F2887CE1D0044029F /* FirstViewController.swift */; };
+		8E15F7622887CEAB0044029F /* First.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E15F7612887CEAB0044029F /* First.storyboard */; };
+		8E1DF04628854B7600B7EE87 /* NurseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E1DF04528854B7600B7EE87 /* NurseViewController.swift */; };
+		8E1DF04828854B9900B7EE87 /* PatientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E1DF04728854B9900B7EE87 /* PatientViewController.swift */; };
+		8E6B71152887D8F000E14DEC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6B71142887D8F000E14DEC /* ViewController.swift */; };
+		8E7319942887D94900548D6C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8E7319932887D94900548D6C /* GoogleService-Info.plist */; };
 		B94C2D5B287FFBC300B3C442 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94C2D5A287FFBC300B3C442 /* AppDelegate.swift */; };
 		B94C2D5D287FFBC300B3C442 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94C2D5C287FFBC300B3C442 /* SceneDelegate.swift */; };
-		B94C2D5F287FFBC300B3C442 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94C2D5E287FFBC300B3C442 /* ViewController.swift */; };
-		B94C2D62287FFBC300B3C442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B94C2D60287FFBC300B3C442 /* Main.storyboard */; };
 		B94C2D64287FFBC400B3C442 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B94C2D63287FFBC400B3C442 /* Assets.xcassets */; };
-		B94C2D67287FFBC400B3C442 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B94C2D65287FFBC400B3C442 /* LaunchScreen.storyboard */; };
-		B94C2D6F287FFD5000B3C442 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B94C2D6E287FFD5000B3C442 /* GoogleService-Info.plist */; };
 		B94C2D722880002200B3C442 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = B94C2D712880002200B3C442 /* FirebaseAnalytics */; };
 		B94C2D742880002200B3C442 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = B94C2D732880002200B3C442 /* FirebaseAuth */; };
 		B94C2D762880002200B3C442 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = B94C2D752880002200B3C442 /* FirebaseDatabase */; };
@@ -33,25 +31,25 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		8E15F75F2887CE1D0044029F /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		8E15F7612887CEAB0044029F /* First.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = First.storyboard; sourceTree = "<group>"; };
-		8E1DF04528854B7600B7EE87 /* NurseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NurseViewController.swift; sourceTree = "<group>"; };
-		8E1DF04728854B9900B7EE87 /* PatientViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientViewController.swift; sourceTree = "<group>"; };
 		7B1DF99F2883EEA6000A31F1 /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
 		7B1DF9A32883F414000A31F1 /* Third.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Third.storyboard; sourceTree = "<group>"; };
 		7B30045E288457F6000E778B /* HospitalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HospitalViewController.swift; sourceTree = "<group>"; };
 		7B30046028845803000E778B /* LetterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterViewController.swift; sourceTree = "<group>"; };
 		7B3004622884FB01000E778B /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		7B3004642884FB32000E778B /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		8E15F75F2887CE1D0044029F /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		8E15F7612887CEAB0044029F /* First.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = First.storyboard; sourceTree = "<group>"; };
+		8E1DF04528854B7600B7EE87 /* NurseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NurseViewController.swift; sourceTree = "<group>"; };
+		8E1DF04728854B9900B7EE87 /* PatientViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientViewController.swift; sourceTree = "<group>"; };
+		8E6B71142887D8F000E14DEC /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8E7319932887D94900548D6C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		8E7319972887DA1200548D6C /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8E7319982887DA1200548D6C /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		B94C2D57287FFBC300B3C442 /* Dear.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dear.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B94C2D5A287FFBC300B3C442 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B94C2D5C287FFBC300B3C442 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		B94C2D5E287FFBC300B3C442 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		B94C2D61287FFBC300B3C442 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B94C2D63287FFBC400B3C442 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		B94C2D66287FFBC400B3C442 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B94C2D68287FFBC400B3C442 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B94C2D6E287FFD5000B3C442 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,9 +72,8 @@
 		7B6472322885365F00F0A3BB /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				B94C2D68287FFBC400B3C442 /* Info.plist */,
-				B94C2D6E287FFD5000B3C442 /* GoogleService-Info.plist */,
 				7B3004642884FB32000E778B /* Data.swift */,
+				8E7319932887D94900548D6C /* GoogleService-Info.plist */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -84,7 +81,7 @@
 		7B6472332885368A00F0A3BB /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				B94C2D5E287FFBC300B3C442 /* ViewController.swift */,
+				8E6B71142887D8F000E14DEC /* ViewController.swift */,
 				7B1DF99F2883EEA6000A31F1 /* ThirdViewController.swift */,
 				7B30045E288457F6000E778B /* HospitalViewController.swift */,
 				7B30046028845803000E778B /* LetterViewController.swift */,
@@ -95,8 +92,8 @@
 		7B647234288536A300F0A3BB /* View */ = {
 			isa = PBXGroup;
 			children = (
-				B94C2D65287FFBC400B3C442 /* LaunchScreen.storyboard */,
-				B94C2D60287FFBC300B3C442 /* Main.storyboard */,
+				8E7319972887DA1200548D6C /* LaunchScreen.storyboard */,
+				8E7319982887DA1200548D6C /* Main.storyboard */,
 				7B1DF9A32883F414000A31F1 /* Third.storyboard */,
 			);
 			path = View;
@@ -123,16 +120,11 @@
 			children = (
 				B94C2D5A287FFBC300B3C442 /* AppDelegate.swift */,
 				B94C2D5C287FFBC300B3C442 /* SceneDelegate.swift */,
-				B94C2D5E287FFBC300B3C442 /* ViewController.swift */,
-				B94C2D60287FFBC300B3C442 /* Main.storyboard */,
 				8E15F7612887CEAB0044029F /* First.storyboard */,
-				B94C2D63287FFBC400B3C442 /* Assets.xcassets */,
-				B94C2D65287FFBC400B3C442 /* LaunchScreen.storyboard */,
 				B94C2D68287FFBC400B3C442 /* Info.plist */,
 				8E1DF04528854B7600B7EE87 /* NurseViewController.swift */,
 				8E15F75F2887CE1D0044029F /* FirstViewController.swift */,
 				8E1DF04728854B9900B7EE87 /* PatientViewController.swift */,
-				B94C2D6E287FFD5000B3C442 /* GoogleService-Info.plist */,
 				7B3004622884FB01000E778B /* UIViewController+Extension.swift */,
 				7B6472322885365F00F0A3BB /* Model */,
 				7B647234288536A300F0A3BB /* View */,
@@ -212,12 +204,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B94C2D67287FFBC400B3C442 /* LaunchScreen.storyboard in Resources */,
-				B94C2D6F287FFD5000B3C442 /* GoogleService-Info.plist in Resources */,
 				7B1DF9A42883F414000A31F1 /* Third.storyboard in Resources */,
 				B94C2D64287FFBC400B3C442 /* Assets.xcassets in Resources */,
-				B94C2D62287FFBC300B3C442 /* Main.storyboard in Resources */,
 				8E15F7622887CEAB0044029F /* First.storyboard in Resources */,
+				8E7319942887D94900548D6C /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -230,10 +220,10 @@
 			files = (
 				8E1DF04828854B9900B7EE87 /* PatientViewController.swift in Sources */,
 				8E1DF04628854B7600B7EE87 /* NurseViewController.swift in Sources */,
-				B94C2D5F287FFBC300B3C442 /* ViewController.swift in Sources */,
 				8E15F7602887CE1D0044029F /* FirstViewController.swift in Sources */,
 				B94C2D5B287FFBC300B3C442 /* AppDelegate.swift in Sources */,
 				B94C2D5D287FFBC300B3C442 /* SceneDelegate.swift in Sources */,
+				8E6B71152887D8F000E14DEC /* ViewController.swift in Sources */,
 				7B1DF9A02883EEA6000A31F1 /* ThirdViewController.swift in Sources */,
 				7B3004632884FB01000E778B /* UIViewController+Extension.swift in Sources */,
 				7B30046128845803000E778B /* LetterViewController.swift in Sources */,
@@ -243,25 +233,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		B94C2D60287FFBC300B3C442 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B94C2D61287FFBC300B3C442 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		B94C2D65287FFBC400B3C442 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B94C2D66287FFBC400B3C442 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		B94C2D69287FFBC400B3C442 /* Debug */ = {
