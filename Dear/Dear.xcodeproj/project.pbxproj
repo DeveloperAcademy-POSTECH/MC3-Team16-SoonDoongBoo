@@ -113,8 +113,6 @@
 		B94C2D59287FFBC300B3C442 /* Dear */ = {
 			isa = PBXGroup;
 			children = (
-				EC09B67F28883D4100632D72 /* CardDetailView.storyboard */,
-				EC09B68028883D4200632D72 /* CardDetailViewController.swift */,
 				B92EF32128868AD100AEC6E9 /* Services */,
 				B9A271E02887EA0400B504B1 /* Views */,
 				B9A271DF2887E9F400B504B1 /* Controllers */,
@@ -134,6 +132,7 @@
 		B9A271DF2887E9F400B504B1 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				EC09B68028883D4200632D72 /* CardDetailViewController.swift */,
 				B9A271E32887EACF00B504B1 /* ThirdViewController.swift */,
 				B9A271E52887EAE200B504B1 /* HospitalViewController.swift */,
 				B9A271E72887EAE700B504B1 /* LetterViewController.swift */,
@@ -147,6 +146,7 @@
 		B9A271E02887EA0400B504B1 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				EC09B67F28883D4100632D72 /* CardDetailView.storyboard */,
 				B9A271E12887EAB100B504B1 /* Third.storyboard */,
 				B9A271E92887ECF400B504B1 /* First.storyboard */,
 			);
