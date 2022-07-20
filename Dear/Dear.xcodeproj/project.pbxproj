@@ -130,6 +130,11 @@
 				7B647234288536A300F0A3BB /* View */,
 				7B6472332885368A00F0A3BB /* Controller */,
 				B94C2D63287FFBC400B3C442 /* Assets.xcassets */,
+				B94C2D5E287FFBC300B3C442 /* ViewController.swift */,
+				B94C2D60287FFBC300B3C442 /* Main.storyboard */,
+				B94C2D63287FFBC400B3C442 /* Assets.xcassets */,
+				B94C2D65287FFBC400B3C442 /* LaunchScreen.storyboard */,
+				B94C2D68287FFBC400B3C442 /* Info.plist */,
 				B94C2D6E287FFD5000B3C442 /* GoogleService-Info.plist */,
 			);
 			path = Dear;
@@ -360,6 +365,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 3PFDRPLY6N;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Dear/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -388,6 +394,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 3PFDRPLY6N;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Dear/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

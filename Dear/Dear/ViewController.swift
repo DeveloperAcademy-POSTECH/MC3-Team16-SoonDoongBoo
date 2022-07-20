@@ -9,6 +9,7 @@ import UIKit
 
 class ViewController: UIViewController {
 
+<<<<<<< HEAD
     @IBOutlet weak var selectionNurseView: UIView!
     @IBOutlet weak var selectionPatientView: UIView!
     
@@ -42,3 +43,13 @@ class ViewController: UIViewController {
     }
     
 }
+=======
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view.
+    }
+
+
+}
+
+>>>>>>> parent of 87428ad (Merge pull request #9 from DeveloperAcademy-POSTECH/마음카드-작성-및-전송-뷰)
