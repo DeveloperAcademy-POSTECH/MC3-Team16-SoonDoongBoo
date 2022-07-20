@@ -28,6 +28,7 @@ class NurseMainSectionHeader: UITableViewHeaderFooterView {
         headerButton.translatesAutoresizingMaskIntoConstraints = false
         headerButton.titleLabel?.font = UIFont.systemFont(ofSize: 14)
         headerButton.setTitleColor(.gray, for: .normal)
+        headerButton.setTitleColor(.lightGray, for: .highlighted)
         
         contentView.addSubview(headerTitle)
         contentView.addSubview(headerButton)
