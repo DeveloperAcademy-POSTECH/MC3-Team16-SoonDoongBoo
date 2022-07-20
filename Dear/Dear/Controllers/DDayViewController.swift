@@ -14,6 +14,10 @@ class DDayViewController: UIViewController {
 
     @IBOutlet weak var ddayTableView: UITableView!
     
+    @IBAction func ConfirmButtonItemPressed(_ sender: UIBarButtonItem) {
+        dismiss(animated: true, completion: nil)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -33,6 +37,7 @@ extension DDayViewController: UITableViewDelegate, UITableViewDataSource {
         let ddayTableCell = ddayTableView.dequeueReusableCell(withIdentifier: cellName, for: indexPath) as! DDayTableCell
         
         ddayTableCell.ddayTitle.text = ddayTitle[indexPath.row]
+        ddayTableCell.ddayDatePicker.maximumDate = Date()
         
         return ddayTableCell
     }
