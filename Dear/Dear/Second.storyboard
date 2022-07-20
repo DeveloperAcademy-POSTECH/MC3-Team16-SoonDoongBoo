@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Jpw-dX-E8I">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Second View Controller-->
+        <scene sceneID="y6U-4q-VWk">
+            <objects>
+                <viewController storyboardIdentifier="SecondViewController" id="Jpw-dX-E8I" customClass="SecondViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Wq2-iq-qAj">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VIf-l2-9NH">
+                                <rect key="frame" x="30" y="433" width="354" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="사용자 병원 선택뷰"/>
+                                <connections>
+                                    <segue destination="tI5-mF-NxR" kind="show" id="O2R-xt-1XD"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="nDk-c0-nEc"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="nDk-c0-nEc" firstAttribute="bottom" secondItem="VIf-l2-9NH" secondAttribute="bottom" constant="398" id="CZq-lm-rTy"/>
+                            <constraint firstItem="VIf-l2-9NH" firstAttribute="top" secondItem="nDk-c0-nEc" secondAttribute="top" constant="389" id="Vyy-U9-44x"/>
+                            <constraint firstItem="VIf-l2-9NH" firstAttribute="leading" secondItem="nDk-c0-nEc" secondAttribute="leading" constant="30" id="iqb-xm-wbv"/>
+                            <constraint firstItem="nDk-c0-nEc" firstAttribute="trailing" secondItem="VIf-l2-9NH" secondAttribute="trailing" constant="30" id="xsa-vo-7JZ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="fpq-ER-qLK"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Yav-FK-ZlR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="474" y="-9"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="gpg-HJ-ubW">
+            <objects>
+                <viewController id="tI5-mF-NxR" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vRf-D0-DVH">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="mNq-Pr-kom"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="r3n-h9-1G2"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FtD-Pd-6F9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1165" y="-9"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

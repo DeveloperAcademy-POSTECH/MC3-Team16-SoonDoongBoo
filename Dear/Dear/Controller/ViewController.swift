@@ -30,7 +30,6 @@ class ViewController: UIViewController {
         selectionPatientView.addGestureRecognizer(patientTapGestureRecognizer)
     }
     
-    
     @objc func viewSelectionnurseTapped(sender: UITapGestureRecognizer) {
         guard let vc = storyboard?.instantiateViewController(withIdentifier: "vc1") as? NurseViewController else {return}
         navigationController?.pushViewController(vc, animated: true)
@@ -40,5 +39,4 @@ class ViewController: UIViewController {
         guard let vc = storyboard?.instantiateViewController(withIdentifier: "vc2") as? PatientViewController else {return}
         navigationController?.pushViewController(vc, animated: true)
     }
-    
 }
