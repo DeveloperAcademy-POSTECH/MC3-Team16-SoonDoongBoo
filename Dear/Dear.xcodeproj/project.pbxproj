@@ -31,6 +31,12 @@
 		B9BAD976288153D900EE530F /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = B9BAD975288153D900EE530F /* FirebaseAnalytics */; };
 		B9BAD978288153D900EE530F /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = B9BAD977288153D900EE530F /* FirebaseAuth */; };
 		B9BAD97A288153D900EE530F /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = B9BAD979288153D900EE530F /* FirebaseFirestore */; };
+		EC09B6742888387100632D72 /* NurseMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC09B6722888387000632D72 /* NurseMainViewController.swift */; };
+		EC09B6752888387100632D72 /* NurseMainView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC09B6732888387000632D72 /* NurseMainView.storyboard */; };
+		EC09B6792888388F00632D72 /* LetterCustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC09B6762888388F00632D72 /* LetterCustomTableViewCell.swift */; };
+		EC09B67A2888388F00632D72 /* NurseMainCustomHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC09B6772888388F00632D72 /* NurseMainCustomHeader.swift */; };
+		EC09B67B2888388F00632D72 /* DDayCustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC09B6782888388F00632D72 /* DDayCustomTableViewCell.swift */; };
+		EC09B67E2888393000632D72 /* DDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC09B67D2888393000632D72 /* DDay.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +60,12 @@
 		B9A271E92887ECF400B504B1 /* First.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = First.storyboard; sourceTree = "<group>"; };
 		B9A271EB2887ED0E00B504B1 /* NurseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NurseViewController.swift; sourceTree = "<group>"; };
 		B9A271ED2887ED0E00B504B1 /* PatientViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatientViewController.swift; sourceTree = "<group>"; };
+		EC09B6722888387000632D72 /* NurseMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NurseMainViewController.swift; sourceTree = "<group>"; };
+		EC09B6732888387000632D72 /* NurseMainView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = NurseMainView.storyboard; sourceTree = "<group>"; };
+		EC09B6762888388F00632D72 /* LetterCustomTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LetterCustomTableViewCell.swift; sourceTree = "<group>"; };
+		EC09B6772888388F00632D72 /* NurseMainCustomHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NurseMainCustomHeader.swift; sourceTree = "<group>"; };
+		EC09B6782888388F00632D72 /* DDayCustomTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DDayCustomTableViewCell.swift; sourceTree = "<group>"; };
+		EC09B67D2888393000632D72 /* DDay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DDay.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +88,7 @@
 		B92EF31C2886886800AEC6E9 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				EC09B67D2888393000632D72 /* DDay.swift */,
 				B92EF31D2886888B00AEC6E9 /* Letter.swift */,
 				B92EF31F2886889500AEC6E9 /* Hospital.swift */,
 			);
@@ -109,6 +122,7 @@
 		B94C2D59287FFBC300B3C442 /* Dear */ = {
 			isa = PBXGroup;
 			children = (
+				EC09B67C288838A600632D72 /* Cell */,
 				B92EF32128868AD100AEC6E9 /* Services */,
 				B9A271E02887EA0400B504B1 /* Views */,
 				B9A271DF2887E9F400B504B1 /* Controllers */,
@@ -128,6 +142,7 @@
 		B9A271DF2887E9F400B504B1 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				EC09B6722888387000632D72 /* NurseMainViewController.swift */,
 				B9A271E32887EACF00B504B1 /* ThirdViewController.swift */,
 				B9A271E52887EAE200B504B1 /* HospitalViewController.swift */,
 				B9A271E72887EAE700B504B1 /* LetterViewController.swift */,
@@ -141,10 +156,21 @@
 		B9A271E02887EA0400B504B1 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				EC09B6732888387000632D72 /* NurseMainView.storyboard */,
 				B9A271E12887EAB100B504B1 /* Third.storyboard */,
 				B9A271E92887ECF400B504B1 /* First.storyboard */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		EC09B67C288838A600632D72 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				EC09B6782888388F00632D72 /* DDayCustomTableViewCell.swift */,
+				EC09B6762888388F00632D72 /* LetterCustomTableViewCell.swift */,
+				EC09B6772888388F00632D72 /* NurseMainCustomHeader.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -217,6 +243,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B94C2D67287FFBC400B3C442 /* LaunchScreen.storyboard in Resources */,
+				EC09B6752888387100632D72 /* NurseMainView.storyboard in Resources */,
 				B94C2D6F287FFD5000B3C442 /* GoogleService-Info.plist in Resources */,
 				B94C2D64287FFBC400B3C442 /* Assets.xcassets in Resources */,
 				B94C2D62287FFBC300B3C442 /* Main.storyboard in Resources */,
@@ -236,10 +263,15 @@
 				B94C2D5B287FFBC300B3C442 /* AppDelegate.swift in Sources */,
 				B9A271F02887ED0E00B504B1 /* PatientViewController.swift in Sources */,
 				B97645EC2887F0500093FDAA /* FirstViewController.swift in Sources */,
+				EC09B6792888388F00632D72 /* LetterCustomTableViewCell.swift in Sources */,
 				B9A271E62887EAE200B504B1 /* HospitalViewController.swift in Sources */,
+				EC09B67A2888388F00632D72 /* NurseMainCustomHeader.swift in Sources */,
 				B94C2D5D287FFBC300B3C442 /* SceneDelegate.swift in Sources */,
+				EC09B67B2888388F00632D72 /* DDayCustomTableViewCell.swift in Sources */,
 				B9A271E42887EACF00B504B1 /* ThirdViewController.swift in Sources */,
 				B92EF3202886889500AEC6E9 /* Hospital.swift in Sources */,
+				EC09B67E2888393000632D72 /* DDay.swift in Sources */,
+				EC09B6742888387100632D72 /* NurseMainViewController.swift in Sources */,
 				B9A271EE2887ED0E00B504B1 /* NurseViewController.swift in Sources */,
 				B92EF32328868AE500AEC6E9 /* FirebaseService.swift in Sources */,
 				B9A271E82887EAE700B504B1 /* LetterViewController.swift in Sources */,
