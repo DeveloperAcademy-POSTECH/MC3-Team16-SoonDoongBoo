@@ -31,6 +31,8 @@
 		B9BAD976288153D900EE530F /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = B9BAD975288153D900EE530F /* FirebaseAnalytics */; };
 		B9BAD978288153D900EE530F /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = B9BAD977288153D900EE530F /* FirebaseAuth */; };
 		B9BAD97A288153D900EE530F /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = B9BAD979288153D900EE530F /* FirebaseFirestore */; };
+		EC09B68128883D4200632D72 /* CardDetailView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC09B67F28883D4100632D72 /* CardDetailView.storyboard */; };
+		EC09B68228883D4200632D72 /* CardDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC09B68028883D4200632D72 /* CardDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +56,8 @@
 		B9A271E92887ECF400B504B1 /* First.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = First.storyboard; sourceTree = "<group>"; };
 		B9A271EB2887ED0E00B504B1 /* NurseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NurseViewController.swift; sourceTree = "<group>"; };
 		B9A271ED2887ED0E00B504B1 /* PatientViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatientViewController.swift; sourceTree = "<group>"; };
+		EC09B67F28883D4100632D72 /* CardDetailView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CardDetailView.storyboard; sourceTree = "<group>"; };
+		EC09B68028883D4200632D72 /* CardDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +113,8 @@
 		B94C2D59287FFBC300B3C442 /* Dear */ = {
 			isa = PBXGroup;
 			children = (
+				EC09B67F28883D4100632D72 /* CardDetailView.storyboard */,
+				EC09B68028883D4200632D72 /* CardDetailViewController.swift */,
 				B92EF32128868AD100AEC6E9 /* Services */,
 				B9A271E02887EA0400B504B1 /* Views */,
 				B9A271DF2887E9F400B504B1 /* Controllers */,
@@ -219,6 +225,7 @@
 				B94C2D67287FFBC400B3C442 /* LaunchScreen.storyboard in Resources */,
 				B94C2D6F287FFD5000B3C442 /* GoogleService-Info.plist in Resources */,
 				B94C2D64287FFBC400B3C442 /* Assets.xcassets in Resources */,
+				EC09B68128883D4200632D72 /* CardDetailView.storyboard in Resources */,
 				B94C2D62287FFBC300B3C442 /* Main.storyboard in Resources */,
 				B9A271E22887EAB100B504B1 /* Third.storyboard in Resources */,
 				B9A271EA2887ECF400B504B1 /* First.storyboard in Resources */,
@@ -232,6 +239,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC09B68228883D4200632D72 /* CardDetailViewController.swift in Sources */,
 				B94C2D5F287FFBC300B3C442 /* ViewController.swift in Sources */,
 				B94C2D5B287FFBC300B3C442 /* AppDelegate.swift in Sources */,
 				B9A271F02887ED0E00B504B1 /* PatientViewController.swift in Sources */,
