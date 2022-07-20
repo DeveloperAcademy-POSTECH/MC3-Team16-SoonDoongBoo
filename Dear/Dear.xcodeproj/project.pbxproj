@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7B1DF9A02883EEA6000A31F1 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B1DF99F2883EEA6000A31F1 /* ThirdViewController.swift */; };
+		7B1DF9A42883F414000A31F1 /* Third.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B1DF9A32883F414000A31F1 /* Third.storyboard */; };
+		7B30045F288457F6000E778B /* HospitalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B30045E288457F6000E778B /* HospitalViewController.swift */; };
+		7B30046128845803000E778B /* LetterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B30046028845803000E778B /* LetterViewController.swift */; };
+		7B3004632884FB01000E778B /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3004622884FB01000E778B /* UIViewController+Extension.swift */; };
+		7B3004652884FB32000E778B /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3004642884FB32000E778B /* Data.swift */; };
 		B94C2D5B287FFBC300B3C442 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94C2D5A287FFBC300B3C442 /* AppDelegate.swift */; };
 		B94C2D5D287FFBC300B3C442 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94C2D5C287FFBC300B3C442 /* SceneDelegate.swift */; };
 		B94C2D5F287FFBC300B3C442 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94C2D5E287FFBC300B3C442 /* ViewController.swift */; };
@@ -23,6 +29,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7B1DF99F2883EEA6000A31F1 /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
+		7B1DF9A32883F414000A31F1 /* Third.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Third.storyboard; sourceTree = "<group>"; };
+		7B30045E288457F6000E778B /* HospitalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HospitalViewController.swift; sourceTree = "<group>"; };
+		7B30046028845803000E778B /* LetterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterViewController.swift; sourceTree = "<group>"; };
+		7B3004622884FB01000E778B /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		7B3004642884FB32000E778B /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		B94C2D57287FFBC300B3C442 /* Dear.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dear.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B94C2D5A287FFBC300B3C442 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B94C2D5C287FFBC300B3C442 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -51,6 +63,37 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7B6472322885365F00F0A3BB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B94C2D68287FFBC400B3C442 /* Info.plist */,
+				B94C2D6E287FFD5000B3C442 /* GoogleService-Info.plist */,
+				7B3004642884FB32000E778B /* Data.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		7B6472332885368A00F0A3BB /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B94C2D5E287FFBC300B3C442 /* ViewController.swift */,
+				7B1DF99F2883EEA6000A31F1 /* ThirdViewController.swift */,
+				7B30045E288457F6000E778B /* HospitalViewController.swift */,
+				7B30046028845803000E778B /* LetterViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		7B647234288536A300F0A3BB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B94C2D65287FFBC400B3C442 /* LaunchScreen.storyboard */,
+				B94C2D60287FFBC300B3C442 /* Main.storyboard */,
+				7B1DF9A32883F414000A31F1 /* Third.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		B94C2D4E287FFBC300B3C442 = {
 			isa = PBXGroup;
 			children = (
@@ -72,12 +115,11 @@
 			children = (
 				B94C2D5A287FFBC300B3C442 /* AppDelegate.swift */,
 				B94C2D5C287FFBC300B3C442 /* SceneDelegate.swift */,
-				B94C2D5E287FFBC300B3C442 /* ViewController.swift */,
-				B94C2D60287FFBC300B3C442 /* Main.storyboard */,
+				7B3004622884FB01000E778B /* UIViewController+Extension.swift */,
+				7B6472322885365F00F0A3BB /* Model */,
+				7B647234288536A300F0A3BB /* View */,
+				7B6472332885368A00F0A3BB /* Controller */,
 				B94C2D63287FFBC400B3C442 /* Assets.xcassets */,
-				B94C2D65287FFBC400B3C442 /* LaunchScreen.storyboard */,
-				B94C2D68287FFBC400B3C442 /* Info.plist */,
-				B94C2D6E287FFD5000B3C442 /* GoogleService-Info.plist */,
 			);
 			path = Dear;
 			sourceTree = "<group>";
@@ -154,6 +196,7 @@
 			files = (
 				B94C2D67287FFBC400B3C442 /* LaunchScreen.storyboard in Resources */,
 				B94C2D6F287FFD5000B3C442 /* GoogleService-Info.plist in Resources */,
+				7B1DF9A42883F414000A31F1 /* Third.storyboard in Resources */,
 				B94C2D64287FFBC400B3C442 /* Assets.xcassets in Resources */,
 				B94C2D62287FFBC300B3C442 /* Main.storyboard in Resources */,
 			);
@@ -169,6 +212,11 @@
 				B94C2D5F287FFBC300B3C442 /* ViewController.swift in Sources */,
 				B94C2D5B287FFBC300B3C442 /* AppDelegate.swift in Sources */,
 				B94C2D5D287FFBC300B3C442 /* SceneDelegate.swift in Sources */,
+				7B1DF9A02883EEA6000A31F1 /* ThirdViewController.swift in Sources */,
+				7B3004632884FB01000E778B /* UIViewController+Extension.swift in Sources */,
+				7B30046128845803000E778B /* LetterViewController.swift in Sources */,
+				7B30045F288457F6000E778B /* HospitalViewController.swift in Sources */,
+				7B3004652884FB32000E778B /* Data.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -244,7 +292,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -298,7 +346,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -315,7 +363,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 3PFDRPLY6N;
+				DEVELOPMENT_TEAM = 572FBL972Z;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Dear/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -343,7 +391,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 3PFDRPLY6N;
+				DEVELOPMENT_TEAM = 572FBL972Z;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Dear/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
