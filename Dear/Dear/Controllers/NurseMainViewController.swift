@@ -23,6 +23,8 @@ class NurseMainViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
+        super.viewDidLoad()
+        
         tableView.delegate = self
         tableView.dataSource = self
         
@@ -52,8 +54,6 @@ class NurseMainViewController: UIViewController {
         
         //section header
         tableView.register(NurseMainSectionHeader.self, forHeaderFooterViewReuseIdentifier: "sectionHeader")
-        
-        super.viewDidLoad()
     }
     //button 클릭 시 이벤트
     @objc func btnClick (_ button: UIButton) {
@@ -76,7 +76,7 @@ extension NurseMainViewController: UITableViewDelegate{
         let view = tableView.dequeueReusableHeaderFooterView(withIdentifier:"sectionHeader") as! NurseMainSectionHeader
         switch section {
         case 0:
-            view.headerTitle.text = "D-day"
+            view.headerTitle.text = "D-Day"
             view.headerButton.setTitle("수정하기", for: .normal)
         default:
             view.headerTitle.text = "받은 마음카드"
