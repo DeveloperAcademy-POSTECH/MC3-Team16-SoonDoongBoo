@@ -83,10 +83,10 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="350" height="230"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="48" translatesAutoresizingMaskIntoConstraints="NO" id="afG-L9-mGb">
-                                                            <rect key="frame" x="20" y="33" width="310" height="164.33333333333334"/>
+                                                            <rect key="frame" x="20" y="30" width="310" height="131.33333333333334"/>
                                                             <subviews>
-                                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="47" translatesAutoresizingMaskIntoConstraints="NO" id="rBW-FX-H55">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="310" height="164.33333333333334"/>
+                                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="rBW-FX-H55">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="310" height="131.33333333333334"/>
                                                                     <subviews>
                                                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="1zp-1I-eEP">
                                                                             <rect key="frame" x="0.0" y="0.0" width="310" height="21.666666666666668"/>
@@ -109,11 +109,12 @@
                                                                             </constraints>
                                                                         </stackView>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zg0-Ij-sRq">
-                                                                            <rect key="frame" x="0.0" y="68.666666666666657" width="310" height="95.666666666666657"/>
+                                                                            <rect key="frame" x="0.0" y="41.666666666666664" width="310" height="89.666666666666686"/>
                                                                             <attributedString key="attributedText">
                                                                                 <fragment content="가나다라마바사아자차카타파하가나다라마바사아자차카타파하가나다라마바사아자차카타파하가나다라마바사아자차카타파하가나다라마바사아자차카타파하가나다라마바사아자차카타파하가나다라마바사아자차카타파하가나다라마바사아자차카타파하가나다라마바사아자차카타파하">
                                                                                     <attributes>
-                                                                                        <font key="NSFont" metaFont="system" size="14"/>
+                                                                                        <font key="NSFont" size="14" name=".AppleSDGothicNeoI-Regular"/>
+                                                                                        <font key="NSOriginalFont" metaFont="system" size="14"/>
                                                                                         <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="3" tighteningFactorForTruncation="0.0"/>
                                                                                     </attributes>
                                                                                 </fragment>
@@ -127,8 +128,8 @@
                                                     </subviews>
                                                     <color key="backgroundColor" systemColor="systemGray6Color"/>
                                                     <constraints>
-                                                        <constraint firstItem="afG-L9-mGb" firstAttribute="centerY" secondItem="zQ6-pP-xg2" secondAttribute="centerY" id="IhK-iL-8Xt"/>
                                                         <constraint firstAttribute="trailing" secondItem="afG-L9-mGb" secondAttribute="trailing" constant="20" id="JjK-sj-cpT"/>
+                                                        <constraint firstItem="afG-L9-mGb" firstAttribute="top" secondItem="zQ6-pP-xg2" secondAttribute="top" constant="30" id="ag0-zD-Oeu"/>
                                                         <constraint firstItem="afG-L9-mGb" firstAttribute="leading" secondItem="zQ6-pP-xg2" secondAttribute="leading" constant="20" id="xJT-qH-mRC"/>
                                                     </constraints>
                                                 </view>
