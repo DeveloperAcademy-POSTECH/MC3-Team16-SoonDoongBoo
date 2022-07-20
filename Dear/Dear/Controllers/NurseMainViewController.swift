@@ -10,12 +10,16 @@ import SwiftUI
 
 class NurseMainViewController: UIViewController {
 
+    //MARK: - firebase추가
+    //firebase data
+    var firebaseService = FirebaseService()
+    var letters: [Letter] = []
     //샘플 데이터
     let cheeringText: [String] = [
         "오늘 하루도 수고하셨습니다.가나다라마바사아자차카타파하가나다라마바사아자차카타파하가나다라마바사아자차카타파하",
         "오늘 하루도 수고하셨습니다.가나다라마바사"
     ]
-    let letters = Letter.sampleData
+    let letters_sample = Letter.sampleData
     let dDays = DDay.sampleData
     
     let cellIdentifier = ["CheeringCustomCell", "dDayCustomCell", "letterCustomCell"]
@@ -54,6 +58,14 @@ class NurseMainViewController: UIViewController {
         
         //section header
         tableView.register(NurseMainSectionHeader.self, forHeaderFooterViewReuseIdentifier: "sectionHeader")
+        
+        //MARK: - Firebase 추가
+        //firebase 초기 data 가져오기
+        Task {
+            letters = try await firebaseService.fetchLettersByHospital()
+            print(letters)
+            self.tableView.reloadData()
+        }
     }
     //button 클릭 시 이벤트
     @objc func btnClick (_ button: UIButton) {
@@ -63,7 +75,6 @@ class NurseMainViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-
 }
 
 extension NurseMainViewController: UITableViewDelegate{
