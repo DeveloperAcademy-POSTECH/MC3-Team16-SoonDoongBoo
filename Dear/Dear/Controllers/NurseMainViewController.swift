@@ -91,20 +91,29 @@ extension NurseMainViewController: UITableViewDelegate{
         case 0:
             view.headerTitle.text = "D-Day"
             view.headerButton.setTitle("수정하기", for: .normal)
-            view.headerButton.addTarget(self, action: #selector(dDayEditTapped(_:)), for: .touchUpInside)
         default:
             view.headerTitle.text = "받은 마음카드"
             view.headerButton.setTitle("더보기", for: .normal)
         }
+        view.headerButton.addTarget(self, action: #selector(sectionBtnTapped(_:)), for: .touchUpInside)
        return view
     }
     //section header height
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 50
     }
-    @objc func dDayEditTapped(_ button: UIButton) {
-        guard let vc = storyboard?.instantiateViewController(withIdentifier: "vc1") as? NurseViewController else {return}
-        navigationController?.pushViewController(vc, animated: true)
+    //MARK: -  버튼 페이지 연결
+    //sectioni header 버튼 클릭 시 다음 페이지 연결하는 함수
+    @objc func sectionBtnTapped(_ button: UIButton) {
+        if button.titleLabel?.text == "수정하기" {
+            let vc = UIStoryboard(name: "DDayEditView", bundle: nil)
+            guard let nextVc = vc.instantiateViewController(withIdentifier: "DDayEditView") as? DDayEditViewController else {return}
+            self.present(nextVc, animated: true, completion: nil)
+        }else {
+            let vc = UIStoryboard(name: "CardListViewEx", bundle: nil)
+            guard let nextVc = vc.instantiateViewController(withIdentifier: "CardListViewEx") as? CardListExViewController else {return}
+            self.present(nextVc, animated: true, completion: nil)
+        }
     }
 }
 
