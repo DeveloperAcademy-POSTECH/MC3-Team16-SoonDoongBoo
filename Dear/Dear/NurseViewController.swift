@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController1: UIViewController {
+class NurseViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

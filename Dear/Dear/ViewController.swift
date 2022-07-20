@@ -9,35 +9,35 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var SelectionnurseView: UIView!
-    @IBOutlet weak var SelectionpatientView: UIView!
+    @IBOutlet weak var selectionNurseView: UIView!
+    @IBOutlet weak var selectionPatientView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        SelectionnurseView.layer.cornerRadius = 10
-        SelectionpatientView.layer.cornerRadius = 10
-        SelectionnurseView.layer.borderColor = UIColor(named: "ButtonBorderColor")?.cgColor
-        SelectionpatientView.layer.borderColor = UIColor(named: "ButtonBorderColor")?.cgColor
-        SelectionnurseView.layer.borderWidth = 2
-        SelectionpatientView.layer.borderWidth = 2
+        selectionNurseView.layer.cornerRadius = 10
+        selectionPatientView.layer.cornerRadius = 10
+        selectionNurseView.layer.borderColor = UIColor(named: "ButtonBorderColor")?.cgColor
+        selectionPatientView.layer.borderColor = UIColor(named: "ButtonBorderColor")?.cgColor
+        selectionNurseView.layer.borderWidth = 2
+        selectionPatientView.layer.borderWidth = 2
         
         
         let nuresTapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(viewSelectionnurseTapped))
-        SelectionnurseView.addGestureRecognizer(nuresTapGestureRecognizer)
+        selectionNurseView.addGestureRecognizer(nuresTapGestureRecognizer)
         
         let patientTapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(viewSelectionpatientTapped))
-        SelectionpatientView.addGestureRecognizer(patientTapGestureRecognizer)
+        selectionPatientView.addGestureRecognizer(patientTapGestureRecognizer)
     }
     
     
     @objc func viewSelectionnurseTapped(sender: UITapGestureRecognizer) {
-        guard let vc = storyboard?.instantiateViewController(withIdentifier: "vc1") as? ViewController1 else {return}
+        guard let vc = storyboard?.instantiateViewController(withIdentifier: "vc1") as? NurseViewController else {return}
         navigationController?.pushViewController(vc, animated: true)
     }
     
     @objc func viewSelectionpatientTapped(sender: UITapGestureRecognizer) {
-        guard let vc = storyboard?.instantiateViewController(withIdentifier: "vc2") as? ViewController2 else {return}
+        guard let vc = storyboard?.instantiateViewController(withIdentifier: "vc2") as? PatientViewController else {return}
         navigationController?.pushViewController(vc, animated: true)
     }
     

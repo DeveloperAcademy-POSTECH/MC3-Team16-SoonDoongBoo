@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8E1DF04628854B7600B7EE87 /* ViewController1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E1DF04528854B7600B7EE87 /* ViewController1.swift */; };
-		8E1DF04828854B9900B7EE87 /* ViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E1DF04728854B9900B7EE87 /* ViewController2.swift */; };
+		8E15F7602887CE1D0044029F /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E15F75F2887CE1D0044029F /* FirstViewController.swift */; };
+		8E15F7622887CEAB0044029F /* First.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E15F7612887CEAB0044029F /* First.storyboard */; };
+		8E1DF04628854B7600B7EE87 /* NurseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E1DF04528854B7600B7EE87 /* NurseViewController.swift */; };
+		8E1DF04828854B9900B7EE87 /* PatientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E1DF04728854B9900B7EE87 /* PatientViewController.swift */; };
 		B94C2D5B287FFBC300B3C442 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94C2D5A287FFBC300B3C442 /* AppDelegate.swift */; };
 		B94C2D5D287FFBC300B3C442 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94C2D5C287FFBC300B3C442 /* SceneDelegate.swift */; };
 		B94C2D5F287FFBC300B3C442 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94C2D5E287FFBC300B3C442 /* ViewController.swift */; };
@@ -25,8 +27,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		8E1DF04528854B7600B7EE87 /* ViewController1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController1.swift; sourceTree = "<group>"; };
-		8E1DF04728854B9900B7EE87 /* ViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController2.swift; sourceTree = "<group>"; };
+		8E15F75F2887CE1D0044029F /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		8E15F7612887CEAB0044029F /* First.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = First.storyboard; sourceTree = "<group>"; };
+		8E1DF04528854B7600B7EE87 /* NurseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NurseViewController.swift; sourceTree = "<group>"; };
+		8E1DF04728854B9900B7EE87 /* PatientViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientViewController.swift; sourceTree = "<group>"; };
 		B94C2D57287FFBC300B3C442 /* Dear.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dear.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B94C2D5A287FFBC300B3C442 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B94C2D5C287FFBC300B3C442 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -78,11 +82,13 @@
 				B94C2D5C287FFBC300B3C442 /* SceneDelegate.swift */,
 				B94C2D5E287FFBC300B3C442 /* ViewController.swift */,
 				B94C2D60287FFBC300B3C442 /* Main.storyboard */,
+				8E15F7612887CEAB0044029F /* First.storyboard */,
 				B94C2D63287FFBC400B3C442 /* Assets.xcassets */,
 				B94C2D65287FFBC400B3C442 /* LaunchScreen.storyboard */,
 				B94C2D68287FFBC400B3C442 /* Info.plist */,
-				8E1DF04528854B7600B7EE87 /* ViewController1.swift */,
-				8E1DF04728854B9900B7EE87 /* ViewController2.swift */,
+				8E1DF04528854B7600B7EE87 /* NurseViewController.swift */,
+				8E15F75F2887CE1D0044029F /* FirstViewController.swift */,
+				8E1DF04728854B9900B7EE87 /* PatientViewController.swift */,
 				B94C2D6E287FFD5000B3C442 /* GoogleService-Info.plist */,
 			);
 			path = Dear;
@@ -162,6 +168,7 @@
 				B94C2D6F287FFD5000B3C442 /* GoogleService-Info.plist in Resources */,
 				B94C2D64287FFBC400B3C442 /* Assets.xcassets in Resources */,
 				B94C2D62287FFBC300B3C442 /* Main.storyboard in Resources */,
+				8E15F7622887CEAB0044029F /* First.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -172,9 +179,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8E1DF04828854B9900B7EE87 /* ViewController2.swift in Sources */,
-				8E1DF04628854B7600B7EE87 /* ViewController1.swift in Sources */,
+				8E1DF04828854B9900B7EE87 /* PatientViewController.swift in Sources */,
+				8E1DF04628854B7600B7EE87 /* NurseViewController.swift in Sources */,
 				B94C2D5F287FFBC300B3C442 /* ViewController.swift in Sources */,
+				8E15F7602887CE1D0044029F /* FirstViewController.swift in Sources */,
 				B94C2D5B287FFBC300B3C442 /* AppDelegate.swift in Sources */,
 				B94C2D5D287FFBC300B3C442 /* SceneDelegate.swift in Sources */,
 			);
@@ -323,7 +331,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 3PFDRPLY6N;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Dear/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -351,7 +359,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 3PFDRPLY6N;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Dear/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
