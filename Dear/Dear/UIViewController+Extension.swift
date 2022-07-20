@@ -4,8 +4,6 @@
 //
 //  Created by 한연희 on 2022/07/18.
 //
-
-import Foundation
 import UIKit
 
 // 키보드 숨기기

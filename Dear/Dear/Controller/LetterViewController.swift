@@ -20,8 +20,7 @@ class LetterViewController: UIViewController {
         let yes = UIAlertAction(title: "확인", style: .default, handler: nil)
         let no = UIAlertAction(title: "취소", style: .destructive, handler: nil)
         
-        alert.addAction(no)
-        alert.addAction(yes)
+        [no, yes].forEach { alert.addAction($0) }
         
         present(alert, animated: true, completion: nil)
     }
