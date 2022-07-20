@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="0Cr-nV-KZL">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="insetGrouped" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="PCq-ys-Js4">
-                                <rect key="frame" x="0.0" y="44" width="390" height="766"/>
+                                <rect key="frame" x="0.0" y="88" width="390" height="722"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="dDayCustomCell" rowHeight="50" id="OSR-9k-Czn" customClass="DDayCustomTableViewCell" customModule="Dear" customModuleProvider="target">
@@ -83,10 +83,10 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="350" height="230"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="48" translatesAutoresizingMaskIntoConstraints="NO" id="afG-L9-mGb">
-                                                            <rect key="frame" x="20" y="30" width="310" height="131.33333333333334"/>
+                                                            <rect key="frame" x="20" y="30" width="310" height="137.33333333333334"/>
                                                             <subviews>
                                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="rBW-FX-H55">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="310" height="131.33333333333334"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="310" height="137.33333333333334"/>
                                                                     <subviews>
                                                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="1zp-1I-eEP">
                                                                             <rect key="frame" x="0.0" y="0.0" width="310" height="21.666666666666668"/>
@@ -109,11 +109,11 @@
                                                                             </constraints>
                                                                         </stackView>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zg0-Ij-sRq">
-                                                                            <rect key="frame" x="0.0" y="41.666666666666664" width="310" height="89.666666666666686"/>
+                                                                            <rect key="frame" x="0.0" y="41.666666666666664" width="310" height="95.666666666666686"/>
                                                                             <attributedString key="attributedText">
                                                                                 <fragment content="가나다라마바사아자차카타파하가나다라마바사아자차카타파하가나다라마바사아자차카타파하가나다라마바사아자차카타파하가나다라마바사아자차카타파하가나다라마바사아자차카타파하가나다라마바사아자차카타파하가나다라마바사아자차카타파하가나다라마바사아자차카타파하">
                                                                                     <attributes>
-                                                                                        <font key="NSFont" size="14" name=".AppleSDGothicNeoI-Regular"/>
+                                                                                        <font key="NSFont" metaFont="system" size="14"/>
                                                                                         <font key="NSOriginalFont" metaFont="system" size="14"/>
                                                                                         <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="3" tighteningFactorForTruncation="0.0"/>
                                                                                     </attributes>
@@ -163,11 +163,30 @@
                             <constraint firstAttribute="trailing" secondItem="PCq-ys-Js4" secondAttribute="trailing" id="gGY-7R-xY0"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="i8N-8E-NO0"/>
                     <connections>
                         <outlet property="tableView" destination="PCq-ys-Js4" id="koC-ot-n7E"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="933.84615384615381" y="75.355450236966817"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="HdK-RH-Vki">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0Cr-nV-KZL" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="CVv-Ov-rdk">
+                        <rect key="frame" x="0.0" y="44" width="390" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="FrI-Qx-sqf"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="okf-ym-FWf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4.615384615384615" y="75.355450236966817"/>
         </scene>

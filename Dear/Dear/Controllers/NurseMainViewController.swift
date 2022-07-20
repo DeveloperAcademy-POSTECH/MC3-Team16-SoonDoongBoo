@@ -57,7 +57,8 @@ class NurseMainViewController: UIViewController {
         ])
         
         //section header
-        tableView.register(NurseMainSectionHeader.self, forHeaderFooterViewReuseIdentifier: "sectionHeader")
+        var sectionHeader = NurseMainSectionHeader.self
+        tableView.register(sectionHeader, forHeaderFooterViewReuseIdentifier: "sectionHeader")
         
         //MARK: - Firebase 추가
         //firebase 초기 data 가져오기
@@ -71,6 +72,7 @@ class NurseMainViewController: UIViewController {
     @objc func btnClick (_ button: UIButton) {
         print("버튼 클릭 시 이벤트")
     }
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -89,6 +91,7 @@ extension NurseMainViewController: UITableViewDelegate{
         case 0:
             view.headerTitle.text = "D-Day"
             view.headerButton.setTitle("수정하기", for: .normal)
+            view.headerButton.addTarget(self, action: #selector(dDayEditTapped(_:)), for: .touchUpInside)
         default:
             view.headerTitle.text = "받은 마음카드"
             view.headerButton.setTitle("더보기", for: .normal)
@@ -98,6 +101,10 @@ extension NurseMainViewController: UITableViewDelegate{
     //section header height
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 50
+    }
+    @objc func dDayEditTapped(_ button: UIButton) {
+        guard let vc = storyboard?.instantiateViewController(withIdentifier: "vc1") as? NurseViewController else {return}
+        navigationController?.pushViewController(vc, animated: true)
     }
 }
 
@@ -117,10 +124,14 @@ extension NurseMainViewController: UITableViewDataSource{
         case 0:
             let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier[1], for: indexPath) as! DDayCustomTableViewCell
             cell.selectionStyle = .none
-//            cell.cellView.layer.cornerRadius = 10
 
             cell.DDayTitleLabel.text = dDays[indexPath.row].title
-            cell.DDayDateLabel.text = dDays[indexPath.row].date.formatted(date: .numeric, time: .omitted)
+            
+            //MARK: - D-Day 기능 추가
+            //디데이 계산
+            print(dDays[indexPath.row].date, Date())
+            cell.DDayDateLabel.text = updateDDay(dDay: dDays[indexPath.row])
+            
             return cell
         default:
             let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier[2], for: indexPath) as! LetterCustomTableViewCell
@@ -132,6 +143,19 @@ extension NurseMainViewController: UITableViewDataSource{
             cell.letterContentLabel.text = letters[indexPath.row].letterContent
             cell.letterDateLabel.text = letters[indexPath.row].date
             return cell
+        }
+    }
+    //MARK: - D-DAY 계산 기능 추가
+    //디데이 계산 함수
+    private func updateDDay(dDay: DDay) -> String {
+        if dDay.calculateDays() < 0 {
+            let day = abs(dDay.calculateDays()) + 1
+            return "D+\(day)"
+        } else if dDay.calculateDays() > 0 {
+            let day = abs(dDay.calculateDays()) + 1
+            return "D-\(day)"
+        }else {
+            return "D-Day"
         }
     }
 }
