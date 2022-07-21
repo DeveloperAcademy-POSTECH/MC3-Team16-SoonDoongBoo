@@ -106,8 +106,8 @@ extension NurseMainViewController: UITableViewDelegate{
     //sectioni header 버튼 클릭 시 다음 페이지 연결하는 함수
     @objc func sectionBtnTapped(_ button: UIButton) {
         if button.titleLabel?.text == "수정하기" {
-            let vc = UIStoryboard(name: "DDayEditView", bundle: nil)
-            guard let nextVc = vc.instantiateViewController(withIdentifier: "DDayEditView") as? DDayEditViewController else {return}
+            let vc = UIStoryboard(name: "DDay", bundle: nil)
+            guard let nextVc = vc.instantiateViewController(withIdentifier: "DDayViewController") as? DDayViewController else {return}
             navigationController?.pushViewController(nextVc, animated: true)
 //            self.present(nextVc, animated: true, completion: nil)
         }else {
