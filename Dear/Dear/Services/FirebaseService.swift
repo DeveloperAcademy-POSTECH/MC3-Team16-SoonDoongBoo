@@ -12,7 +12,7 @@ import FirebaseAuth
 
 class FirebaseService {
     private let db = Firestore.firestore()
-    private let uid = { FirebaseAuth.getuid() }
+    private let uid = FirebaseAuth.getuid()
     
     // 병원 이름으로 마음 카드를 가져오는 함수
     func fetchLettersByHospital() async throws -> [Letter] {
@@ -66,5 +66,27 @@ class FirebaseService {
         hospitals = models
         
         return hospitals
+    }
+    
+    func sendLetterToHospital(hospitalName: String, letterTo: String, letterContent: String) {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        
+        let date = dateFormatter.string(from: Date())
+        
+        var ref: DocumentReference? = nil
+        ref = db.collection(hospitalName).addDocument(data: [
+            "Date": date,
+            "HospitalName": hospitalName,
+            "LetterTo": letterTo,
+            "LetterContent": letterContent,
+            "uid": String(uid)
+        ]) { err in
+            if let err = err {
+                print("Error adding document: \(err)")
+            } else {
+                print("Document added with ID: \(ref!.documentID)")
+            }
+        }
     }
 }
