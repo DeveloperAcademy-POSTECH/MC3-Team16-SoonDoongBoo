@@ -23,20 +23,25 @@ class FirstViewController: UIViewController {
         selectionPatientView.layer.borderWidth = 2
         
         
-        let nuresTapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(viewSelectionnurseTapped))
+        let nuresTapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(viewSelectionNurseTapped))
         selectionNurseView.addGestureRecognizer(nuresTapGestureRecognizer)
         
-        let patientTapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(viewSelectionpatientTapped))
+        let patientTapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(viewSelectionPatientTapped))
         selectionPatientView.addGestureRecognizer(patientTapGestureRecognizer)
     }
     
-    @objc func viewSelectionnurseTapped(sender: UITapGestureRecognizer) {
-        guard let vc = storyboard?.instantiateViewController(withIdentifier: "vc1") as? NurseViewController else {return}
-        navigationController?.pushViewController(vc, animated: true)
+    @objc func viewSelectionNurseTapped(sender: UITapGestureRecognizer) {
+        print(" 클릭 됨")
+        UserDefaults.standard.setValue( true , forKey: "isUserNurse")
+        let vc = UIStoryboard(name: "SelectHospitalView", bundle: nil)
+        guard let nextVC = vc.instantiateViewController(withIdentifier: "SelectHospitalView") as? HospitalViewController else {return}
+        navigationController?.pushViewController(nextVC, animated: true)
     }
     
-    @objc func viewSelectionpatientTapped(sender: UITapGestureRecognizer) {
-        guard let vc = storyboard?.instantiateViewController(withIdentifier: "vc2") as? PatientViewController else {return}
-        navigationController?.pushViewController(vc, animated: true)
+    @objc func viewSelectionPatientTapped(sender: UITapGestureRecognizer) {
+        UserDefaults.standard.setValue( false , forKey: "isUserNurse")
+        let vc = UIStoryboard(name: "SelectHospitalView", bundle: nil)
+        guard let nextVC = vc.instantiateViewController(withIdentifier: "SelectHospitalView") as? HospitalViewController else {return}
+        navigationController?.pushViewController(nextVC, animated: true)
     }
 }

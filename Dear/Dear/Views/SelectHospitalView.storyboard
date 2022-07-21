@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="aWV-F9-LZ7">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Hospital View Controller-->
+        <scene sceneID="mgl-dd-qJo">
+            <objects>
+                <viewController storyboardIdentifier="SelectHospitalView" id="aWV-F9-LZ7" customClass="HospitalViewController" customModule="Dear" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="d3i-VS-1z6">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="258" translatesAutoresizingMaskIntoConstraints="NO" id="Rd5-zL-S9f">
+                                <rect key="frame" x="29" y="100" width="355" height="31"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Ex-37-Yrg">
+                                        <rect key="frame" x="0.0" y="0.0" width="48.5" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="이전"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wl0-sB-0Pt">
+                                        <rect key="frame" x="306.5" y="0.0" width="48.5" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="완료"/>
+                                        <connections>
+                                            <action selector="CompletebtnAction:" destination="aWV-F9-LZ7" eventType="touchUpInside" id="t2e-49-pqh"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PR2-vZ-Zki">
+                                <rect key="frame" x="30" y="478" width="354" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="pjb-cj-ayq"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="병원을 선택해주세요" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ge7-5w-vEJ">
+                                <rect key="frame" x="35" y="240" width="137" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="8Ej-ae-l90"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="PR2-vZ-Zki" firstAttribute="leading" secondItem="8Ej-ae-l90" secondAttribute="leading" constant="30" id="gCZ-ik-JHm"/>
+                            <constraint firstItem="Rd5-zL-S9f" firstAttribute="top" secondItem="d3i-VS-1z6" secondAttribute="top" constant="100" id="nYd-2k-mRp"/>
+                            <constraint firstItem="8Ej-ae-l90" firstAttribute="trailing" secondItem="PR2-vZ-Zki" secondAttribute="trailing" constant="30" id="qS8-FO-bUC"/>
+                            <constraint firstItem="8Ej-ae-l90" firstAttribute="bottom" secondItem="PR2-vZ-Zki" secondAttribute="bottom" constant="350" id="rGZ-ll-Uh4"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="NlN-SC-blK"/>
+                    <connections>
+                        <outlet property="hospitalTextField" destination="PR2-vZ-Zki" id="F0g-jf-VnG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BDp-Jz-wkW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1853.6231884057972" y="347.54464285714283"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

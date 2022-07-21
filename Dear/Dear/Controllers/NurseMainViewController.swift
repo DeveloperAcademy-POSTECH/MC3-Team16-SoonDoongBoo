@@ -57,7 +57,7 @@ class NurseMainViewController: UIViewController {
         ])
         
         //section header
-        var sectionHeader = NurseMainSectionHeader.self
+        let sectionHeader = NurseMainSectionHeader.self
         tableView.register(sectionHeader, forHeaderFooterViewReuseIdentifier: "sectionHeader")
         
         //MARK: - Firebase 추가
@@ -108,11 +108,13 @@ extension NurseMainViewController: UITableViewDelegate{
         if button.titleLabel?.text == "수정하기" {
             let vc = UIStoryboard(name: "DDayEditView", bundle: nil)
             guard let nextVc = vc.instantiateViewController(withIdentifier: "DDayEditView") as? DDayEditViewController else {return}
-            self.present(nextVc, animated: true, completion: nil)
+            navigationController?.pushViewController(nextVc, animated: true)
+//            self.present(nextVc, animated: true, completion: nil)
         }else {
             let vc = UIStoryboard(name: "CardListViewEx", bundle: nil)
             guard let nextVc = vc.instantiateViewController(withIdentifier: "CardListViewEx") as? CardListExViewController else {return}
-            self.present(nextVc, animated: true, completion: nil)
+            navigationController?.pushViewController(nextVc, animated: true)
+//            self.present(nextVc, animated: true, completion: nil)
         }
     }
 }

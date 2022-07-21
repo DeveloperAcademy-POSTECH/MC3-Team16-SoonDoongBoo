@@ -7,7 +7,20 @@
 import UIKit
 class HospitalViewController: UIViewController {
     
+    let isUserNurse = UserDefaults.standard.bool(forKey: "isUserNurse")
+    
     @IBOutlet weak var hospitalTextField: UITextField!
+    @IBAction func CompletebtnAction(_ sender: Any) {
+        if isUserNurse {
+            let vc = UIStoryboard(name: "NurseMainView", bundle: nil)
+            guard let nextVC = vc.instantiateViewController(withIdentifier: "NurseMainView") as? NurseMainViewController else {return}
+            navigationController?.pushViewController(nextVC, animated: true)
+        }else{
+            let vc = UIStoryboard(name: "WriteCardView", bundle: nil)
+            guard let nextVC = vc.instantiateViewController(withIdentifier: "WriteLetterView") as? LetterViewController else {return}
+            navigationController?.pushViewController(nextVC, animated: true)
+        }
+    }
     
     let hospitals = ["병원01", "병원02", "병원03", "병원04", "병원05"]
     var pickerView = UIPickerView()
