@@ -155,19 +155,13 @@
                                                                         <constraint firstAttribute="height" constant="30" id="awT-nk-J3J"/>
                                                                     </constraints>
                                                                 </stackView>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Letter Content" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2cs-FA-5jq">
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Letter Content" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2cs-FA-5jq">
                                                                     <rect key="frame" x="0.0" y="50" width="310" height="112"/>
-                                                                    <constraints>
-                                                                        <constraint firstAttribute="height" constant="110" id="UaH-ML-ykq"/>
-                                                                    </constraints>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                             </subviews>
-                                                            <constraints>
-                                                                <constraint firstItem="2cs-FA-5jq" firstAttribute="top" secondItem="oOX-rX-JWZ" secondAttribute="bottom" constant="20" id="zhu-We-WAU"/>
-                                                            </constraints>
                                                         </stackView>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P3N-mQ-xbn">
                                                             <rect key="frame" x="0.0" y="192" width="310" height="22"/>
