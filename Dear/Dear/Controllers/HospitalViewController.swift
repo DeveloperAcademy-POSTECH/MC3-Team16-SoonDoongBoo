@@ -24,8 +24,35 @@ class HospitalViewController: UIViewController {
         hospitalTextField.textAlignment = .left
         hospitalTextField.addLeftPadding()
         hospitalTextField.text = hospitals[0]
+        
+        let backButton = UIBarButtonItem(title: "이전", style: .plain, target: self, action: #selector(popToPrevious))
+        backButton.tintColor = .black
+        navigationItem.setLeftBarButton(backButton, animated: true)
+        
+        let confirmButton = UIBarButtonItem(title: "완료", style: .plain, target: self, action: #selector(pushToNext))
+        confirmButton.tintColor = .black
+        navigationItem.setRightBarButton(confirmButton, animated: true)
+    }
+    
+    // Navigation 상에서 뒤로 가기 위한 액션 구현
+    @objc private func popToPrevious() {
+        navigationController?.popViewController(animated: true)
+    }
+    
+    @objc private func pushToNext() {
+        let user = UserDefaults.standard.string(forKey: "user")
+        
+        switch user {
+        case "nurse":
+            print("nurse")
+        case "patient":
+            print("patient")
+        default:
+            fatalError("Error : Not Select User")
+        }
     }
 }
+
 extension HospitalViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {

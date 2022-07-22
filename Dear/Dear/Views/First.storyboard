@@ -38,7 +38,8 @@
                                             <color key="baseForegroundColor" systemColor="labelColor"/>
                                         </buttonConfiguration>
                                         <connections>
-                                            <segue destination="hnt-Kh-bMT" kind="show" id="Zzw-bF-fjh"/>
+                                            <action selector="nurseButtonPressed:" destination="kWm-IB-VGt" eventType="touchUpInside" id="r6X-n7-V9r"/>
+                                            <segue destination="hnt-Kh-bMT" kind="show" id="KJD-CU-QRw"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sPo-4F-PE6">
@@ -53,7 +54,8 @@
                                             <color key="baseForegroundColor" systemColor="labelColor"/>
                                         </buttonConfiguration>
                                         <connections>
-                                            <segue destination="hnt-Kh-bMT" kind="show" id="Ffe-x7-Vya"/>
+                                            <action selector="patientButtonPressed:" destination="kWm-IB-VGt" eventType="touchUpInside" id="vDI-ah-tGe"/>
+                                            <segue destination="hnt-Kh-bMT" kind="show" id="gcg-uy-ecm"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -74,6 +76,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Zxb-qm-LGr"/>
+                    <connections>
+                        <outlet property="navigationItem" destination="Zxb-qm-LGr" id="NEW-zh-Ast"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TEq-1j-RBL" sceneMemberID="firstResponder"/>
             </objects>
@@ -109,7 +114,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Ffe-x7-Vya"/>
+        <segue reference="gcg-uy-ecm"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="circle.fill" catalog="system" width="128" height="121"/>
