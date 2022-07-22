@@ -8,7 +8,7 @@
 import UIKit
 
 class DDayCustomTableViewCell: UITableViewCell {
-    @IBOutlet weak var DDayTitleLabel: UILabel!
-    @IBOutlet weak var DDayDateLabel: UILabel!
+    @IBOutlet weak var dDayTitleLabel: UILabel!
+    @IBOutlet weak var dDayDateLabel: UILabel!
     @IBOutlet weak var cellView: UIView!
 }

@@ -12,5 +12,5 @@ class LetterCustomTableViewCell: UITableViewCell {
     @IBOutlet weak var letterContentLabel: UILabel!
     @IBOutlet weak var letterDateLabel: UILabel!
     @IBOutlet weak var cellView: UIView!
-    @IBOutlet weak var LetterContentView: UIView!
+    @IBOutlet weak var letterContentView: UIView!
 }
