@@ -21,6 +21,8 @@
 		B94C2D742880002200B3C442 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = B94C2D732880002200B3C442 /* FirebaseAuth */; };
 		B94C2D762880002200B3C442 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = B94C2D752880002200B3C442 /* FirebaseDatabase */; };
 		B97645EC2887F0500093FDAA /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97645EB2887F0500093FDAA /* FirstViewController.swift */; };
+		B97645F12887F71B0093FDAA /* DDay.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B97645F02887F71B0093FDAA /* DDay.storyboard */; };
+		B97645F32887F7360093FDAA /* DDayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97645F22887F7360093FDAA /* DDayViewController.swift */; };
 		B9A271E22887EAB100B504B1 /* Third.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B9A271E12887EAB100B504B1 /* Third.storyboard */; };
 		B9A271E42887EACF00B504B1 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9A271E32887EACF00B504B1 /* ThirdViewController.swift */; };
 		B9A271E62887EAE200B504B1 /* HospitalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9A271E52887EAE200B504B1 /* HospitalViewController.swift */; };
@@ -38,6 +40,7 @@
 		EC09B67B2888388F00632D72 /* DDayCustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC09B6782888388F00632D72 /* DDayCustomTableViewCell.swift */; };
 		EC09B67E2888393000632D72 /* DDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC09B67D2888393000632D72 /* DDay.swift */; };
 		EC09B6842888535400632D72 /* NurseMainTableHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC09B6832888535400632D72 /* NurseMainTableHeader.swift */; };
+		B9CB989328884BE800200510 /* DDayTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9CB989228884BE800200510 /* DDayTableCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +57,8 @@
 		B94C2D68287FFBC400B3C442 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B94C2D6E287FFD5000B3C442 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B97645EB2887F0500093FDAA /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		B97645F02887F71B0093FDAA /* DDay.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DDay.storyboard; sourceTree = "<group>"; };
+		B97645F22887F7360093FDAA /* DDayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDayViewController.swift; sourceTree = "<group>"; };
 		B9A271E12887EAB100B504B1 /* Third.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Third.storyboard; sourceTree = "<group>"; };
 		B9A271E32887EACF00B504B1 /* ThirdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
 		B9A271E52887EAE200B504B1 /* HospitalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HospitalViewController.swift; sourceTree = "<group>"; };
@@ -68,6 +73,7 @@
 		EC09B6782888388F00632D72 /* DDayCustomTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DDayCustomTableViewCell.swift; sourceTree = "<group>"; };
 		EC09B67D2888393000632D72 /* DDay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DDay.swift; sourceTree = "<group>"; };
 		EC09B6832888535400632D72 /* NurseMainTableHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NurseMainTableHeader.swift; sourceTree = "<group>"; };
+		B9CB989228884BE800200510 /* DDayTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDayTableCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +157,8 @@
 				B9A271EB2887ED0E00B504B1 /* NurseViewController.swift */,
 				B9A271ED2887ED0E00B504B1 /* PatientViewController.swift */,
 				B97645EB2887F0500093FDAA /* FirstViewController.swift */,
+				B97645F22887F7360093FDAA /* DDayViewController.swift */,
+				B9CB989228884BE800200510 /* DDayTableCell.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -161,6 +169,7 @@
 				EC09B6732888387000632D72 /* NurseMainView.storyboard */,
 				B9A271E12887EAB100B504B1 /* Third.storyboard */,
 				B9A271E92887ECF400B504B1 /* First.storyboard */,
+				B97645F02887F71B0093FDAA /* DDay.storyboard */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -252,6 +261,7 @@
 				B94C2D62287FFBC300B3C442 /* Main.storyboard in Resources */,
 				B9A271E22887EAB100B504B1 /* Third.storyboard in Resources */,
 				B9A271EA2887ECF400B504B1 /* First.storyboard in Resources */,
+				B97645F12887F71B0093FDAA /* DDay.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,6 +272,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B97645F32887F7360093FDAA /* DDayViewController.swift in Sources */,
 				B94C2D5F287FFBC300B3C442 /* ViewController.swift in Sources */,
 				B94C2D5B287FFBC300B3C442 /* AppDelegate.swift in Sources */,
 				B9A271F02887ED0E00B504B1 /* PatientViewController.swift in Sources */,
@@ -277,6 +288,7 @@
 				EC09B67E2888393000632D72 /* DDay.swift in Sources */,
 				EC09B6742888387100632D72 /* NurseMainViewController.swift in Sources */,
 				B9A271EE2887ED0E00B504B1 /* NurseViewController.swift in Sources */,
+				B9CB989328884BE800200510 /* DDayTableCell.swift in Sources */,
 				B92EF32328868AE500AEC6E9 /* FirebaseService.swift in Sources */,
 				B9A271E82887EAE700B504B1 /* LetterViewController.swift in Sources */,
 				B92EF31E2886888B00AEC6E9 /* Letter.swift in Sources */,
