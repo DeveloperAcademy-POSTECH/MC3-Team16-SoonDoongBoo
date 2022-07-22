@@ -81,49 +81,46 @@
         <!--Letter View Controller-->
         <scene sceneID="1Ri-0a-dSK">
             <objects>
-                <viewController id="wf1-GY-au0" customClass="LetterViewController" customModule="Dear" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LetterView" id="wf1-GY-au0" customClass="LetterViewController" customModule="Dear" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cqQ-mR-V4C">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R8z-U3-h1w">
-                                <rect key="frame" x="332" y="66" width="49" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="완료"/>
-                                <connections>
-                                    <action selector="PrintAlert:" destination="wf1-GY-au0" eventType="touchUpInside" id="Fsi-PH-eSt"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="선택한 병원 표시" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mkm-PA-Jwh">
-                                <rect key="frame" x="151" y="71" width="112" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="마음카드 쓰기" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rGz-da-awL">
+                                <rect key="frame" x="20" y="64" width="130" height="29"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="To. OOO 간호사님께" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2cJ-TM-BBE">
-                                <rect key="frame" x="52" y="212" width="311" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="To. OOO 간호사님께" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2cJ-TM-BBE">
+                                <rect key="frame" x="20" y="123" width="350" height="62"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="62" id="JrK-hv-85R"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="마음카드 쓰기" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rGz-da-awL">
-                                <rect key="frame" x="52" y="147" width="93" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="내용을 입력해주세요" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="srE-xU-aId">
+                                <rect key="frame" x="20" y="205" width="350" height="500"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="500" id="dUJ-KG-wFt"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="내용을 입력해주세요" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="srE-xU-aId">
-                                <rect key="frame" x="52" y="267" width="311" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no"/>
                             </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="WFY-Ws-OSy"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="rGz-da-awL" firstAttribute="top" secondItem="WFY-Ws-OSy" secondAttribute="top" constant="20" id="3wO-eX-pxH"/>
+                            <constraint firstItem="WFY-Ws-OSy" firstAttribute="trailing" secondItem="srE-xU-aId" secondAttribute="trailing" constant="20" id="5GQ-bW-aan"/>
+                            <constraint firstItem="srE-xU-aId" firstAttribute="top" secondItem="2cJ-TM-BBE" secondAttribute="bottom" constant="20" id="8My-eC-vb0"/>
+                            <constraint firstItem="rGz-da-awL" firstAttribute="leading" secondItem="WFY-Ws-OSy" secondAttribute="leading" constant="20" id="FNw-zf-olx"/>
+                            <constraint firstItem="WFY-Ws-OSy" firstAttribute="trailing" secondItem="2cJ-TM-BBE" secondAttribute="trailing" constant="20" id="Q70-0N-562"/>
+                            <constraint firstItem="2cJ-TM-BBE" firstAttribute="top" secondItem="rGz-da-awL" secondAttribute="bottom" constant="30" id="Yak-8Y-hJU"/>
+                            <constraint firstItem="srE-xU-aId" firstAttribute="leading" secondItem="WFY-Ws-OSy" secondAttribute="leading" constant="20" id="rFa-pH-isU"/>
+                            <constraint firstItem="2cJ-TM-BBE" firstAttribute="leading" secondItem="WFY-Ws-OSy" secondAttribute="leading" constant="20" id="zBf-qK-BLs"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="4Op-ci-Dua"/>
                     <connections>
