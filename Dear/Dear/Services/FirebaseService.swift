@@ -12,13 +12,13 @@ import FirebaseAuth
 
 class FirebaseService {
     private let db = Firestore.firestore()
-    private let uid = { FirebaseAuth.getuid() }
+    private let uid = FirebaseAuth.getuid()
     
     // 병원 이름으로 마음 카드를 가져오는 함수
-    func fetchLettersByHospital() async throws -> [Letter] {
+    func fetchLettersByHospital(hospitalName: String) async throws -> [Letter] {
         var letters: [Letter] = []
         
-        let documents = try await db.collection("TestHospital").getDocuments()
+        let documents = try await db.collection("Letters").whereField("HospitalName", in: [hospitalName]).getDocuments()
 
         let models = documents.documents.map({ (document) -> Letter in
             if let model = Letter(dictionary: document.data()) {
@@ -32,11 +32,11 @@ class FirebaseService {
         return letters
     }
     
-    // 환자가 작성한 편지를 가져오는 함수
+    // 환자가 작성한 마음 카드를 가져오는 함수
     func fetchLettersByName() async throws -> [Letter] {
         var letters: [Letter] = []
         
-        let documents = try await db.collection("TestHospital").whereField("uid", in: [uid]).getDocuments()
+        let documents = try await db.collection("Letters").whereField("uid", in: [String(uid)]).getDocuments()
         
         let models = documents.documents.map({ (document) -> Letter in
             if let model = Letter(dictionary: document.data()) {
@@ -66,5 +66,28 @@ class FirebaseService {
         hospitals = models
         
         return hospitals
+    }
+    
+    // 마음 카드를 파이어베이스에 등록하는 함수
+    func sendLetterToHospital(hospitalName: String, letterTo: String, letterContent: String) {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        
+        let date = dateFormatter.string(from: Date())
+        
+        var ref: DocumentReference? = nil
+        ref = db.collection("Letters").addDocument(data: [
+            "Date": date,
+            "HospitalName": hospitalName,
+            "LetterTo": letterTo,
+            "LetterContent": letterContent,
+            "uid": String(uid)
+        ]) { err in
+            if let err = err {
+                print("Error adding document: \(err)")
+            } else {
+                print("Document added with ID: \(ref!.documentID)")
+            }
+        }
     }
 }
