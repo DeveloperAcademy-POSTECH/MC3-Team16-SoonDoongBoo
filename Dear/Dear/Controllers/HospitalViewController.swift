@@ -18,7 +18,12 @@ class HospitalViewController: UIViewController {
         pickerView.dataSource = self
         
         hospitalTextField.inputView = pickerView
+        hospitalTextField.borderStyle = .none
+        hospitalTextField.layer.cornerRadius = 10
+        hospitalTextField.backgroundColor = UIColor(named: "TextFieldBackgroundColor")
         hospitalTextField.textAlignment = .left
+        hospitalTextField.addLeftPadding()
+        hospitalTextField.text = hospitals[0]
     }
 }
 extension HospitalViewController: UIPickerViewDelegate, UIPickerViewDataSource {

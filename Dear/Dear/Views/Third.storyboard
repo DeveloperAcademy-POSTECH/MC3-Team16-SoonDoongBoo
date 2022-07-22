@@ -47,35 +47,22 @@
         <!--Hospital View Controller-->
         <scene sceneID="3QJ-7v-2yP">
             <objects>
-                <viewController id="ZSR-aD-y6O" customClass="HospitalViewController" customModule="Dear" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HospitalViewController" id="ZSR-aD-y6O" customClass="HospitalViewController" customModule="Dear" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="MRu-cF-Rid">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="57t-0a-SOI">
-                                <rect key="frame" x="29" y="39" width="49" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="이전"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3jO-Ll-zqq">
-                                <rect key="frame" x="336" y="39" width="49" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="완료"/>
-                            </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qNa-LL-BfN">
-                                <rect key="frame" x="30" y="458" width="354" height="34"/>
+                                <rect key="frame" x="20" y="391" width="374" height="60"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="34" id="dXR-c1-3La"/>
+                                    <constraint firstAttribute="height" constant="60" id="WpL-hj-Vz9"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="병원을 선택해주세요" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EXr-95-boG">
-                                <rect key="frame" x="35" y="240" width="137" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="병원을 선택해주세요" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EXr-95-boG">
+                                <rect key="frame" x="20" y="150" width="192" height="29"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -83,9 +70,12 @@
                         <viewLayoutGuide key="safeArea" id="0uI-Mq-mKX"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="0uI-Mq-mKX" firstAttribute="bottom" secondItem="qNa-LL-BfN" secondAttribute="bottom" constant="350" id="7Vv-RE-8E4"/>
-                            <constraint firstItem="qNa-LL-BfN" firstAttribute="leading" secondItem="0uI-Mq-mKX" secondAttribute="leading" constant="30" id="ZUs-vE-uif"/>
-                            <constraint firstItem="0uI-Mq-mKX" firstAttribute="trailing" secondItem="qNa-LL-BfN" secondAttribute="trailing" constant="30" id="mzM-f5-IvC"/>
+                            <constraint firstItem="0uI-Mq-mKX" firstAttribute="trailing" secondItem="qNa-LL-BfN" secondAttribute="trailing" constant="20" id="0tN-eI-CYA"/>
+                            <constraint firstItem="qNa-LL-BfN" firstAttribute="centerX" secondItem="MRu-cF-Rid" secondAttribute="centerX" id="Ku6-e6-FWh"/>
+                            <constraint firstItem="qNa-LL-BfN" firstAttribute="centerY" secondItem="MRu-cF-Rid" secondAttribute="centerY" id="LYo-DZ-Yoh"/>
+                            <constraint firstItem="EXr-95-boG" firstAttribute="top" secondItem="0uI-Mq-mKX" secondAttribute="top" constant="106" id="Omu-uY-gLL"/>
+                            <constraint firstItem="EXr-95-boG" firstAttribute="leading" secondItem="0uI-Mq-mKX" secondAttribute="leading" constant="20" id="x87-WX-8p5"/>
+                            <constraint firstItem="qNa-LL-BfN" firstAttribute="leading" secondItem="0uI-Mq-mKX" secondAttribute="leading" constant="20" id="y4p-TN-zg8"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="tcw-MK-ltd"/>

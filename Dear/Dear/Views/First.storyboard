@@ -3,6 +3,7 @@
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -22,139 +23,71 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="G0x-v5-7rL">
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="6sR-Ud-xlZ">
                                 <rect key="frame" x="20" y="322" width="350" height="200"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hjt-6N-G0t">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yj5-Yn-pCY">
                                         <rect key="frame" x="0.0" y="0.0" width="170" height="200"/>
-                                        <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="oOe-0R-YT3">
-                                                <rect key="frame" x="60" y="50.000000000000007" width="50" height="48.666666666666664"/>
-                                                <color key="tintColor" systemColor="systemGrayColor"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="50" id="0D5-fr-vhD"/>
-                                                    <constraint firstAttribute="width" constant="50" id="jVl-By-J4c"/>
-                                                </constraints>
-                                            </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="병원 관계자" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qhs-qw-Hco">
-                                                <rect key="frame" x="48.333333333333321" y="109" width="73.666666666666686" height="19.333333333333343"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                        <constraints>
-                                            <constraint firstItem="qhs-qw-Hco" firstAttribute="centerX" secondItem="Hjt-6N-G0t" secondAttribute="centerX" id="AhX-RP-tAL"/>
-                                            <constraint firstAttribute="height" constant="200" id="FAJ-Ln-4Rl"/>
-                                            <constraint firstItem="oOe-0R-YT3" firstAttribute="top" secondItem="Hjt-6N-G0t" secondAttribute="top" constant="49" id="Zfk-IU-nIH"/>
-                                            <constraint firstItem="qhs-qw-Hco" firstAttribute="top" secondItem="oOe-0R-YT3" secondAttribute="bottom" constant="10" id="fNi-Wj-3hU"/>
-                                            <constraint firstAttribute="width" constant="170" id="fsU-oW-nbn"/>
-                                            <constraint firstItem="oOe-0R-YT3" firstAttribute="centerX" secondItem="qhs-qw-Hco" secondAttribute="centerX" id="xVj-ml-n9y"/>
-                                        </constraints>
-                                    </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v90-2O-uLq">
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="circle.fill" catalog="system" imagePlacement="top" title="병원 관계자" imagePadding="10">
+                                            <backgroundConfiguration key="background" cornerRadius="10" strokeWidth="2">
+                                                <color key="strokeColor" name="ButtonBorderColor"/>
+                                            </backgroundConfiguration>
+                                            <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="50" scale="default"/>
+                                            <fontDescription key="titleFontDescription" type="boldSystem" pointSize="16"/>
+                                            <color key="baseForegroundColor" systemColor="labelColor"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <segue destination="hnt-Kh-bMT" kind="show" id="Zzw-bF-fjh"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sPo-4F-PE6">
                                         <rect key="frame" x="180" y="0.0" width="170" height="200"/>
-                                        <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="5gO-mL-9QP">
-                                                <rect key="frame" x="60" y="50.000000000000007" width="50" height="48.666666666666664"/>
-                                                <color key="tintColor" systemColor="systemGrayColor"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="50" id="7Eb-W7-R7l"/>
-                                                    <constraint firstAttribute="height" constant="50" id="wv7-yj-DNO"/>
-                                                </constraints>
-                                            </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="환자 및 보호자" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fNJ-4U-t4f">
-                                                <rect key="frame" x="39.33333333333335" y="109" width="91.666666666666686" height="19.333333333333343"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                        <constraints>
-                                            <constraint firstItem="fNJ-4U-t4f" firstAttribute="centerX" secondItem="v90-2O-uLq" secondAttribute="centerX" id="9Zc-xU-ZT7"/>
-                                            <constraint firstItem="5gO-mL-9QP" firstAttribute="centerX" secondItem="fNJ-4U-t4f" secondAttribute="centerX" id="NMg-iM-iUA"/>
-                                            <constraint firstAttribute="width" constant="170" id="OiH-eK-xbJ"/>
-                                            <constraint firstItem="fNJ-4U-t4f" firstAttribute="top" secondItem="5gO-mL-9QP" secondAttribute="bottom" constant="10" id="Pi9-Jb-0ms"/>
-                                            <constraint firstItem="5gO-mL-9QP" firstAttribute="top" secondItem="v90-2O-uLq" secondAttribute="top" constant="49" id="cKQ-gv-Pin"/>
-                                            <constraint firstAttribute="height" constant="200" id="yR9-Kj-zuM"/>
-                                        </constraints>
-                                    </view>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="circle.fill" catalog="system" imagePlacement="top" title="환자 및 보호자" imagePadding="10">
+                                            <backgroundConfiguration key="background" cornerRadius="10" strokeWidth="2">
+                                                <color key="strokeColor" name="ButtonBorderColor"/>
+                                            </backgroundConfiguration>
+                                            <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="50" scale="default"/>
+                                            <fontDescription key="titleFontDescription" type="boldSystem" pointSize="16"/>
+                                            <color key="baseForegroundColor" systemColor="labelColor"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <segue destination="hnt-Kh-bMT" kind="show" id="Ffe-x7-Vya"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="yhe-xk-pRr"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Ul7-6M-KOk"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Ul7-6M-KOk" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="xsB-F9-ylI" secondAttribute="trailing" symbolic="YES" id="5El-pE-uWc"/>
+                            <constraint firstItem="Ul7-6M-KOk" firstAttribute="trailing" secondItem="6sR-Ud-xlZ" secondAttribute="trailing" constant="20" id="K74-oI-87k"/>
+                            <constraint firstItem="6sR-Ud-xlZ" firstAttribute="centerY" secondItem="xME-RU-aT1" secondAttribute="centerY" id="XiB-ze-p0D"/>
+                            <constraint firstItem="6sR-Ud-xlZ" firstAttribute="centerX" secondItem="xME-RU-aT1" secondAttribute="centerX" id="XyP-bb-ArM"/>
                             <constraint firstItem="xsB-F9-ylI" firstAttribute="top" secondItem="Ul7-6M-KOk" secondAttribute="top" constant="106" id="mRa-0t-gLq"/>
                             <constraint firstItem="xsB-F9-ylI" firstAttribute="leading" secondItem="Ul7-6M-KOk" secondAttribute="leading" constant="20" id="nEN-4B-0g3"/>
-                            <constraint firstItem="G0x-v5-7rL" firstAttribute="centerY" secondItem="xME-RU-aT1" secondAttribute="centerY" id="sVL-GU-cgC"/>
-                            <constraint firstItem="G0x-v5-7rL" firstAttribute="centerX" secondItem="xME-RU-aT1" secondAttribute="centerX" id="xdh-La-6GE"/>
+                            <constraint firstItem="6sR-Ud-xlZ" firstAttribute="leading" secondItem="Ul7-6M-KOk" secondAttribute="leading" constant="20" id="sjG-pl-MiU"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Zxb-qm-LGr"/>
-                    <connections>
-                        <outlet property="selectionNurseView" destination="Hjt-6N-G0t" id="FCT-wz-Gqr"/>
-                        <outlet property="selectionPatientView" destination="v90-2O-uLq" id="b8J-St-rEB"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TEq-1j-RBL" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1970.7692307692307" y="98.104265402843595"/>
         </scene>
-        <!--Nurse View Controller-->
-        <scene sceneID="TUU-bz-7le">
+        <!--HospitalViewController-->
+        <scene sceneID="Zvd-8H-5bW">
             <objects>
-                <viewController storyboardIdentifier="vc1" id="pns-K3-z7N" customClass="NurseViewController" customModule="Dear" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="1ci-kW-gew">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NurseView" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iw7-7j-6mm">
-                                <rect key="frame" x="154" y="411.66666666666669" width="82" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="iDK-6c-d95"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="iw7-7j-6mm" firstAttribute="centerY" secondItem="1ci-kW-gew" secondAttribute="centerY" id="85c-9d-dZh"/>
-                            <constraint firstItem="iw7-7j-6mm" firstAttribute="centerX" secondItem="1ci-kW-gew" secondAttribute="centerX" id="942-Dq-K6M"/>
-                        </constraints>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="IxR-SS-CAc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardIdentifier="HospitalViewController" storyboardName="Third" referencedIdentifier="HospitalViewController" id="hnt-Kh-bMT" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="96c-FH-u4y"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="msw-su-5zH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2701.5384615384614" y="98.104265402843595"/>
-        </scene>
-        <!--Patient View Controller-->
-        <scene sceneID="EFV-k5-fuK">
-            <objects>
-                <viewController storyboardIdentifier="vc2" id="aCL-Vo-dLW" customClass="PatientViewController" customModule="Dear" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="DIj-Ly-1ET">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PatientView" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bqz-20-5qV">
-                                <rect key="frame" x="150" y="411.66666666666669" width="90" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="3Ii-Bs-mrl"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="Bqz-20-5qV" firstAttribute="centerY" secondItem="DIj-Ly-1ET" secondAttribute="centerY" id="LNj-QW-Apt"/>
-                            <constraint firstItem="Bqz-20-5qV" firstAttribute="centerX" secondItem="DIj-Ly-1ET" secondAttribute="centerX" id="t9C-aw-qhF"/>
-                        </constraints>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="TCy-Cw-XvO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3433.8461538461538" y="98.104265402843595"/>
+            <point key="canvasLocation" x="2604" y="-36"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="aoE-gk-aex">
@@ -175,13 +108,19 @@
             <point key="canvasLocation" x="1041.5384615384614" y="98.104265402843595"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Ffe-x7-Vya"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="circle.fill" catalog="system" width="128" height="121"/>
+        <namedColor name="ButtonBorderColor">
+            <color red="0.54509803921568623" green="0.54509803921568623" blue="0.54509803921568623" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemGrayColor">
-            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

@@ -15,26 +15,6 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8kX-yj-Bem">
-                                <rect key="frame" x="174" y="433" width="67" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
-                                <connections>
-                                    <segue destination="e7s-fe-xdj" kind="show" id="9RA-E8-CTS"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ScM-Eh-5JU">
-                                <rect key="frame" x="174" y="564" width="67" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
-                                <connections>
-                                    <segue destination="3dz-gk-TdE" kind="show" id="d6I-jz-AKj"/>
-                                </connections>
-                            </button>
-                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
@@ -42,26 +22,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="132" y="99"/>
-        </scene>
-        <!--ThirdViewController-->
-        <scene sceneID="xmn-xN-PBq">
-            <objects>
-                <viewControllerPlaceholder storyboardIdentifier="ThirdViewController" storyboardName="Third" referencedIdentifier="ThirdViewController" id="e7s-fe-xdj" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="wgu-pa-5ZA"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="DLl-ND-wuA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="842" y="89"/>
-        </scene>
-        <!--UINavigationController-->
-        <scene sceneID="r4A-wV-3fo">
-            <objects>
-                <viewControllerPlaceholder storyboardIdentifier="UINavigationController" storyboardName="First" referencedIdentifier="UINavigationController" id="3dz-gk-TdE" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="GIW-Xn-Cr0"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="w1V-V0-aCY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="849" y="200"/>
         </scene>
     </scenes>
     <resources>
