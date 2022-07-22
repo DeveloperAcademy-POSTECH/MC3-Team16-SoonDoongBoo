@@ -47,13 +47,17 @@ class HospitalViewController: UIViewController {
         
         switch user {
         case "nurse":
-            print("nurse")
+            UserDefaults.standard.set(hospitalTextField.text, forKey: "hospital")
             guard let nurseViewController = UIStoryboard(name: "NurseMainView", bundle: nil).instantiateViewController(withIdentifier: "NurseMainView") as? NurseMainViewController else {
                 return
             }
             navigationController?.pushViewController(nurseViewController, animated: true)
         case "patient":
-            print("patient")
+            UserDefaults.standard.set(hospitalTextField.text, forKey: "hospital")
+            guard let patientViewController = storyboard?.instantiateViewController(withIdentifier: "PatientMainView") as? PatientMainViewController else {
+                return
+            }
+            navigationController?.pushViewController(patientViewController, animated: true)
         default:
             fatalError("Error : Not Select User")
         }
