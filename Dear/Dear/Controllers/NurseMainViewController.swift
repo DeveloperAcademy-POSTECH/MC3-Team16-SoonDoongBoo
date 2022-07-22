@@ -28,6 +28,8 @@ class NurseMainViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         
+        self.navigationController?.setNavigationBarHidden(true, animated: true)
+        
         //TODO: - NurseMainTableHeader 클래스로 추출할 것
         //tablve view header설정
         let header = UIView(frame: CGRect(x: 0, y: 0, width: view.frame.size.width-40, height: 150))

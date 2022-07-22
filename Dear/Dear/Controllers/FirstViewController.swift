@@ -8,35 +8,18 @@
 import UIKit
 
 class FirstViewController: UIViewController {
-
-    @IBOutlet weak var selectionNurseView: UIView!
-    @IBOutlet weak var selectionPatientView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        selectionNurseView.layer.cornerRadius = 10
-        selectionPatientView.layer.cornerRadius = 10
-        selectionNurseView.layer.borderColor = UIColor(named: "ButtonBorderColor")?.cgColor
-        selectionPatientView.layer.borderColor = UIColor(named: "ButtonBorderColor")?.cgColor
-        selectionNurseView.layer.borderWidth = 2
-        selectionPatientView.layer.borderWidth = 2
-        
-        
-        let nuresTapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(viewSelectionnurseTapped))
-        selectionNurseView.addGestureRecognizer(nuresTapGestureRecognizer)
-        
-        let patientTapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(viewSelectionpatientTapped))
-        selectionPatientView.addGestureRecognizer(patientTapGestureRecognizer)
+        navigationItem.hidesBackButton = true
     }
     
-    @objc func viewSelectionnurseTapped(sender: UITapGestureRecognizer) {
-        guard let vc = storyboard?.instantiateViewController(withIdentifier: "vc1") as? NurseViewController else {return}
-        navigationController?.pushViewController(vc, animated: true)
+    @IBAction func nurseButtonPressed(_ sender: UIButton) {
+        UserDefaults.standard.set("nurse", forKey: "user")
     }
     
-    @objc func viewSelectionpatientTapped(sender: UITapGestureRecognizer) {
-        guard let vc = storyboard?.instantiateViewController(withIdentifier: "vc2") as? PatientViewController else {return}
-        navigationController?.pushViewController(vc, animated: true)
+    @IBAction func patientButtonPressed(_ sender: UIButton) {
+        UserDefaults.standard.set("patient", forKey: "user")
     }
 }
