@@ -108,8 +108,8 @@ extension NurseMainViewController: UITableViewDataSource{
             cell.selectionStyle = .none
 //            cell.cellView.layer.cornerRadius = 10
 
-            cell.DDayTitleLabel.text = dDays[indexPath.row].title
-            cell.DDayDateLabel.text = dDays[indexPath.row].date.formatted(date: .numeric, time: .omitted)
+            cell.dDayTitleLabel.text = dDays[indexPath.row].title
+            cell.dDayDateLabel.text = dDays[indexPath.row].date.formatted(date: .numeric, time: .omitted)
             return cell
         default:
             let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier[2], for: indexPath) as! LetterCustomTableViewCell
