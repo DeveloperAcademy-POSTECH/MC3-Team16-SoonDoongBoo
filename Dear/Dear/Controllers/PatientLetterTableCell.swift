@@ -19,7 +19,6 @@ class PatientLetterTableCell: UITableViewCell {
         
         dateView.layer.cornerRadius = 15
         contentView.layer.cornerRadius = 10
-        letterContent.sizeToFit()
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

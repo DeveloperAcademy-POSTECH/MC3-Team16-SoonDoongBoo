@@ -20,7 +20,6 @@ class PatientMainViewController: UIViewController {
         super.viewDidLoad()
         
         setup()
-        print(letters)
         
         // 우측 상단 네비게이션 아이템 설정
         navigationItem.hidesBackButton = true
@@ -34,13 +33,27 @@ class PatientMainViewController: UIViewController {
         hospitalStackView.layer.cornerRadius = 15
         
         // 테이블 뷰 설정
-        if letters.count > 0 {
-            letterTabelView.delegate = self
-            letterTabelView.dataSource = self
-            letterTabelView.separatorStyle = UITableViewCell.SeparatorStyle.none
-            letterTabelView.showsVerticalScrollIndicator = false
-        } else {
-            letterTabelView.layer.opacity = 0
+        letterTabelView.layer.opacity = 0
+        
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1) {
+            print(self.letters)
+            //TODO: LetterContent가 안보이는 문제 발생
+            // 내용은 전부 잘 들어옴
+            if self.letters.count != 0 {
+                self.letterTabelView.layer.opacity = 1
+                self.letterTabelView.delegate = self
+                self.letterTabelView.dataSource = self
+                self.letterTabelView.separatorStyle = UITableViewCell.SeparatorStyle.none
+                self.letterTabelView.showsVerticalScrollIndicator = false
+            }
+        }
+    }
+    
+    override func updateViewConstraints() {
+        super.updateViewConstraints()
+        print(letters.count)
+        if letters.count != 0 {
+            letterTabelView.layer.opacity = 1
         }
     }
     
