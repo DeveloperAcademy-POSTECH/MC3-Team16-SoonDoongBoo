@@ -9,7 +9,7 @@ import UIKit
 
 class PatientMainViewController: UIViewController {
     private var hospitalName = UserDefaults.standard.string(forKey: "hospital")
-    private let letters = Letter.sampleData
+    private var letters: [Letter] = []
     private let cellName = "PatientLetterTableCell"
 
     @IBOutlet weak var hospitalStackView: UIStackView!
@@ -31,10 +31,14 @@ class PatientMainViewController: UIViewController {
         hospitalStackView.layer.cornerRadius = 15
         
         // 테이블 뷰 설정
-        letterTabelView.delegate = self
-        letterTabelView.dataSource = self
-        letterTabelView.separatorStyle = UITableViewCell.SeparatorStyle.none
-        letterTabelView.showsVerticalScrollIndicator = false
+        if letters.count > 0 {
+            letterTabelView.delegate = self
+            letterTabelView.dataSource = self
+            letterTabelView.separatorStyle = UITableViewCell.SeparatorStyle.none
+            letterTabelView.showsVerticalScrollIndicator = false
+        } else {
+            letterTabelView.layer.opacity = 0
+        }
     }
     
     @objc func sendLetterButtonPressed() {
@@ -42,6 +46,15 @@ class PatientMainViewController: UIViewController {
             return
         }
         navigationController?.pushViewController(letterViewController, animated: true)
+    }
+}
+
+extension PatientMainViewController {
+    func setup() {
+        let firebaseService = FirebaseService()
+        Task {
+            letters = try await firebaseService.fetchLettersByName()
+        }
     }
 }
 

@@ -95,6 +95,24 @@
                                 </subviews>
                                 <color key="backgroundColor" name="LabelBackgroundColor"/>
                             </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="GCj-XD-wyY">
+                                <rect key="frame" x="131.33333333333334" y="364" width="127.33333333333334" height="116.33333333333331"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="EmptyLetter" translatesAutoresizingMaskIntoConstraints="NO" id="OL2-2D-RF7">
+                                        <rect key="frame" x="23.666666666666657" y="0.0" width="80" height="76"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="80" id="c37-Lk-bXc"/>
+                                            <constraint firstAttribute="height" constant="76" id="vKs-O2-boC"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="편지함이 비었어요." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SY0-j3-HOZ">
+                                        <rect key="frame" x="0.0" y="96" width="127.33333333333333" height="20.333333333333329"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <color key="textColor" systemColor="secondaryLabelColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="a9E-Fq-f14">
                                 <rect key="frame" x="20" y="174" width="350" height="636"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -210,11 +228,13 @@
                             <constraint firstItem="a9E-Fq-f14" firstAttribute="bottom" secondItem="k2V-l0-7Q0" secondAttribute="bottomMargin" id="CPX-IL-fKo"/>
                             <constraint firstItem="a9E-Fq-f14" firstAttribute="leading" secondItem="GdU-f7-UfQ" secondAttribute="leading" constant="20" id="EWg-M2-FMz"/>
                             <constraint firstItem="GdU-f7-UfQ" firstAttribute="trailing" secondItem="a9E-Fq-f14" secondAttribute="trailing" constant="20" id="MG6-Hw-fTS"/>
+                            <constraint firstItem="GCj-XD-wyY" firstAttribute="centerX" secondItem="k2V-l0-7Q0" secondAttribute="centerX" id="OrD-5q-IaS"/>
                             <constraint firstItem="a9E-Fq-f14" firstAttribute="top" secondItem="wuU-9w-IME" secondAttribute="bottom" constant="20" id="TU2-MD-nKG"/>
                             <constraint firstItem="S8c-8o-eIq" firstAttribute="top" secondItem="GdU-f7-UfQ" secondAttribute="top" constant="22" id="Zoc-dg-GW4"/>
                             <constraint firstItem="wuU-9w-IME" firstAttribute="top" secondItem="S8c-8o-eIq" secondAttribute="bottom" constant="22" id="bju-M4-1lb"/>
                             <constraint firstItem="wuU-9w-IME" firstAttribute="leading" secondItem="GdU-f7-UfQ" secondAttribute="leading" constant="20" id="dsx-1b-QJV"/>
                             <constraint firstItem="S8c-8o-eIq" firstAttribute="leading" secondItem="GdU-f7-UfQ" secondAttribute="leading" constant="20" id="hrr-VB-DgD"/>
+                            <constraint firstItem="GCj-XD-wyY" firstAttribute="centerY" secondItem="k2V-l0-7Q0" secondAttribute="centerY" id="wh2-nm-4Mr"/>
                         </constraints>
                     </view>
                     <connections>
@@ -283,6 +303,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="EmptyLetter" width="80" height="77"/>
         <namedColor name="LabelBackgroundColor">
             <color red="0.85098039215686272" green="0.85098039215686272" blue="0.85098039215686272" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

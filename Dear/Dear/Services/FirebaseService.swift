@@ -36,6 +36,7 @@ class FirebaseService {
     func fetchLettersByName() async throws -> [Letter] {
         var letters: [Letter] = []
         
+        print(uid)
         let documents = try await db.collection("Letters").whereField("uid", in: [String(uid)]).getDocuments()
         
         let models = documents.documents.map({ (document) -> Letter in
