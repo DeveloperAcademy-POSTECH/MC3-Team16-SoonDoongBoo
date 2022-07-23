@@ -19,6 +19,9 @@ class PatientMainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setup()
+        print(letters)
+        
         // 우측 상단 네비게이션 아이템 설정
         navigationItem.hidesBackButton = true
         let sendLetterButton = UIBarButtonItem(image: UIImage(systemName: "square.and.pencil"), style: .plain, target: self, action: #selector(sendLetterButtonPressed))

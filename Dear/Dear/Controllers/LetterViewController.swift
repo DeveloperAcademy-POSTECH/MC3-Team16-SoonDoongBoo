@@ -49,12 +49,27 @@ class LetterViewController: UIViewController, UITextFieldDelegate {
     // Alert를 띄우는 메서드
     @objc func printAlert() {
         let alert = UIAlertController(title: "마음카드를 보낼까요?", message: "발송 완료 후 수정할 수 없습니다", preferredStyle: .alert)
-        let yes = UIAlertAction(title: "확인", style: .default, handler: nil)
+        let yes = UIAlertAction(title: "확인", style: .default) { (_) in
+            self.sendLetter()
+            self.navigationController?.popViewController(animated: true)
+        }
         let no = UIAlertAction(title: "취소", style: .destructive, handler: nil)
         
         [no, yes].forEach { alert.addAction($0) }
         
         present(alert, animated: true, completion: nil)
+    }
+}
+
+extension LetterViewController {
+    func sendLetter() {
+        let firebaseService = FirebaseService()
+        let letterTo = letterTitle.text!
+        let letterContent = letterContext.text!
+        print("Letter Send : \(letterTo), \(letterContent), \(hospitalName)")
+        Task {
+            firebaseService.sendLetterToHospital(hospitalName: hospitalName!, letterTo: letterTo, letterContent: letterContent)
+        }
     }
 }
 
