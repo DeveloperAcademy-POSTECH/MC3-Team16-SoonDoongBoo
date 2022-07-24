@@ -37,6 +37,7 @@
 		B9CB9896288AE6C200200510 /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9CB9895288AE6C200200510 /* TextField.swift */; };
 		B9CB989B288B059900200510 /* PatientMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9CB989A288B059900200510 /* PatientMainViewController.swift */; };
 		B9CB989D288B1F4A00200510 /* PatientLetterTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9CB989C288B1F4900200510 /* PatientLetterTableCell.swift */; };
+		B9CB989F288C01D600200510 /* PatientLetterDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9CB989E288C01D600200510 /* PatientLetterDetailViewController.swift */; };
 		EC09B6742888387100632D72 /* NurseMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC09B6722888387000632D72 /* NurseMainViewController.swift */; };
 		EC09B6752888387100632D72 /* NurseMainView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC09B6732888387000632D72 /* NurseMainView.storyboard */; };
 		EC09B6792888388F00632D72 /* LetterCustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC09B6762888388F00632D72 /* LetterCustomTableViewCell.swift */; };
@@ -75,6 +76,7 @@
 		B9CB9895288AE6C200200510 /* TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
 		B9CB989A288B059900200510 /* PatientMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientMainViewController.swift; sourceTree = "<group>"; };
 		B9CB989C288B1F4900200510 /* PatientLetterTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientLetterTableCell.swift; sourceTree = "<group>"; };
+		B9CB989E288C01D600200510 /* PatientLetterDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientLetterDetailViewController.swift; sourceTree = "<group>"; };
 		EC09B6722888387000632D72 /* NurseMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NurseMainViewController.swift; sourceTree = "<group>"; };
 		EC09B6732888387000632D72 /* NurseMainView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = NurseMainView.storyboard; sourceTree = "<group>"; };
 		EC09B6762888388F00632D72 /* LetterCustomTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LetterCustomTableViewCell.swift; sourceTree = "<group>"; };
@@ -173,6 +175,7 @@
 				B9CB989228884BE800200510 /* DDayTableCell.swift */,
 				B9CB989A288B059900200510 /* PatientMainViewController.swift */,
 				B9CB989C288B1F4900200510 /* PatientLetterTableCell.swift */,
+				B9CB989E288C01D600200510 /* PatientLetterDetailViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -297,6 +300,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EC09B68228883D4200632D72 /* CardDetailViewController.swift in Sources */,
+				B9CB989F288C01D600200510 /* PatientLetterDetailViewController.swift in Sources */,
 				B9CB9896288AE6C200200510 /* TextField.swift in Sources */,
 				B97645F32887F7360093FDAA /* DDayViewController.swift in Sources */,
 				B94C2D5F287FFBC300B3C442 /* ViewController.swift in Sources */,

@@ -13,6 +13,7 @@ class PatientLetterTableCell: UITableViewCell {
     @IBOutlet weak var letterContent: UILabel!
     @IBOutlet weak var dateView: UIStackView!
     @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var detailButton: UIButton!
     
     override func awakeFromNib() {
         super.awakeFromNib()

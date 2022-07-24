@@ -23,6 +23,7 @@ class DDayViewController: UIViewController {
         
         ddayTableView.delegate = self
         ddayTableView.dataSource = self
+        ddayTableView.allowsSelection = false
     }
 
 

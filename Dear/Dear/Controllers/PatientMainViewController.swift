@@ -35,6 +35,7 @@ class PatientMainViewController: UIViewController {
         // 테이블 뷰 설정
         letterTabelView.layer.opacity = 0
         
+        // 1초 뒤에 마음카드가 받아졌는지 확인
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1) {
             print(self.letters)
             //TODO: LetterContent가 안보이는 문제 발생
@@ -49,6 +50,7 @@ class PatientMainViewController: UIViewController {
         }
     }
     
+    // 파이어베이스에서 가져온 마음 카드가 있을 경우에, 테이블 뷰의 opacity를 1로 설정
     override func updateViewConstraints() {
         super.updateViewConstraints()
         print(letters.count)
@@ -57,15 +59,25 @@ class PatientMainViewController: UIViewController {
         }
     }
     
+    // 보내기 버튼을 눌렀을 때 마음 편지 쓰는 뷰로 이동
     @objc func sendLetterButtonPressed() {
         guard let letterViewController = storyboard?.instantiateViewController(withIdentifier: "LetterView") as? LetterViewController else {
             return
         }
         navigationController?.pushViewController(letterViewController, animated: true)
     }
+    
+    // 더보기 버튼을 눌렀을 때, PatientLetterDetailView로 이동하도록 설정
+    @objc func detailButtonPressed() {
+        guard let patientLetterDetailViewController = storyboard?.instantiateViewController(withIdentifier: "PatientLetterDetailView") as? PatientLetterDetailViewController else {
+            return
+        }
+        navigationController?.pushViewController(patientLetterDetailViewController, animated: true)
+    }
 }
 
 extension PatientMainViewController {
+    // 파이어베이스에서 마음 카드 데이터를 가져오는 작업 실행
     func setup() {
         let firebaseService = FirebaseService()
         Task {
@@ -81,10 +93,13 @@ extension PatientMainViewController: UITableViewDelegate, UITableViewDataSource 
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let letterCell = letterTabelView.dequeueReusableCell(withIdentifier: cellName, for: indexPath) as! PatientLetterTableCell
+        let date = String(letters[indexPath.row].date.suffix(5))
         
+        // 각 셀에 데이터를 바인딩하고, 버튼 액션을 설정
         letterCell.letterTo.text = letters[indexPath.row].letterTo
         letterCell.letterContent.text = letters[indexPath.row].letterContent
-        letterCell.dateLabel.text = letters[indexPath.row].date
+        letterCell.dateLabel.text = date
+        letterCell.detailButton.addTarget(self, action: #selector(detailButtonPressed), for: .touchUpInside)
         
         return letterCell
     }
