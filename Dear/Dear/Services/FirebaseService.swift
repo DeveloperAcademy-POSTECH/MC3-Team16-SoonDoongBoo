@@ -36,6 +36,7 @@ class FirebaseService {
     func fetchLettersByName() async throws -> [Letter] {
         var letters: [Letter] = []
         
+        print(uid)
         let documents = try await db.collection("Letters").whereField("uid", in: [String(uid)]).getDocuments()
         
         let models = documents.documents.map({ (document) -> Letter in
@@ -71,9 +72,10 @@ class FirebaseService {
     // 마음 카드를 파이어베이스에 등록하는 함수
     func sendLetterToHospital(hospitalName: String, letterTo: String, letterContent: String) {
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd"
+        dateFormatter.dateFormat = "yyyy.MM.dd."
         
         let date = dateFormatter.string(from: Date())
+        print("date: \(date)")
         
         var ref: DocumentReference? = nil
         ref = db.collection("Letters").addDocument(data: [

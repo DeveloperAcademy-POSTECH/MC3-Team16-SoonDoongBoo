@@ -28,6 +28,8 @@ class NurseMainViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         
+        self.navigationController?.setNavigationBarHidden(true, animated: true)
+        
         //TODO: - NurseMainTableHeader 클래스로 추출할 것
         //tablve view header설정
         let header = UIView(frame: CGRect(x: 0, y: 0, width: view.frame.size.width-40, height: 150))
@@ -55,6 +57,12 @@ class NurseMainViewController: UIViewController {
         //section header
         tableView.register(NurseMainSectionHeader.self, forHeaderFooterViewReuseIdentifier: "sectionHeader")
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        navigationController?.isNavigationBarHidden = true
+    }
+    
     //button 클릭 시 이벤트
     @objc func btnClick (_ button: UIButton) {
         print("버튼 클릭 시 이벤트")
@@ -81,12 +89,18 @@ extension NurseMainViewController: UITableViewDelegate{
         default:
             view.headerTitle.text = "받은 마음카드"
             view.headerButton.setTitle("더보기", for: .normal)
+            view.headerButton.addTarget(self, action: #selector(letterButtonPressed), for: .touchUpInside)
         }
        return view
     }
     //section header height
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 50
+    }
+    
+    @objc func letterButtonPressed() {
+        guard let letterMainViewController = storyboard?.instantiateViewController(withIdentifier: "NurseMainLetterView") as? NurseMainLetterViewController else { return }
+        navigationController?.pushViewController(letterMainViewController, animated: true)
     }
 }
 
