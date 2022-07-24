@@ -8,8 +8,8 @@
 import UIKit
 
 class PatientLetterDetailViewController: UIViewController {
-    var letterToText: String? = ""
-    var letterContentText: String? = ""
+    var letterToText: String? = "Test To Text"
+    var letterContentText: String? = "Test Content Text"
     
     @IBOutlet weak var letterTo: UILabel!
     @IBOutlet weak var letterContent: UILabel!

@@ -3,6 +3,7 @@
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -171,8 +172,87 @@
             </objects>
             <point key="canvasLocation" x="4.615384615384615" y="75.355450236966817"/>
         </scene>
+        <!--Nurse Main Letter View Controller-->
+        <scene sceneID="CnR-vg-z40">
+            <objects>
+                <viewController storyboardIdentifier="NurseMainLetterView" id="uX7-IU-OP1" customClass="NurseMainLetterViewController" customModule="Dear" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PqL-a0-kbh">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hospital Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p7m-M9-CPP">
+                                <rect key="frame" x="20" y="64" width="205" height="36"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="bL8-on-gao">
+                                <rect key="frame" x="20" y="122" width="199" height="30"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FUm-2N-ybp">
+                                        <rect key="frame" x="0.0" y="0.0" width="15" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="AiT-na-Ho6"/>
+                                            <constraint firstAttribute="width" constant="15" id="hDW-Td-nYq"/>
+                                        </constraints>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="우리 병원이 받은 마음 카드" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qQW-QH-WPh">
+                                        <rect key="frame" x="15" y="0.0" width="169" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pau-hq-0uA">
+                                        <rect key="frame" x="184" y="0.0" width="15" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="15" id="3ci-So-FtQ"/>
+                                            <constraint firstAttribute="height" constant="30" id="hj9-dc-exo"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" name="LabelBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="qQW-QH-WPh" firstAttribute="centerY" secondItem="bL8-on-gao" secondAttribute="centerY" id="SdV-xE-SdH"/>
+                                </constraints>
+                            </stackView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="dIL-uQ-t08">
+                                <rect key="frame" x="20" y="172" width="350" height="638"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="a54-Qd-Lm2">
+                                        <rect key="frame" x="0.0" y="44.666666030883789" width="350" height="43.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="a54-Qd-Lm2" id="lKM-T6-idZ">
+                                            <rect key="frame" x="0.0" y="0.0" width="350" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="5Df-Hp-Ap5"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="dIL-uQ-t08" firstAttribute="top" secondItem="bL8-on-gao" secondAttribute="bottom" constant="20" id="0a0-Ok-ARX"/>
+                            <constraint firstItem="p7m-M9-CPP" firstAttribute="leading" secondItem="5Df-Hp-Ap5" secondAttribute="leading" constant="20" id="WHf-P6-LHt"/>
+                            <constraint firstItem="p7m-M9-CPP" firstAttribute="top" secondItem="5Df-Hp-Ap5" secondAttribute="top" constant="20" id="aO1-9f-N5W"/>
+                            <constraint firstItem="bL8-on-gao" firstAttribute="top" secondItem="p7m-M9-CPP" secondAttribute="bottom" constant="22" id="axu-JB-TDz"/>
+                            <constraint firstItem="dIL-uQ-t08" firstAttribute="leading" secondItem="5Df-Hp-Ap5" secondAttribute="leading" constant="20" id="bFf-P3-Bi3"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="dIL-uQ-t08" secondAttribute="bottom" id="p7y-77-9Bm"/>
+                            <constraint firstItem="bL8-on-gao" firstAttribute="leading" secondItem="5Df-Hp-Ap5" secondAttribute="leading" constant="20" id="qtf-3y-jhe"/>
+                            <constraint firstItem="5Df-Hp-Ap5" firstAttribute="trailing" secondItem="dIL-uQ-t08" secondAttribute="trailing" constant="20" id="srY-II-C4S"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hud-tY-vPY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="781.53846153846155" y="74.644549763033169"/>
+        </scene>
     </scenes>
     <resources>
+        <namedColor name="LabelBackgroundColor">
+            <color red="0.85098039215686272" green="0.85098039215686272" blue="0.85098039215686272" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

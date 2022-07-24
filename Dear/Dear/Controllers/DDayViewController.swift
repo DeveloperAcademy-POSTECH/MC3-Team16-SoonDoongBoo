@@ -38,7 +38,6 @@ extension DDayViewController: UITableViewDelegate, UITableViewDataSource {
         let ddayTableCell = ddayTableView.dequeueReusableCell(withIdentifier: cellName, for: indexPath) as! DDayTableCell
         
         ddayTableCell.ddayTitle.text = ddayTitle[indexPath.row]
-        ddayTableCell.ddayDatePicker.maximumDate = Date()
         
         return ddayTableCell
     }
