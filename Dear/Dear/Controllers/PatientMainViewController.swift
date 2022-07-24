@@ -46,6 +46,7 @@ class PatientMainViewController: UIViewController {
                 self.letterTabelView.dataSource = self
                 self.letterTabelView.separatorStyle = UITableViewCell.SeparatorStyle.none
                 self.letterTabelView.showsVerticalScrollIndicator = false
+                self.letterTabelView.allowsSelection = false
             }
         }
     }

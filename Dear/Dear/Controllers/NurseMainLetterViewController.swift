@@ -24,6 +24,7 @@ class NurseMainLetterViewController: UIViewController {
         letterTableView.dataSource = self
         letterTableView.separatorStyle = UITableViewCell.SeparatorStyle.none
         letterTableView.showsVerticalScrollIndicator = false
+        letterTableView.allowsSelection = false
         
         navigationController?.isNavigationBarHidden = false
         navigationItem.hidesBackButton = true
