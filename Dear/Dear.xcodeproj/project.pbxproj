@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		711EB701288FBE4B00468B89 /* PatientPillBagView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 711EB700288FBE4B00468B89 /* PatientPillBagView.storyboard */; };
+		7139C349288FC60700783A28 /* PatientPillBagViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7139C348288FC60700783A28 /* PatientPillBagViewController.swift */; };
 		B92EF31E2886888B00AEC6E9 /* Letter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92EF31D2886888B00AEC6E9 /* Letter.swift */; };
 		B92EF3202886889500AEC6E9 /* Hospital.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92EF31F2886889500AEC6E9 /* Hospital.swift */; };
 		B92EF32328868AE500AEC6E9 /* FirebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92EF32228868AE500AEC6E9 /* FirebaseService.swift */; };
@@ -43,6 +45,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		711EB700288FBE4B00468B89 /* PatientPillBagView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PatientPillBagView.storyboard; sourceTree = "<group>"; };
+		7139C348288FC60700783A28 /* PatientPillBagViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientPillBagViewController.swift; sourceTree = "<group>"; };
 		B92EF31D2886888B00AEC6E9 /* Letter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Letter.swift; sourceTree = "<group>"; };
 		B92EF31F2886889500AEC6E9 /* Hospital.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hospital.swift; sourceTree = "<group>"; };
 		B92EF32228868AE500AEC6E9 /* FirebaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseService.swift; sourceTree = "<group>"; };
@@ -155,6 +159,7 @@
 				B9A271EB2887ED0E00B504B1 /* NurseViewController.swift */,
 				B9A271ED2887ED0E00B504B1 /* PatientViewController.swift */,
 				B97645EB2887F0500093FDAA /* SelectUserViewController.swift */,
+				7139C348288FC60700783A28 /* PatientPillBagViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -167,6 +172,7 @@
 				B9A271E12887EAB100B504B1 /* SelectHospital.storyboard */,
 				B9A271E92887ECF400B504B1 /* SelectUser.storyboard */,
 				B97EACA6288FB64900DA8A93 /* WriteLetter.storyboard */,
+				711EB700288FBE4B00468B89 /* PatientPillBagView.storyboard */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -252,6 +258,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B94C2D67287FFBC400B3C442 /* LaunchScreen.storyboard in Resources */,
+				711EB701288FBE4B00468B89 /* PatientPillBagView.storyboard in Resources */,
 				EC09B6752888387100632D72 /* NurseMainView.storyboard in Resources */,
 				B94C2D6F287FFD5000B3C442 /* GoogleService-Info.plist in Resources */,
 				B94C2D64287FFBC400B3C442 /* Assets.xcassets in Resources */,
@@ -273,6 +280,7 @@
 				EC09B68228883D4200632D72 /* CardDetailViewController.swift in Sources */,
 				B94C2D5F287FFBC300B3C442 /* ViewController.swift in Sources */,
 				B94C2D5B287FFBC300B3C442 /* AppDelegate.swift in Sources */,
+				7139C349288FC60700783A28 /* PatientPillBagViewController.swift in Sources */,
 				B9A271F02887ED0E00B504B1 /* PatientViewController.swift in Sources */,
 				B97645EC2887F0500093FDAA /* SelectUserViewController.swift in Sources */,
 				EC09B6792888388F00632D72 /* LetterCustomTableViewCell.swift in Sources */,

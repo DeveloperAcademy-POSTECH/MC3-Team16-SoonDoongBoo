@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Patient Pill Bag View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController id="Y6W-OH-hqX" customClass="PatientPillBagViewController" customModule="Dear" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xTt-A7-Ti2">
+                                <rect key="frame" x="20" y="74" width="98" height="46"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QuU-uZ-LdD">
+                                        <rect key="frame" x="0.0" y="0.0" width="18.5" height="46"/>
+                                        <color key="backgroundColor" name="ButtonBorderColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="18.5" id="wee-fR-gIv"/>
+                                        </constraints>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="약 뭉치" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aa9-Xq-TWL">
+                                        <rect key="frame" x="18.5" y="0.0" width="61" height="46"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="61" id="MRp-sR-jxV"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hqX-iH-8i0">
+                                        <rect key="frame" x="79.5" y="0.0" width="18.5" height="46"/>
+                                        <color key="backgroundColor" name="ButtonBorderColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="18.5" id="Euu-xa-exh"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" name="ButtonBorderColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="46" id="4r0-Dc-BVX"/>
+                                    <constraint firstAttribute="width" constant="98" id="Kem-6P-2Oe"/>
+                                </constraints>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wzM-pF-XR4">
+                                <rect key="frame" x="327" y="77" width="67" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="xTt-A7-Ti2" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="K66-dG-i6F"/>
+                            <constraint firstItem="xTt-A7-Ti2" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="30" id="NtE-nP-GO1"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="wzM-pF-XR4" secondAttribute="trailing" constant="20" id="V1k-B6-LdD"/>
+                            <constraint firstItem="wzM-pF-XR4" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="33" id="dkU-s1-DzP"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="pillBag" destination="xTt-A7-Ti2" id="gge-bo-jAu"/>
+                        <outlet property="pillBagLabel" destination="xTt-A7-Ti2" id="jcL-5E-HgX"/>
+                        <outlet property="sentPrescription" destination="wzM-pF-XR4" id="cKz-EN-Lzc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="24.637681159420293" y="75"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="ButtonBorderColor">
+            <color red="0.54509803921568623" green="0.54509803921568623" blue="0.54509803921568623" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
