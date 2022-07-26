@@ -69,7 +69,7 @@ class FirebaseService {
     }
     
     // 마음 카드를 파이어베이스에 등록하는 함수
-    func sendLetterToHospital(hospitalName: String, letterTo: String, letterContent: String) {
+    func sendLetterToHospital(hospitalName: String, letterTo: String, letterContent: String, anger: Bool, calm: Bool, depression: Bool, joyful: Bool, sadness: Bool) {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd"
         
@@ -81,7 +81,12 @@ class FirebaseService {
             "HospitalName": hospitalName,
             "LetterTo": letterTo,
             "LetterContent": letterContent,
-            "uid": String(uid)
+            "Uid": String(uid),
+            "Anger": anger,
+            "Calm": calm,
+            "Depression": depression,
+            "Joyful": joyful,
+            "Sadness": sadness
         ]) { err in
             if let err = err {
                 print("Error adding document: \(err)")
