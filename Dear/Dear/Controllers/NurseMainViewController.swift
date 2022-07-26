@@ -16,7 +16,7 @@ class NurseMainViewController: UIViewController {
         "오늘 하루도 수고하셨습니다.가나다라마바사"
     ]
     let letters = Letter.sampleData
-    let dDays = DDay.sampleData
+//    let dDays = DDay.sampleData
     
     let cellIdentifier = ["CheeringCustomCell", "dDayCustomCell", "letterCustomCell"]
     
@@ -98,7 +98,8 @@ extension NurseMainViewController: UITableViewDataSource{
     }
     //섹션 별 아이템 수 구분
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return section==0 ? dDays.count : letters.count
+//        return section==0 ? dDays.count : letters.count
+        return 0;
     }
     //section에 따른 셀 종류 구분
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -108,8 +109,8 @@ extension NurseMainViewController: UITableViewDataSource{
             cell.selectionStyle = .none
 //            cell.cellView.layer.cornerRadius = 10
 
-            cell.dDayTitleLabel.text = dDays[indexPath.row].title
-            cell.dDayDateLabel.text = dDays[indexPath.row].date.formatted(date: .numeric, time: .omitted)
+//            cell.dDayTitleLabel.text = dDays[indexPath.row].title
+//            cell.dDayDateLabel.text = dDays[indexPath.row].date.formatted(date: .numeric, time: .omitted)
             return cell
         default:
             let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier[2], for: indexPath) as! LetterCustomTableViewCell

@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Third View Controller-->
+        <!--Test View Controller-->
         <scene sceneID="PGW-l9-Ial">
             <objects>
-                <viewController storyboardIdentifier="ThirdViewController" id="boY-Uk-2aM" customClass="ThirdViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TestViewController" id="boY-Uk-2aM" customClass="TestViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="urk-jJ-9rb">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -31,7 +31,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="마음 카드 전송 뷰"/>
                                 <connections>
-                                    <segue destination="wf1-GY-au0" kind="show" id="n9V-sX-IjL"/>
+                                    <segue destination="NPo-yR-JRh" kind="show" id="D0u-qP-S1s"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -97,62 +97,15 @@
             </objects>
             <point key="canvasLocation" x="1853.6231884057972" y="347.54464285714283"/>
         </scene>
-        <!--Letter View Controller-->
-        <scene sceneID="1Ri-0a-dSK">
+        <!--LetterViewController-->
+        <scene sceneID="9Rr-Pl-AKj">
             <objects>
-                <viewController id="wf1-GY-au0" customClass="LetterViewController" customModule="Dear" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="cqQ-mR-V4C">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R8z-U3-h1w">
-                                <rect key="frame" x="332" y="66" width="49" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="완료"/>
-                                <connections>
-                                    <action selector="PrintAlert:" destination="wf1-GY-au0" eventType="touchUpInside" id="Fsi-PH-eSt"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="선택한 병원 표시" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mkm-PA-Jwh">
-                                <rect key="frame" x="151" y="71" width="112" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="To. OOO 간호사님께" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2cJ-TM-BBE">
-                                <rect key="frame" x="52" y="212" width="311" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocorrectionType="no"/>
-                            </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="마음카드 쓰기" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rGz-da-awL">
-                                <rect key="frame" x="52" y="147" width="93" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="내용을 입력해주세요" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="srE-xU-aId">
-                                <rect key="frame" x="52" y="267" width="311" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocorrectionType="no"/>
-                            </textField>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="WFY-Ws-OSy"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="4Op-ci-Dua"/>
-                    <connections>
-                        <outlet property="letterContext" destination="srE-xU-aId" id="6LA-K7-SJ2"/>
-                        <outlet property="letterTitle" destination="2cJ-TM-BBE" id="mr9-Vn-HD8"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="eOy-a0-GDO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardIdentifier="LetterViewController" storyboardName="WriteLetter" referencedIdentifier="LetterViewController" id="NPo-yR-JRh" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="UAo-JZ-rSa"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fpg-fd-9gh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1853.6231884057972" y="1062.7232142857142"/>
+            <point key="canvasLocation" x="1804" y="806"/>
         </scene>
     </scenes>
     <resources>

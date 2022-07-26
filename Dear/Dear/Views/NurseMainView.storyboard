@@ -83,10 +83,10 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="350" height="230"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="48" translatesAutoresizingMaskIntoConstraints="NO" id="afG-L9-mGb">
-                                                            <rect key="frame" x="20" y="30" width="310" height="131.33333333333334"/>
+                                                            <rect key="frame" x="20" y="30" width="310" height="137.33333333333334"/>
                                                             <subviews>
                                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="rBW-FX-H55">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="310" height="131.33333333333334"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="310" height="137.33333333333334"/>
                                                                     <subviews>
                                                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="1zp-1I-eEP">
                                                                             <rect key="frame" x="0.0" y="0.0" width="310" height="21.666666666666668"/>
@@ -109,11 +109,11 @@
                                                                             </constraints>
                                                                         </stackView>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zg0-Ij-sRq">
-                                                                            <rect key="frame" x="0.0" y="41.666666666666664" width="310" height="89.666666666666686"/>
+                                                                            <rect key="frame" x="0.0" y="41.666666666666664" width="310" height="95.666666666666686"/>
                                                                             <attributedString key="attributedText">
                                                                                 <fragment content="가나다라마바사아자차카타파하가나다라마바사아자차카타파하가나다라마바사아자차카타파하가나다라마바사아자차카타파하가나다라마바사아자차카타파하가나다라마바사아자차카타파하가나다라마바사아자차카타파하가나다라마바사아자차카타파하가나다라마바사아자차카타파하">
                                                                                     <attributes>
-                                                                                        <font key="NSFont" size="14" name=".AppleSDGothicNeoI-Regular"/>
+                                                                                        <font key="NSFont" metaFont="system" size="14"/>
                                                                                         <font key="NSOriginalFont" metaFont="system" size="14"/>
                                                                                         <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="3" tighteningFactorForTruncation="0.0"/>
                                                                                     </attributes>
