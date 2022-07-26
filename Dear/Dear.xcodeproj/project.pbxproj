@@ -32,6 +32,8 @@
 		B9BAD976288153D900EE530F /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = B9BAD975288153D900EE530F /* FirebaseAnalytics */; };
 		B9BAD978288153D900EE530F /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = B9BAD977288153D900EE530F /* FirebaseAuth */; };
 		B9BAD97A288153D900EE530F /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = B9BAD979288153D900EE530F /* FirebaseFirestore */; };
+		E15AC77928904D9A004BE3E8 /* NursePillBagView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E15AC77828904D9A004BE3E8 /* NursePillBagView.storyboard */; };
+		E15AC77B28904DFB004BE3E8 /* NursePillBagViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15AC77A28904DFB004BE3E8 /* NursePillBagViewController.swift */; };
 		EC09B6742888387100632D72 /* NurseMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC09B6722888387000632D72 /* NurseMainViewController.swift */; };
 		EC09B6752888387100632D72 /* NurseMainView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC09B6732888387000632D72 /* NurseMainView.storyboard */; };
 		EC09B6792888388F00632D72 /* LetterCustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC09B6762888388F00632D72 /* LetterCustomTableViewCell.swift */; };
@@ -64,6 +66,8 @@
 		B9A271E92887ECF400B504B1 /* SelectUser.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SelectUser.storyboard; sourceTree = "<group>"; };
 		B9A271EB2887ED0E00B504B1 /* NurseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NurseViewController.swift; sourceTree = "<group>"; };
 		B9A271ED2887ED0E00B504B1 /* PatientViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatientViewController.swift; sourceTree = "<group>"; };
+		E15AC77828904D9A004BE3E8 /* NursePillBagView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NursePillBagView.storyboard; sourceTree = "<group>"; };
+		E15AC77A28904DFB004BE3E8 /* NursePillBagViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NursePillBagViewController.swift; sourceTree = "<group>"; };
 		EC09B6722888387000632D72 /* NurseMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NurseMainViewController.swift; sourceTree = "<group>"; };
 		EC09B6732888387000632D72 /* NurseMainView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = NurseMainView.storyboard; sourceTree = "<group>"; };
 		EC09B6762888388F00632D72 /* LetterCustomTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LetterCustomTableViewCell.swift; sourceTree = "<group>"; };
@@ -155,6 +159,7 @@
 				B9A271EB2887ED0E00B504B1 /* NurseViewController.swift */,
 				B9A271ED2887ED0E00B504B1 /* PatientViewController.swift */,
 				B97645EB2887F0500093FDAA /* SelectUserViewController.swift */,
+				E15AC77A28904DFB004BE3E8 /* NursePillBagViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -167,6 +172,7 @@
 				B9A271E12887EAB100B504B1 /* SelectHospital.storyboard */,
 				B9A271E92887ECF400B504B1 /* SelectUser.storyboard */,
 				B97EACA6288FB64900DA8A93 /* WriteLetter.storyboard */,
+				E15AC77828904D9A004BE3E8 /* NursePillBagView.storyboard */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -260,6 +266,7 @@
 				B97EACA7288FB64900DA8A93 /* WriteLetter.storyboard in Resources */,
 				B9A271E22887EAB100B504B1 /* SelectHospital.storyboard in Resources */,
 				B9A271EA2887ECF400B504B1 /* SelectUser.storyboard in Resources */,
+				E15AC77928904D9A004BE3E8 /* NursePillBagView.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -271,6 +278,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EC09B68228883D4200632D72 /* CardDetailViewController.swift in Sources */,
+				E15AC77B28904DFB004BE3E8 /* NursePillBagViewController.swift in Sources */,
 				B94C2D5F287FFBC300B3C442 /* ViewController.swift in Sources */,
 				B94C2D5B287FFBC300B3C442 /* AppDelegate.swift in Sources */,
 				B9A271F02887ED0E00B504B1 /* PatientViewController.swift in Sources */,
