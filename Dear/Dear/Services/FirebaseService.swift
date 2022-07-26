@@ -18,7 +18,7 @@ class FirebaseService {
     func fetchLettersByHospital(hospitalName: String) async throws -> [Letter] {
         var letters: [Letter] = []
         
-        let documents = try await db.collection("Letters").whereField("HospitalName", in: [hospitalName]).getDocuments()
+        let documents = try await db.collection("Letters").whereField("HospitalName", in: [hospitalName]).order(by: "Date", descending: true).getDocuments()
 
         let models = documents.documents.map({ (document) -> Letter in
             if let model = Letter(dictionary: document.data()) {
@@ -36,7 +36,7 @@ class FirebaseService {
     func fetchLettersByName() async throws -> [Letter] {
         var letters: [Letter] = []
         
-        let documents = try await db.collection("Letters").whereField("uid", in: [String(uid)]).getDocuments()
+        let documents = try await db.collection("Letters").whereField("Uid", in: [String(uid)]).order(by: "Date", descending: true).getDocuments()
         
         let models = documents.documents.map({ (document) -> Letter in
             if let model = Letter(dictionary: document.data()) {
