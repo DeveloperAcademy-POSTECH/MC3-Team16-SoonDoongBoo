@@ -19,7 +19,6 @@ class HospitalViewController: UIViewController {
         
         hospitalTextField.inputView = pickerView
         hospitalTextField.textAlignment = .left
-        hospitalTextField.backgroundColor = UIColor(named: "PinkColor")
     }
 }
 extension HospitalViewController: UIPickerViewDelegate, UIPickerViewDataSource {
