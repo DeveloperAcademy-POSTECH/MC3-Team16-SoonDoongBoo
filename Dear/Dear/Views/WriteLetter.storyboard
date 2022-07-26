@@ -31,22 +31,98 @@
                                     <action selector="PrintAlert:" destination="yjt-aa-E6v" eventType="touchUpInside" id="Dcf-t5-ENb"/>
                                 </connections>
                             </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="DVM-zJ-dDu">
-                                <rect key="frame" x="20" y="669" width="357" height="128"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="mSD-Je-0eO">
+                                <rect key="frame" x="20" y="623" width="379" height="50"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="anger" translatesAutoresizingMaskIntoConstraints="NO" id="s5j-ZD-xeS">
-                                        <rect key="frame" x="0.0" y="0.0" width="51" height="128"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sadness" translatesAutoresizingMaskIntoConstraints="NO" id="td5-Cp-Bqe">
+                                        <rect key="frame" x="0.0" y="0.0" width="51" height="50"/>
                                     </imageView>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ToR-FC-dvq">
-                                        <rect key="frame" x="64" y="0.0" width="230" height="128"/>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" text="슬픔을 잠시동안 잊게 해줘요" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="3sj-7V-mgM">
+                                        <rect key="frame" x="64" y="0.0" width="278" height="50"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                         <color key="textColor" systemColor="labelColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="An9-k1-q3B">
-                                        <rect key="frame" x="307" y="0.0" width="50" height="128"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="check-false" translatesAutoresizingMaskIntoConstraints="NO" id="kpU-qJ-WaL">
+                                        <rect key="frame" x="355" y="0.0" width="24" height="50"/>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="LoW-0Y-3Fh">
+                                <rect key="frame" x="20" y="687" width="379" height="50"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="anger" translatesAutoresizingMaskIntoConstraints="NO" id="c3m-6S-bkl">
+                                        <rect key="frame" x="0.0" y="0.0" width="51" height="50"/>
+                                    </imageView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" text="오늘 하루 쌓인 분노를 잠시 잊게 해줘요" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="evk-Z6-uAD">
+                                        <rect key="frame" x="64" y="0.0" width="278" height="50"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="textColor" systemColor="labelColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="check-false" translatesAutoresizingMaskIntoConstraints="NO" id="gtH-w3-LoE">
+                                        <rect key="frame" x="355" y="0.0" width="24" height="50"/>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="fxg-lN-b4Z">
+                                <rect key="frame" x="20" y="745" width="379" height="50"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mild" translatesAutoresizingMaskIntoConstraints="NO" id="auE-zY-8lr">
+                                        <rect key="frame" x="0.0" y="0.0" width="51" height="50"/>
+                                    </imageView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" text="평온을 되찾게 해줘요" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="9iT-jc-Gaf">
+                                        <rect key="frame" x="64" y="0.0" width="278" height="50"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="textColor" systemColor="labelColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="check-false" translatesAutoresizingMaskIntoConstraints="NO" id="A33-Vw-277">
+                                        <rect key="frame" x="355" y="0.0" width="24" height="50"/>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="Dwf-hN-Vvk">
+                                <rect key="frame" x="20" y="803" width="379" height="50"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="joyful" translatesAutoresizingMaskIntoConstraints="NO" id="Gec-i8-XjD">
+                                        <rect key="frame" x="0.0" y="0.0" width="51" height="50"/>
+                                    </imageView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" text="기쁨을 지속하게 해줘요" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Z7V-fL-v9f">
+                                        <rect key="frame" x="64" y="0.0" width="278" height="50"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="textColor" systemColor="labelColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="check-false" translatesAutoresizingMaskIntoConstraints="NO" id="9Ud-ke-V9j">
+                                        <rect key="frame" x="355" y="0.0" width="24" height="50"/>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="aA1-07-nxy">
+                                <rect key="frame" x="29" y="91" width="359" height="466"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="DVM-zJ-dDu">
+                                <rect key="frame" x="20" y="565" width="379" height="50"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="depressed" translatesAutoresizingMaskIntoConstraints="NO" id="s5j-ZD-xeS">
+                                        <rect key="frame" x="0.0" y="0.0" width="51" height="50"/>
+                                    </imageView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" text="우울한 기분을 완화해줘요" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ToR-FC-dvq">
+                                        <rect key="frame" x="64" y="0.0" width="278" height="50"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="textColor" systemColor="labelColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="check-true" translatesAutoresizingMaskIntoConstraints="NO" id="An9-k1-q3B">
+                                        <rect key="frame" x="355" y="0.0" width="24" height="50"/>
                                     </imageView>
                                 </subviews>
                             </stackView>
@@ -63,6 +139,12 @@
     </scenes>
     <resources>
         <image name="anger" width="51" height="34"/>
+        <image name="check-false" width="24" height="24"/>
+        <image name="check-true" width="24" height="24"/>
+        <image name="depressed" width="51" height="34"/>
+        <image name="joyful" width="51" height="34"/>
+        <image name="mild" width="51" height="34"/>
+        <image name="sadness" width="51" height="34"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
