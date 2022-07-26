@@ -7,7 +7,7 @@
 
 import UIKit
 
-class FirstViewController: UIViewController {
+class SelectUserViewController: UIViewController {
 
     @IBOutlet weak var selectionNurseView: UIView!
     @IBOutlet weak var selectionPatientView: UIView!
