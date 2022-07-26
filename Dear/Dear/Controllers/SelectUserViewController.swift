@@ -29,16 +29,16 @@ class SelectUserViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        selectionNurseView.layer.backgroundColor = UIColor(named: "pink_03")?.cgColor
-        selectionPatientView.layer.backgroundColor = UIColor(named: "pink_03")?.cgColor
+        selectionNurseView.layer.backgroundColor = UIColor.pink_03.cgColor
+        selectionPatientView.layer.backgroundColor = UIColor.pink_03.cgColor
     }
     
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
         
         DispatchQueue.main.async {
-            self.selectionNurseView.layer.backgroundColor = UIColor(named: "pink_03")?.cgColor
-            self.selectionPatientView.layer.backgroundColor = UIColor(named: "pink_03")?.cgColor
+            self.selectionNurseView.layer.backgroundColor = UIColor.pink_03.cgColor
+            self.selectionPatientView.layer.backgroundColor = UIColor.pink_03.cgColor
         }
     }
     
@@ -46,13 +46,13 @@ class SelectUserViewController: UIViewController {
         guard let vc = storyboard?.instantiateViewController(withIdentifier: "vc1") as? NurseViewController else {return}
         navigationController?.pushViewController(vc, animated: true)
         
-        selectionNurseView.layer.backgroundColor = UIColor(named: "pink_02")?.cgColor
+        selectionNurseView.layer.backgroundColor = UIColor.pink_02.cgColor
     }
     
     @objc func viewSelectionpatientTapped(sender: UITapGestureRecognizer) {
         guard let vc = storyboard?.instantiateViewController(withIdentifier: "vc2") as? PatientViewController else {return}
         navigationController?.pushViewController(vc, animated: true)
         
-        selectionPatientView.layer.backgroundColor = UIColor(named: "pink_02")?.cgColor
+        selectionPatientView.layer.backgroundColor = UIColor.pink_02.cgColor
     }
 }
