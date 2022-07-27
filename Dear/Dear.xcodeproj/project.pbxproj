@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8E30720F289018C7007F6CB1 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E30720E289018C7007F6CB1 /* ColorExtension.swift */; };
 		B92EF31E2886888B00AEC6E9 /* Letter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92EF31D2886888B00AEC6E9 /* Letter.swift */; };
 		B92EF3202886889500AEC6E9 /* Hospital.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92EF31F2886889500AEC6E9 /* Hospital.swift */; };
 		B92EF32328868AE500AEC6E9 /* FirebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92EF32228868AE500AEC6E9 /* FirebaseService.swift */; };
@@ -43,6 +44,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8E30720E289018C7007F6CB1 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 		B92EF31D2886888B00AEC6E9 /* Letter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Letter.swift; sourceTree = "<group>"; };
 		B92EF31F2886889500AEC6E9 /* Hospital.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hospital.swift; sourceTree = "<group>"; };
 		B92EF32228868AE500AEC6E9 /* FirebaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseService.swift; sourceTree = "<group>"; };
@@ -91,6 +93,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8E30720D289018A5007F6CB1 /* Resoures */ = {
+			isa = PBXGroup;
+			children = (
+				8E30720E289018C7007F6CB1 /* ColorExtension.swift */,
+			);
+			path = Resoures;
+			sourceTree = "<group>";
+		};
 		B92EF31C2886886800AEC6E9 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -127,6 +137,7 @@
 		B94C2D59287FFBC300B3C442 /* Dear */ = {
 			isa = PBXGroup;
 			children = (
+				8E30720D289018A5007F6CB1 /* Resoures */,
 				EC09B67C288838A600632D72 /* Cell */,
 				B92EF32128868AD100AEC6E9 /* Services */,
 				B9A271E02887EA0400B504B1 /* Views */,
@@ -288,6 +299,7 @@
 				B92EF32328868AE500AEC6E9 /* FirebaseService.swift in Sources */,
 				B9A271E82887EAE700B504B1 /* LetterViewController.swift in Sources */,
 				B92EF31E2886888B00AEC6E9 /* Letter.swift in Sources */,
+				8E30720F289018C7007F6CB1 /* ColorExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
