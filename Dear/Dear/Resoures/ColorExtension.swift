@@ -48,16 +48,6 @@ extension UIColor {
         return color
     }
     
-    static var Label_01: UIColor {
-        guard let color = UIColor(named: "Label_01") else { return .label }
-        return color
-    }
-    
-    static var Label_02: UIColor {
-        guard let color = UIColor(named: "Label_02") else { return .label }
-        return color
-    }
-    
     static var blue: UIColor {
         guard let color = UIColor(named: "blue") else { return .label }
         return color
