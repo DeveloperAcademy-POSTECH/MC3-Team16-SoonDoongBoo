@@ -14,6 +14,7 @@ class NursePillBagViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.dataSource = self
+        self.tableView.delegate = self
     }
     
 }
@@ -23,9 +24,20 @@ extension NursePillBagViewController: UITableViewDataSource {
         return self.letters.count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "LetterCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "LetterCell", for: indexPath) as! NursePillBagViewCell
         let letter = self.letters[indexPath.row]
-        cell.textLabel?.text = letter.letterTo
+        
+        cell.cellDate.text = letter.date
+        cell.cellDay.text = letter.date
+        cell.cellTitle.text = "기분이 좋아지는 약"
+        cell.cellLetterTo.text = letter.letterTo
+
         return cell
+    }
+}
+
+extension NursePillBagViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 277
     }
 }
