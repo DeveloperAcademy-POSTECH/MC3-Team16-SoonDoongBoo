@@ -33,6 +33,15 @@ class SelectUserViewController: UIViewController {
         selectionPatientView.layer.backgroundColor = UIColor(named: "pink_03")?.cgColor
     }
     
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        
+        DispatchQueue.main.async {
+            self.selectionNurseView.layer.backgroundColor = UIColor(named: "pink_03")?.cgColor
+            self.selectionPatientView.layer.backgroundColor = UIColor(named: "pink_03")?.cgColor
+        }
+    }
+    
     @objc func viewSelectionnurseTapped(sender: UITapGestureRecognizer) {
         guard let vc = storyboard?.instantiateViewController(withIdentifier: "vc1") as? NurseViewController else {return}
         navigationController?.pushViewController(vc, animated: true)

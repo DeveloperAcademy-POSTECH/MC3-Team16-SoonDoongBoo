@@ -22,7 +22,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Button"/>
                                 <connections>
-                                    <segue destination="e7s-fe-xdj" kind="show" id="9RA-E8-CTS"/>
+                                    <segue destination="e7s-fe-xdj" kind="presentation" animates="NO" modalPresentationStyle="fullScreen" id="9RA-E8-CTS"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ScM-Eh-5JU">
@@ -31,7 +31,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Button"/>
                                 <connections>
-                                    <segue destination="3dz-gk-TdE" kind="show" id="d6I-jz-AKj"/>
+                                    <segue destination="3dz-gk-TdE" kind="presentation" animates="NO" modalPresentationStyle="fullScreen" id="d6I-jz-AKj"/>
                                 </connections>
                             </button>
                         </subviews>
