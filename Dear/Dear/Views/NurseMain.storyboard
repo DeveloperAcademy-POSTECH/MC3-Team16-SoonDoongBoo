@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Nurse Main Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController id="Y6W-OH-hqX" sceneMemberID="viewController">
+                <viewController id="Y6W-OH-hqX" customClass="NurseMainController" customModule="Dear" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -35,8 +35,8 @@
                                                                 <rect key="frame" x="15" y="92" width="320" height="45"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="마음 약국" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OvF-SD-DKC">
-                                                                        <rect key="frame" x="122" y="8.6666666666666572" width="76" height="28"/>
-                                                                        <fontDescription key="fontDescription" name="PingFangHK-Regular" family="PingFang HK" pointSize="20"/>
+                                                                        <rect key="frame" x="123" y="10.666666666666657" width="74.333333333333314" height="24"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
@@ -59,26 +59,14 @@
                                                                     </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
                                                             </view>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hYt-nS-gJw">
-                                                                <rect key="frame" x="15" y="159" width="320" height="21.666666666666657"/>
-                                                                <attributedString key="attributedText">
-                                                                    <fragment content="포항성모병원">
-                                                                        <attributes>
-                                                                            <font key="NSFont" size="18" name="AppleSDGothicNeo-Regular"/>
-                                                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                                        </attributes>
-                                                                    </fragment>
-                                                                    <fragment content=" 님">
-                                                                        <attributes>
-                                                                            <font key="NSFont" size="17" name=".AppleSDGothicNeoI-Regular"/>
-                                                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                                        </attributes>
-                                                                    </fragment>
-                                                                </attributedString>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="포항성모병원 님" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hYt-nS-gJw">
+                                                                <rect key="frame" x="15" y="159" width="320" height="24"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                                <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xwY-KS-V1i" customClass="UIViewExtension" customModule="Dear" customModuleProvider="target">
-                                                                <rect key="frame" x="15" y="220.66666666666669" width="320" height="254.33333333333331"/>
+                                                                <rect key="frame" x="15" y="223" width="320" height="252"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2022년 07월 25일" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zVu-xs-zka">
                                                                         <rect key="frame" x="20" y="33" width="280" height="20.333333333333329"/>
@@ -93,16 +81,16 @@
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="dxP-Sg-Qm6">
-                                                                        <rect key="frame" x="125.33333333333334" y="101.33333333333331" width="69.333333333333343" height="36"/>
+                                                                        <rect key="frame" x="124.33333333333334" y="101.33333333333331" width="71.333333333333343" height="36"/>
                                                                         <subviews>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5개" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TcA-1D-hu5">
-                                                                                <rect key="frame" x="0.0" y="0.0" width="44" height="36"/>
-                                                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                                                                <nil key="textColor"/>
+                                                                                <rect key="frame" x="0.0" y="0.0" width="46" height="36"/>
+                                                                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="30"/>
+                                                                                <color key="textColor" red="1" green="0.53725490200000003" blue="0.4039215686" alpha="1" colorSpace="calibratedRGB"/>
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="의" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kcl-ks-PA8">
-                                                                                <rect key="frame" x="52" y="0.0" width="17.333333333333329" height="36"/>
+                                                                                <rect key="frame" x="54" y="0.0" width="17.333333333333329" height="36"/>
                                                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                                                 <nil key="textColor"/>
                                                                                 <nil key="highlightedColor"/>
@@ -116,36 +104,13 @@
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JE2-gc-peT">
-                                                                        <rect key="frame" x="84.666666666666686" y="185.33333333333331" width="151" height="37.666666666666657"/>
-                                                                        <color key="tintColor" red="1" green="0.53725490200000003" blue="0.4039215686" alpha="1" colorSpace="calibratedRGB"/>
+                                                                        <rect key="frame" x="85.333333333333329" y="185.33333333333331" width="149.66666666666669" height="42.666666666666657"/>
                                                                         <state key="normal" title="Button"/>
-                                                                        <buttonConfiguration key="configuration" style="filled" cornerStyle="large" titleAlignment="center">
-                                                                            <attributedString key="attributedTitle">
-                                                                                <fragment content="확인하러">
-                                                                                    <attributes>
-                                                                                        <font key="NSFont" size="20" name=".AppleSDGothicNeoI-Regular"/>
-                                                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                                                    </attributes>
-                                                                                </fragment>
-                                                                                <fragment content=" ">
-                                                                                    <attributes>
-                                                                                        <font key="NSFont" size="20" name="NotoSerifKannada-Regular"/>
-                                                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                                                    </attributes>
-                                                                                </fragment>
-                                                                                <fragment content="가기">
-                                                                                    <attributes>
-                                                                                        <font key="NSFont" size="20" name=".AppleSDGothicNeoI-Regular"/>
-                                                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                                                    </attributes>
-                                                                                </fragment>
-                                                                                <fragment content=" &gt;">
-                                                                                    <attributes>
-                                                                                        <font key="NSFont" size="20" name="NotoSerifKannada-Regular"/>
-                                                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                                                    </attributes>
-                                                                                </fragment>
-                                                                            </attributedString>
+                                                                        <buttonConfiguration key="configuration" style="filled" title="확인하러 가기 &gt;" cornerStyle="large" titleAlignment="center">
+                                                                            <backgroundConfiguration key="background">
+                                                                                <color key="backgroundColor" red="1" green="0.53725490200000003" blue="0.4039215686" alpha="1" colorSpace="calibratedRGB"/>
+                                                                            </backgroundConfiguration>
+                                                                            <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
                                                                         </buttonConfiguration>
                                                                     </button>
                                                                 </subviews>
@@ -158,6 +123,7 @@
                                                                     <constraint firstItem="zVu-xs-zka" firstAttribute="top" secondItem="xwY-KS-V1i" secondAttribute="top" constant="33" id="KeT-Eu-RGy"/>
                                                                     <constraint firstItem="RPU-Tn-WG4" firstAttribute="top" secondItem="dxP-Sg-Qm6" secondAttribute="bottom" id="Mla-ia-0eQ"/>
                                                                     <constraint firstItem="8zI-72-bGt" firstAttribute="top" secondItem="zVu-xs-zka" secondAttribute="bottom" constant="20" id="Shc-04-MQD"/>
+                                                                    <constraint firstAttribute="bottom" secondItem="JE2-gc-peT" secondAttribute="bottom" constant="24" id="Vcv-kV-ydX"/>
                                                                     <constraint firstAttribute="trailing" secondItem="RPU-Tn-WG4" secondAttribute="trailing" constant="20" id="a3V-NB-A3f"/>
                                                                     <constraint firstAttribute="trailing" secondItem="zVu-xs-zka" secondAttribute="trailing" constant="20" id="o1N-WE-lff"/>
                                                                     <constraint firstAttribute="trailing" secondItem="8zI-72-bGt" secondAttribute="trailing" constant="20" id="qfG-PC-mxb"/>
@@ -178,7 +144,7 @@
                                                                 </userDefinedRuntimeAttributes>
                                                             </view>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zWy-74-r5l" customClass="UIViewExtension" customModule="Dear" customModuleProvider="target">
-                                                                <rect key="frame" x="120" y="202.66666666666669" width="110" height="35"/>
+                                                                <rect key="frame" x="120" y="205" width="110" height="35"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="응원 메세지" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ApN-WA-8qG">
                                                                         <rect key="frame" x="16" y="7.3333333333333126" width="78" height="20.333333333333329"/>
@@ -289,6 +255,10 @@
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="9aa-Dp-dXs" secondAttribute="bottom" id="oZN-RP-OIC"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="moodView" destination="KgW-a1-9dk" id="CJl-dg-pTr"/>
+                        <outlet property="stackView" destination="mzc-y9-0fT" id="ScU-37-fc5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
