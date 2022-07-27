@@ -42,17 +42,36 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zYT-zn-zWx">
                                 <rect key="frame" x="0.0" y="88" width="414" height="80"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="약 뭉치 " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MKh-l0-dx6">
-                                        <rect key="frame" x="25" y="30" width="53" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J0X-dI-0EK" customClass="UIViewExtension2" customModule="Dear" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="14" width="98" height="46"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="약 뭉치 " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MKh-l0-dx6">
+                                                <rect key="frame" x="18" y="11" width="62" height="24"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="46" id="5AY-U4-9y9"/>
+                                            <constraint firstAttribute="width" constant="98" id="N0a-7v-jHS"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="98" id="SGy-7B-dvG"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="46" id="uGX-VR-rZB"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <integer key="value" value="25"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="3bS-EE-Zm3"/>
+                                    <constraint firstItem="J0X-dI-0EK" firstAttribute="leading" secondItem="zYT-zn-zWx" secondAttribute="leading" constant="20" id="Sej-cx-6SH"/>
+                                    <constraint firstItem="J0X-dI-0EK" firstAttribute="top" secondItem="zYT-zn-zWx" secondAttribute="top" constant="14" id="Wqg-X0-yNK"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -75,7 +94,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1" y="491"/>
+            <point key="canvasLocation" x="-1.4492753623188408" y="490.84821428571428"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="8pF-yy-F4q">
@@ -97,6 +116,9 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

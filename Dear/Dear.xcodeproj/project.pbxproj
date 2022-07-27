@@ -34,6 +34,7 @@
 		B9BAD97A288153D900EE530F /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = B9BAD979288153D900EE530F /* FirebaseFirestore */; };
 		E15AC77928904D9A004BE3E8 /* NursePillBagView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E15AC77828904D9A004BE3E8 /* NursePillBagView.storyboard */; };
 		E15AC77B28904DFB004BE3E8 /* NursePillBagViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15AC77A28904DFB004BE3E8 /* NursePillBagViewController.swift */; };
+		E15AC7A528910DCC004BE3E8 /* UIViewExtension2.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15AC7A428910DCC004BE3E8 /* UIViewExtension2.swift */; };
 		EC09B6742888387100632D72 /* NurseMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC09B6722888387000632D72 /* NurseMainViewController.swift */; };
 		EC09B6752888387100632D72 /* NurseMainView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC09B6732888387000632D72 /* NurseMainView.storyboard */; };
 		EC09B6792888388F00632D72 /* LetterCustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC09B6762888388F00632D72 /* LetterCustomTableViewCell.swift */; };
@@ -68,6 +69,7 @@
 		B9A271ED2887ED0E00B504B1 /* PatientViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatientViewController.swift; sourceTree = "<group>"; };
 		E15AC77828904D9A004BE3E8 /* NursePillBagView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NursePillBagView.storyboard; sourceTree = "<group>"; };
 		E15AC77A28904DFB004BE3E8 /* NursePillBagViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NursePillBagViewController.swift; sourceTree = "<group>"; };
+		E15AC7A428910DCC004BE3E8 /* UIViewExtension2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension2.swift; sourceTree = "<group>"; };
 		EC09B6722888387000632D72 /* NurseMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NurseMainViewController.swift; sourceTree = "<group>"; };
 		EC09B6732888387000632D72 /* NurseMainView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = NurseMainView.storyboard; sourceTree = "<group>"; };
 		EC09B6762888388F00632D72 /* LetterCustomTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LetterCustomTableViewCell.swift; sourceTree = "<group>"; };
@@ -144,6 +146,7 @@
 				B94C2D65287FFBC400B3C442 /* LaunchScreen.storyboard */,
 				B94C2D68287FFBC400B3C442 /* Info.plist */,
 				B94C2D6E287FFD5000B3C442 /* GoogleService-Info.plist */,
+				E15AC7A428910DCC004BE3E8 /* UIViewExtension2.swift */,
 			);
 			path = Dear;
 			sourceTree = "<group>";
@@ -294,6 +297,7 @@
 				EC09B6742888387100632D72 /* NurseMainViewController.swift in Sources */,
 				B9A271EE2887ED0E00B504B1 /* NurseViewController.swift in Sources */,
 				B92EF32328868AE500AEC6E9 /* FirebaseService.swift in Sources */,
+				E15AC7A528910DCC004BE3E8 /* UIViewExtension2.swift in Sources */,
 				B9A271E82887EAE700B504B1 /* LetterViewController.swift in Sources */,
 				B92EF31E2886888B00AEC6E9 /* Letter.swift in Sources */,
 			);
