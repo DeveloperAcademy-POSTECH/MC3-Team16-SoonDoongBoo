@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -16,21 +17,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hyg-zM-pN9">
-                                <rect key="frame" x="29" y="38" width="49" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="이전"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mPz-ss-19e">
-                                <rect key="frame" x="339" y="38" width="49" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="완료"/>
-                                <connections>
-                                    <action selector="PrintAlert:" destination="yjt-aa-E6v" eventType="touchUpInside" id="Dcf-t5-ENb"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="DVM-zJ-dDu">
+                                <rect key="frame" x="20" y="565" width="379" height="50"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="depressed" translatesAutoresizingMaskIntoConstraints="NO" id="s5j-ZD-xeS">
+                                        <rect key="frame" x="0.0" y="0.0" width="51" height="50"/>
+                                    </imageView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" text="우울한 기분을 완화해줘요" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ToR-FC-dvq">
+                                        <rect key="frame" x="64" y="0.0" width="278" height="50"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="textColor" systemColor="labelColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="check-true" translatesAutoresizingMaskIntoConstraints="NO" id="An9-k1-q3B">
+                                        <rect key="frame" x="355" y="0.0" width="24" height="50"/>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="mSD-Je-0eO">
                                 <rect key="frame" x="20" y="623" width="379" height="50"/>
                                 <subviews>
@@ -104,31 +108,110 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="aA1-07-nxy">
-                                <rect key="frame" x="29" y="91" width="359" height="466"/>
+                                <rect key="frame" x="20" y="511" width="379" height="46"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" name="Pink02Color"/>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="DVM-zJ-dDu">
-                                <rect key="frame" x="20" y="565" width="379" height="50"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="6lA-d7-4U7">
+                                <rect key="frame" x="20" y="64" width="374" height="50"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="depressed" translatesAutoresizingMaskIntoConstraints="NO" id="s5j-ZD-xeS">
-                                        <rect key="frame" x="0.0" y="0.0" width="51" height="50"/>
-                                    </imageView>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" text="우울한 기분을 완화해줘요" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ToR-FC-dvq">
-                                        <rect key="frame" x="64" y="0.0" width="278" height="50"/>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="처방전" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="BWY-km-VSz">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="50"/>
+                                        <color key="textColor" name="Pink01Color"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <color key="backgroundColor" name="Pink02Color"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="8aM-Da-ByK"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aqw-3P-Y0J">
+                                <rect key="frame" x="20" y="114" width="374" height="40"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hZS-DO-sh1">
+                                        <rect key="frame" x="0.0" y="0.0" width="58" height="40"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="날짜" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hOn-e2-Ug5">
+                                                <rect key="frame" x="8" y="10" width="30" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="58" id="VyK-zN-mGr"/>
+                                            <constraint firstAttribute="height" constant="40" id="rlM-sM-YPW"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ijq-O4-ddU">
+                                        <rect key="frame" x="58" y="0.0" width="316" height="40"/>
+                                        <subviews>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="2022-07-26" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="d2C-uU-ZRV">
+                                                <rect key="frame" x="20" y="20" width="187" height="40"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <color key="textColor" systemColor="labelColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="iun-ew-9Sr"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" spacing="73" translatesAutoresizingMaskIntoConstraints="NO" id="GTw-tm-owE">
+                                <rect key="frame" x="20" y="267" width="379" height="128"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" text="환자" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="tee-Pp-USK">
+                                        <rect key="frame" x="0.0" y="0.0" width="66" height="128"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <color key="textColor" systemColor="labelColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="check-true" translatesAutoresizingMaskIntoConstraints="NO" id="An9-k1-q3B">
-                                        <rect key="frame" x="355" y="0.0" width="24" height="50"/>
-                                    </imageView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" text="정제든 간호사님" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="AEV-nf-Daf">
+                                        <rect key="frame" x="139" y="0.0" width="240" height="128"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="textColor" systemColor="labelColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
                                 </subviews>
                             </stackView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="필요한 처방 Tip!" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="4ZA-JW-5IB">
+                                <rect key="frame" x="148" y="431" width="240" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="textColor" name="Pink01Color"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="세부 사항" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="k0q-ej-3xf">
+                                <rect key="frame" x="199" y="388" width="240" height="37.5"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="textColor" name="Pink01Color"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="K84-7G-D7c"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6lA-d7-4U7" firstAttribute="top" secondItem="K84-7G-D7c" secondAttribute="top" constant="20" id="39O-C2-Coc"/>
+                            <constraint firstItem="K84-7G-D7c" firstAttribute="trailing" secondItem="6lA-d7-4U7" secondAttribute="trailing" constant="20" id="5ps-wN-Yaz"/>
+                            <constraint firstItem="K84-7G-D7c" firstAttribute="trailing" secondItem="aqw-3P-Y0J" secondAttribute="trailing" constant="20" id="DeY-ol-vnB"/>
+                            <constraint firstItem="6lA-d7-4U7" firstAttribute="leading" secondItem="K84-7G-D7c" secondAttribute="leading" constant="20" id="a77-2Z-zdG"/>
+                            <constraint firstItem="aqw-3P-Y0J" firstAttribute="leading" secondItem="K84-7G-D7c" secondAttribute="leading" constant="20" id="dKS-bl-0gG"/>
+                            <constraint firstItem="aqw-3P-Y0J" firstAttribute="top" secondItem="6lA-d7-4U7" secondAttribute="bottom" id="e8V-jZ-Dsa"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="TEx-FB-Tay"/>
                 </viewController>
@@ -145,6 +228,12 @@
         <image name="joyful" width="51" height="34"/>
         <image name="mild" width="51" height="34"/>
         <image name="sadness" width="51" height="34"/>
+        <namedColor name="Pink01Color">
+            <color red="1" green="0.53700000047683716" blue="0.40400001406669617" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Pink02Color">
+            <color red="1" green="0.88599997758865356" blue="0.81999999284744263" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
