@@ -19,7 +19,6 @@ class UIViewExtension: UIView {
             self.layer.borderColor = newValue.cgColor
         }
     }
-    
     @IBInspectable var borderWidth: CGFloat {
         get{
             return self.layer.borderWidth
@@ -28,7 +27,6 @@ class UIViewExtension: UIView {
             self.layer.borderWidth = newValue
         }
     }
-    
     @IBInspectable var cornerRadius: CGFloat {
         get {
             return self.layer.cornerRadius
@@ -37,7 +35,6 @@ class UIViewExtension: UIView {
             self.layer.cornerRadius = newValue
         }
     }
-    
     @IBInspectable var shadowRadius: CGFloat {
         get{
             return self.layer.shadowRadius
@@ -46,7 +43,6 @@ class UIViewExtension: UIView {
             self.layer.shadowRadius = newValue
         }
     }
-    
     @IBInspectable var shadowOpacity: Float {
         get {
             return self.layer.shadowOpacity

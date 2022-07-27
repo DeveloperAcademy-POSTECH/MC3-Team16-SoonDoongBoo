@@ -25,9 +25,7 @@ class NurseMainController: UIViewController {
         moodView.layer.shadowRadius = 8
         
         moodSelect.frame.size = CGSize(width: moodView.frame.width, height: moodView.frame.height)
-//        moodView.addSubview(moodSelect)
-        moodView.addSubview(moodText
-        )
+        moodView.addSubview(moodSelect)
         moodSelect.center = moodView.convert(moodView.center, from:moodView.superview)
         
         moodSelect.frame = moodView.bounds
