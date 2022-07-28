@@ -75,7 +75,8 @@ class FirebaseService {
         dateFormatter.dateFormat = "yyyy.MM.dd"
         let today = dateFormatter.string(from: Date())
         
-        let documents = try await db.collection("Letters").whereField("HospitalName", in: [hospitalName]).whereField("Date", in: [today]).getDocuments()
+        let documents = try await db.collection("Letters").whereField("HospitalName", isEqualTo: hospitalName)
+            .whereField("Date", isEqualTo: today).getDocuments()
         
         let models = documents.documents.map({ (document) -> Letter in
             if let model = Letter(dictionary: document.data()) {
