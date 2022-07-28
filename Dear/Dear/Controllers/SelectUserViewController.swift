@@ -17,10 +17,6 @@ class SelectUserViewController: UIViewController {
         
         selectionNurseView.layer.cornerRadius = 10
         selectionPatientView.layer.cornerRadius = 10
-        selectionNurseView.layer.borderColor = UIColor(named: "ButtonBorderColor")?.cgColor
-        selectionPatientView.layer.borderColor = UIColor(named: "ButtonBorderColor")?.cgColor
-        selectionNurseView.layer.borderWidth = 2
-        selectionPatientView.layer.borderWidth = 2
         
         
         let nuresTapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(viewSelectionnurseTapped))
@@ -30,13 +26,33 @@ class SelectUserViewController: UIViewController {
         selectionPatientView.addGestureRecognizer(patientTapGestureRecognizer)
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        selectionNurseView.layer.backgroundColor = UIColor.pink_03.cgColor
+        selectionPatientView.layer.backgroundColor = UIColor.pink_03.cgColor
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        
+        DispatchQueue.main.async {
+            self.selectionNurseView.layer.backgroundColor = UIColor.pink_03.cgColor
+            self.selectionPatientView.layer.backgroundColor = UIColor.pink_03.cgColor
+        }
+    }
+    
     @objc func viewSelectionnurseTapped(sender: UITapGestureRecognizer) {
         guard let vc = storyboard?.instantiateViewController(withIdentifier: "vc1") as? NurseViewController else {return}
         navigationController?.pushViewController(vc, animated: true)
+        
+        selectionNurseView.layer.backgroundColor = UIColor.pink_02.cgColor
     }
     
     @objc func viewSelectionpatientTapped(sender: UITapGestureRecognizer) {
         guard let vc = storyboard?.instantiateViewController(withIdentifier: "vc2") as? PatientViewController else {return}
         navigationController?.pushViewController(vc, animated: true)
+        
+        selectionPatientView.layer.backgroundColor = UIColor.pink_02.cgColor
     }
 }
