@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Patient Pill Bag View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="PatientPillBagView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="PatientPillBagViewController" customModule="Dear" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xTt-A7-Ti2">
+                                <rect key="frame" x="20" y="74" width="98" height="46"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QuU-uZ-LdD">
+                                        <rect key="frame" x="0.0" y="0.0" width="18.5" height="46"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="18.5" id="wee-fR-gIv"/>
+                                        </constraints>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="약 뭉치" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aa9-Xq-TWL">
+                                        <rect key="frame" x="18.5" y="0.0" width="61" height="46"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="61" id="MRp-sR-jxV"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hqX-iH-8i0">
+                                        <rect key="frame" x="79.5" y="0.0" width="18.5" height="46"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="18.5" id="Euu-xa-exh"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" name="ButtonBorderColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="46" id="4r0-Dc-BVX"/>
+                                    <constraint firstAttribute="width" constant="98" id="Kem-6P-2Oe"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wzM-pF-XR4">
+                                <rect key="frame" x="340" y="77" width="54" height="54"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="54" id="1EN-6X-iXH"/>
+                                    <constraint firstAttribute="width" constant="54" id="82d-Gx-JPM"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="icon-plus-circle-mono" title=""/>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Bk1-ne-7EG">
+                                <rect key="frame" x="20" y="140" width="374" height="702"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="pillCell" rowHeight="239" id="naG-eY-B8T" customClass="PatientPillBagTableViewCell" customModule="Dear" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="44.5" width="374" height="239"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="naG-eY-B8T" id="6bG-cA-FqT">
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="239"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="R1P-HA-Wkh">
+                                                    <rect key="frame" x="40" y="40" width="67" height="29"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jul" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qTe-cP-eda">
+                                                            <rect key="frame" x="0.0" y="0.0" width="32" height="29"/>
+                                                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="24"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="24" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fzo-ZS-PFY">
+                                                            <rect key="frame" x="38" y="0.0" width="29" height="29"/>
+                                                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="24"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sunday" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZCM-Ce-Nb4">
+                                                    <rect key="frame" x="40" y="73" width="48.5" height="17"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="기분이 좋아지는 약" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="guB-qz-Gay">
+                                                    <rect key="frame" x="40" y="128" width="148" height="24"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tik-9Z-WJT">
+                                                    <rect key="frame" x="257.5" y="180" width="76.5" height="40"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="40" id="oaJ-eH-Q4t"/>
+                                                    </constraints>
+                                                    <state key="normal" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="plain" title="더보기 &gt;">
+                                                        <fontDescription key="titleFontDescription" type="system" pointSize="15"/>
+                                                        <color key="baseForegroundColor" name="ButtonBorderColor"/>
+                                                    </buttonConfiguration>
+                                                </button>
+                                                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mug-e7-KxS">
+                                                    <rect key="frame" x="40" y="180" width="96" height="40"/>
+                                                    <subviews>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jZy-ig-66S">
+                                                            <rect key="frame" x="0.0" y="0.0" width="15" height="40"/>
+                                                        </view>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A 간호사님" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pYo-BK-q0I">
+                                                            <rect key="frame" x="15" y="0.0" width="66" height="40"/>
+                                                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="acJ-c9-b0E">
+                                                            <rect key="frame" x="81" y="0.0" width="15" height="40"/>
+                                                        </view>
+                                                    </subviews>
+                                                    <color key="backgroundColor" red="1" green="0.52120530610000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstItem="jZy-ig-66S" firstAttribute="width" secondItem="acJ-c9-b0E" secondAttribute="width" id="EvI-Sh-Xby"/>
+                                                        <constraint firstAttribute="width" constant="96" id="dhJ-5g-piH"/>
+                                                        <constraint firstAttribute="height" constant="40" id="riF-HA-MSn"/>
+                                                    </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                            <real key="value" value="20"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </stackView>
+                                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yAw-E6-lfR">
+                                                    <rect key="frame" x="20" y="18" width="282" height="221"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </view>
+                                            </subviews>
+                                            <color key="backgroundColor" red="0.47684186699999997" green="0.50480759139999998" blue="1" alpha="0.41522661420000001" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <constraints>
+                                                <constraint firstItem="guB-qz-Gay" firstAttribute="top" secondItem="ZCM-Ce-Nb4" secondAttribute="bottom" constant="38" id="26X-9x-Ly4"/>
+                                                <constraint firstItem="ZCM-Ce-Nb4" firstAttribute="top" secondItem="R1P-HA-Wkh" secondAttribute="bottom" constant="4" id="3Yl-gl-54z"/>
+                                                <constraint firstItem="R1P-HA-Wkh" firstAttribute="top" secondItem="6bG-cA-FqT" secondAttribute="top" constant="40" id="K1n-l0-BK7"/>
+                                                <constraint firstItem="Mug-e7-KxS" firstAttribute="top" secondItem="guB-qz-Gay" secondAttribute="bottom" constant="28" id="MAp-Ma-vaW"/>
+                                                <constraint firstItem="tik-9Z-WJT" firstAttribute="top" secondItem="6bG-cA-FqT" secondAttribute="top" constant="180" id="Rnw-53-a5I"/>
+                                                <constraint firstItem="ZCM-Ce-Nb4" firstAttribute="leading" secondItem="6bG-cA-FqT" secondAttribute="leading" constant="40" id="aZf-ib-GFE"/>
+                                                <constraint firstItem="guB-qz-Gay" firstAttribute="leading" secondItem="6bG-cA-FqT" secondAttribute="leading" constant="40" id="lAg-ug-2r4"/>
+                                                <constraint firstItem="R1P-HA-Wkh" firstAttribute="leading" secondItem="6bG-cA-FqT" secondAttribute="leading" constant="40" id="r2J-7w-wBW"/>
+                                                <constraint firstItem="Mug-e7-KxS" firstAttribute="leading" secondItem="6bG-cA-FqT" secondAttribute="leading" constant="40" id="xcW-Pv-eHI"/>
+                                                <constraint firstAttribute="trailing" secondItem="tik-9Z-WJT" secondAttribute="trailing" constant="40" id="yPI-5d-4gh"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <outlet property="borderView" destination="yAw-E6-lfR" id="lLp-Ze-UJw"/>
+                                            <outlet property="date" destination="Fzo-ZS-PFY" id="d8z-d2-9SN"/>
+                                            <outlet property="day" destination="ZCM-Ce-Nb4" id="PYg-Qo-eck"/>
+                                            <outlet property="month" destination="qTe-cP-eda" id="SfE-qh-Y4G"/>
+                                            <outlet property="moreButton" destination="tik-9Z-WJT" id="tdJ-at-Cii"/>
+                                            <outlet property="title" destination="guB-qz-Gay" id="MPk-XZ-VYd"/>
+                                            <outlet property="toNurse" destination="pYo-BK-q0I" id="fS7-cu-QUP"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="xTt-A7-Ti2" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="K66-dG-i6F"/>
+                            <constraint firstItem="xTt-A7-Ti2" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="30" id="NtE-nP-GO1"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="wzM-pF-XR4" secondAttribute="trailing" constant="20" id="V1k-B6-LdD"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="Bk1-ne-7EG" secondAttribute="bottom" constant="20" id="cGR-on-wAb"/>
+                            <constraint firstItem="wzM-pF-XR4" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="33" id="dkU-s1-DzP"/>
+                            <constraint firstItem="Bk1-ne-7EG" firstAttribute="top" secondItem="xTt-A7-Ti2" secondAttribute="bottom" constant="20" id="k1T-zj-nkN"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Bk1-ne-7EG" secondAttribute="trailing" constant="20" id="o1i-bN-Aex"/>
+                            <constraint firstItem="Bk1-ne-7EG" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="sMl-Gn-tlK"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="pillBag" destination="xTt-A7-Ti2" id="gge-bo-jAu"/>
+                        <outlet property="pillBagTable" destination="Bk1-ne-7EG" id="gmf-5Q-VpR"/>
+                        <outlet property="sentPrescription" destination="wzM-pF-XR4" id="cKz-EN-Lzc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="24.637681159420293" y="75"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="icon-plus-circle-mono" width="40" height="40"/>
+        <namedColor name="ButtonBorderColor">
+            <color red="0.54509803921568623" green="0.54509803921568623" blue="0.54509803921568623" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
