@@ -7,6 +7,7 @@
 
 import UIKit
 
+/*
 extension UIView {
     
     //extension에서는 Stored Property(값을 넣는 프로퍼티)가
@@ -80,3 +81,4 @@ extension UIView {
 
     
 }
+*/
