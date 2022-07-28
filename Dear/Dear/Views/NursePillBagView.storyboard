@@ -21,7 +21,7 @@
                                 <rect key="frame" x="0.0" y="124" width="414" height="612"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="LetterCell" rowHeight="277" id="WIT-hN-TRG" customClass="NursePillBagViewCell" customModule="Dear" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="1" reuseIdentifier="LetterCell" rowHeight="277" id="WIT-hN-TRG" customClass="NursePillBagViewCell" customModule="Dear" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="44.666666030883789" width="414" height="277"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="WIT-hN-TRG" id="kvx-Dw-bmd">
@@ -53,16 +53,15 @@
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lgI-PT-eQv">
-                                                                    <rect key="frame" x="235.66666666666663" y="177" width="73" height="32"/>
+                                                                    <rect key="frame" x="250.33333333333337" y="177" width="73" height="32"/>
                                                                     <state key="normal" title="Button"/>
                                                                     <buttonConfiguration key="configuration" style="plain" title="더보기 &gt;"/>
                                                                 </button>
                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xh1-mH-UY7" customClass="UIViewExtension2" customModule="Dear" customModuleProvider="target">
-                                                                    <rect key="frame" x="30" y="177" width="96" height="34"/>
+                                                                    <rect key="frame" x="30" y="177" width="79" height="34"/>
                                                                     <subviews>
-                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="A 간호사님" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Il-h2-hBY">
-                                                                            <rect key="frame" x="8" y="8" width="80" height="18"/>
-                                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A 간호사님" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Il-h2-hBY">
+                                                                            <rect key="frame" x="8.0000000000000071" y="8" width="66" height="18"/>
                                                                             <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
                                                                             <nil key="textColor"/>
                                                                             <nil key="highlightedColor"/>
@@ -70,8 +69,10 @@
                                                                     </subviews>
                                                                     <color key="backgroundColor" systemColor="systemRedColor"/>
                                                                     <constraints>
+                                                                        <constraint firstAttribute="width" secondItem="0Il-h2-hBY" secondAttribute="width" multiplier="1.2" id="3ff-y9-WbI"/>
+                                                                        <constraint firstItem="0Il-h2-hBY" firstAttribute="leading" secondItem="Xh1-mH-UY7" secondAttribute="leadingMargin" id="AQU-KT-CNz"/>
+                                                                        <constraint firstItem="0Il-h2-hBY" firstAttribute="top" secondItem="Xh1-mH-UY7" secondAttribute="topMargin" id="Yxc-iw-vpW"/>
                                                                         <constraint firstAttribute="height" constant="34" id="eEE-c7-PA1"/>
-                                                                        <constraint firstAttribute="width" constant="96" id="vcd-lG-0i7"/>
                                                                     </constraints>
                                                                     <userDefinedRuntimeAttributes>
                                                                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -86,7 +87,6 @@
                                                                 <constraint firstItem="lgI-PT-eQv" firstAttribute="top" secondItem="Xh1-mH-UY7" secondAttribute="top" id="3YL-Gg-7fy"/>
                                                                 <constraint firstAttribute="height" constant="231" id="BjG-JN-2GQ"/>
                                                                 <constraint firstAttribute="bottom" secondItem="lgI-PT-eQv" secondAttribute="bottom" constant="22" id="D0N-V5-aAk"/>
-                                                                <constraint firstItem="lgI-PT-eQv" firstAttribute="leading" secondItem="Xh1-mH-UY7" secondAttribute="trailing" constant="109.66666666666663" id="EF2-9h-Tzh"/>
                                                                 <constraint firstItem="ySN-No-NPw" firstAttribute="top" secondItem="oTF-pD-gbM" secondAttribute="bottom" constant="37" id="GcT-oD-N3m"/>
                                                                 <constraint firstItem="oTF-pD-gbM" firstAttribute="leading" secondItem="3Jr-xA-qvg" secondAttribute="leading" constant="30" id="Lae-VO-rFw"/>
                                                                 <constraint firstItem="Xh1-mH-UY7" firstAttribute="leading" secondItem="3Jr-xA-qvg" secondAttribute="leading" constant="30" id="Liq-0W-fmh"/>
@@ -94,7 +94,7 @@
                                                                 <constraint firstItem="Xh1-mH-UY7" firstAttribute="top" secondItem="ySN-No-NPw" secondAttribute="bottom" constant="28" id="ToX-Hd-0eU"/>
                                                                 <constraint firstItem="kQL-pK-pcG" firstAttribute="leading" secondItem="ySN-No-NPw" secondAttribute="leading" id="VgA-ox-TFG"/>
                                                                 <constraint firstItem="oTF-pD-gbM" firstAttribute="top" secondItem="kQL-pK-pcG" secondAttribute="bottom" constant="4" id="Xcl-gj-ALE"/>
-                                                                <constraint firstAttribute="trailing" secondItem="Xh1-mH-UY7" secondAttribute="trailing" constant="197.33333333333337" id="hqg-fP-7BY"/>
+                                                                <constraint firstAttribute="trailing" secondItem="lgI-PT-eQv" secondAttribute="trailing" id="eye-8T-mcr"/>
                                                                 <constraint firstItem="kQL-pK-pcG" firstAttribute="leading" secondItem="3Jr-xA-qvg" secondAttribute="leading" constant="30" id="knC-j1-q2e"/>
                                                             </constraints>
                                                             <userDefinedRuntimeAttributes>
