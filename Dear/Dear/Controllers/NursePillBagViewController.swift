@@ -9,12 +9,18 @@ import UIKit
 
 class NursePillBagViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
-    var letters: [Letter] = Letter.sampleData
+    var letters: [Letter] = []
+    let firebaseService = FirebaseService()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.dataSource = self
         self.tableView.delegate = self
+        
+        Task {
+            letters = try await firebaseService.fetchLettersByHospital(hospitalName: "포항성모병원")
+            tableView.reloadData()
+        }
     }
     
 }
