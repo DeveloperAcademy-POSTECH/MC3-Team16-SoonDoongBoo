@@ -52,7 +52,6 @@
 		ECF246C028910EF30025581F /* SelectMood.xib in Resources */ = {isa = PBXBuildFile; fileRef = ECF246BF28910EF30025581F /* SelectMood.xib */; };
 		ECF246C2289118B20025581F /* XibUIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF246C1289118B20025581F /* XibUIViewExtension.swift */; };
 		ECF246C4289119E50025581F /* SelectMood.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF246C3289119E50025581F /* SelectMood.swift */; };
-		ECF246C6289129BF0025581F /* MoodText.xib in Resources */ = {isa = PBXBuildFile; fileRef = ECF246C5289129BF0025581F /* MoodText.xib */; };
 		ECF246C828912B290025581F /* MoodText.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF246C728912B290025581F /* MoodText.swift */; };
 /* End PBXBuildFile section */
 
@@ -98,7 +97,6 @@
 		ECF246BF28910EF30025581F /* SelectMood.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectMood.xib; sourceTree = "<group>"; };
 		ECF246C1289118B20025581F /* XibUIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XibUIViewExtension.swift; sourceTree = "<group>"; };
 		ECF246C3289119E50025581F /* SelectMood.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectMood.swift; sourceTree = "<group>"; };
-		ECF246C5289129BF0025581F /* MoodText.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MoodText.xib; sourceTree = "<group>"; };
 		ECF246C728912B290025581F /* MoodText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodText.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -213,7 +211,6 @@
 				B97EACA6288FB64900DA8A93 /* WriteLetter.storyboard */,
 				E15AC77828904D9A004BE3E8 /* NursePillBagView.storyboard */,
 				ECF246BF28910EF30025581F /* SelectMood.xib */,
-				ECF246C5289129BF0025581F /* MoodText.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -302,7 +299,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				B94C2D67287FFBC400B3C442 /* LaunchScreen.storyboard in Resources */,
-				ECF246C6289129BF0025581F /* MoodText.xib in Resources */,
 				ECE52228288FBC7200B3C509 /* NurseMain.storyboard in Resources */,
 				EC09B6752888387100632D72 /* NurseMainView.storyboard in Resources */,
 				ECF246C028910EF30025581F /* SelectMood.xib in Resources */,
