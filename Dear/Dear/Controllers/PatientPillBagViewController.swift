@@ -47,8 +47,6 @@ class PatientPillBagViewController: UIViewController, UITableViewDataSource {
         cell.title.text = "기분이 좋아지는 약"
         cell.toNurse.text = "A 간호사님"
         
-
-        
         return cell
     }
     
