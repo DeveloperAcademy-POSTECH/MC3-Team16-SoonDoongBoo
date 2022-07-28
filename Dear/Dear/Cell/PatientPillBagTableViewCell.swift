@@ -10,19 +10,12 @@ import UIKit
 class PatientPillBagTableViewCell: UITableViewCell {
     
     @IBOutlet weak var cellStackView: UIStackView!
-    
     @IBOutlet weak var month: UILabel!
-    
     @IBOutlet weak var date: UILabel!
-    
     @IBOutlet weak var day: UILabel!
-    
     @IBOutlet weak var title: UILabel!
-    
     @IBOutlet weak var toNurse: UILabel!
-    
     @IBOutlet weak var moreButton: UIButton!
-    
     @IBOutlet weak var borderView: UIView!
     
     // 테이블 뷰 셀 시작시 동작하는 함수
