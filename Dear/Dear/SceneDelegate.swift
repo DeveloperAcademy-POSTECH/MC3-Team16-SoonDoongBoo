@@ -22,7 +22,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         let storyboard = UIStoryboard(name: "SelectUser", bundle: nil)
         let navigationController = storyboard.instantiateViewController(withIdentifier: "UINavigationController")
-
+        
         window?.rootViewController = navigationController
         window?.windowScene = scene
         window?.makeKeyAndVisible()
