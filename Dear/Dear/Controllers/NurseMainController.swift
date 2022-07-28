@@ -29,17 +29,17 @@ class NurseMainController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     
-        setMoodCount()
-        ///데이터 연결시 삭제
-        UserDefaults.standard.set("테스트 병원", forKey: "hospital")
+        //TODO: 데이터 연결시 삭제
+        UserDefaults.standard.set("포항성모병원", forKey: "hospital")
         
+        setMoodCount()
         setDateLabel()
+        
         hospitalLabel.text = hospitalName
         Task {
-            letters = try await firebaseService.fetchLettersByHospital(hospitalName: "")
+            letters = try await firebaseService.fetchLettersToday(hospitalName: hospitalName)
             letterCountLabel.text = "\(letters.count)개"
         }
-        
         if UserDefaults.standard.integer(forKey: "today") == moodSelect.getDate()
             && UserDefaults.standard.bool(forKey: "isSelectedMood") == true {
             cheeringView.isHidden = false
@@ -49,7 +49,6 @@ class NurseMainController: UIViewController {
             selectMoodView.isHidden = false
         }
     }
-    
     private func setDateLabel() {
         let current = Date()
         let formatter = DateFormatter()
