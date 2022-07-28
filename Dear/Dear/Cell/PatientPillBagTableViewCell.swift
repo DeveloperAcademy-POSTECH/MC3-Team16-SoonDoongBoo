@@ -24,7 +24,7 @@ class PatientPillBagTableViewCell: UITableViewCell {
     @IBOutlet weak var moreButton: UIButton!
     
  
-    
+    // 테이블 뷰 셀 시작시 동작하는 함수
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -32,12 +32,14 @@ class PatientPillBagTableViewCell: UITableViewCell {
         
     }
 
+    // 테이블 뷰 셀 클릭되었을 때 동작하는 함수
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
     }
     
+    // 테이블 뷰 사이의 간격을 조절하는 함수
     override func layoutSubviews() {
         super.layoutSubviews()
 

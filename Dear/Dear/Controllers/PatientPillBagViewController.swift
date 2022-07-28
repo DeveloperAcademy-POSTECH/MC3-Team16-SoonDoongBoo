@@ -19,6 +19,7 @@ class PatientPillBagViewController: UIViewController, UITableViewDataSource {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
+        // 약뭉치 등 레이블쪽 관련된 부분
         pillBagTable.dataSource = self
         pillBagTable.delegate = self
         pillBag.layer.cornerRadius = 23
@@ -26,15 +27,19 @@ class PatientPillBagViewController: UIViewController, UITableViewDataSource {
 
     }
 
+    // 테이블 뷰 셀 개수에 대한 함수
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 5
     }
     
+    //테이블 뷰 셀 커스텀하는 함수
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 //        let cell = UITableViewCell.init(style: .default, reuseIdentifier: "pillCell")
 //        cell.textLabel?.text = "\(indexPath.row)"
 //        return cell
         let cell = tableView.dequeueReusableCell(withIdentifier: "pillCell", for: indexPath) as! PatientPillBagTableViewCell
+        
+        //아래의 더미 데이터들을 파이어베이스에서 불러오는 데이터로 바꿔줘야함
         cell.month.text = "Jul"
         cell.date.text = "24"
         cell.day.text = "Sunday"
@@ -45,12 +50,14 @@ class PatientPillBagViewController: UIViewController, UITableViewDataSource {
     
 }
 
+//테이블 뷰 셀의 크기를 키워주는 익스텐션
 extension PatientPillBagViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 260
     }
 }
 
+// 점선 생성하는 익스텐션
 extension UIView {
    func createDottedLine(width: CGFloat, color: CGColor) {
       let caShapeLayer = CAShapeLayer()
