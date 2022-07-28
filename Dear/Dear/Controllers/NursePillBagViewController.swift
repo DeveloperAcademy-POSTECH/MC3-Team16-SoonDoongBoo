@@ -9,14 +9,20 @@ import UIKit
 
 class NursePillBagViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var titleView: UIViewExtension!
+    
     var letters: [Letter] = []
     let firebaseService = FirebaseService()
+    
+    override func viewDidAppear(_ animated: Bool) {
+        titleView.layer.backgroundColor = UIColor.pink_01.cgColor
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.dataSource = self
         self.tableView.delegate = self
-        
+
         Task {
             letters = try await firebaseService.fetchLettersByHospital(hospitalName: "포항성모병원")
             tableView.reloadData()
@@ -33,8 +39,27 @@ extension NursePillBagViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "LetterCell", for: indexPath) as! NursePillBagViewCell
         let letter = self.letters[indexPath.row]
         
-        cell.cellDate.text = letter.date
-        cell.cellDay.text = letter.date
+        //print("\(letter.date)", type(of: letter.date)) //2022.07.28 String
+        
+        //String -> Date
+        let dateString:String = "2022.07.29"
+
+        let dateFormatter = DateFormatter()
+
+        dateFormatter.dateFormat = "yyyy.MM.dd"
+        
+        let date:Date = dateFormatter.date(from: dateString)!
+        print("\(date)", type(of: date))
+        dateFormatter.locale = Locale(identifier: "us")
+        dateFormatter.dateFormat = "MMM d"
+        print("\(dateFormatter.string(from: date))")
+        
+        //Date -> String
+        
+        cell.cellDate.text = dateFormatter.string(from: date)
+        
+        dateFormatter.dateFormat = "EEEE"
+        cell.cellDay.text = dateFormatter.string(from: date)
         cell.cellTitle.text = "기분이 좋아지는 약"
         cell.cellLetterTo.text = letter.letterTo
 

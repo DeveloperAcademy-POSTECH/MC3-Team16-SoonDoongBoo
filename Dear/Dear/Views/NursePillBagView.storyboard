@@ -213,6 +213,7 @@
                     <navigationItem key="navigationItem" id="Ern-5K-dxA"/>
                     <connections>
                         <outlet property="tableView" destination="7Ra-cC-eUo" id="RKS-oF-ZZD"/>
+                        <outlet property="titleView" destination="J0X-dI-0EK" id="GYR-Kx-sJx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
