@@ -68,6 +68,27 @@ class FirebaseService {
         return hospitals
     }
     
+    // 해당하는 병원 이름의 현재 날짜에 등록된 마음카드를 가져오는 함수
+    func fetchLettersToday(hospitalName: String) async throws -> [Letter] {
+        var letters: [Letter] = []
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy.MM.dd"
+        let today = dateFormatter.string(from: Date())
+        
+        let documents = try await db.collection("Letters").whereField("HospitalName", in: [hospitalName]).whereField("Date", in: [today]).getDocuments()
+        
+        let models = documents.documents.map({ (document) -> Letter in
+            if let model = Letter(dictionary: document.data()) {
+                return model
+            } else {
+                fatalError("Unable to initialize type \(Letter.self) with dictionary \(document.data())")
+            }
+        })
+        letters = models
+        
+        return letters
+    }
+    
     // 마음 카드를 파이어베이스에 등록하는 함수
     func sendLetterToHospital(hospitalName: String, letterTo: String, letterContent: String, anger: Bool, calm: Bool, depression: Bool, joyful: Bool, sadness: Bool) {
         let dateFormatter = DateFormatter()
