@@ -402,6 +402,16 @@
                             <constraint firstItem="6FR-Lb-2Rr" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="sce-eU-11B"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="angerView" destination="HjS-YA-cOC" id="RuA-Lk-que"/>
+                        <outlet property="calmView" destination="qgw-1Q-CEK" id="Cwz-Lo-h5k"/>
+                        <outlet property="contentLabel" destination="p9g-zT-aVO" id="K6B-Z5-55x"/>
+                        <outlet property="dateLabel" destination="fah-yO-sIw" id="cSy-6A-rvZ"/>
+                        <outlet property="depressionView" destination="6fp-4V-Cso" id="WO8-sx-cgI"/>
+                        <outlet property="joyfulView" destination="B2d-b1-V5D" id="uxc-FK-ffm"/>
+                        <outlet property="nameLabel" destination="H8c-x0-55X" id="VBF-x0-Qxv"/>
+                        <outlet property="sadnessView" destination="JA8-AV-X4B" id="UeE-ay-8gA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
