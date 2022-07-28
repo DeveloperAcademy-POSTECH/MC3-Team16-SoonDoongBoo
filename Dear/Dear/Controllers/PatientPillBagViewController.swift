@@ -21,6 +21,9 @@ class PatientPillBagViewController: UIViewController, UITableViewDataSource {
         // Do any additional setup after loading the view.
         pillBagTable.dataSource = self
         pillBagTable.delegate = self
+        pillBag.layer.cornerRadius = 23
+        pillBag.backgroundColor = UIColor.orange
+
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -44,6 +47,20 @@ class PatientPillBagViewController: UIViewController, UITableViewDataSource {
 
 extension PatientPillBagViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 180
+        return 260
     }
+}
+
+extension UIView {
+   func createDottedLine(width: CGFloat, color: CGColor) {
+      let caShapeLayer = CAShapeLayer()
+      caShapeLayer.strokeColor = color
+      caShapeLayer.lineWidth = width
+      caShapeLayer.lineDashPattern = [10,5]
+      let cgPath = CGMutablePath()
+       let cgPoint = [CGPoint(x: 330, y: 30), CGPoint(x: 330, y: 230)]
+      cgPath.addLines(between: cgPoint)
+      caShapeLayer.path = cgPath
+      layer.addSublayer(caShapeLayer)
+   }
 }

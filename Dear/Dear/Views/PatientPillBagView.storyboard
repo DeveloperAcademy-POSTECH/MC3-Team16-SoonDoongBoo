@@ -22,7 +22,6 @@
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QuU-uZ-LdD">
                                         <rect key="frame" x="0.0" y="0.0" width="18.5" height="46"/>
-                                        <color key="backgroundColor" name="ButtonBorderColor"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="18.5" id="wee-fR-gIv"/>
                                         </constraints>
@@ -33,12 +32,16 @@
                                             <constraint firstAttribute="width" constant="61" id="MRp-sR-jxV"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hqX-iH-8i0">
                                         <rect key="frame" x="79.5" y="0.0" width="18.5" height="46"/>
-                                        <color key="backgroundColor" name="ButtonBorderColor"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="18.5" id="Euu-xa-exh"/>
                                         </constraints>
@@ -49,6 +52,11 @@
                                     <constraint firstAttribute="height" constant="46" id="4r0-Dc-BVX"/>
                                     <constraint firstAttribute="width" constant="98" id="Kem-6P-2Oe"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wzM-pF-XR4">
                                 <rect key="frame" x="327" y="77" width="67" height="31"/>
@@ -66,61 +74,74 @@
                                             <rect key="frame" x="0.0" y="0.0" width="374" height="239"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" alignment="top" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="JYm-HI-pcR">
-                                                    <rect key="frame" x="40" y="40" width="312.5" height="155.5"/>
+                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="R1P-HA-Wkh">
+                                                    <rect key="frame" x="40" y="40" width="67" height="29"/>
                                                     <subviews>
-                                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="R1P-HA-Wkh">
-                                                            <rect key="frame" x="0.0" y="0.0" width="54" height="20.5"/>
-                                                            <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jul" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qTe-cP-eda">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="22.5" height="20.5"/>
-                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                    <nil key="textColor"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="24" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fzo-ZS-PFY">
-                                                                    <rect key="frame" x="33.5" y="0.0" width="20.5" height="20.5"/>
-                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                    <nil key="textColor"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                </label>
-                                                            </subviews>
-                                                        </stackView>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sunday" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZCM-Ce-Nb4">
-                                                            <rect key="frame" x="0.0" y="41.5" width="57" height="20.5"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jul" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qTe-cP-eda">
+                                                            <rect key="frame" x="0.0" y="0.0" width="32" height="29"/>
+                                                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="24"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="기분이 좋아지는 약" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="guB-qz-Gay">
-                                                            <rect key="frame" x="0.0" y="83" width="126.5" height="20.5"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="24" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fzo-ZS-PFY">
+                                                            <rect key="frame" x="38" y="0.0" width="29" height="29"/>
+                                                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="24"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="165" translatesAutoresizingMaskIntoConstraints="NO" id="hZO-p0-IdR">
-                                                            <rect key="frame" x="0.0" y="124.5" width="312.5" height="31"/>
-                                                            <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A 간호사님" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pYo-BK-q0I">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="74.5" height="31"/>
-                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                    <nil key="textColor"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                </label>
-                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tik-9Z-WJT">
-                                                                    <rect key="frame" x="239.5" y="0.0" width="73" height="31"/>
-                                                                    <state key="normal" title="Button"/>
-                                                                    <buttonConfiguration key="configuration" style="plain" title="더보기 &gt;"/>
-                                                                </button>
-                                                            </subviews>
-                                                        </stackView>
                                                     </subviews>
                                                 </stackView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sunday" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZCM-Ce-Nb4">
+                                                    <rect key="frame" x="40" y="73" width="48.5" height="17"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A 간호사님" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pYo-BK-q0I">
+                                                    <rect key="frame" x="55" y="180" width="66" height="18"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="기분이 좋아지는 약" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="guB-qz-Gay">
+                                                    <rect key="frame" x="40" y="128" width="148" height="24"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tik-9Z-WJT">
+                                                    <rect key="frame" x="257.5" y="180" width="76.5" height="18"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="18" id="n0l-me-HPU"/>
+                                                    </constraints>
+                                                    <state key="normal" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="plain" title="더보기 &gt;">
+                                                        <fontDescription key="titleFontDescription" type="system" pointSize="15"/>
+                                                        <color key="baseForegroundColor" name="ButtonBorderColor"/>
+                                                    </buttonConfiguration>
+                                                </button>
                                             </subviews>
-                                            <color key="backgroundColor" white="0.67000000000000004" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="backgroundColor" red="0.47684186699999997" green="0.50480759139999998" blue="1" alpha="0.41522661420000001" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <constraints>
+                                                <constraint firstItem="guB-qz-Gay" firstAttribute="top" secondItem="ZCM-Ce-Nb4" secondAttribute="bottom" constant="38" id="26X-9x-Ly4"/>
+                                                <constraint firstItem="ZCM-Ce-Nb4" firstAttribute="top" secondItem="R1P-HA-Wkh" secondAttribute="bottom" constant="4" id="3Yl-gl-54z"/>
+                                                <constraint firstItem="R1P-HA-Wkh" firstAttribute="top" secondItem="6bG-cA-FqT" secondAttribute="top" constant="40" id="K1n-l0-BK7"/>
+                                                <constraint firstItem="tik-9Z-WJT" firstAttribute="top" secondItem="6bG-cA-FqT" secondAttribute="top" constant="180" id="Rnw-53-a5I"/>
+                                                <constraint firstItem="pYo-BK-q0I" firstAttribute="leading" secondItem="6bG-cA-FqT" secondAttribute="leading" constant="55" id="ZWq-9K-ZQ9"/>
+                                                <constraint firstItem="ZCM-Ce-Nb4" firstAttribute="leading" secondItem="6bG-cA-FqT" secondAttribute="leading" constant="40" id="aZf-ib-GFE"/>
+                                                <constraint firstItem="guB-qz-Gay" firstAttribute="leading" secondItem="6bG-cA-FqT" secondAttribute="leading" constant="40" id="lAg-ug-2r4"/>
+                                                <constraint firstItem="R1P-HA-Wkh" firstAttribute="leading" secondItem="6bG-cA-FqT" secondAttribute="leading" constant="40" id="r2J-7w-wBW"/>
+                                                <constraint firstItem="pYo-BK-q0I" firstAttribute="top" secondItem="guB-qz-Gay" secondAttribute="bottom" constant="28" id="ruH-iT-fyq"/>
+                                                <constraint firstAttribute="trailing" secondItem="tik-9Z-WJT" secondAttribute="trailing" constant="40" id="yPI-5d-4gh"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <outlet property="cellStackView" destination="JYm-HI-pcR" id="9Lr-Rk-Ekb"/>
                                             <outlet property="date" destination="Fzo-ZS-PFY" id="d8z-d2-9SN"/>
                                             <outlet property="day" destination="ZCM-Ce-Nb4" id="PYg-Qo-eck"/>
                                             <outlet property="month" destination="qTe-cP-eda" id="SfE-qh-Y4G"/>
