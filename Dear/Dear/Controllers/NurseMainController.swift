@@ -16,6 +16,7 @@ class NurseMainController: UIViewController {
     @IBOutlet weak var letterCountLabel: UILabel!
     
     @IBOutlet weak var cheeringView: UIView!
+    @IBOutlet weak var selectMoodView: UIView!
     
     //TODO: userdefault정보로 받아와서 넣기
     let hospitalName: String = UserDefaults.standard.string(forKey: "hospital") ?? "병원선택"
@@ -38,15 +39,6 @@ class NurseMainController: UIViewController {
         Task {
             letters = try await firebaseService.fetchLettersByHospital(hospitalName: "")
             letterCountLabel.text = "\(letters.count)개"
-        }
-        
-        if UserDefaults.standard.integer(forKey: "today") == moodSelect.getDate()
-            && UserDefaults.standard.bool(forKey: "isSelectedMood") == true {
-            cheeringView.isHidden = false
-            moodView.isHidden = true
-        }else{
-            cheeringView.isHidden = true
-            moodView.isHidden = false
         }
     }
     
@@ -78,7 +70,6 @@ class NurseMainController: UIViewController {
         print(currentDay)
         
         if currentDay == 1 {
-            
             moodList.forEach { id in
                 UserDefaults.standard.set(0, forKey: id)
             }
@@ -87,6 +78,25 @@ class NurseMainController: UIViewController {
             moodList.forEach { id in
                 UserDefaults.standard.integer(forKey: id)
             }
+        }
+    }
+    //버튼 클릭 시 값 증가
+    @IBAction func selectMood(_ sender: Any) {
+        let button = sender as? UIButton
+        let key = String(describing: button?.accessibilityIdentifier)
+        let count = UserDefaults.standard.integer(forKey: "\(key)") + 1
+        UserDefaults.standard.set(count, forKey: "\(key)")
+        UserDefaults.standard.set(true, forKey: "isSelectedMood")
+        UserDefaults.standard.set(getDate(), forKey: "today")
+        print("\(String(describing: button?.accessibilityIdentifier)), count: \(UserDefaults.standard.integer(forKey: "\(key)")), \(UserDefaults.standard.bool(forKey: "isSelectedMood")), \(UserDefaults.standard.integer(forKey: "today"))")
+        
+        if UserDefaults.standard.integer(forKey: "today") == moodSelect.getDate()
+            && UserDefaults.standard.bool(forKey: "isSelectedMood") == true {
+            cheeringView.isHidden = false
+            selectMoodView.isHidden = true
+        }else{
+            cheeringView.isHidden = true
+            selectMoodView.isHidden = false
         }
     }
 }

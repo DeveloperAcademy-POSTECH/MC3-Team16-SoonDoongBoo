@@ -20,10 +20,10 @@
                                 <rect key="frame" x="0.0" y="44" width="390" height="766"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C3n-BL-TgG" userLabel="ContentView">
-                                        <rect key="frame" x="0.0" y="0.0" width="390" height="1430"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="390" height="1610"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="mzc-y9-0fT">
-                                                <rect key="frame" x="20" y="20" width="350" height="1390"/>
+                                                <rect key="frame" x="20" y="20" width="350" height="1570"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="339-4g-vs3" userLabel="MedicineBag" customClass="UIViewExtension" customModule="Dear" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="350" height="500"/>
@@ -218,12 +218,173 @@
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KgW-a1-9dk" userLabel="Select" customClass="SelectMood" customModule="Dear" customModuleProvider="target">
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WtT-Ag-OVc" customClass="UIViewExtension" customModule="Dear" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="530" width="350" height="150"/>
-                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <subviews>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" axis="vertical" distribution="equalSpacing" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="TGx-52-MzD">
+                                                                <rect key="frame" x="18.666666666666657" y="23.333333333333364" width="313" height="103.33333333333331"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" insetsLayoutMarginsFromSafeArea="NO" text="오늘 기분은 어떤가요?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jI8-lJ-8DV">
+                                                                        <rect key="frame" x="77.333333333333329" y="0.0" width="158.33333333333337" height="21.666666666666668"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                                        <nil key="textColor"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="wrS-cg-A8B">
+                                                                        <rect key="frame" x="0.0" y="36.666666666666636" width="313" height="66.666666666666686"/>
+                                                                        <subviews>
+                                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" id="sCJ-vA-R4G">
+                                                                                <rect key="frame" x="0.0" y="0.0" width="59" height="66.666666666666671"/>
+                                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                                <subviews>
+                                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IPx-UB-7Dz">
+                                                                                        <rect key="frame" x="0.0" y="0.0" width="59" height="43"/>
+                                                                                        <accessibility key="accessibilityConfiguration" identifier="Joyful">
+                                                                                            <accessibilityTraits key="traits" button="YES" image="YES"/>
+                                                                                        </accessibility>
+                                                                                        <state key="normal" title="Button"/>
+                                                                                        <buttonConfiguration key="configuration" style="plain" image="Joyful" title="" buttonSize="mini" titleAlignment="center">
+                                                                                            <backgroundConfiguration key="background"/>
+                                                                                            <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage"/>
+                                                                                        </buttonConfiguration>
+                                                                                        <connections>
+                                                                                            <action selector="selectMood:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="kex-OA-nbB"/>
+                                                                                        </connections>
+                                                                                    </button>
+                                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="기쁨" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LZk-Tg-jh7">
+                                                                                        <rect key="frame" x="18" y="51" width="22.666666666666671" height="15.666666666666671"/>
+                                                                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                                                        <nil key="textColor"/>
+                                                                                        <nil key="highlightedColor"/>
+                                                                                    </label>
+                                                                                </subviews>
+                                                                                <viewLayoutGuide key="safeArea" id="FMn-yq-gbH"/>
+                                                                            </stackView>
+                                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ygh-MQ-Ffm">
+                                                                                <rect key="frame" x="64" y="0.0" width="58" height="66.666666666666671"/>
+                                                                                <subviews>
+                                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v6N-w2-UJ2">
+                                                                                        <rect key="frame" x="0.0" y="0.0" width="58" height="43"/>
+                                                                                        <accessibility key="accessibilityConfiguration" identifier="Anger">
+                                                                                            <accessibilityTraits key="traits" button="YES" image="YES"/>
+                                                                                        </accessibility>
+                                                                                        <state key="normal" title="Button"/>
+                                                                                        <buttonConfiguration key="configuration" style="plain" image="Anger" title="" buttonSize="mini">
+                                                                                            <backgroundConfiguration key="background"/>
+                                                                                            <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage"/>
+                                                                                        </buttonConfiguration>
+                                                                                        <connections>
+                                                                                            <action selector="selectMood:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="zE9-Es-56S"/>
+                                                                                        </connections>
+                                                                                    </button>
+                                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="분노" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Mp-6I-5Kc">
+                                                                                        <rect key="frame" x="17.666666666666657" y="51" width="22.666666666666671" height="15.666666666666671"/>
+                                                                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                                                        <nil key="textColor"/>
+                                                                                        <nil key="highlightedColor"/>
+                                                                                    </label>
+                                                                                </subviews>
+                                                                            </stackView>
+                                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Vmj-9O-e2j">
+                                                                                <rect key="frame" x="127" y="0.0" width="59" height="66.666666666666671"/>
+                                                                                <subviews>
+                                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ycB-8r-kct">
+                                                                                        <rect key="frame" x="0.0" y="0.0" width="59" height="43"/>
+                                                                                        <accessibility key="accessibilityConfiguration" identifier="Sadness">
+                                                                                            <accessibilityTraits key="traits" button="YES" image="YES"/>
+                                                                                        </accessibility>
+                                                                                        <state key="normal" title="Button"/>
+                                                                                        <buttonConfiguration key="configuration" style="plain" image="Sadness" title="" buttonSize="mini">
+                                                                                            <backgroundConfiguration key="background"/>
+                                                                                            <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage"/>
+                                                                                        </buttonConfiguration>
+                                                                                        <connections>
+                                                                                            <action selector="selectMood:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="tzS-2y-krI"/>
+                                                                                        </connections>
+                                                                                    </button>
+                                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="슬픔" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x9T-Jd-i7g">
+                                                                                        <rect key="frame" x="18" y="51" width="22.666666666666671" height="15.666666666666671"/>
+                                                                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                                                        <nil key="textColor"/>
+                                                                                        <nil key="highlightedColor"/>
+                                                                                    </label>
+                                                                                </subviews>
+                                                                            </stackView>
+                                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="TQl-M1-wRj">
+                                                                                <rect key="frame" x="191" y="0.0" width="59" height="66.666666666666671"/>
+                                                                                <subviews>
+                                                                                    <button opaque="NO" contentMode="scaleAspectFit" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vbH-an-unj">
+                                                                                        <rect key="frame" x="0.0" y="0.0" width="59" height="43"/>
+                                                                                        <accessibility key="accessibilityConfiguration" identifier="Calm">
+                                                                                            <accessibilityTraits key="traits" button="YES" image="YES"/>
+                                                                                        </accessibility>
+                                                                                        <state key="normal" title="Button"/>
+                                                                                        <buttonConfiguration key="configuration" style="plain" image="Calm" title="" buttonSize="mini">
+                                                                                            <backgroundConfiguration key="background"/>
+                                                                                            <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage"/>
+                                                                                        </buttonConfiguration>
+                                                                                        <connections>
+                                                                                            <action selector="selectMood:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="IdZ-gI-5XS"/>
+                                                                                        </connections>
+                                                                                    </button>
+                                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="평온" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NBr-k0-aov">
+                                                                                        <rect key="frame" x="18" y="51" width="22.666666666666671" height="15.666666666666671"/>
+                                                                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                                                        <nil key="textColor"/>
+                                                                                        <nil key="highlightedColor"/>
+                                                                                    </label>
+                                                                                </subviews>
+                                                                            </stackView>
+                                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="oUg-bk-yGq">
+                                                                                <rect key="frame" x="255" y="0.0" width="58" height="66.666666666666671"/>
+                                                                                <subviews>
+                                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J3w-z8-RdB">
+                                                                                        <rect key="frame" x="0.0" y="0.0" width="58" height="43"/>
+                                                                                        <accessibility key="accessibilityConfiguration" identifier="Depression">
+                                                                                            <accessibilityTraits key="traits" button="YES" image="YES"/>
+                                                                                        </accessibility>
+                                                                                        <state key="normal" title="Button"/>
+                                                                                        <buttonConfiguration key="configuration" style="plain" image="Depression" title="" buttonSize="mini">
+                                                                                            <backgroundConfiguration key="background"/>
+                                                                                            <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage"/>
+                                                                                        </buttonConfiguration>
+                                                                                        <connections>
+                                                                                            <action selector="selectMood:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="fRC-2u-isZ"/>
+                                                                                        </connections>
+                                                                                    </button>
+                                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="우울" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y7L-el-xDR">
+                                                                                        <rect key="frame" x="17.666666666666629" y="51" width="22.666666666666671" height="15.666666666666671"/>
+                                                                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                                                        <nil key="textColor"/>
+                                                                                        <nil key="highlightedColor"/>
+                                                                                    </label>
+                                                                                </subviews>
+                                                                            </stackView>
+                                                                        </subviews>
+                                                                    </stackView>
+                                                                </subviews>
+                                                            </stackView>
+                                                        </subviews>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="width" secondItem="KgW-a1-9dk" secondAttribute="height" multiplier="7:3" id="9Ip-Qr-Bal"/>
+                                                            <constraint firstItem="TGx-52-MzD" firstAttribute="centerY" secondItem="WtT-Ag-OVc" secondAttribute="centerY" id="2QI-RF-hPB"/>
+                                                            <constraint firstAttribute="width" secondItem="WtT-Ag-OVc" secondAttribute="height" multiplier="7:3" id="YVR-SA-WK0"/>
+                                                            <constraint firstItem="TGx-52-MzD" firstAttribute="centerX" secondItem="WtT-Ag-OVc" secondAttribute="centerX" id="lJW-Ju-c2f"/>
                                                         </constraints>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="10"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                                <real key="value" value="5"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                                                <color key="value" red="0.66274509800000003" green="0.66274509800000003" blue="0.66274509800000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                                <real key="value" value="25"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c5m-lU-czG" userLabel="Cheering" customClass="UIViewExtension" customModule="Dear" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="710" width="350" height="150"/>
@@ -260,7 +421,7 @@
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                 </subviews>
-                                                                <color key="backgroundColor" red="0.66658775250000002" green="0.44730917850000002" blue="0.35860142490000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             </stackView>
                                                         </subviews>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -293,6 +454,13 @@
                                                         <color key="backgroundColor" systemColor="systemCyanColor"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="g9z-ZW-I9S" secondAttribute="height" multiplier="7:10" id="9OF-ig-L62"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KgW-a1-9dk" userLabel="Select" customClass="SelectMood" customModule="Dear" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="1420" width="350" height="150"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="KgW-a1-9dk" secondAttribute="height" multiplier="7:3" id="9Ip-Qr-Bal"/>
                                                         </constraints>
                                                     </view>
                                                 </subviews>
@@ -336,6 +504,7 @@
                         <outlet property="hospitalLabel" destination="hYt-nS-gJw" id="uSY-j5-A35"/>
                         <outlet property="letterCountLabel" destination="TcA-1D-hu5" id="rwf-Ao-oMJ"/>
                         <outlet property="moodView" destination="KgW-a1-9dk" id="CJl-dg-pTr"/>
+                        <outlet property="selectMoodView" destination="WtT-Ag-OVc" id="QK1-8i-Mj8"/>
                         <outlet property="stackView" destination="mzc-y9-0fT" id="ScU-37-fc5"/>
                     </connections>
                 </viewController>
@@ -355,6 +524,11 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Anger" width="38" height="33"/>
+        <image name="Calm" width="39" height="33"/>
+        <image name="Depression" width="38" height="33"/>
+        <image name="Joyful" width="39" height="33"/>
+        <image name="Sadness" width="39" height="33"/>
         <image name="cross-1" width="52" height="52"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
