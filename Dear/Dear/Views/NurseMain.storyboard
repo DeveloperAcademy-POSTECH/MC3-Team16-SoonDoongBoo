@@ -3,6 +3,7 @@
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -55,7 +56,7 @@
                                                                         <real key="value" value="10"/>
                                                                     </userDefinedRuntimeAttribute>
                                                                     <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                                        <color key="value" red="1" green="0.53725490196078429" blue="0.40392156862745099" alpha="1" colorSpace="calibratedRGB"/>
+                                                                        <color key="value" name="pink_01"/>
                                                                     </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
                                                             </view>
@@ -111,7 +112,7 @@
                                                                         <state key="normal" title="Button"/>
                                                                         <buttonConfiguration key="configuration" style="filled" title="확인하러 가기 &gt;" cornerStyle="large" titleAlignment="center">
                                                                             <backgroundConfiguration key="background">
-                                                                                <color key="backgroundColor" red="1" green="0.53725490200000003" blue="0.4039215686" alpha="1" colorSpace="calibratedRGB"/>
+                                                                                <color key="backgroundColor" name="pink_01"/>
                                                                             </backgroundConfiguration>
                                                                             <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
                                                                         </buttonConfiguration>
@@ -139,7 +140,7 @@
                                                                 </constraints>
                                                                 <userDefinedRuntimeAttributes>
                                                                     <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                                        <color key="value" red="1" green="0.53725490200000003" blue="0.4039215686" alpha="1" colorSpace="calibratedRGB"/>
+                                                                        <color key="value" name="pink_01"/>
                                                                     </userDefinedRuntimeAttribute>
                                                                     <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
                                                                         <real key="value" value="1"/>
@@ -173,7 +174,7 @@
                                                                 </constraints>
                                                                 <userDefinedRuntimeAttributes>
                                                                     <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                                        <color key="value" red="1" green="0.53725490200000003" blue="0.4039215686" alpha="1" colorSpace="calibratedRGB"/>
+                                                                        <color key="value" name="pink_01"/>
                                                                     </userDefinedRuntimeAttribute>
                                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                                         <real key="value" value="18"/>
@@ -398,11 +399,11 @@
                                                                             <constraint firstAttribute="height" constant="20" id="XPv-qy-Yle"/>
                                                                         </constraints>
                                                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
-                                                                        <color key="textColor" red="1" green="0.53725490200000003" blue="0.4039215686" alpha="1" colorSpace="calibratedRGB"/>
+                                                                        <color key="textColor" name="pink_01"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                 </subviews>
-                                                                <color key="backgroundColor" red="1" green="0.8862745098" blue="0.81960784310000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <color key="backgroundColor" name="pink_02"/>
                                                                 <color key="tintColor" red="1" green="0.53725490200000003" blue="0.4039215686" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <constraints>
                                                                     <constraint firstItem="E3f-Je-hFw" firstAttribute="centerY" secondItem="QjN-1d-bcL" secondAttribute="centerY" id="ZWM-DY-peG"/>
@@ -540,6 +541,12 @@
         <image name="Joyful" width="39" height="33"/>
         <image name="Sadness" width="39" height="33"/>
         <image name="cross-1" width="52" height="52"/>
+        <namedColor name="pink_01">
+            <color red="1" green="0.53725490196078429" blue="0.40392156862745099" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="pink_02">
+            <color red="1" green="0.88599997758865356" blue="0.81999999284744263" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

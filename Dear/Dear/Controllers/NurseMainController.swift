@@ -56,8 +56,7 @@ class NurseMainController: UIViewController {
         formatter.timeZone = TimeZone(abbreviation: "KST")
         formatter.dateFormat = "YYYY년 MM월 dd일"
         dateLabel.text = formatter.string(from: current)
-        //TODO: 추후 color extension 색으로 변경 필요
-        dateLabel.textColor = UIColor(named: "temp_pink01")
+        dateLabel.textColor = UIColor.pink_01
     }
     private func getDate() -> Int {
         let current = Date()
