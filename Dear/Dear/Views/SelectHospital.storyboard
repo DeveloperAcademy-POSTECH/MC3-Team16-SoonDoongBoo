@@ -48,7 +48,7 @@
         <!--Hospital View Controller-->
         <scene sceneID="3QJ-7v-2yP">
             <objects>
-                <viewController id="ZSR-aD-y6O" customClass="HospitalViewController" customModule="Dear" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HospitalView" id="ZSR-aD-y6O" customClass="HospitalViewController" customModule="Dear" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="MRu-cF-Rid">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

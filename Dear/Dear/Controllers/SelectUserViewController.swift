@@ -18,7 +18,6 @@ class SelectUserViewController: UIViewController {
         selectionNurseView.layer.cornerRadius = 10
         selectionPatientView.layer.cornerRadius = 10
         
-        
         let nuresTapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(viewSelectionnurseTapped))
         selectionNurseView.addGestureRecognizer(nuresTapGestureRecognizer)
         
@@ -43,16 +42,20 @@ class SelectUserViewController: UIViewController {
     }
     
     @objc func viewSelectionnurseTapped(sender: UITapGestureRecognizer) {
-        guard let vc = storyboard?.instantiateViewController(withIdentifier: "vc1") as? NurseViewController else {return}
-        navigationController?.pushViewController(vc, animated: true)
-        
         selectionNurseView.layer.backgroundColor = UIColor.pink_02.cgColor
+        
+        let stroyboard = UIStoryboard(name: "SelectHospital", bundle: nil)
+        let selectHospitalViewContorller = stroyboard.instantiateViewController(withIdentifier: "HospitalView")
+        
+        navigationController?.pushViewController(selectHospitalViewContorller, animated: true)
     }
     
     @objc func viewSelectionpatientTapped(sender: UITapGestureRecognizer) {
-        guard let vc = storyboard?.instantiateViewController(withIdentifier: "vc2") as? PatientViewController else {return}
-        navigationController?.pushViewController(vc, animated: true)
-        
         selectionPatientView.layer.backgroundColor = UIColor.pink_02.cgColor
+        
+        let stroyboard = UIStoryboard(name: "SelectHospital", bundle: nil)
+        let selectHospitalViewContorller = stroyboard.instantiateViewController(withIdentifier: "HospitalView")
+        
+        navigationController?.pushViewController(selectHospitalViewContorller, animated: true)
     }
 }
