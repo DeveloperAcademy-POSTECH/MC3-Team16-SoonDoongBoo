@@ -16,8 +16,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Dear Logo" translatesAutoresizingMaskIntoConstraints="NO" id="39k-dR-n7P">
-                                <rect key="frame" x="162.66666666666666" y="391.66666666666669" width="65" height="61"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="39k-dR-n7P">
+                                <rect key="frame" x="142" y="372" width="106" height="100"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -34,7 +34,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Dear Logo" width="65" height="61"/>
+        <image name="Logo" width="106" height="100"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

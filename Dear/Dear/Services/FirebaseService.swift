@@ -18,7 +18,7 @@ class FirebaseService {
     func fetchLettersByHospital(hospitalName: String) async throws -> [Letter] {
         var letters: [Letter] = []
         
-        let documents = try await db.collection("Letters").whereField("HospitalName", in: [hospitalName]).getDocuments()
+        let documents = try await db.collection("Letters").whereField("HospitalName", in: [hospitalName]).order(by: "Date", descending: true).getDocuments()
 
         let models = documents.documents.map({ (document) -> Letter in
             if let model = Letter(dictionary: document.data()) {
@@ -36,7 +36,7 @@ class FirebaseService {
     func fetchLettersByName() async throws -> [Letter] {
         var letters: [Letter] = []
         
-        let documents = try await db.collection("Letters").whereField("uid", in: [String(uid)]).getDocuments()
+        let documents = try await db.collection("Letters").whereField("Uid", in: [String(uid)]).order(by: "Date", descending: true).getDocuments()
         
         let models = documents.documents.map({ (document) -> Letter in
             if let model = Letter(dictionary: document.data()) {
@@ -68,8 +68,30 @@ class FirebaseService {
         return hospitals
     }
     
+    // 해당하는 병원 이름의 현재 날짜에 등록된 마음카드를 가져오는 함수
+    func fetchLettersToday(hospitalName: String) async throws -> [Letter] {
+        var letters: [Letter] = []
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy.MM.dd"
+        let today = dateFormatter.string(from: Date())
+        
+        let documents = try await db.collection("Letters").whereField("HospitalName", isEqualTo: hospitalName)
+            .whereField("Date", isEqualTo: today).getDocuments()
+        
+        let models = documents.documents.map({ (document) -> Letter in
+            if let model = Letter(dictionary: document.data()) {
+                return model
+            } else {
+                fatalError("Unable to initialize type \(Letter.self) with dictionary \(document.data())")
+            }
+        })
+        letters = models
+        
+        return letters
+    }
+    
     // 마음 카드를 파이어베이스에 등록하는 함수
-    func sendLetterToHospital(hospitalName: String, letterTo: String, letterContent: String) {
+    func sendLetterToHospital(hospitalName: String, letterTo: String, letterContent: String, anger: Bool, calm: Bool, depression: Bool, joyful: Bool, sadness: Bool) {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd"
         
@@ -81,7 +103,12 @@ class FirebaseService {
             "HospitalName": hospitalName,
             "LetterTo": letterTo,
             "LetterContent": letterContent,
-            "uid": String(uid)
+            "Uid": String(uid),
+            "Anger": anger,
+            "Calm": calm,
+            "Depression": depression,
+            "Joyful": joyful,
+            "Sadness": sadness
         ]) { err in
             if let err = err {
                 print("Error adding document: \(err)")
