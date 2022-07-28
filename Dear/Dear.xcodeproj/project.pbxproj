@@ -55,7 +55,6 @@
 		ECF246C028910EF30025581F /* SelectMood.xib in Resources */ = {isa = PBXBuildFile; fileRef = ECF246BF28910EF30025581F /* SelectMood.xib */; };
 		ECF246C2289118B20025581F /* XibUIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF246C1289118B20025581F /* XibUIViewExtension.swift */; };
 		ECF246C4289119E50025581F /* SelectMood.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF246C3289119E50025581F /* SelectMood.swift */; };
-		ECF246C828912B290025581F /* MoodText.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF246C728912B290025581F /* MoodText.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -103,7 +102,6 @@
 		ECF246BF28910EF30025581F /* SelectMood.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectMood.xib; sourceTree = "<group>"; };
 		ECF246C1289118B20025581F /* XibUIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XibUIViewExtension.swift; sourceTree = "<group>"; };
 		ECF246C3289119E50025581F /* SelectMood.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectMood.swift; sourceTree = "<group>"; };
-		ECF246C728912B290025581F /* MoodText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodText.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -233,7 +231,6 @@
 				71002E58289110FC00E7399A /* PatientPillBagTableViewCell.swift */,
 				E15AC7A6289114B2004BE3E8 /* NursePillBagViewCell.swift */,
 				ECF246C3289119E50025581F /* SelectMood.swift */,
-				ECF246C728912B290025581F /* MoodText.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -330,7 +327,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ECF246C828912B290025581F /* MoodText.swift in Sources */,
 				EC09B68228883D4200632D72 /* CardDetailViewController.swift in Sources */,
 				E15AC77B28904DFB004BE3E8 /* NursePillBagViewController.swift in Sources */,
 				B94C2D5F287FFBC300B3C442 /* ViewController.swift in Sources */,
