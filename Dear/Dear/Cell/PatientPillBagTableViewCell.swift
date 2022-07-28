@@ -23,13 +23,16 @@ class PatientPillBagTableViewCell: UITableViewCell {
     
     @IBOutlet weak var moreButton: UIButton!
     
- 
+    @IBOutlet weak var borderView: UIView!
+    
     // 테이블 뷰 셀 시작시 동작하는 함수
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        // 아래의 컬러는 컬러 익스텐션 추가한뒤에 다시 바꿀 예정
         self.contentView.createDottedLine(width: 1.0, color: UIColor.gray.cgColor)
-        
+        borderView.layer.borderColor = UIColor.purple.cgColor
+        borderView.layer.borderWidth = 2
     }
 
     // 테이블 뷰 셀 클릭되었을 때 동작하는 함수

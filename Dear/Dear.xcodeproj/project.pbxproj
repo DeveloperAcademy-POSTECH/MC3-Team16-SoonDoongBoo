@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		71002E59289110FC00E7399A /* PatientPillBagTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71002E58289110FC00E7399A /* PatientPillBagTableViewCell.swift */; };
+		71002E5F289274A600E7399A /* CornerRadius+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71002E5E289274A600E7399A /* CornerRadius+Extensions.swift */; };
 		711EB701288FBE4B00468B89 /* PatientPillBagView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 711EB700288FBE4B00468B89 /* PatientPillBagView.storyboard */; };
 		7139C349288FC60700783A28 /* PatientPillBagViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7139C348288FC60700783A28 /* PatientPillBagViewController.swift */; };
 		B92EF31E2886888B00AEC6E9 /* Letter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92EF31D2886888B00AEC6E9 /* Letter.swift */; };
@@ -47,6 +48,7 @@
 
 /* Begin PBXFileReference section */
 		71002E58289110FC00E7399A /* PatientPillBagTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientPillBagTableViewCell.swift; sourceTree = "<group>"; };
+		71002E5E289274A600E7399A /* CornerRadius+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CornerRadius+Extensions.swift"; sourceTree = "<group>"; };
 		711EB700288FBE4B00468B89 /* PatientPillBagView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PatientPillBagView.storyboard; sourceTree = "<group>"; };
 		7139C348288FC60700783A28 /* PatientPillBagViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientPillBagViewController.swift; sourceTree = "<group>"; };
 		B92EF31D2886888B00AEC6E9 /* Letter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Letter.swift; sourceTree = "<group>"; };
@@ -146,6 +148,7 @@
 				B94C2D65287FFBC400B3C442 /* LaunchScreen.storyboard */,
 				B94C2D68287FFBC400B3C442 /* Info.plist */,
 				B94C2D6E287FFD5000B3C442 /* GoogleService-Info.plist */,
+				71002E5E289274A600E7399A /* CornerRadius+Extensions.swift */,
 			);
 			path = Dear;
 			sourceTree = "<group>";
@@ -295,6 +298,7 @@
 				EC09B67B2888388F00632D72 /* DDayCustomTableViewCell.swift in Sources */,
 				B9A271E42887EACF00B504B1 /* TestViewController.swift in Sources */,
 				B92EF3202886889500AEC6E9 /* Hospital.swift in Sources */,
+				71002E5F289274A600E7399A /* CornerRadius+Extensions.swift in Sources */,
 				EC09B6742888387100632D72 /* NurseMainViewController.swift in Sources */,
 				B9A271EE2887ED0E00B504B1 /* NurseViewController.swift in Sources */,
 				B92EF32328868AE500AEC6E9 /* FirebaseService.swift in Sources */,

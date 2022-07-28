@@ -59,9 +59,13 @@
                                 </userDefinedRuntimeAttributes>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wzM-pF-XR4">
-                                <rect key="frame" x="327" y="77" width="67" height="31"/>
+                                <rect key="frame" x="340" y="77" width="54" height="54"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="54" id="1EN-6X-iXH"/>
+                                    <constraint firstAttribute="width" constant="54" id="82d-Gx-JPM"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="icon-plus-circle-mono" title=""/>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Bk1-ne-7EG">
                                 <rect key="frame" x="20" y="140" width="374" height="702"/>
@@ -97,12 +101,6 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A 간호사님" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pYo-BK-q0I">
-                                                    <rect key="frame" x="55" y="180" width="66" height="18"/>
-                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="기분이 좋아지는 약" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="guB-qz-Gay">
                                                     <rect key="frame" x="40" y="128" width="148" height="24"/>
                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
@@ -110,9 +108,9 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tik-9Z-WJT">
-                                                    <rect key="frame" x="257.5" y="180" width="76.5" height="18"/>
+                                                    <rect key="frame" x="257.5" y="180" width="76.5" height="40"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="18" id="n0l-me-HPU"/>
+                                                        <constraint firstAttribute="height" constant="40" id="oaJ-eH-Q4t"/>
                                                     </constraints>
                                                     <state key="normal" title="Button"/>
                                                     <buttonConfiguration key="configuration" style="plain" title="더보기 &gt;">
@@ -120,18 +118,51 @@
                                                         <color key="baseForegroundColor" name="ButtonBorderColor"/>
                                                     </buttonConfiguration>
                                                 </button>
+                                                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mug-e7-KxS">
+                                                    <rect key="frame" x="40" y="180" width="96" height="40"/>
+                                                    <subviews>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jZy-ig-66S">
+                                                            <rect key="frame" x="0.0" y="0.0" width="15" height="40"/>
+                                                        </view>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A 간호사님" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pYo-BK-q0I">
+                                                            <rect key="frame" x="15" y="0.0" width="66" height="40"/>
+                                                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="acJ-c9-b0E">
+                                                            <rect key="frame" x="81" y="0.0" width="15" height="40"/>
+                                                        </view>
+                                                    </subviews>
+                                                    <color key="backgroundColor" red="1" green="0.52120530610000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstItem="jZy-ig-66S" firstAttribute="width" secondItem="acJ-c9-b0E" secondAttribute="width" id="EvI-Sh-Xby"/>
+                                                        <constraint firstAttribute="width" constant="96" id="dhJ-5g-piH"/>
+                                                        <constraint firstAttribute="height" constant="40" id="riF-HA-MSn"/>
+                                                    </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                            <real key="value" value="20"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </stackView>
+                                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yAw-E6-lfR">
+                                                    <rect key="frame" x="20" y="18" width="282" height="221"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </view>
                                             </subviews>
                                             <color key="backgroundColor" red="0.47684186699999997" green="0.50480759139999998" blue="1" alpha="0.41522661420000001" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
                                                 <constraint firstItem="guB-qz-Gay" firstAttribute="top" secondItem="ZCM-Ce-Nb4" secondAttribute="bottom" constant="38" id="26X-9x-Ly4"/>
                                                 <constraint firstItem="ZCM-Ce-Nb4" firstAttribute="top" secondItem="R1P-HA-Wkh" secondAttribute="bottom" constant="4" id="3Yl-gl-54z"/>
                                                 <constraint firstItem="R1P-HA-Wkh" firstAttribute="top" secondItem="6bG-cA-FqT" secondAttribute="top" constant="40" id="K1n-l0-BK7"/>
+                                                <constraint firstItem="Mug-e7-KxS" firstAttribute="top" secondItem="guB-qz-Gay" secondAttribute="bottom" constant="28" id="MAp-Ma-vaW"/>
                                                 <constraint firstItem="tik-9Z-WJT" firstAttribute="top" secondItem="6bG-cA-FqT" secondAttribute="top" constant="180" id="Rnw-53-a5I"/>
-                                                <constraint firstItem="pYo-BK-q0I" firstAttribute="leading" secondItem="6bG-cA-FqT" secondAttribute="leading" constant="55" id="ZWq-9K-ZQ9"/>
                                                 <constraint firstItem="ZCM-Ce-Nb4" firstAttribute="leading" secondItem="6bG-cA-FqT" secondAttribute="leading" constant="40" id="aZf-ib-GFE"/>
                                                 <constraint firstItem="guB-qz-Gay" firstAttribute="leading" secondItem="6bG-cA-FqT" secondAttribute="leading" constant="40" id="lAg-ug-2r4"/>
                                                 <constraint firstItem="R1P-HA-Wkh" firstAttribute="leading" secondItem="6bG-cA-FqT" secondAttribute="leading" constant="40" id="r2J-7w-wBW"/>
-                                                <constraint firstItem="pYo-BK-q0I" firstAttribute="top" secondItem="guB-qz-Gay" secondAttribute="bottom" constant="28" id="ruH-iT-fyq"/>
+                                                <constraint firstItem="Mug-e7-KxS" firstAttribute="leading" secondItem="6bG-cA-FqT" secondAttribute="leading" constant="40" id="xcW-Pv-eHI"/>
                                                 <constraint firstAttribute="trailing" secondItem="tik-9Z-WJT" secondAttribute="trailing" constant="40" id="yPI-5d-4gh"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -142,6 +173,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
+                                            <outlet property="borderView" destination="yAw-E6-lfR" id="lLp-Ze-UJw"/>
                                             <outlet property="date" destination="Fzo-ZS-PFY" id="d8z-d2-9SN"/>
                                             <outlet property="day" destination="ZCM-Ce-Nb4" id="PYg-Qo-eck"/>
                                             <outlet property="month" destination="qTe-cP-eda" id="SfE-qh-Y4G"/>
@@ -178,6 +210,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="icon-plus-circle-mono" width="40" height="40"/>
         <namedColor name="ButtonBorderColor">
             <color red="0.54509803921568623" green="0.54509803921568623" blue="0.54509803921568623" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

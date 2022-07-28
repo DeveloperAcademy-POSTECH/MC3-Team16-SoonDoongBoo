@@ -25,6 +25,7 @@ class PatientPillBagViewController: UIViewController, UITableViewDataSource {
         pillBag.layer.cornerRadius = 23
         pillBag.backgroundColor = UIColor.orange
 
+
     }
 
     // 테이블 뷰 셀 개수에 대한 함수
@@ -45,6 +46,9 @@ class PatientPillBagViewController: UIViewController, UITableViewDataSource {
         cell.day.text = "Sunday"
         cell.title.text = "기분이 좋아지는 약"
         cell.toNurse.text = "A 간호사님"
+        
+
+        
         return cell
     }
     
@@ -65,7 +69,7 @@ extension UIView {
       caShapeLayer.lineWidth = width
       caShapeLayer.lineDashPattern = [10,5]
       let cgPath = CGMutablePath()
-       let cgPoint = [CGPoint(x: 330, y: 30), CGPoint(x: 330, y: 230)]
+       let cgPoint = [CGPoint(x: 325, y: 30), CGPoint(x: 325, y: 230)]
       cgPath.addLines(between: cgPoint)
       caShapeLayer.path = cgPath
       layer.addSublayer(caShapeLayer)
