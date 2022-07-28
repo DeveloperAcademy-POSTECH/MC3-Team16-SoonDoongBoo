@@ -18,13 +18,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="사용자를 선택해주세요" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xsB-F9-ylI">
-                                <rect key="frame" x="20" y="270" width="213" height="28.666666666666686"/>
+                                <rect key="frame" x="20" y="228" width="213" height="28.666666666666686"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="G0x-v5-7rL">
-                                <rect key="frame" x="20" y="361.66666666666669" width="350" height="200.00000000000006"/>
+                                <rect key="frame" x="20" y="319.66666666666669" width="350" height="200.00000000000006"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hjt-6N-G0t">
                                         <rect key="frame" x="0.0" y="0.0" width="170" height="200"/>
@@ -95,8 +95,8 @@
                         <constraints>
                             <constraint firstItem="G0x-v5-7rL" firstAttribute="top" secondItem="xsB-F9-ylI" secondAttribute="bottom" constant="63" id="Fgf-3h-BcK"/>
                             <constraint firstItem="Ul7-6M-KOk" firstAttribute="trailing" secondItem="G0x-v5-7rL" secondAttribute="trailing" constant="20" id="JQs-RW-kXO"/>
+                            <constraint firstItem="xsB-F9-ylI" firstAttribute="top" secondItem="Ul7-6M-KOk" secondAttribute="top" constant="140" id="Mbg-Fn-fvU"/>
                             <constraint firstItem="xsB-F9-ylI" firstAttribute="leading" secondItem="Ul7-6M-KOk" secondAttribute="leading" constant="20" id="Ty6-aA-aZW"/>
-                            <constraint firstItem="xsB-F9-ylI" firstAttribute="top" secondItem="Ul7-6M-KOk" secondAttribute="top" constant="182" id="w7S-9j-w2z"/>
                             <constraint firstItem="G0x-v5-7rL" firstAttribute="leading" secondItem="Ul7-6M-KOk" secondAttribute="leading" constant="20" id="ymy-f9-tnm"/>
                         </constraints>
                     </view>

@@ -47,6 +47,8 @@ class SelectUserViewController: UIViewController {
         let stroyboard = UIStoryboard(name: "SelectHospital", bundle: nil)
         let selectHospitalViewContorller = stroyboard.instantiateViewController(withIdentifier: "HospitalView")
         
+        UserDefaults.standard.set("nurse", forKey: "user")
+        
         navigationController?.pushViewController(selectHospitalViewContorller, animated: true)
     }
     
@@ -55,6 +57,8 @@ class SelectUserViewController: UIViewController {
         
         let stroyboard = UIStoryboard(name: "SelectHospital", bundle: nil)
         let selectHospitalViewContorller = stroyboard.instantiateViewController(withIdentifier: "HospitalView")
+        
+        UserDefaults.standard.set("patient", forKey: "user")
         
         navigationController?.pushViewController(selectHospitalViewContorller, animated: true)
     }

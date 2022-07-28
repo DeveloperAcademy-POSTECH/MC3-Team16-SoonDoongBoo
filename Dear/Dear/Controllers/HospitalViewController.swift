@@ -11,7 +11,7 @@ class HospitalViewController: UIViewController {
     
     @IBOutlet weak var hospitalTextField: UITextField!
     
-    let hospitals = ["병원01", "병원02", "병원03", "병원04", "병원05"]
+    let hospitals = [Hospital(hospitalName: "병원")]
     var pickerView = UIPickerView()
     
     override func viewDidLoad() {
@@ -21,8 +21,36 @@ class HospitalViewController: UIViewController {
         
         hospitalTextField.inputView = pickerView
         hospitalTextField.layer.cornerRadius = 10
+        hospitalTextField.text = hospitals[0].hospitalName
         hospitalTextField.textAlignment = .left
         hospitalTextField.addLeftPadding(padding: 10.0)
+        
+        let backButton = UIBarButtonItem(title: "이전", style: .plain, target: self, action: #selector(popToPrevious))
+        let confirmButton = UIBarButtonItem(title: "확인", style: .plain, target: self, action: #selector(pushToNext))
+        backButton.tintColor = .black
+        confirmButton.tintColor = .black
+        
+        navigationItem.setLeftBarButton(backButton, animated: true)
+        navigationItem.setRightBarButton(confirmButton, animated: true)
+    }
+    
+    @objc private func popToPrevious() {
+        navigationController?.popViewController(animated: true)
+    }
+    
+    @objc private func pushToNext() {
+        let user = UserDefaults.standard.string(forKey: "user")
+        
+        switch user {
+        case "nurse":
+            print("nurse")
+        case "patient":
+            print("patient")
+        default:
+            fatalError("Error: User isn't Selected")
+        }
+        
+        print(hospitalTextField.text)
     }
 }
 
@@ -37,11 +65,11 @@ extension HospitalViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return hospitals[row]
+        return hospitals[row].hospitalName
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        hospitalTextField.text = hospitals[row]
+        hospitalTextField.text = hospitals[row].hospitalName
         hospitalTextField.resignFirstResponder()
     }
 }
