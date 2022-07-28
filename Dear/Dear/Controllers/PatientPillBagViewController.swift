@@ -10,9 +10,7 @@ import UIKit
 class PatientPillBagViewController: UIViewController, UITableViewDataSource {
     
     @IBOutlet weak var pillBag: UIStackView!
-    
     @IBOutlet weak var sentPrescription: UIButton!
-    
     @IBOutlet weak var pillBagTable: UITableView!
     
     override func viewDidLoad() {
