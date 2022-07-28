@@ -36,6 +36,7 @@
 		E15AC77B28904DFB004BE3E8 /* NursePillBagViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15AC77A28904DFB004BE3E8 /* NursePillBagViewController.swift */; };
 		E15AC7A528910DCC004BE3E8 /* UIViewExtension2.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15AC7A428910DCC004BE3E8 /* UIViewExtension2.swift */; };
 		E15AC7A7289114B2004BE3E8 /* NursePillBagViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15AC7A6289114B2004BE3E8 /* NursePillBagViewCell.swift */; };
+		E183BD1F28922E52000A21A1 /* DashedLineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E183BD1E28922E52000A21A1 /* DashedLineView.swift */; };
 		EC09B6742888387100632D72 /* NurseMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC09B6722888387000632D72 /* NurseMainViewController.swift */; };
 		EC09B6752888387100632D72 /* NurseMainView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC09B6732888387000632D72 /* NurseMainView.storyboard */; };
 		EC09B6792888388F00632D72 /* LetterCustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC09B6762888388F00632D72 /* LetterCustomTableViewCell.swift */; };
@@ -72,6 +73,7 @@
 		E15AC77A28904DFB004BE3E8 /* NursePillBagViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NursePillBagViewController.swift; sourceTree = "<group>"; };
 		E15AC7A428910DCC004BE3E8 /* UIViewExtension2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension2.swift; sourceTree = "<group>"; };
 		E15AC7A6289114B2004BE3E8 /* NursePillBagViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NursePillBagViewCell.swift; sourceTree = "<group>"; };
+		E183BD1E28922E52000A21A1 /* DashedLineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashedLineView.swift; sourceTree = "<group>"; };
 		EC09B6722888387000632D72 /* NurseMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NurseMainViewController.swift; sourceTree = "<group>"; };
 		EC09B6732888387000632D72 /* NurseMainView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = NurseMainView.storyboard; sourceTree = "<group>"; };
 		EC09B6762888388F00632D72 /* LetterCustomTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LetterCustomTableViewCell.swift; sourceTree = "<group>"; };
@@ -149,6 +151,7 @@
 				B94C2D68287FFBC400B3C442 /* Info.plist */,
 				B94C2D6E287FFD5000B3C442 /* GoogleService-Info.plist */,
 				E15AC7A428910DCC004BE3E8 /* UIViewExtension2.swift */,
+				E183BD1E28922E52000A21A1 /* DashedLineView.swift */,
 			);
 			path = Dear;
 			sourceTree = "<group>";
@@ -304,6 +307,7 @@
 				E15AC7A528910DCC004BE3E8 /* UIViewExtension2.swift in Sources */,
 				B9A271E82887EAE700B504B1 /* LetterViewController.swift in Sources */,
 				B92EF31E2886888B00AEC6E9 /* Letter.swift in Sources */,
+				E183BD1F28922E52000A21A1 /* DashedLineView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
