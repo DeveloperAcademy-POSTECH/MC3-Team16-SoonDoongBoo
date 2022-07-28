@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -52,40 +53,46 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="57t-0a-SOI">
-                                <rect key="frame" x="29" y="39" width="49" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="이전"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3jO-Ll-zqq">
-                                <rect key="frame" x="336" y="39" width="49" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="완료"/>
-                            </button>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qNa-LL-BfN">
-                                <rect key="frame" x="30" y="458" width="354" height="34"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="병원을 선택해주세요" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EXr-95-boG">
+                                <rect key="frame" x="20" y="184" width="192" height="29"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="처방전 목적지를 선택해주세요" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="alx-I4-Qer">
+                                <rect key="frame" x="20" y="233" width="142" height="14.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" systemColor="secondaryLabelColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="선택해 주신 곳으로 처방전이 배송될 예정이에요~!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8bZ-QZ-jFM">
+                                <rect key="frame" x="20" y="247.5" width="236" height="14.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" systemColor="secondaryLabelColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qNa-LL-BfN">
+                                <rect key="frame" x="20" y="282" width="374" height="50"/>
+                                <color key="backgroundColor" name="pink_03"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="34" id="dXR-c1-3La"/>
+                                    <constraint firstAttribute="height" constant="50" id="jhq-Ht-bYD"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="병원을 선택해주세요" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EXr-95-boG">
-                                <rect key="frame" x="35" y="240" width="137" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="0uI-Mq-mKX"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="0uI-Mq-mKX" firstAttribute="bottom" secondItem="qNa-LL-BfN" secondAttribute="bottom" constant="350" id="7Vv-RE-8E4"/>
-                            <constraint firstItem="qNa-LL-BfN" firstAttribute="leading" secondItem="0uI-Mq-mKX" secondAttribute="leading" constant="30" id="ZUs-vE-uif"/>
-                            <constraint firstItem="0uI-Mq-mKX" firstAttribute="trailing" secondItem="qNa-LL-BfN" secondAttribute="trailing" constant="30" id="mzM-f5-IvC"/>
+                            <constraint firstItem="qNa-LL-BfN" firstAttribute="top" secondItem="8bZ-QZ-jFM" secondAttribute="bottom" constant="20" id="FCk-KY-Miu"/>
+                            <constraint firstItem="EXr-95-boG" firstAttribute="leading" secondItem="0uI-Mq-mKX" secondAttribute="leading" constant="20" id="Nm2-8G-ZD8"/>
+                            <constraint firstItem="alx-I4-Qer" firstAttribute="top" secondItem="EXr-95-boG" secondAttribute="bottom" constant="20" id="hDh-p7-q9v"/>
+                            <constraint firstItem="alx-I4-Qer" firstAttribute="leading" secondItem="0uI-Mq-mKX" secondAttribute="leading" constant="20" id="lFv-tm-KGZ"/>
+                            <constraint firstItem="8bZ-QZ-jFM" firstAttribute="top" secondItem="alx-I4-Qer" secondAttribute="bottom" id="lgh-W0-fzv"/>
+                            <constraint firstItem="qNa-LL-BfN" firstAttribute="leading" secondItem="0uI-Mq-mKX" secondAttribute="leading" constant="20" id="qG7-4U-2Wj"/>
+                            <constraint firstItem="0uI-Mq-mKX" firstAttribute="trailing" secondItem="qNa-LL-BfN" secondAttribute="trailing" constant="20" id="vp1-Vd-ah3"/>
+                            <constraint firstItem="8bZ-QZ-jFM" firstAttribute="leading" secondItem="0uI-Mq-mKX" secondAttribute="leading" constant="20" id="w3l-Bc-Nxb"/>
+                            <constraint firstItem="EXr-95-boG" firstAttribute="top" secondItem="0uI-Mq-mKX" secondAttribute="top" constant="140" id="y7i-Td-0o4"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="tcw-MK-ltd"/>
@@ -109,6 +116,12 @@
         </scene>
     </scenes>
     <resources>
+        <namedColor name="pink_03">
+            <color red="0.99199998378753662" green="0.96100002527236938" blue="0.94900000095367432" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

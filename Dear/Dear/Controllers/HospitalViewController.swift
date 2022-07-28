@@ -4,7 +4,9 @@
 //
 //  Created by 한연희 on 2022/07/17.
 //
+
 import UIKit
+
 class HospitalViewController: UIViewController {
     
     @IBOutlet weak var hospitalTextField: UITextField!
@@ -18,9 +20,12 @@ class HospitalViewController: UIViewController {
         pickerView.dataSource = self
         
         hospitalTextField.inputView = pickerView
+        hospitalTextField.layer.cornerRadius = 10
         hospitalTextField.textAlignment = .left
+        hospitalTextField.addLeftPadding(padding: 10.0)
     }
 }
+
 extension HospitalViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -30,6 +35,7 @@ extension HospitalViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return hospitals.count
     }
+    
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return hospitals[row]
     }
@@ -37,6 +43,16 @@ extension HospitalViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         hospitalTextField.text = hospitals[row]
         hospitalTextField.resignFirstResponder()
+    }
+}
+
+// TextFeild 내부 텍스트 왼쪽에 패딩을 넣어주는 코드
+// https://developer-fury.tistory.com/46
+extension UITextField {
+    func addLeftPadding(padding: CGFloat) {
+        let paddingView = UIView(frame: CGRect(x: 0, y: 0, width: padding, height: self.frame.height))
+        self.leftView = paddingView
+        self.leftViewMode = ViewMode.always
     }
 }
 
