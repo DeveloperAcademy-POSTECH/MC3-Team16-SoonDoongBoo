@@ -15,4 +15,7 @@ class NursePillBagViewCell: UITableViewCell {
     @IBOutlet weak var cellLetterTo: UILabel!
     @IBOutlet weak var cellButton: UIButton!
     
+    @IBOutlet weak var cellBackgroundView: UIViewExtension!
+    @IBOutlet weak var cellBorderView: UIViewExtension!
+    @IBOutlet weak var cellLetterToBackgroundView: UIViewExtension!
 }

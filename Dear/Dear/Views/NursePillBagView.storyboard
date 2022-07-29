@@ -153,10 +153,13 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="cellBackgroundView" destination="ecf-nV-IG9" id="tzg-n0-nGD"/>
+                                            <outlet property="cellBorderView" destination="3Jr-xA-qvg" id="ysH-Sd-6OK"/>
                                             <outlet property="cellButton" destination="lgI-PT-eQv" id="ORV-Tr-Bd7"/>
                                             <outlet property="cellDate" destination="kQL-pK-pcG" id="UqK-gx-71a"/>
                                             <outlet property="cellDay" destination="oTF-pD-gbM" id="P5R-jm-piD"/>
                                             <outlet property="cellLetterTo" destination="0Il-h2-hBY" id="beb-0h-XfU"/>
+                                            <outlet property="cellLetterToBackgroundView" destination="Xh1-mH-UY7" id="3jR-FU-QTZ"/>
                                             <outlet property="cellTitle" destination="ySN-No-NPw" id="GFo-Cz-Zlh"/>
                                         </connections>
                                     </tableViewCell>

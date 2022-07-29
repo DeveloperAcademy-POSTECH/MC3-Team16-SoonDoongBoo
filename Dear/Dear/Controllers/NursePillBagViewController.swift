@@ -63,6 +63,12 @@ extension NursePillBagViewController: UITableViewDataSource {
         cell.cellTitle.text = "기분이 좋아지는 약"
         cell.cellLetterTo.text = letter.letterTo
 
+        let colorRandom = Int(arc4random_uniform(3)) //0~2난수 발생
+        var color = [[UIColor.craft_02, UIColor.craft_01],[UIColor.pink_03, UIColor.pink_02],[UIColor.purple_03, UIColor.purple_02]]
+        
+        cell.cellBackgroundView.backgroundColor = color[colorRandom][0]
+        cell.cellBorderView.borderColor = color[colorRandom][1]
+        cell.cellLetterToBackgroundView.backgroundColor = color[colorRandom][1]
         return cell
     }
 }
