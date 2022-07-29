@@ -38,12 +38,9 @@ extension NursePillBagViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "LetterCell", for: indexPath) as! NursePillBagViewCell
         let letter = self.letters[indexPath.row]
-        
-        //print("\(letter.date)", type(of: letter.date)) //2022.07.28 String
-        
+           
         //String -> Date
-        let dateString:String = "2022.07.29"
-
+        let dateString:String = letter.date
         let dateFormatter = DateFormatter()
 
         dateFormatter.dateFormat = "yyyy.MM.dd"
@@ -64,7 +61,7 @@ extension NursePillBagViewController: UITableViewDataSource {
         cell.cellLetterTo.text = letter.letterTo
 
         let colorRandom = Int(arc4random_uniform(3)) //0~2난수 발생
-        var color = [[UIColor.craft_02, UIColor.craft_01],[UIColor.pink_03, UIColor.pink_02],[UIColor.purple_03, UIColor.purple_02]]
+        let color = [[UIColor.craft_02, UIColor.craft_01],[UIColor.pink_03, UIColor.pink_02],[UIColor.purple_03, UIColor.purple_02]]
         
         cell.cellBackgroundView.backgroundColor = color[colorRandom][0]
         cell.cellBorderView.borderColor = color[colorRandom][1]
