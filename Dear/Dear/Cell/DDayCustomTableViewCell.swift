@@ -7,6 +7,7 @@
 
 import UIKit
 
+//TODO: 머지 후 파일 삭제
 class DDayCustomTableViewCell: UITableViewCell {
     @IBOutlet weak var dDayTitleLabel: UILabel!
     @IBOutlet weak var dDayDateLabel: UILabel!
