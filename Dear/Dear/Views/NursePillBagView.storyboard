@@ -3,7 +3,6 @@
     <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
-        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -17,7 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="7Ra-cC-eUo">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="7Ra-cC-eUo">
                                 <rect key="frame" x="0.0" y="124" width="414" height="612"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
@@ -58,10 +57,10 @@
                                                                     <buttonConfiguration key="configuration" style="plain" title="더보기 &gt;"/>
                                                                 </button>
                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xh1-mH-UY7" customClass="UIViewExtension" customModule="Dear" customModuleProvider="target">
-                                                                    <rect key="frame" x="30" y="177" width="79" height="34"/>
+                                                                    <rect key="frame" x="29.999999999999993" y="177" width="103.66666666666666" height="34"/>
                                                                     <subviews>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A 간호사님" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Il-h2-hBY">
-                                                                            <rect key="frame" x="8.0000000000000071" y="8" width="66" height="18"/>
+                                                                            <rect key="frame" x="18.666666666666664" y="8" width="66" height="18"/>
                                                                             <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
                                                                             <nil key="textColor"/>
                                                                             <nil key="highlightedColor"/>
@@ -69,10 +68,10 @@
                                                                     </subviews>
                                                                     <color key="backgroundColor" systemColor="systemRedColor"/>
                                                                     <constraints>
-                                                                        <constraint firstAttribute="width" secondItem="0Il-h2-hBY" secondAttribute="width" multiplier="1.2" id="3ff-y9-WbI"/>
-                                                                        <constraint firstItem="0Il-h2-hBY" firstAttribute="leading" secondItem="Xh1-mH-UY7" secondAttribute="leadingMargin" id="AQU-KT-CNz"/>
-                                                                        <constraint firstItem="0Il-h2-hBY" firstAttribute="top" secondItem="Xh1-mH-UY7" secondAttribute="topMargin" id="Yxc-iw-vpW"/>
+                                                                        <constraint firstItem="0Il-h2-hBY" firstAttribute="centerX" secondItem="Xh1-mH-UY7" secondAttribute="centerX" id="CA7-6C-kOT"/>
+                                                                        <constraint firstItem="0Il-h2-hBY" firstAttribute="centerY" secondItem="Xh1-mH-UY7" secondAttribute="centerY" id="CaL-RO-gsk"/>
                                                                         <constraint firstAttribute="height" constant="34" id="eEE-c7-PA1"/>
+                                                                        <constraint firstItem="0Il-h2-hBY" firstAttribute="width" secondItem="Xh1-mH-UY7" secondAttribute="width" multiplier="0.63544" id="zfn-zo-ORT"/>
                                                                     </constraints>
                                                                     <userDefinedRuntimeAttributes>
                                                                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -80,12 +79,21 @@
                                                                         </userDefinedRuntimeAttribute>
                                                                     </userDefinedRuntimeAttributes>
                                                                 </view>
+                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pills" translatesAutoresizingMaskIntoConstraints="NO" id="noI-sk-Lku">
+                                                                    <rect key="frame" x="177.33333333333334" y="22" width="92.000000000000028" height="92"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" constant="92" id="SWO-Ew-igh"/>
+                                                                        <constraint firstAttribute="height" constant="92" id="f56-ss-Y5c"/>
+                                                                    </constraints>
+                                                                </imageView>
                                                             </subviews>
                                                             <color key="backgroundColor" red="0.50513459373074898" green="0.19251782699923037" blue="0.60359453914141414" alpha="0.0" colorSpace="custom" customColorSpace="displayP3"/>
                                                             <constraints>
                                                                 <constraint firstItem="kQL-pK-pcG" firstAttribute="top" secondItem="3Jr-xA-qvg" secondAttribute="top" constant="28" id="2Jg-Lc-zyP"/>
                                                                 <constraint firstItem="lgI-PT-eQv" firstAttribute="top" secondItem="Xh1-mH-UY7" secondAttribute="top" id="3YL-Gg-7fy"/>
+                                                                <constraint firstItem="noI-sk-Lku" firstAttribute="top" secondItem="3Jr-xA-qvg" secondAttribute="top" constant="22" id="B99-f0-6aB"/>
                                                                 <constraint firstAttribute="height" constant="231" id="BjG-JN-2GQ"/>
+                                                                <constraint firstAttribute="trailing" secondItem="noI-sk-Lku" secondAttribute="trailing" constant="54" id="CTc-oz-kFp"/>
                                                                 <constraint firstAttribute="bottom" secondItem="lgI-PT-eQv" secondAttribute="bottom" constant="22" id="D0N-V5-aAk"/>
                                                                 <constraint firstItem="ySN-No-NPw" firstAttribute="top" secondItem="oTF-pD-gbM" secondAttribute="bottom" constant="37" id="GcT-oD-N3m"/>
                                                                 <constraint firstItem="oTF-pD-gbM" firstAttribute="leading" secondItem="3Jr-xA-qvg" secondAttribute="leading" constant="30" id="Lae-VO-rFw"/>
@@ -111,19 +119,19 @@
                                                         </view>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MMH-VH-Jmf" customClass="DashedLineView" customModule="Dear" customModuleProvider="target">
                                                             <rect key="frame" x="354" y="20" width="1" height="215"/>
-                                                            <color key="backgroundColor" name="AccentColor"/>
+                                                            <color key="backgroundColor" red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="1" id="RD5-Fy-QJb"/>
                                                             </constraints>
                                                             <userDefinedRuntimeAttributes>
                                                                 <userDefinedRuntimeAttribute type="number" keyPath="perDashLength">
-                                                                    <real key="value" value="6"/>
+                                                                    <real key="value" value="10"/>
                                                                 </userDefinedRuntimeAttribute>
                                                                 <userDefinedRuntimeAttribute type="number" keyPath="spaceBetweenDash">
-                                                                    <integer key="value" value="10"/>
+                                                                    <real key="value" value="10"/>
                                                                 </userDefinedRuntimeAttribute>
                                                                 <userDefinedRuntimeAttribute type="color" keyPath="dashColor">
-                                                                    <color key="value" systemColor="systemPinkColor"/>
+                                                                    <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 </userDefinedRuntimeAttribute>
                                                             </userDefinedRuntimeAttributes>
                                                         </view>
@@ -153,10 +161,13 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="cellBackgroundView" destination="ecf-nV-IG9" id="tzg-n0-nGD"/>
+                                            <outlet property="cellBorderView" destination="3Jr-xA-qvg" id="ysH-Sd-6OK"/>
                                             <outlet property="cellButton" destination="lgI-PT-eQv" id="ORV-Tr-Bd7"/>
                                             <outlet property="cellDate" destination="kQL-pK-pcG" id="UqK-gx-71a"/>
                                             <outlet property="cellDay" destination="oTF-pD-gbM" id="P5R-jm-piD"/>
                                             <outlet property="cellLetterTo" destination="0Il-h2-hBY" id="beb-0h-XfU"/>
+                                            <outlet property="cellLetterToBackgroundView" destination="Xh1-mH-UY7" id="3jR-FU-QTZ"/>
                                             <outlet property="cellTitle" destination="ySN-No-NPw" id="GFo-Cz-Zlh"/>
                                         </connections>
                                     </tableViewCell>
@@ -213,6 +224,7 @@
                     <navigationItem key="navigationItem" id="Ern-5K-dxA"/>
                     <connections>
                         <outlet property="tableView" destination="7Ra-cC-eUo" id="RKS-oF-ZZD"/>
+                        <outlet property="titleView" destination="J0X-dI-0EK" id="GYR-Kx-sJx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -237,17 +249,12 @@
         </scene>
     </scenes>
     <resources>
-        <namedColor name="AccentColor">
-            <color red="1" green="0.79199999570846558" blue="0.15700000524520874" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
+        <image name="pills" width="93" height="83"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemOrangeColor">
             <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemPinkColor">
-            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
