@@ -16,6 +16,19 @@ class NurseMainController: UIViewController {
     
     @IBOutlet private weak var cheeringView: UIView!
     @IBOutlet private weak var selectMoodView: UIView!
+    @IBOutlet private weak var chartView: UIView!
+    
+    @IBOutlet private weak var joyfulHeight: NSLayoutConstraint!
+    @IBOutlet private weak var angerHeight: NSLayoutConstraint!
+    @IBOutlet private weak var sadnessHeight: NSLayoutConstraint!
+    @IBOutlet private weak var calmHeight: NSLayoutConstraint!
+    @IBOutlet private weak var depressionHeight: NSLayoutConstraint!
+    
+    @IBOutlet private weak var joyfulBar: UIView!
+    @IBOutlet private weak var angerBar: UIView!
+    @IBOutlet private weak var sadnessBar: UIView!
+    @IBOutlet private weak var calmBar: UIView!
+    @IBOutlet private weak var depressionBar: UIView!
     
     //TODO: userdefault정보로 받아와서 넣기
     let hospitalName: String = UserDefaults.standard.string(forKey: "hospital") ?? "병원선택"
@@ -39,14 +52,17 @@ class NurseMainController: UIViewController {
             letters = try await firebaseService.fetchLettersToday(hospitalName: hospitalName)
             letterCountLabel.text = "\(letters.count)개"
         }
-//        if UserDefaults.standard.integer(forKey: "today") == Date().getDate()
-//            && UserDefaults.standard.bool(forKey: "isSelectedMood") == true {
-//            cheeringView.isHidden = false
-//            selectMoodView.isHidden = true
-//        }else{
-//            cheeringView.isHidden = true
-//            selectMoodView.isHidden = false
-//        }
+        
+        if UserDefaults.standard.integer(forKey: "today") == Date().getDate()
+            && UserDefaults.standard.bool(forKey: "isSelectedMood") == true {
+            cheeringView.isHidden = false
+            selectMoodView.isHidden = true
+        } else {
+            cheeringView.isHidden = true
+            selectMoodView.isHidden = false
+        }
+
+        setInitialChart()
     }
     private func setDateLabel() {
         let current = Date()
@@ -85,7 +101,50 @@ class NurseMainController: UIViewController {
         UserDefaults.standard.set(Date().getDate(), forKey: "today")
         print("\(String(describing: button?.accessibilityIdentifier)), count: \(UserDefaults.standard.integer(forKey: "\(key)")), \(UserDefaults.standard.bool(forKey: "isSelectedMood")), \(UserDefaults.standard.integer(forKey: "today"))")
         
-//        cheeringView.isHidden = false
-//        selectMoodView.isHidden = true
+        cheeringView.isHidden = false
+        selectMoodView.isHidden = true
+        
+        setChart(key: key)
+    }
+    //버튼 클릭시 차트 값 변경하는 함수
+    private func setChart(key: String) {
+        let count = UserDefaults.standard.integer(forKey: key)
+        switch key {
+        case "Optional(\"Joyful\")":
+            self.joyfulHeight.constant = CGFloat(count) * 8.8
+        case "Optional(\"Anger\")":
+            self.angerHeight.constant = CGFloat(count) * 8.8
+        case "Optional(\"Sadness\")":
+            self.sadnessHeight.constant = CGFloat(count) * 8.8
+        case "Optional(\"Calm\")":
+            self.calmHeight.constant = CGFloat(count) * 8.8
+        case "Optional(\"Depression\")":
+            self.depressionHeight.constant = CGFloat(count) * 8.8
+        default: break
+        }
+        UIView.animate(withDuration: 0.2, animations: {
+            self.chartView.layoutIfNeeded()
+        })
+    }
+    //차트뷰 초기값 세팅 함수
+    private func setInitialChart() {
+        joyfulBar.layer.cornerRadius = 4
+        angerBar.layer.cornerRadius = 4
+        sadnessBar.layer.cornerRadius = 4
+        calmBar.layer.cornerRadius = 4
+        depressionBar.layer.cornerRadius = 4
+        
+        let count = [
+            UserDefaults.standard.integer(forKey: "Optional(\"Joyful\")"),
+            UserDefaults.standard.integer(forKey: "Optional(\"Anger\")"),
+            UserDefaults.standard.integer(forKey: "Optional(\"Sadness\")"),
+            UserDefaults.standard.integer(forKey: "Optional(\"Calm\")"),
+            UserDefaults.standard.integer(forKey: "Optional(\"Depression\")")
+        ]
+        self.joyfulHeight.constant = CGFloat(count[0]) * 8.8
+        self.angerHeight.constant = CGFloat(count[1]) * 8.8
+        self.sadnessHeight.constant = CGFloat(count[2]) * 8.8
+        self.calmHeight.constant = CGFloat(count[3]) * 8.8
+        self.depressionHeight.constant = CGFloat(count[4]) * 8.8
     }
 }
