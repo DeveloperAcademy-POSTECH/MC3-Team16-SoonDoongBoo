@@ -20,10 +20,24 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         window = UIWindow(frame: UIScreen.main.bounds)
         
-        let storyboard = UIStoryboard(name: "SelectUser", bundle: nil)
-        let navigationController = storyboard.instantiateViewController(withIdentifier: "UINavigationController")
+        switch UserDefaults.standard.string(forKey: "user") {
+        case "nurse":
+            let stroyboard = UIStoryboard(name: "NurseMain", bundle: nil)
+            let nurseMainViewController = stroyboard.instantiateViewController(withIdentifier: "NurseMain")
+            
+            window?.rootViewController = nurseMainViewController
+        case "patient":
+            let stroyboard = UIStoryboard(name: "PatientPillBagView", bundle: nil)
+            let patientMainViewController = stroyboard.instantiateViewController(withIdentifier: "PatientPillBagView")
+            
+            window?.rootViewController = patientMainViewController
+        default:
+            let storyboard = UIStoryboard(name: "SelectUser", bundle: nil)
+            let navigationController = storyboard.instantiateViewController(withIdentifier: "UINavigationController")
+            
+            window?.rootViewController = navigationController
+        }
         
-        window?.rootViewController = navigationController
         window?.windowScene = scene
         window?.makeKeyAndVisible()
     }

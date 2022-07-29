@@ -13,6 +13,8 @@ class PatientPillBagViewController: UIViewController, UITableViewDataSource {
     @IBOutlet weak var sentPrescription: UIButton!
     @IBOutlet weak var pillBagTable: UITableView!
     
+    var letters: [Letter] = Letter.sampleData
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -21,14 +23,13 @@ class PatientPillBagViewController: UIViewController, UITableViewDataSource {
         pillBagTable.dataSource = self
         pillBagTable.delegate = self
         pillBag.layer.cornerRadius = 23
-        pillBag.backgroundColor = UIColor.orange
-
+        pillBag.backgroundColor = UIColor.pink_01
 
     }
 
     // 테이블 뷰 셀 개수에 대한 함수
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return self.letters.count
     }
     
     //테이블 뷰 셀 커스텀하는 함수
@@ -38,12 +39,14 @@ class PatientPillBagViewController: UIViewController, UITableViewDataSource {
 //        return cell
         let cell = tableView.dequeueReusableCell(withIdentifier: "pillCell", for: indexPath) as! PatientPillBagTableViewCell
         
+        let letter = self.letters[indexPath.row]
+
         //아래의 더미 데이터들을 파이어베이스에서 불러오는 데이터로 바꿔줘야함
-        cell.month.text = "Jul"
-        cell.date.text = "24"
+        cell.month.text = letter.date
+        //cell.date.text = "24"
         cell.day.text = "Sunday"
         cell.title.text = "기분이 좋아지는 약"
-        cell.toNurse.text = "A 간호사님"
+        cell.toNurse.text = letter.letterTo
         
         return cell
     }
@@ -65,7 +68,7 @@ extension UIView {
       caShapeLayer.lineWidth = width
       caShapeLayer.lineDashPattern = [10,5]
       let cgPath = CGMutablePath()
-       let cgPoint = [CGPoint(x: 325, y: 30), CGPoint(x: 325, y: 230)]
+       let cgPoint = [CGPoint(x: 330, y: 30), CGPoint(x: 330, y: 230)]
       cgPath.addLines(between: cgPoint)
       caShapeLayer.path = cgPath
       layer.addSublayer(caShapeLayer)
