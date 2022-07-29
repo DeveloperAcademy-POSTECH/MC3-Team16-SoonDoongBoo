@@ -7,6 +7,7 @@
 
 import UIKit
 
+//TODO: 머지 후 파일 삭제
 class NurseMainSectionHeader: UITableViewHeaderFooterView {
     let headerTitle = UILabel()
     let headerButton = UIButton()
