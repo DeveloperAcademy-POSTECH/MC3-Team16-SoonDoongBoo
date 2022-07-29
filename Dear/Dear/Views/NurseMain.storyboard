@@ -505,10 +505,10 @@
             </objects>
             <point key="canvasLocation" x="970.76923076923072" y="75.355450236966817"/>
         </scene>
-        <!--NurseMainView-->
+        <!--NursePillBagViewController-->
         <scene sceneID="8VQ-G6-bpG">
             <objects>
-                <viewControllerPlaceholder storyboardName="NurseMainView" referencedIdentifier="NurseMainView" id="ozc-Cb-DRK" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="NursePillBagView" referencedIdentifier="NursePillBagViewController" id="ozc-Cb-DRK" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="OTp-ze-0mf"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AvI-Br-90c" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
