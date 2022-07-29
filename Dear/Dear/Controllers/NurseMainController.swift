@@ -68,7 +68,7 @@ class NurseMainController: UIViewController {
             moodList.forEach { id in
                 UserDefaults.standard.set(0, forKey: id)
             }
-        }else {
+        } else {
             //TODO: 사용자 선택 뷰에서 버튼을 누르는 순간 설정하도록 옮길 것
             moodList.forEach { id in
                 UserDefaults.standard.integer(forKey: id)
