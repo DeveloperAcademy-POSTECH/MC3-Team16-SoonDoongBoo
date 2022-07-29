@@ -8,16 +8,19 @@
 import UIKit
 
 class HospitalViewController: UIViewController {
+    let firebaseService = FirebaseService()
     
     @IBOutlet weak var hospitalTextField: UITextField!
     
-    let hospitals = [Hospital(hospitalName: "병원")]
+    var hospitals = [Hospital(hospitalName: "병원")]
     var pickerView = UIPickerView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         pickerView.delegate = self
         pickerView.dataSource = self
+        
+        setup()
         
         hospitalTextField.inputView = pickerView
         hospitalTextField.layer.cornerRadius = 10
@@ -39,9 +42,13 @@ class HospitalViewController: UIViewController {
     }
     
     @objc private func pushToNext() {
-        let user = UserDefaults.standard.string(forKey: "user")
+        let hospitalName = hospitalTextField.text
         
-        switch user {
+        guard hospitalName == "병원" else { return }
+        
+        UserDefaults.standard.set(hospitalName, forKey: "hospital")
+            
+        switch UserDefaults.standard.string(forKey: "user") {
         case "nurse":
             print("nurse")
         case "patient":
@@ -49,13 +56,10 @@ class HospitalViewController: UIViewController {
         default:
             fatalError("Error: User isn't Selected")
         }
-        
-        print(hospitalTextField.text)
     }
 }
 
 extension HospitalViewController: UIPickerViewDelegate, UIPickerViewDataSource {
-    
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
@@ -71,6 +75,14 @@ extension HospitalViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         hospitalTextField.text = hospitals[row].hospitalName
         hospitalTextField.resignFirstResponder()
+    }
+}
+
+extension HospitalViewController {
+    private func setup() {
+        Task {
+            hospitals = try await firebaseService.fetchHospitals()
+        }
     }
 }
 
