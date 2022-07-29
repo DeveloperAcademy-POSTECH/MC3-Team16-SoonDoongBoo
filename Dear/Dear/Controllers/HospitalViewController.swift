@@ -55,7 +55,10 @@ class HospitalViewController: UIViewController {
             
             navigationController?.pushViewController(nurseMainViewController, animated: true)
         case "patient":
-            print("patient")
+            let storyboard = UIStoryboard(name: "PatientPillBagView", bundle: nil)
+            let patientMainViewController = storyboard.instantiateViewController(withIdentifier: "PatientPillBagView")
+            
+            navigationController?.pushViewController(patientMainViewController, animated: true)
         default:
             fatalError("Error: User isn't Selected")
         }
