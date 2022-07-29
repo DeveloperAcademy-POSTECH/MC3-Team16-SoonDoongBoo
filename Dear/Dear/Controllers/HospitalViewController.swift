@@ -44,13 +44,16 @@ class HospitalViewController: UIViewController {
     @objc private func pushToNext() {
         let hospitalName = hospitalTextField.text
         
-        guard hospitalName == "병원" else { return }
+        guard hospitalName != "병원" else { return }
         
         UserDefaults.standard.set(hospitalName, forKey: "hospital")
-            
+        
         switch UserDefaults.standard.string(forKey: "user") {
         case "nurse":
-            print("nurse")
+            let storyboard = UIStoryboard(name: "NurseMain", bundle: nil)
+            let nurseMainViewController = storyboard.instantiateViewController(withIdentifier: "NurseMain")
+            
+            navigationController?.pushViewController(nurseMainViewController, animated: true)
         case "patient":
             print("patient")
         default:
