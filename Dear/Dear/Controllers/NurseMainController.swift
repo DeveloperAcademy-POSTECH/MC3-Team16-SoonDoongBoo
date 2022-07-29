@@ -72,7 +72,8 @@ class NurseMainController: UIViewController {
     private func setLabel() {
         dateLabel.text = Date().getAllDate()
         dateLabel.textColor = UIColor.pink_01
-        monthLabel.text = Date().getMonthString()
+        let monthString = Date().getMonthString()
+        monthLabel.text = "1 \(monthString) - \(Date().endOfMonth()) \(monthString) "
         hospitalLabel.text = hospitalName
     }
     //버튼 클릭 시 값 증가

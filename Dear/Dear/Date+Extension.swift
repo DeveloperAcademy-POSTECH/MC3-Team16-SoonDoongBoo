@@ -21,6 +21,7 @@ extension Date {
     func getMonthString() -> String {
         let current = Date()
         let formatter = DateFormatter()
+        formatter.locale = Locale(identifier: "default")
         formatter.timeZone = TimeZone(abbreviation: "KST")
         formatter.dateFormat = "MMMM"
         let month = formatter.string(from: current)
@@ -45,5 +46,17 @@ extension Date {
         let date = formatter.string(from: current)
         
         return date
+    }
+    //출처: https://stackoverflow.com/questions/33605816/first-and-last-day-of-the-current-month-in-swift
+    func startOfMonth() -> Date {
+        return Calendar.current.date(from: Calendar.current.dateComponents([.year, .month], from: Calendar.current.startOfDay(for: self)))!
+    }
+    func endOfMonth() -> Int {
+        let endDate = Calendar.current.date(byAdding: DateComponents(month: 1, day: -1), to: self.startOfMonth())!
+        let formatter = DateFormatter()
+        formatter.timeZone = TimeZone(abbreviation: "KST")
+        formatter.dateFormat = "d"
+        let endDay = Int(formatter.string(from: endDate)) ?? 0
+        return endDay
     }
 }
