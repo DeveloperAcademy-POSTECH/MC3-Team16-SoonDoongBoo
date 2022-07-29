@@ -12,15 +12,15 @@ class NursePrescriptionViewController: UIViewController {
     //TODO: 서버 데이터 받아와서 연결하기
     let letterSampleData = Letter.sampleData[0]
 
-    @IBOutlet weak var dateLabel: UILabel!
-    @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var contentLabel: UILabel!
+    @IBOutlet private weak var dateLabel: UILabel!
+    @IBOutlet private weak var nameLabel: UILabel!
+    @IBOutlet private weak var contentLabel: UILabel!
     
-    @IBOutlet weak var depressionView: UIView!
-    @IBOutlet weak var sadnessView: UIView!
-    @IBOutlet weak var angerView: UIView!
-    @IBOutlet weak var calmView: UIView!
-    @IBOutlet weak var joyfulView: UIView!
+    @IBOutlet private weak var depressionView: UIView!
+    @IBOutlet private weak var sadnessView: UIView!
+    @IBOutlet private weak var angerView: UIView!
+    @IBOutlet private weak var calmView: UIView!
+    @IBOutlet private weak var joyfulView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
