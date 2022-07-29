@@ -24,7 +24,7 @@ class PatientPillBagTableViewCell: UITableViewCell {
         // Initialization code
         // 아래의 컬러는 컬러 익스텐션 추가한뒤에 다시 바꿀 예정
         self.contentView.createDottedLine(width: 1.0, color: UIColor.gray.cgColor)
-        borderView.layer.borderColor = UIColor.purple.cgColor
+        borderView.layer.borderColor = UIColor.purple_01.cgColor
         borderView.layer.borderWidth = 2
     }
 
