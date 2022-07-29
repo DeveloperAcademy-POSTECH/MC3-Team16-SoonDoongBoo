@@ -7,7 +7,7 @@
 
 import UIKit
 
-class NursePrescriptionViewController: UIViewController {
+final class NursePrescriptionViewController: UIViewController {
     
     //TODO: 서버 데이터 받아와서 연결하기
     let letterSampleData = Letter.sampleData[0]
@@ -33,10 +33,10 @@ class NursePrescriptionViewController: UIViewController {
     }
     
     private func setMedicine() {
-        depressionView.isHidden = letterSampleData.depression ? false : true
-        sadnessView.isHidden = letterSampleData.sadness ? false : true
-        angerView.isHidden = letterSampleData.anger ? false : true
-        calmView.isHidden = letterSampleData.calm ? false : true
-        joyfulView.isHidden = letterSampleData.joyful ? false : true
+        depressionView.isHidden = !letterSampleData.depression
+        sadnessView.isHidden = !letterSampleData.sadness
+        angerView.isHidden = !letterSampleData.anger
+        calmView.isHidden = !letterSampleData.calm
+        joyfulView.isHidden = !letterSampleData.joyful
     }
 }
