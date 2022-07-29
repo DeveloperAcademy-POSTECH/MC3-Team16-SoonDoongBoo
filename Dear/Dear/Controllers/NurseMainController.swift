@@ -39,14 +39,14 @@ class NurseMainController: UIViewController {
             letters = try await firebaseService.fetchLettersToday(hospitalName: hospitalName)
             letterCountLabel.text = "\(letters.count)개"
         }
-        if UserDefaults.standard.integer(forKey: "today") == Date().getDate()
-            && UserDefaults.standard.bool(forKey: "isSelectedMood") == true {
-            cheeringView.isHidden = false
-            selectMoodView.isHidden = true
-        }else{
-            cheeringView.isHidden = true
-            selectMoodView.isHidden = false
-        }
+//        if UserDefaults.standard.integer(forKey: "today") == Date().getDate()
+//            && UserDefaults.standard.bool(forKey: "isSelectedMood") == true {
+//            cheeringView.isHidden = false
+//            selectMoodView.isHidden = true
+//        }else{
+//            cheeringView.isHidden = true
+//            selectMoodView.isHidden = false
+//        }
     }
     private func setDateLabel() {
         let current = Date()
@@ -85,7 +85,7 @@ class NurseMainController: UIViewController {
         UserDefaults.standard.set(Date().getDate(), forKey: "today")
         print("\(String(describing: button?.accessibilityIdentifier)), count: \(UserDefaults.standard.integer(forKey: "\(key)")), \(UserDefaults.standard.bool(forKey: "isSelectedMood")), \(UserDefaults.standard.integer(forKey: "today"))")
         
-        cheeringView.isHidden = false
-        selectMoodView.isHidden = true
+//        cheeringView.isHidden = false
+//        selectMoodView.isHidden = true
     }
 }
