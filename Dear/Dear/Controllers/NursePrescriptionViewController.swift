@@ -7,7 +7,7 @@
 
 import UIKit
 
-class NursePrescriptionViewController: UIViewController {
+final class NursePrescriptionViewController: UIViewController {
     
     //TODO: 서버 데이터 받아와서 연결하기
     let letterSampleData = Letter.sampleData[0]
