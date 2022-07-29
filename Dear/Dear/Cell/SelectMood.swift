@@ -7,6 +7,9 @@
 
 import UIKit
 
+
+//TODO: 머지 후 파일 삭제해야함
+/*
 @IBDesignable
 class SelectMood: XibUIView {
     
@@ -50,3 +53,4 @@ class SelectMood: XibUIView {
     }
        
 }
+*/

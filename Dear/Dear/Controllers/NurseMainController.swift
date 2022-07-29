@@ -8,14 +8,14 @@
 import UIKit
 
 class NurseMainController: UIViewController {
-    @IBOutlet weak var stackView: UIStackView!
+    @IBOutlet private weak var stackView: UIStackView!
     
-    @IBOutlet weak var hospitalLabel: UILabel!
-    @IBOutlet weak var dateLabel: UILabel!
-    @IBOutlet weak var letterCountLabel: UILabel!
+    @IBOutlet private weak var hospitalLabel: UILabel!
+    @IBOutlet private weak var dateLabel: UILabel!
+    @IBOutlet private weak var letterCountLabel: UILabel!
     
-    @IBOutlet weak var cheeringView: UIView!
-    @IBOutlet weak var selectMoodView: UIView!
+    @IBOutlet private weak var cheeringView: UIView!
+    @IBOutlet private weak var selectMoodView: UIView!
     
     //TODO: userdefault정보로 받아와서 넣기
     let hospitalName: String = UserDefaults.standard.string(forKey: "hospital") ?? "병원선택"
@@ -24,7 +24,6 @@ class NurseMainController: UIViewController {
     var letters: [Letter] = []
     
     let moodList: [String] = ["Joyful", "Anger", "Sadness", "Calm", "Depression"]
-    let moodSelect = SelectMood()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,7 +39,7 @@ class NurseMainController: UIViewController {
             letters = try await firebaseService.fetchLettersToday(hospitalName: hospitalName)
             letterCountLabel.text = "\(letters.count)개"
         }
-        if UserDefaults.standard.integer(forKey: "today") == moodSelect.getDate()
+        if UserDefaults.standard.integer(forKey: "today") == Date().getDate()
             && UserDefaults.standard.bool(forKey: "isSelectedMood") == true {
             cheeringView.isHidden = false
             selectMoodView.isHidden = true
@@ -57,16 +56,6 @@ class NurseMainController: UIViewController {
         formatter.dateFormat = "YYYY년 MM월 dd일"
         dateLabel.text = formatter.string(from: current)
         dateLabel.textColor = UIColor.pink_01
-    }
-    private func getDate() -> Int {
-        let current = Date()
-        let formatter = DateFormatter()
-        formatter.locale = Locale(identifier: "ko_kr")
-        formatter.timeZone = TimeZone(abbreviation: "KST")
-        formatter.dateFormat = "dd"
-        let today = Int(formatter.string(from: current)) ?? -1
-        
-        return today
     }
     // 감정 선택 시 값 저장 세팅
     private func setMoodCount() {
@@ -93,7 +82,7 @@ class NurseMainController: UIViewController {
         let count = UserDefaults.standard.integer(forKey: "\(key)") + 1
         UserDefaults.standard.set(count, forKey: "\(key)")
         UserDefaults.standard.set(true, forKey: "isSelectedMood")
-        UserDefaults.standard.set(getDate(), forKey: "today")
+        UserDefaults.standard.set(Date().getDate(), forKey: "today")
         print("\(String(describing: button?.accessibilityIdentifier)), count: \(UserDefaults.standard.integer(forKey: "\(key)")), \(UserDefaults.standard.bool(forKey: "isSelectedMood")), \(UserDefaults.standard.integer(forKey: "today"))")
         
         cheeringView.isHidden = false

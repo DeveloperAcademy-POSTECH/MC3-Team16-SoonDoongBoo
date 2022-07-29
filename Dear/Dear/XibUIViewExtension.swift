@@ -7,6 +7,8 @@
 
 import UIKit
 
+//TODO: 머지 후 파일 삭제
+/*
 //출처: https://poky-develop.tistory.com/16
 class XibUIView: UIView {
     override init(frame: CGRect) {
@@ -36,3 +38,5 @@ extension UIView {
         return nib.instantiate(withOwner: self, options: nil).first as? UIView
     }
 }
+ 
+ */

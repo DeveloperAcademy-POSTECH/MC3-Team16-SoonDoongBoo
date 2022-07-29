@@ -7,6 +7,7 @@
 
 import UIKit
 
+//TODO: 머지 후 파일 삭제 
 class LetterCustomTableViewCell: UITableViewCell {
     @IBOutlet weak var letterTitleLabel: UILabel!
     @IBOutlet weak var letterContentLabel: UILabel!
