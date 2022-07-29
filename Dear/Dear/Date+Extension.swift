@@ -18,12 +18,21 @@ extension Date {
         
         return today
     }
-    func getMonth() -> String {
+    func getMonthString() -> String {
         let current = Date()
         let formatter = DateFormatter()
         formatter.timeZone = TimeZone(abbreviation: "KST")
         formatter.dateFormat = "MMMM"
         let month = formatter.string(from: current)
+        
+        return month
+    }
+    func getMonthInt() -> Int {
+        let current = Date()
+        let formatter = DateFormatter()
+        formatter.timeZone = TimeZone(abbreviation: "KST")
+        formatter.dateFormat = "M"
+        let month = Int(formatter.string(from: current)) ?? 0
         
         return month
     }

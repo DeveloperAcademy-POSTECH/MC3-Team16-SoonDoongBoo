@@ -39,13 +39,16 @@ class NurseMainController: UIViewController {
     var letters: [Letter] = []
     
     private let today: Int = Date().getDate()
+    private let month: Int = Date().getMonthInt()
+    
     private let keys: [String] = [ "Optional(\"Joyful\")", "Optional(\"Anger\")", "Optional(\"Sadness\")", "Optional(\"Calm\")", "Optional(\"Depression\")"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         //다음달로 넘어갔을 경우 차트 초기화
-        if today < UserDefaults.standard.integer(forKey: "today") {
+        if month != UserDefaults.standard.integer(forKey: "month") {
+            UserDefaults.standard.set(month, forKey: "month")
             keys.forEach { id in
                 UserDefaults.standard.set(0, forKey: id)
             }
@@ -69,7 +72,7 @@ class NurseMainController: UIViewController {
     private func setLabel() {
         dateLabel.text = Date().getAllDate()
         dateLabel.textColor = UIColor.pink_01
-        monthLabel.text = Date().getMonth()
+        monthLabel.text = Date().getMonthString()
         hospitalLabel.text = hospitalName
     }
     //버튼 클릭 시 값 증가
