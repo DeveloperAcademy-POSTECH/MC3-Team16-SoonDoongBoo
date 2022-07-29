@@ -21,7 +21,7 @@ class PatientPillBagViewController: UIViewController, UITableViewDataSource {
         pillBagTable.dataSource = self
         pillBagTable.delegate = self
         pillBag.layer.cornerRadius = 23
-        pillBag.backgroundColor = UIColor.orange
+        pillBag.backgroundColor = UIColor.pink_01
 
 
     }
@@ -65,7 +65,7 @@ extension UIView {
       caShapeLayer.lineWidth = width
       caShapeLayer.lineDashPattern = [10,5]
       let cgPath = CGMutablePath()
-       let cgPoint = [CGPoint(x: 325, y: 30), CGPoint(x: 325, y: 230)]
+       let cgPoint = [CGPoint(x: 330, y: 30), CGPoint(x: 330, y: 230)]
       cgPath.addLines(between: cgPoint)
       caShapeLayer.path = cgPath
       layer.addSublayer(caShapeLayer)

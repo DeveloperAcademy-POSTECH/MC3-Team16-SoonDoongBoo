@@ -59,10 +59,10 @@
                                 </userDefinedRuntimeAttributes>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wzM-pF-XR4">
-                                <rect key="frame" x="340" y="77" width="54" height="54"/>
+                                <rect key="frame" x="354" y="77" width="40" height="40"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="54" id="1EN-6X-iXH"/>
-                                    <constraint firstAttribute="width" constant="54" id="82d-Gx-JPM"/>
+                                    <constraint firstAttribute="width" constant="40" id="USn-E5-2Np"/>
+                                    <constraint firstAttribute="height" constant="40" id="gQG-3N-Bw9"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="icon-plus-circle-mono" title=""/>
@@ -74,7 +74,7 @@
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="pillCell" rowHeight="239" id="naG-eY-B8T" customClass="PatientPillBagTableViewCell" customModule="Dear" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="44.5" width="374" height="239"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="naG-eY-B8T" id="6bG-cA-FqT" customClass="UIViewExtension" customModule="Dear" customModuleProvider="target">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="naG-eY-B8T" id="6bG-cA-FqT">
                                             <rect key="frame" x="0.0" y="0.0" width="374" height="239"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
@@ -146,22 +146,25 @@
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                 </stackView>
-                                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yAw-E6-lfR" customClass="UIViewExtension" customModule="Dear" customModuleProvider="target">
-                                                    <rect key="frame" x="20" y="18" width="282" height="221"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yAw-E6-lfR" customClass="UIViewExtension" customModule="Dear" customModuleProvider="target">
+                                                    <rect key="frame" x="10" y="12" width="324" height="215"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </view>
                                             </subviews>
-                                            <color key="backgroundColor" red="0.47684186699999997" green="0.50480759139999998" blue="1" alpha="0.41522661420000001" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="backgroundColor" name="purple_02"/>
                                             <constraints>
                                                 <constraint firstItem="guB-qz-Gay" firstAttribute="top" secondItem="ZCM-Ce-Nb4" secondAttribute="bottom" constant="38" id="26X-9x-Ly4"/>
                                                 <constraint firstItem="ZCM-Ce-Nb4" firstAttribute="top" secondItem="R1P-HA-Wkh" secondAttribute="bottom" constant="4" id="3Yl-gl-54z"/>
+                                                <constraint firstAttribute="trailing" secondItem="yAw-E6-lfR" secondAttribute="trailing" constant="40" id="Ezd-lp-Rdk"/>
                                                 <constraint firstItem="R1P-HA-Wkh" firstAttribute="top" secondItem="6bG-cA-FqT" secondAttribute="top" constant="40" id="K1n-l0-BK7"/>
+                                                <constraint firstAttribute="bottom" secondItem="yAw-E6-lfR" secondAttribute="bottom" constant="12" id="LXI-Tb-og1"/>
                                                 <constraint firstItem="Mug-e7-KxS" firstAttribute="top" secondItem="guB-qz-Gay" secondAttribute="bottom" constant="28" id="MAp-Ma-vaW"/>
                                                 <constraint firstItem="tik-9Z-WJT" firstAttribute="top" secondItem="6bG-cA-FqT" secondAttribute="top" constant="180" id="Rnw-53-a5I"/>
                                                 <constraint firstItem="ZCM-Ce-Nb4" firstAttribute="leading" secondItem="6bG-cA-FqT" secondAttribute="leading" constant="40" id="aZf-ib-GFE"/>
                                                 <constraint firstItem="guB-qz-Gay" firstAttribute="leading" secondItem="6bG-cA-FqT" secondAttribute="leading" constant="40" id="lAg-ug-2r4"/>
                                                 <constraint firstItem="R1P-HA-Wkh" firstAttribute="leading" secondItem="6bG-cA-FqT" secondAttribute="leading" constant="40" id="r2J-7w-wBW"/>
+                                                <constraint firstItem="yAw-E6-lfR" firstAttribute="leading" secondItem="6bG-cA-FqT" secondAttribute="leading" constant="10" id="rhP-AQ-SjX"/>
+                                                <constraint firstItem="yAw-E6-lfR" firstAttribute="top" secondItem="6bG-cA-FqT" secondAttribute="top" constant="12" id="xTm-1f-QNu"/>
                                                 <constraint firstItem="Mug-e7-KxS" firstAttribute="leading" secondItem="6bG-cA-FqT" secondAttribute="leading" constant="40" id="xcW-Pv-eHI"/>
                                                 <constraint firstAttribute="trailing" secondItem="tik-9Z-WJT" secondAttribute="trailing" constant="40" id="yPI-5d-4gh"/>
                                             </constraints>
@@ -213,6 +216,9 @@
         <image name="icon-plus-circle-mono" width="40" height="40"/>
         <namedColor name="ButtonBorderColor">
             <color red="0.54509803921568623" green="0.54509803921568623" blue="0.54509803921568623" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="purple_02">
+            <color red="0.8666666666666667" green="0.8666666666666667" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
