@@ -8,15 +8,18 @@
 import UIKit
 
 class NurseMainController: UIViewController {
-    @IBOutlet private weak var stackView: UIStackView!
-    
-    @IBOutlet private weak var hospitalLabel: UILabel!
-    @IBOutlet private weak var dateLabel: UILabel!
-    @IBOutlet private weak var letterCountLabel: UILabel!
     
     @IBOutlet private weak var cheeringView: UIView!
     @IBOutlet private weak var selectMoodView: UIView!
     @IBOutlet private weak var chartView: UIView!
+    
+    //MedicineBag properties
+    @IBOutlet private weak var hospitalLabel: UILabel!
+    @IBOutlet private weak var dateLabel: UILabel!
+    @IBOutlet private weak var letterCountLabel: UILabel!
+    
+    //chart properties
+    @IBOutlet private weak var monthLabel: UILabel!
     
     @IBOutlet private weak var joyfulHeight: NSLayoutConstraint!
     @IBOutlet private weak var angerHeight: NSLayoutConstraint!
@@ -30,66 +33,44 @@ class NurseMainController: UIViewController {
     @IBOutlet private weak var calmBar: UIView!
     @IBOutlet private weak var depressionBar: UIView!
     
-    //TODO: userdefault정보로 받아와서 넣기
-    let hospitalName: String = UserDefaults.standard.string(forKey: "hospital") ?? "병원선택"
+    private let hospitalName: String = UserDefaults.standard.string(forKey: "hospital") ?? "병원선택"
     
     var firebaseService = FirebaseService()
     var letters: [Letter] = []
     
-    let moodList: [String] = ["Joyful", "Anger", "Sadness", "Calm", "Depression"]
+    private let today: Int = Date().getDate()
+    private let keys: [String] = [ "Optional(\"Joyful\")", "Optional(\"Anger\")", "Optional(\"Sadness\")", "Optional(\"Calm\")", "Optional(\"Depression\")"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    
-        //TODO: 데이터 연결시 삭제
-        UserDefaults.standard.set("포항성모병원", forKey: "hospital")
         
-        setMoodCount()
-        setDateLabel()
-        
-        hospitalLabel.text = hospitalName
+        //다음달로 넘어갔을 경우 차트 초기화
+        if today < UserDefaults.standard.integer(forKey: "today") {
+            keys.forEach { id in
+                UserDefaults.standard.set(0, forKey: id)
+            }
+        }
+        setLabel()
         Task {
             letters = try await firebaseService.fetchLettersToday(hospitalName: hospitalName)
             letterCountLabel.text = "\(letters.count)개"
         }
-        
-        if UserDefaults.standard.integer(forKey: "today") == Date().getDate()
-            && UserDefaults.standard.bool(forKey: "isSelectedMood") == true {
+        //감정 선택 유무에 따라 띄우는 뷰 구분
+        if UserDefaults.standard.integer(forKey: "today") == today {
             cheeringView.isHidden = false
             selectMoodView.isHidden = true
         } else {
             cheeringView.isHidden = true
             selectMoodView.isHidden = false
         }
-
         setInitialChart()
     }
-    private func setDateLabel() {
-        let current = Date()
-        let formatter = DateFormatter()
-        formatter.locale = Locale(identifier: "ko_kr")
-        formatter.timeZone = TimeZone(abbreviation: "KST")
-        formatter.dateFormat = "YYYY년 MM월 dd일"
-        dateLabel.text = formatter.string(from: current)
+    //label setting
+    private func setLabel() {
+        dateLabel.text = Date().getAllDate()
         dateLabel.textColor = UIColor.pink_01
-    }
-    // 감정 선택 시 값 저장 세팅
-    private func setMoodCount() {
-        let formatter_day = DateFormatter()
-        formatter_day.dateFormat = "dd"
-        let currentDay = Int(formatter_day.string(from: Date())) ?? 0
-        print(currentDay)
-        
-        if currentDay == 1 {
-            moodList.forEach { id in
-                UserDefaults.standard.set(0, forKey: id)
-            }
-        } else {
-            //TODO: 사용자 선택 뷰에서 버튼을 누르는 순간 설정하도록 옮길 것
-            moodList.forEach { id in
-                UserDefaults.standard.integer(forKey: id)
-            }
-        }
+        monthLabel.text = Date().getMonth()
+        hospitalLabel.text = hospitalName
     }
     //버튼 클릭 시 값 증가
     @IBAction func selectMood(_ sender: Any) {
@@ -97,9 +78,7 @@ class NurseMainController: UIViewController {
         let key = String(describing: button?.accessibilityIdentifier)
         let count = UserDefaults.standard.integer(forKey: "\(key)") + 1
         UserDefaults.standard.set(count, forKey: "\(key)")
-        UserDefaults.standard.set(true, forKey: "isSelectedMood")
-        UserDefaults.standard.set(Date().getDate(), forKey: "today")
-        print("\(String(describing: button?.accessibilityIdentifier)), count: \(UserDefaults.standard.integer(forKey: "\(key)")), \(UserDefaults.standard.bool(forKey: "isSelectedMood")), \(UserDefaults.standard.integer(forKey: "today"))")
+        UserDefaults.standard.set(today, forKey: "today")
         
         cheeringView.isHidden = false
         selectMoodView.isHidden = true
@@ -135,11 +114,11 @@ class NurseMainController: UIViewController {
         depressionBar.layer.cornerRadius = 4
         
         let count = [
-            UserDefaults.standard.integer(forKey: "Optional(\"Joyful\")"),
-            UserDefaults.standard.integer(forKey: "Optional(\"Anger\")"),
-            UserDefaults.standard.integer(forKey: "Optional(\"Sadness\")"),
-            UserDefaults.standard.integer(forKey: "Optional(\"Calm\")"),
-            UserDefaults.standard.integer(forKey: "Optional(\"Depression\")")
+            UserDefaults.standard.integer(forKey: keys[0]),
+            UserDefaults.standard.integer(forKey: keys[1]),
+            UserDefaults.standard.integer(forKey: keys[2]),
+            UserDefaults.standard.integer(forKey: keys[3]),
+            UserDefaults.standard.integer(forKey: keys[4])
         ]
         self.joyfulHeight.constant = CGFloat(count[0]) * 8.8
         self.angerHeight.constant = CGFloat(count[1]) * 8.8

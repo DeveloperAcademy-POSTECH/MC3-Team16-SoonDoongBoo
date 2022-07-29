@@ -18,4 +18,23 @@ extension Date {
         
         return today
     }
+    func getMonth() -> String {
+        let current = Date()
+        let formatter = DateFormatter()
+        formatter.timeZone = TimeZone(abbreviation: "KST")
+        formatter.dateFormat = "MMMM"
+        let month = formatter.string(from: current)
+        
+        return month
+    }
+    func getAllDate() -> String {
+        let current = Date()
+        let formatter = DateFormatter()
+        formatter.locale = Locale(identifier: "ko_kr")
+        formatter.timeZone = TimeZone(abbreviation: "KST")
+        formatter.dateFormat = "YYYY년 MM월 dd일"
+        let date = formatter.string(from: current)
+        
+        return date
+    }
 }

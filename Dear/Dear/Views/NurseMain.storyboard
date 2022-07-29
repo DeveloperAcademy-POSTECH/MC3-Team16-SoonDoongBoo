@@ -804,10 +804,10 @@
                         <outlet property="joyfulBar" destination="Y17-zV-aW4" id="ClG-du-nXG"/>
                         <outlet property="joyfulHeight" destination="oHx-YT-Hpf" id="8lI-1U-aqd"/>
                         <outlet property="letterCountLabel" destination="TcA-1D-hu5" id="rwf-Ao-oMJ"/>
+                        <outlet property="monthLabel" destination="IUt-oI-CNy" id="od7-Cj-fLY"/>
                         <outlet property="sadnessBar" destination="Ayx-8H-mEG" id="7sq-RK-ZSz"/>
                         <outlet property="sadnessHeight" destination="7c3-Rs-uSI" id="0I8-nZ-qYW"/>
                         <outlet property="selectMoodView" destination="WtT-Ag-OVc" id="QK1-8i-Mj8"/>
-                        <outlet property="stackView" destination="mzc-y9-0fT" id="ScU-37-fc5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
