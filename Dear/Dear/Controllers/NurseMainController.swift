@@ -67,7 +67,17 @@ class NurseMainController: UIViewController {
             selectMoodView.isHidden = false
         }
         setInitialChart()
+        
+        // 처음 설정 후 이전 버튼 삭제
+        navigationItem.hidesBackButton = true
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        navigationController?.isNavigationBarHidden = true
+    }
+    
     //label setting
     private func setLabel() {
         dateLabel.text = Date().getAllDate()

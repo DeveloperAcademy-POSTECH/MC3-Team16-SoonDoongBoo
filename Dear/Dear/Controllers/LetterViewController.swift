@@ -34,6 +34,8 @@ class LetterViewController: UIViewController {
         
         textViewDidChange(textView)
         self.hideKeyboardWhenTappedAround()
+        
+        navigationController?.isNavigationBarHidden = false
      }
     @IBAction func selectBtn(_ sender: UIButton) {
         sender.isSelected = !sender.isSelected
