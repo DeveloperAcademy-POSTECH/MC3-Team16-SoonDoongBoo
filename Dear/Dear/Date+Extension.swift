@@ -47,6 +47,16 @@ extension Date {
         
         return date
     }
+    func getAllDateforPrescription() -> String {
+        let current = Date()
+        let formatter = DateFormatter()
+        formatter.locale = Locale(identifier: "ko_kr")
+        formatter.timeZone = TimeZone(abbreviation: "KST")
+        formatter.dateFormat = "YY.MM.dd"
+        let date = formatter.string(from: current)
+        
+        return date
+    }
     //출처: https://stackoverflow.com/questions/33605816/first-and-last-day-of-the-current-month-in-swift
     func startOfMonth() -> Date {
         return Calendar.current.date(from: Calendar.current.dateComponents([.year, .month], from: Calendar.current.startOfDay(for: self)))!

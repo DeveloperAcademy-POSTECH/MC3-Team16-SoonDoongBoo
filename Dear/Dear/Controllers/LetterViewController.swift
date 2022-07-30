@@ -8,56 +8,67 @@
 import UIKit
 
 class LetterViewController: UIViewController {
+    
+    private var isTextFilled = [false, false]
     @IBOutlet private weak var contentViewHeight: NSLayoutConstraint!
-    @IBOutlet private weak var doneButton: UIBarButtonItem!
-    @IBOutlet private weak var textView: UITextView!
-    
+    @IBOutlet private weak var doneButton: UIBarButtonItem! {
+        didSet { doneButton.isEnabled = false }
+    }
+    @IBOutlet private weak var textView: UITextView! {
+        didSet { textView.isScrollEnabled = false }
+    }
+    @IBOutlet private weak var textViewPlaceholder: UILabel!
+    @IBOutlet private weak var textField: UITextField!
+    @IBOutlet private weak var dateLabel: UILabel! {
+        didSet { dateLabel.text = Date().getAllDateforPrescription() }
+    }
     @IBOutlet private weak var letterTo: UITextField!
-    private var check:[Bool] = [false, false, false, false, false]
-    
-    private var firebaseService = FirebaseService()
+    ///anger, calm, depression, joyful, sadness 순서
+    private var pillCheck:[Bool] = [false, false, false, false, false]
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        textView.isScrollEnabled = false
-        doneButton.isEnabled = false
-        placeholderSetting()
+        
+        textField.delegate = self
+        textView.delegate = self
+        
         textViewDidChange(textView)
         self.hideKeyboardWhenTappedAround()
-    }
-
-    @IBAction func PrintAlert(_ sender: UIButton) {
-        let alert = UIAlertController(title: "처방전을 보낼까요?", message: "발송 완료 후 수정할 수 없습니다", preferredStyle: .alert)
-        let yes = UIAlertAction(title: "확인", style: .default, handler: nil)
-        let no = UIAlertAction(title: "취소", style: .destructive, handler: nil)
-        
-        [no, yes].forEach { alert.addAction($0) }
-        
-        present(alert, animated: true, completion: nil)
-    }
-    
+     }
     @IBAction func selectBtn(_ sender: UIButton) {
         sender.isSelected = !sender.isSelected
-        check[sender.tag] = sender.isSelected
-        print(check)
+        pillCheck[sender.tag] = sender.isSelected
     }
     @IBAction func pressedDoneButton(_ sender: UIBarButtonItem) {
         print("Done Button")
         
         let alert = UIAlertController(title: "처방전을 보낼까요?", message: "발송 완료 후 수정할 수 없습니다", preferredStyle: .alert)
         let yes = UIAlertAction(title: "확인", style: .default) { _ in
-            print("yes")
-            let hospital = UserDefaults.standard.string(forKey: "hospital") ?? ""
-            Task {
-//                firebaseService.sendLetterToHospital(hospitalName: hospital, letterTo: letterTo.text ?? "", letterContent: textView.text, anger: check[0], calm: check[1], depression: check[2], joyful: check[3], sadness: check[4])
-            }
+            self.sendLetter()
         }
         let no = UIAlertAction(title: "취소", style: .destructive, handler: nil)
         [no, yes].forEach { alert.addAction($0) }
         present(alert, animated: true, completion: nil)
     }
-    
-    
+}
+
+extension LetterViewController {
+    func sendLetter() {
+        let firebaseService = FirebaseService()
+        let letterTo = letterTo.text!
+        let letterContent = textView.text!
+        let hospital = UserDefaults.standard.string(forKey: "hospital") ?? ""
+        Task {
+            firebaseService.sendLetterToHospital(hospitalName: hospital, letterTo: letterTo, letterContent: letterContent, anger: pillCheck[0], calm: pillCheck[1], depression: pillCheck[2], joyful: pillCheck[3], sadness: pillCheck[4])
+        }
+    }
+    func checkButtonState() {
+        if isTextFilled[0] && isTextFilled[1] {
+            doneButton.isEnabled = true
+        } else {
+            doneButton.isEnabled = false
+        }
+    }
 }
 
 extension LetterViewController: UITextViewDelegate {
@@ -76,26 +87,31 @@ extension LetterViewController: UITextViewDelegate {
             }
         }
     }
-    ///출처: https://hyongdoc.tistory.com/280
-    func placeholderSetting() {
-        textView.delegate = self
-        textView.text = "처방전을 작성해주세요."
-        textView.textColor = UIColor.lightGray
-    }
-    func textViewDidBeginEditing(_ textView: UITextView) {
-        if textView.textColor == UIColor.lightGray {
-            textView.text = nil
-            textView.textColor = UIColor.black
-        }
-    }
-    func textViewDidEndEditing(_ textView: UITextView) {
-        if textView.text.isEmpty {
-            doneButton.isEnabled = false
-            textView.text = "처방전을 작성해주세요."
-            textView.textColor = UIColor.lightGray
+    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+        if range.location == 0 && range.length != 0 {
+            isTextFilled[0] = false
+            textViewPlaceholder.isHidden = false
+            checkButtonState()
         } else {
-            doneButton.isEnabled = true
+            if !textView.text.isEmpty {
+                isTextFilled[0] = true
+                textViewPlaceholder.isHidden = true
+            }
+            checkButtonState()
         }
+        return true
     }
-    
+}
+extension LetterViewController: UITextFieldDelegate {
+    //출처: https://kirkim.github.io/swift/2021/12/11/backspace.html
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        if range.location == 0 && range.length != 0 {
+            isTextFilled[1] = false
+            checkButtonState()
+        } else {
+            isTextFilled[1] = true
+            checkButtonState()
+        }
+        return true
+    }
 }
