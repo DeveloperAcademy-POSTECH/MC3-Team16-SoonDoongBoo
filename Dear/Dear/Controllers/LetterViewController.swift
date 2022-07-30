@@ -10,6 +10,7 @@ import UIKit
 class LetterViewController: UIViewController {
     
     private var isTextFilled = [false, false]
+    
     @IBOutlet private weak var contentViewHeight: NSLayoutConstraint!
     @IBOutlet private weak var doneButton: UIBarButtonItem! {
         didSet { doneButton.isEnabled = false }
@@ -23,6 +24,7 @@ class LetterViewController: UIViewController {
         didSet { dateLabel.text = Date().getAllDateforPrescription() }
     }
     @IBOutlet private weak var letterTo: UITextField!
+    
     ///anger, calm, depression, joyful, sadness 순서
     private var pillCheck:[Bool] = [false, false, false, false, false]
     
@@ -36,11 +38,14 @@ class LetterViewController: UIViewController {
         self.hideKeyboardWhenTappedAround()
         
         navigationController?.isNavigationBarHidden = false
+        navigationController?.navigationBar.tintColor = .black
      }
+    
     @IBAction func selectBtn(_ sender: UIButton) {
         sender.isSelected = !sender.isSelected
         pillCheck[sender.tag] = sender.isSelected
     }
+    
     @IBAction func pressedDoneButton(_ sender: UIBarButtonItem) {
         print("Done Button")
         
@@ -51,6 +56,10 @@ class LetterViewController: UIViewController {
         let no = UIAlertAction(title: "취소", style: .destructive, handler: nil)
         [no, yes].forEach { alert.addAction($0) }
         present(alert, animated: true, completion: nil)
+    }
+    
+    @IBAction func backButtonPressed(_ sender: UIBarButtonItem) {
+        navigationController?.popViewController(animated: true)
     }
 }
 
@@ -64,6 +73,8 @@ extension LetterViewController {
             firebaseService.sendLetterToHospital(hospitalName: hospital, letterTo: letterTo, letterContent: letterContent, anger: pillCheck[0], calm: pillCheck[1], depression: pillCheck[2], joyful: pillCheck[3], sadness: pillCheck[4])
         }
     }
+    
+    
     func checkButtonState() {
         if isTextFilled[0] && isTextFilled[1] {
             doneButton.isEnabled = true
@@ -89,6 +100,7 @@ extension LetterViewController: UITextViewDelegate {
             }
         }
     }
+    
     func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
         if range.location == 0 && range.length != 0 {
             isTextFilled[0] = false
