@@ -8,12 +8,19 @@
 import UIKit
 
 class LetterViewController: UIViewController {
-    @IBOutlet private weak var textView: UITextView!
     @IBOutlet private weak var contentViewHeight: NSLayoutConstraint!
+    @IBOutlet private weak var doneButton: UIBarButtonItem!
+    @IBOutlet private weak var textView: UITextView!
+    
+    @IBOutlet private weak var letterTo: UITextField!
+    private var check:[Bool] = [false, false, false, false, false]
+    
+    private var firebaseService = FirebaseService()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         textView.isScrollEnabled = false
+        doneButton.isEnabled = false
         placeholderSetting()
         textViewDidChange(textView)
         self.hideKeyboardWhenTappedAround()
@@ -31,7 +38,26 @@ class LetterViewController: UIViewController {
     
     @IBAction func selectBtn(_ sender: UIButton) {
         sender.isSelected = !sender.isSelected
+        check[sender.tag] = sender.isSelected
+        print(check)
     }
+    @IBAction func pressedDoneButton(_ sender: UIBarButtonItem) {
+        print("Done Button")
+        
+        let alert = UIAlertController(title: "처방전을 보낼까요?", message: "발송 완료 후 수정할 수 없습니다", preferredStyle: .alert)
+        let yes = UIAlertAction(title: "확인", style: .default) { _ in
+            print("yes")
+            let hospital = UserDefaults.standard.string(forKey: "hospital") ?? ""
+            Task {
+//                firebaseService.sendLetterToHospital(hospitalName: hospital, letterTo: letterTo.text ?? "", letterContent: textView.text, anger: check[0], calm: check[1], depression: check[2], joyful: check[3], sadness: check[4])
+            }
+        }
+        let no = UIAlertAction(title: "취소", style: .destructive, handler: nil)
+        [no, yes].forEach { alert.addAction($0) }
+        present(alert, animated: true, completion: nil)
+    }
+    
+    
 }
 
 extension LetterViewController: UITextViewDelegate {
@@ -64,8 +90,12 @@ extension LetterViewController: UITextViewDelegate {
     }
     func textViewDidEndEditing(_ textView: UITextView) {
         if textView.text.isEmpty {
+            doneButton.isEnabled = false
             textView.text = "처방전을 작성해주세요."
             textView.textColor = UIColor.lightGray
+        } else {
+            doneButton.isEnabled = true
         }
     }
+    
 }
