@@ -7,11 +7,16 @@
 
 import UIKit
 
-class LetterViewController: UIViewController, UITextFieldDelegate {
-    
+class LetterViewController: UIViewController {
+    @IBOutlet private weak var textView: UITextView!
+    @IBOutlet private weak var contentViewHeight: NSLayoutConstraint!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        textView.isScrollEnabled = false
+        placeholderSetting()
+        textViewDidChange(textView)
+        self.hideKeyboardWhenTappedAround()
     }
 
     @IBAction func PrintAlert(_ sender: UIButton) {
@@ -24,5 +29,43 @@ class LetterViewController: UIViewController, UITextFieldDelegate {
         present(alert, animated: true, completion: nil)
     }
     
+    @IBAction func selectBtn(_ sender: UIButton) {
+        sender.isSelected = !sender.isSelected
+    }
+}
 
+extension LetterViewController: UITextViewDelegate {
+    ///출처: https://velog.io/@hyesuuou/Swift-UITextView-%EB%86%92%EC%9D%B4%EB%A5%BC-Contents-height%EC%99%80-%EA%B0%99%EA%B2%8C-%ED%95%98%EA%B8%B0
+    func textViewDidChange(_ textView: UITextView) {
+        let size = CGSize(width: view.frame.width, height: .infinity)
+        let estimatedSize = textView.sizeThatFits(size)
+        textView.constraints.forEach { (constraint) in
+            /// 180 이하일때는 더 이상 줄어들지 않게하기
+            if estimatedSize.height <= 180 {
+            }
+            else {
+                if constraint.firstAttribute == .height {
+                    constraint.constant = estimatedSize.height
+                }
+            }
+        }
+    }
+    ///출처: https://hyongdoc.tistory.com/280
+    func placeholderSetting() {
+        textView.delegate = self
+        textView.text = "처방전을 작성해주세요."
+        textView.textColor = UIColor.lightGray
+    }
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        if textView.textColor == UIColor.lightGray {
+            textView.text = nil
+            textView.textColor = UIColor.black
+        }
+    }
+    func textViewDidEndEditing(_ textView: UITextView) {
+        if textView.text.isEmpty {
+            textView.text = "처방전을 작성해주세요."
+            textView.textColor = UIColor.lightGray
+        }
+    }
 }
