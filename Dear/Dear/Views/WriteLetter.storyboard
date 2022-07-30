@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Title-->
+        <!--Letter View Controller-->
         <scene sceneID="4Zk-qR-cL7">
             <objects>
                 <viewController storyboardIdentifier="LetterViewController" id="yjt-aa-E6v" customClass="LetterViewController" customModule="Dear" customModuleProvider="target" sceneMemberID="viewController">
@@ -596,9 +596,9 @@
                             <constraint firstItem="fDF-xY-Zy9" firstAttribute="bottom" secondItem="K84-7G-D7c" secondAttribute="bottom" id="qNU-tf-O6x"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="DS8-NQ-MLD">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="nfb-SL-g8y"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="WZp-1E-vBR">
+                    <navigationItem key="navigationItem" id="DS8-NQ-MLD">
+                        <barButtonItem key="leftBarButtonItem" title="이전" id="nfb-SL-g8y"/>
+                        <barButtonItem key="rightBarButtonItem" title="완료" id="WZp-1E-vBR">
                             <connections>
                                 <action selector="pressedDoneButton:" destination="yjt-aa-E6v" id="6jr-0q-jI6"/>
                             </connections>
