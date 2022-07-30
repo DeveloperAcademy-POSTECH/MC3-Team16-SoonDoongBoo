@@ -23,12 +23,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         switch UserDefaults.standard.string(forKey: "user") {
         case "nurse":
             let stroyboard = UIStoryboard(name: "NurseMain", bundle: nil)
-            let nurseMainViewController = stroyboard.instantiateViewController(withIdentifier: "NurseMain")
+            let nurseMainViewController = stroyboard.instantiateViewController(withIdentifier: "UINurseNavigationController")
             
             window?.rootViewController = nurseMainViewController
         case "patient":
             let stroyboard = UIStoryboard(name: "PatientPillBagView", bundle: nil)
-            let patientMainViewController = stroyboard.instantiateViewController(withIdentifier: "PatientPillBagView")
+            let patientMainViewController = stroyboard.instantiateViewController(withIdentifier: "PatientMainNavigation")
             
             window?.rootViewController = patientMainViewController
         default:
