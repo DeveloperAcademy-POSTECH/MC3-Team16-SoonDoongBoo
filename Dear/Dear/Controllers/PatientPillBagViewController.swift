@@ -24,7 +24,14 @@ class PatientPillBagViewController: UIViewController, UITableViewDataSource {
         pillBagTable.delegate = self
         pillBag.layer.cornerRadius = 23
         pillBag.backgroundColor = UIColor.pink_01
-
+        
+        navigationItem.hidesBackButton = true
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        navigationController?.isNavigationBarHidden = true
     }
     
     @IBAction func sentPrescriptionPressed(_ sender: UIButton) {
