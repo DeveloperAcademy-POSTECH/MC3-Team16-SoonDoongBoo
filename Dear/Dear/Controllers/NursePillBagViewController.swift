@@ -29,6 +29,7 @@ class NursePillBagViewController: UIViewController {
         }
         
         navigationController?.isNavigationBarHidden = false
+        navigationController?.navigationBar.tintColor = .black
     }
     
 }
