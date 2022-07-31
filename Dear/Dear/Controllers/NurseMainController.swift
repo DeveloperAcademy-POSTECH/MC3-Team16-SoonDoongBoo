@@ -42,11 +42,10 @@ class NurseMainController: UIViewController {
     var letters: [Letter] = []
     
     private let phraseData = Phrase.data
+    private let keys: [String] = [ "Joyful", "Anger", "Sadness", "Calm", "Depression"]
     
     private let today: Int = Date().getDate()
     private let month: Int = Date().getMonthInt()
-    
-    private let keys: [String] = [ "Optional(\"Joyful\")", "Optional(\"Anger\")", "Optional(\"Sadness\")", "Optional(\"Calm\")", "Optional(\"Depression\")"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
