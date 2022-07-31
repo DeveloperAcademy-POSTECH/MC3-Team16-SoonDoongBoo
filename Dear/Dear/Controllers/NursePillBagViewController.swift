@@ -57,6 +57,8 @@ extension NursePillBagViewController: UITableViewDataSource {
         dateFormatter.locale = Locale(identifier: "us")
         dateFormatter.dateFormat = "MMM d"
 
+        cell.selectionStyle = UITableViewCell.SelectionStyle.none
+    
         //Date -> String
         cell.cellDate.text = dateFormatter.string(from: date)
         
