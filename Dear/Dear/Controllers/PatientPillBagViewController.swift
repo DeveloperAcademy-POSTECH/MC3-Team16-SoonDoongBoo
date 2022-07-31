@@ -27,6 +27,7 @@ class PatientPillBagViewController: UIViewController, UITableViewDataSource {
         
         // table view 세팅
         pillBagTable.showsVerticalScrollIndicator = false
+        pillBagTable.separatorStyle = .none
         
         // 초기 세팅 후 뒤로가기 버튼 제거
         navigationItem.hidesBackButton = true
@@ -69,6 +70,7 @@ class PatientPillBagViewController: UIViewController, UITableViewDataSource {
         return cell
     }
     
+    // 선택된 셀에 정보를 넘기는 함수
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let seletedLetter = letters[indexPath.row]
         
