@@ -8,15 +8,21 @@
 import UIKit
 
 class PatientPillBagViewController: UIViewController, UITableViewDataSource {
+    private let firebaseService = FirebaseService()
     
     @IBOutlet weak var pillBag: UIStackView!
     @IBOutlet weak var sentPrescription: UIButton!
     @IBOutlet weak var pillBagTable: UITableView!
     
-    var letters: [Letter] = Letter.sampleData
+    private var letters: [Letter] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        Task {
+            letters = try await firebaseService.fetchLettersByName()
+            pillBagTable.reloadData()
+        }
         
         // Do any additional setup after loading the view.
         // 약뭉치 등 레이블쪽 관련된 부분
@@ -91,15 +97,15 @@ extension PatientPillBagViewController: UITableViewDelegate {
 
 // 점선 생성하는 익스텐션
 extension UIView {
-   func createDottedLine(width: CGFloat, color: CGColor) {
-      let caShapeLayer = CAShapeLayer()
-      caShapeLayer.strokeColor = color
-      caShapeLayer.lineWidth = width
-      caShapeLayer.lineDashPattern = [10,5]
-      let cgPath = CGMutablePath()
-       let cgPoint = [CGPoint(x: 330, y: 30), CGPoint(x: 330, y: 230)]
-      cgPath.addLines(between: cgPoint)
-      caShapeLayer.path = cgPath
-      layer.addSublayer(caShapeLayer)
-   }
+    func createDottedLine(width: CGFloat, color: CGColor) {
+        let caShapeLayer = CAShapeLayer()
+        caShapeLayer.strokeColor = color
+        caShapeLayer.lineWidth = width
+        caShapeLayer.lineDashPattern = [10,5]
+        let cgPath = CGMutablePath()
+        let cgPoint = [CGPoint(x: 330, y: 30), CGPoint(x: 330, y: 230)]
+        cgPath.addLines(between: cgPoint)
+        caShapeLayer.path = cgPath
+        layer.addSublayer(caShapeLayer)
+    }
 }
