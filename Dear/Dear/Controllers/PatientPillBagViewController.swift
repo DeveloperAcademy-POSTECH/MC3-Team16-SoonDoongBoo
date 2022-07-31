@@ -24,9 +24,23 @@ class PatientPillBagViewController: UIViewController, UITableViewDataSource {
         pillBagTable.delegate = self
         pillBag.layer.cornerRadius = 23
         pillBag.backgroundColor = UIColor.pink_01
-
+        
+        // 초기 세팅 후 뒤로가기 버튼 제거
+        navigationItem.hidesBackButton = true
     }
-
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        navigationController?.isNavigationBarHidden = true
+    }
+    
+    @IBAction func sentPrescriptionPressed(_ sender: UIButton) {
+        let writeLetterStoryboard = UIStoryboard(name: "WriteLetter", bundle: nil)
+                let writeLetterViewController = writeLetterStoryboard.instantiateViewController(withIdentifier: "LetterViewController")
+                navigationController?.pushViewController(writeLetterViewController, animated: true)
+    }
+    
     // 테이블 뷰 셀 개수에 대한 함수
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.letters.count

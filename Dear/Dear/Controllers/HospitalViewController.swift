@@ -20,7 +20,10 @@ class HospitalViewController: UIViewController {
         pickerView.delegate = self
         pickerView.dataSource = self
         
-        setup()
+        Task {
+            hospitals = try await firebaseService.fetchHospitals()
+            pickerView.reloadInputViews()
+        }
         
         hospitalTextField.inputView = pickerView
         hospitalTextField.layer.cornerRadius = 10
@@ -81,14 +84,6 @@ extension HospitalViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         hospitalTextField.text = hospitals[row].hospitalName
         hospitalTextField.resignFirstResponder()
-    }
-}
-
-extension HospitalViewController {
-    private func setup() {
-        Task {
-            hospitals = try await firebaseService.fetchHospitals()
-        }
     }
 }
 

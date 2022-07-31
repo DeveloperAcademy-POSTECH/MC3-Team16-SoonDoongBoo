@@ -27,6 +27,9 @@ class NursePillBagViewController: UIViewController {
             letters = try await firebaseService.fetchLettersByHospital(hospitalName: "포항성모병원")
             tableView.reloadData()
         }
+        
+        navigationController?.isNavigationBarHidden = false
+        navigationController?.navigationBar.tintColor = .black
     }
     
 }

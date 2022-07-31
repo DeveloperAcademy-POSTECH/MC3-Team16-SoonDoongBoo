@@ -597,7 +597,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="DS8-NQ-MLD">
-                        <barButtonItem key="leftBarButtonItem" title="이전" id="nfb-SL-g8y"/>
+                        <barButtonItem key="leftBarButtonItem" title="이전" id="nfb-SL-g8y">
+                            <connections>
+                                <action selector="backButtonPressed:" destination="yjt-aa-E6v" id="dK9-oo-41Z"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="완료" id="WZp-1E-vBR">
                             <connections>
                                 <action selector="pressedDoneButton:" destination="yjt-aa-E6v" id="6jr-0q-jI6"/>
