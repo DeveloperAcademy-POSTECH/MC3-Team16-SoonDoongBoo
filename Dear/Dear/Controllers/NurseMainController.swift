@@ -66,6 +66,7 @@ class NurseMainController: UIViewController {
         if UserDefaults.standard.integer(forKey: "today") == today {
             cheeringView.isHidden = false
             selectMoodView.isHidden = true
+            setPhrase(idx: UserDefaults.standard.integer(forKey: "PhraseIndex"), mood: UserDefaults.standard.string(forKey: "mood") ?? "")
         } else {
             cheeringView.isHidden = true
             selectMoodView.isHidden = false
@@ -94,10 +95,10 @@ class NurseMainController: UIViewController {
     @IBAction func selectMood(_ sender: UIButton) {
         let key = getKey(tag: sender.tag)
         
-        print(key)
         let count = UserDefaults.standard.integer(forKey: key) + 1
         UserDefaults.standard.set(count, forKey: key)
         UserDefaults.standard.set(today, forKey: "today")
+        UserDefaults.standard.set(key, forKey: "mood")
         
         cheeringView.isHidden = false
         selectMoodView.isHidden = true
@@ -124,10 +125,14 @@ class NurseMainController: UIViewController {
         return key
     }
     
-    private func setPhrase(mood: String) {
+    private func setPhrase(idx: Int = -1, mood: String) {
         let texts = phraseData.filter { $0.mood == mood }
-        print(texts)
-        phraseLabel.text = texts.randomElement()?.phrase
+        var index = idx
+        if index == -1  {
+            index = Int.random(in: 0..<texts.count)
+        }
+        phraseLabel.text = texts[index].phrase
+        UserDefaults.standard.set(index, forKey: "PhraseIndex")
     }
     
     //버튼 클릭시 차트 값 변경하는 함수
