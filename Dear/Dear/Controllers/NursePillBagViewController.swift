@@ -36,12 +36,17 @@ class NursePillBagViewController: UIViewController {
 
 extension NursePillBagViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if self.letters.count == 0 {
+            self.tableView.setEmpty("약 봉투가 비었어요.")
+        } else {
+            self.tableView.restore()
+        }
         return self.letters.count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "LetterCell", for: indexPath) as! NursePillBagViewCell
         let letter = self.letters[indexPath.row]
-           
+        
         //String -> Date
         let dateString:String = letter.date
         let dateFormatter = DateFormatter()
@@ -49,13 +54,10 @@ extension NursePillBagViewController: UITableViewDataSource {
         dateFormatter.dateFormat = "yyyy.MM.dd"
         
         let date:Date = dateFormatter.date(from: dateString)!
-        print("\(date)", type(of: date))
         dateFormatter.locale = Locale(identifier: "us")
         dateFormatter.dateFormat = "MMM d"
-        print("\(dateFormatter.string(from: date))")
-        
+
         //Date -> String
-        
         cell.cellDate.text = dateFormatter.string(from: date)
         
         dateFormatter.dateFormat = "EEEE"
@@ -78,3 +80,24 @@ extension NursePillBagViewController: UITableViewDelegate {
         return 277
     }
 }
+
+// 빈 약 뭉치일때
+extension UITableView {
+    func setEmpty(_ message: String) {
+        let messageLabel = UILabel(frame: CGRect(x: 0, y: 0, width: self.bounds.size.width, height: self.bounds.size.height))
+        messageLabel.text = message
+        messageLabel.textColor = .gray
+        messageLabel.numberOfLines = 0
+        messageLabel.textAlignment = .center
+        messageLabel.font = UIFont(name: "System", size: 16)
+        messageLabel.sizeToFit()
+        
+        self.backgroundView = messageLabel
+        self.separatorStyle = .none
+    }
+    func restore() {
+        self.backgroundView = nil
+        self.separatorStyle = .singleLine
+    }
+}
+

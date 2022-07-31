@@ -8,15 +8,21 @@
 import UIKit
 
 class PatientPillBagViewController: UIViewController, UITableViewDataSource {
+    private let firebaseService = FirebaseService()
     
     @IBOutlet weak var pillBag: UIStackView!
     @IBOutlet weak var sentPrescription: UIButton!
     @IBOutlet weak var pillBagTable: UITableView!
     
-    var letters: [Letter] = Letter.sampleData
+    private var letters: [Letter] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        Task {
+            letters = try await firebaseService.fetchLettersByName()
+            pillBagTable.reloadData()
+        }
         
         // Do any additional setup after loading the view.
         // 약뭉치 등 레이블쪽 관련된 부분
@@ -24,6 +30,10 @@ class PatientPillBagViewController: UIViewController, UITableViewDataSource {
         pillBagTable.delegate = self
         pillBag.layer.cornerRadius = 23
         pillBag.backgroundColor = UIColor.pink_01
+        
+        // table view 세팅
+        pillBagTable.showsVerticalScrollIndicator = false
+        pillBagTable.separatorStyle = .none
         
         // 초기 세팅 후 뒤로가기 버튼 제거
         navigationItem.hidesBackButton = true
@@ -52,6 +62,7 @@ class PatientPillBagViewController: UIViewController, UITableViewDataSource {
 //        cell.textLabel?.text = "\(indexPath.row)"
 //        return cell
         let cell = tableView.dequeueReusableCell(withIdentifier: "pillCell", for: indexPath) as! PatientPillBagTableViewCell
+        cell.selectionStyle = .none
         
         let letter = self.letters[indexPath.row]
 
@@ -65,6 +76,16 @@ class PatientPillBagViewController: UIViewController, UITableViewDataSource {
         return cell
     }
     
+    // 선택된 셀에 정보를 넘기는 함수
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let seletedLetter = letters[indexPath.row]
+        
+        let storyboard = UIStoryboard(name: "NursePrescriptionView", bundle: nil)
+        guard let prescriptionViewController = storyboard.instantiateViewController(withIdentifier: "NursePrescriptionViewController") as? NursePrescriptionViewController else { return }
+        prescriptionViewController.letter = seletedLetter
+        
+        navigationController?.pushViewController(prescriptionViewController, animated: true)
+    }
 }
 
 //테이블 뷰 셀의 크기를 키워주는 익스텐션
@@ -76,15 +97,15 @@ extension PatientPillBagViewController: UITableViewDelegate {
 
 // 점선 생성하는 익스텐션
 extension UIView {
-   func createDottedLine(width: CGFloat, color: CGColor) {
-      let caShapeLayer = CAShapeLayer()
-      caShapeLayer.strokeColor = color
-      caShapeLayer.lineWidth = width
-      caShapeLayer.lineDashPattern = [10,5]
-      let cgPath = CGMutablePath()
-       let cgPoint = [CGPoint(x: 330, y: 30), CGPoint(x: 330, y: 230)]
-      cgPath.addLines(between: cgPoint)
-      caShapeLayer.path = cgPath
-      layer.addSublayer(caShapeLayer)
-   }
+    func createDottedLine(width: CGFloat, color: CGColor) {
+        let caShapeLayer = CAShapeLayer()
+        caShapeLayer.strokeColor = color
+        caShapeLayer.lineWidth = width
+        caShapeLayer.lineDashPattern = [10,5]
+        let cgPath = CGMutablePath()
+        let cgPoint = [CGPoint(x: 330, y: 30), CGPoint(x: 330, y: 230)]
+        cgPath.addLines(between: cgPoint)
+        caShapeLayer.path = cgPath
+        layer.addSublayer(caShapeLayer)
+    }
 }
