@@ -16,7 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="7Ra-cC-eUo">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="7Ra-cC-eUo">
                                 <rect key="frame" x="0.0" y="80" width="414" height="656"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
@@ -52,15 +52,18 @@
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lgI-PT-eQv">
-                                                                    <rect key="frame" x="250.33333333333337" y="177" width="73" height="32"/>
+                                                                    <rect key="frame" x="247.00000000000003" y="177" width="76.333333333333343" height="32"/>
                                                                     <state key="normal" title="Button"/>
-                                                                    <buttonConfiguration key="configuration" style="plain" title="더보기 &gt;"/>
+                                                                    <buttonConfiguration key="configuration" style="plain" title="더보기 &gt;">
+                                                                        <fontDescription key="titleFontDescription" type="system" pointSize="15"/>
+                                                                        <color key="baseForegroundColor" systemColor="systemGray2Color"/>
+                                                                    </buttonConfiguration>
                                                                 </button>
                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xh1-mH-UY7" customClass="UIViewExtension" customModule="Dear" customModuleProvider="target">
-                                                                    <rect key="frame" x="29.999999999999993" y="177" width="103.66666666666666" height="34"/>
+                                                                    <rect key="frame" x="30" y="177" width="94" height="34"/>
                                                                     <subviews>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A 간호사님" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Il-h2-hBY">
-                                                                            <rect key="frame" x="18.666666666666664" y="8" width="66" height="18"/>
+                                                                            <rect key="frame" x="14.000000000000007" y="8" width="66" height="18"/>
                                                                             <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
                                                                             <nil key="textColor"/>
                                                                             <nil key="highlightedColor"/>
@@ -71,7 +74,7 @@
                                                                         <constraint firstItem="0Il-h2-hBY" firstAttribute="centerX" secondItem="Xh1-mH-UY7" secondAttribute="centerX" id="CA7-6C-kOT"/>
                                                                         <constraint firstItem="0Il-h2-hBY" firstAttribute="centerY" secondItem="Xh1-mH-UY7" secondAttribute="centerY" id="CaL-RO-gsk"/>
                                                                         <constraint firstAttribute="height" constant="34" id="eEE-c7-PA1"/>
-                                                                        <constraint firstItem="0Il-h2-hBY" firstAttribute="width" secondItem="Xh1-mH-UY7" secondAttribute="width" multiplier="0.63544" id="zfn-zo-ORT"/>
+                                                                        <constraint firstAttribute="width" secondItem="0Il-h2-hBY" secondAttribute="width" constant="28" id="qe6-y9-dwJ"/>
                                                                     </constraints>
                                                                     <userDefinedRuntimeAttributes>
                                                                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -236,6 +239,9 @@
         <image name="pills" width="93" height="83"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemOrangeColor">
             <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
