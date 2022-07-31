@@ -102,6 +102,7 @@ class NurseMainController: UIViewController {
         cheeringView.isHidden = false
         selectMoodView.isHidden = true
         
+        setPhrase(mood: key)
         setChart(key: key)
     }
     
@@ -124,8 +125,11 @@ class NurseMainController: UIViewController {
     }
     
     private func setPhrase(mood: String) {
-        phraseData.filter { $0.mood == mood }
+        let texts = phraseData.filter { $0.mood == mood }
+        print(texts)
+        phraseLabel.text = texts.randomElement()?.phrase
     }
+    
     //버튼 클릭시 차트 값 변경하는 함수
     private func setChart(key: String) {
         let count = UserDefaults.standard.integer(forKey: key)
