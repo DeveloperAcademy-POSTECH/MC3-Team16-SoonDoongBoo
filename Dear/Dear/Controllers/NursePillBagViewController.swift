@@ -51,7 +51,6 @@ extension NursePillBagViewController: UITableViewDataSource {
         dateFormatter.dateFormat = "yyyy.MM.dd"
         
         let date:Date = dateFormatter.date(from: dateString)!
-        print("\(date)", type(of: date))
         dateFormatter.locale = Locale(identifier: "us")
         dateFormatter.dateFormat = "MMM d"
 
