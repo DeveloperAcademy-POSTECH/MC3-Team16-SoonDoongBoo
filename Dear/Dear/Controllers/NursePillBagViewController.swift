@@ -14,15 +14,13 @@ class NursePillBagViewController: UIViewController {
     var letters: [Letter] = []
     let firebaseService = FirebaseService()
     
-    override func viewDidAppear(_ animated: Bool) {
-        titleView.layer.backgroundColor = UIColor.pink_01.cgColor
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.dataSource = self
         self.tableView.delegate = self
 
+        titleView.layer.backgroundColor = UIColor.pink_01.cgColor
+        
         Task {
             letters = try await firebaseService.fetchLettersByHospital(hospitalName: "포항성모병원")
             tableView.reloadData()
