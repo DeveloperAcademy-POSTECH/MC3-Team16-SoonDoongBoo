@@ -25,6 +25,9 @@ class PatientPillBagViewController: UIViewController, UITableViewDataSource {
         pillBag.layer.cornerRadius = 23
         pillBag.backgroundColor = UIColor.pink_01
         
+        // table view 세팅
+        pillBagTable.showsVerticalScrollIndicator = false
+        
         // 초기 세팅 후 뒤로가기 버튼 제거
         navigationItem.hidesBackButton = true
     }
@@ -52,6 +55,7 @@ class PatientPillBagViewController: UIViewController, UITableViewDataSource {
 //        cell.textLabel?.text = "\(indexPath.row)"
 //        return cell
         let cell = tableView.dequeueReusableCell(withIdentifier: "pillCell", for: indexPath) as! PatientPillBagTableViewCell
+        cell.selectionStyle = .none
         
         let letter = self.letters[indexPath.row]
 
@@ -65,6 +69,15 @@ class PatientPillBagViewController: UIViewController, UITableViewDataSource {
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let seletedLetter = letters[indexPath.row]
+        
+        let storyboard = UIStoryboard(name: "NursePrescriptionView", bundle: nil)
+        guard let prescriptionViewController = storyboard.instantiateViewController(withIdentifier: "NursePrescriptionViewController") as? NursePrescriptionViewController else { return }
+        prescriptionViewController.letter = seletedLetter
+        
+        navigationController?.pushViewController(prescriptionViewController, animated: true)
+    }
 }
 
 //테이블 뷰 셀의 크기를 키워주는 익스텐션
