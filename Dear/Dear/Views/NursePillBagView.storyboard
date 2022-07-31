@@ -60,10 +60,10 @@
                                                                     </buttonConfiguration>
                                                                 </button>
                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xh1-mH-UY7" customClass="UIViewExtension" customModule="Dear" customModuleProvider="target">
-                                                                    <rect key="frame" x="30" y="177" width="80" height="34"/>
+                                                                    <rect key="frame" x="30" y="177" width="94" height="34"/>
                                                                     <subviews>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A 간호사님" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Il-h2-hBY">
-                                                                            <rect key="frame" x="7.0000000000000071" y="8" width="66" height="18"/>
+                                                                            <rect key="frame" x="14.000000000000007" y="8" width="66" height="18"/>
                                                                             <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
                                                                             <nil key="textColor"/>
                                                                             <nil key="highlightedColor"/>
@@ -74,7 +74,7 @@
                                                                         <constraint firstItem="0Il-h2-hBY" firstAttribute="centerX" secondItem="Xh1-mH-UY7" secondAttribute="centerX" id="CA7-6C-kOT"/>
                                                                         <constraint firstItem="0Il-h2-hBY" firstAttribute="centerY" secondItem="Xh1-mH-UY7" secondAttribute="centerY" id="CaL-RO-gsk"/>
                                                                         <constraint firstAttribute="height" constant="34" id="eEE-c7-PA1"/>
-                                                                        <constraint firstAttribute="width" secondItem="0Il-h2-hBY" secondAttribute="width" multiplier="0.787879" constant="28" id="qe6-y9-dwJ"/>
+                                                                        <constraint firstAttribute="width" secondItem="0Il-h2-hBY" secondAttribute="width" constant="28" id="qe6-y9-dwJ"/>
                                                                     </constraints>
                                                                     <userDefinedRuntimeAttributes>
                                                                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">

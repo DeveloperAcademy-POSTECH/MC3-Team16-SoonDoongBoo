@@ -24,7 +24,7 @@ class NursePillBagViewController: UIViewController {
         self.tableView.delegate = self
 
         Task {
-            letters = try await firebaseService.fetchLettersByHospital(hospitalName: "testHosiptal")
+            letters = try await firebaseService.fetchLettersByHospital(hospitalName: "포항성모병원")
             tableView.reloadData()
         }
     }
