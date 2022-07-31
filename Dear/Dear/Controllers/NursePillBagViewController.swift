@@ -73,6 +73,16 @@ extension NursePillBagViewController: UITableViewDataSource {
         cell.cellLetterToBackgroundView.backgroundColor = color[colorRandom][1]
         return cell
     }
+    // 선택된 셀에 정보를 넘기는 함수
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let seletedLetter = letters[indexPath.row]
+        
+        let storyboard = UIStoryboard(name: "NursePrescriptionView", bundle: nil)
+        guard let prescriptionViewController = storyboard.instantiateViewController(withIdentifier: "NursePrescriptionViewController") as? NursePrescriptionViewController else { return }
+        prescriptionViewController.letter = seletedLetter
+        
+        navigationController?.pushViewController(prescriptionViewController, animated: true)
+    }
 }
 
 extension NursePillBagViewController: UITableViewDelegate {
