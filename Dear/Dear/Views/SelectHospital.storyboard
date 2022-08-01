@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="boY-Uk-2aM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ZSR-aD-y6O">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -9,48 +10,12 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Test View Controller-->
-        <scene sceneID="PGW-l9-Ial">
-            <objects>
-                <viewController storyboardIdentifier="TestViewController" id="boY-Uk-2aM" customClass="TestViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="urk-jJ-9rb">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oCF-dL-Rb7">
-                                <rect key="frame" x="30" y="347" width="354" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="병원 선택 뷰"/>
-                                <connections>
-                                    <segue destination="ZSR-aD-y6O" kind="show" id="mLe-k2-1g1"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h5P-dW-ThJ">
-                                <rect key="frame" x="147" y="485" width="121" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="마음 카드 전송 뷰"/>
-                                <connections>
-                                    <segue destination="NPo-yR-JRh" kind="show" id="D0u-qP-S1s"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="X1f-90-mkN"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="hKg-fQ-R1L"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="L4B-xD-w9v" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="996" y="644"/>
-        </scene>
         <!--Hospital View Controller-->
         <scene sceneID="3QJ-7v-2yP">
             <objects>
                 <viewController storyboardIdentifier="HospitalView" id="ZSR-aD-y6O" customClass="HospitalViewController" customModule="Dear" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="MRu-cF-Rid">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="병원을 선택해주세요" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EXr-95-boG">
@@ -103,16 +68,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="snt-8a-NG1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1853.6231884057972" y="347.54464285714283"/>
-        </scene>
-        <!--LetterViewController-->
-        <scene sceneID="9Rr-Pl-AKj">
-            <objects>
-                <viewControllerPlaceholder storyboardIdentifier="LetterViewController" storyboardName="WriteLetter" referencedIdentifier="LetterViewController" id="NPo-yR-JRh" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="UAo-JZ-rSa"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="fpg-fd-9gh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1804" y="806"/>
         </scene>
     </scenes>
     <resources>
