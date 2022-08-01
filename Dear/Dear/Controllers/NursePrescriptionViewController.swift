@@ -10,7 +10,7 @@ import UIKit
 final class NursePrescriptionViewController: UIViewController {
     
     //TODO: 서버 데이터 받아와서 연결하기
-    var letter = Letter.sampleData[0]
+    var letter: Letter = Letter(date: "", hospitalName: "", letterTo: "", letterContent: "", uid: "", anger: false, calm: false, depression: false, joyful: false, sadness: false)
 
     @IBOutlet private weak var dateLabel: UILabel!
     @IBOutlet private weak var nameLabel: UILabel!
