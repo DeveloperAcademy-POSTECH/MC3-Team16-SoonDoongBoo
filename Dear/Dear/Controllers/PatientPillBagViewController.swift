@@ -19,10 +19,7 @@ class PatientPillBagViewController: UIViewController, UITableViewDataSource {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        Task {
-            letters = try await firebaseService.fetchLettersByName()
-            pillBagTable.reloadData()
-        }
+        fetchLetterData()
         
         // Do any additional setup after loading the view.
         // 약뭉치 등 레이블쪽 관련된 부분
@@ -41,7 +38,7 @@ class PatientPillBagViewController: UIViewController, UITableViewDataSource {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        
+        fetchLetterData()
         navigationController?.isNavigationBarHidden = true
     }
     
@@ -85,6 +82,13 @@ class PatientPillBagViewController: UIViewController, UITableViewDataSource {
         prescriptionViewController.letter = seletedLetter
         
         navigationController?.pushViewController(prescriptionViewController, animated: true)
+    }
+    
+    func fetchLetterData() {
+        Task {
+            letters = try await firebaseService.fetchLettersByName()
+            pillBagTable.reloadData()
+        }
     }
 }
 

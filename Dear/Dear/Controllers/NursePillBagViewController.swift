@@ -14,17 +14,16 @@ class NursePillBagViewController: UIViewController {
     var letters: [Letter] = []
     let firebaseService = FirebaseService()
     
-    override func viewDidAppear(_ animated: Bool) {
-        titleView.layer.backgroundColor = UIColor.pink_01.cgColor
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.dataSource = self
         self.tableView.delegate = self
 
+        titleView.layer.backgroundColor = UIColor.pink_01.cgColor
+        let hospitalName = UserDefaults.standard.string(forKey: "hospital")
+        
         Task {
-            letters = try await firebaseService.fetchLettersByHospital(hospitalName: "포항성모병원")
+            letters = try await firebaseService.fetchLettersByHospital(hospitalName: "hospitalName")
             tableView.reloadData()
         }
         
@@ -57,6 +56,8 @@ extension NursePillBagViewController: UITableViewDataSource {
         dateFormatter.locale = Locale(identifier: "us")
         dateFormatter.dateFormat = "MMM d"
 
+        cell.selectionStyle = UITableViewCell.SelectionStyle.none
+    
         //Date -> String
         cell.cellDate.text = dateFormatter.string(from: date)
         
@@ -72,6 +73,16 @@ extension NursePillBagViewController: UITableViewDataSource {
         cell.cellBorderView.borderColor = color[colorRandom][1]
         cell.cellLetterToBackgroundView.backgroundColor = color[colorRandom][1]
         return cell
+    }
+    // 선택된 셀에 정보를 넘기는 함수
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let seletedLetter = letters[indexPath.row]
+        
+        let storyboard = UIStoryboard(name: "NursePrescriptionView", bundle: nil)
+        guard let prescriptionViewController = storyboard.instantiateViewController(withIdentifier: "NursePrescriptionViewController") as? NursePrescriptionViewController else { return }
+        prescriptionViewController.letter = seletedLetter
+        
+        navigationController?.pushViewController(prescriptionViewController, animated: true)
     }
 }
 

@@ -49,6 +49,7 @@
 		EC09B68128883D4200632D72 /* CardDetailView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC09B67F28883D4100632D72 /* CardDetailView.storyboard */; };
 		EC09B68228883D4200632D72 /* CardDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC09B68028883D4200632D72 /* CardDetailViewController.swift */; };
 		EC09B6842888535400632D72 /* NurseMainTableHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC09B6832888535400632D72 /* NurseMainTableHeader.swift */; };
+		EC36482A289685D2006BBC90 /* Phrase.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC364829289685D2006BBC90 /* Phrase.swift */; };
 		EC622BC32892B05500F60D95 /* NursePrescriptionView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC622BC22892B05500F60D95 /* NursePrescriptionView.storyboard */; };
 		EC7767902895328700C62E0C /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC77678F2895328700C62E0C /* UIViewController+Extension.swift */; };
 		EC9633B32892BF3F0064E1BA /* NursePrescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9633B22892BF3F0064E1BA /* NursePrescriptionViewController.swift */; };
@@ -100,6 +101,7 @@
 		EC09B67F28883D4100632D72 /* CardDetailView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CardDetailView.storyboard; sourceTree = "<group>"; };
 		EC09B68028883D4200632D72 /* CardDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardDetailViewController.swift; sourceTree = "<group>"; };
 		EC09B6832888535400632D72 /* NurseMainTableHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NurseMainTableHeader.swift; sourceTree = "<group>"; };
+		EC364829289685D2006BBC90 /* Phrase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Phrase.swift; sourceTree = "<group>"; };
 		EC622BC22892B05500F60D95 /* NursePrescriptionView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NursePrescriptionView.storyboard; sourceTree = "<group>"; };
 		EC77678F2895328700C62E0C /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		EC9633B22892BF3F0064E1BA /* NursePrescriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NursePrescriptionViewController.swift; sourceTree = "<group>"; };
@@ -142,6 +144,7 @@
 			children = (
 				B92EF31D2886888B00AEC6E9 /* Letter.swift */,
 				B92EF31F2886889500AEC6E9 /* Hospital.swift */,
+				EC364829289685D2006BBC90 /* Phrase.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -355,6 +358,7 @@
 				B9A271E62887EAE200B504B1 /* HospitalViewController.swift in Sources */,
 				ECF246B4289039A00025581F /* UIView+Extension.swift in Sources */,
 				ECF246C4289119E50025581F /* SelectMood.swift in Sources */,
+				EC36482A289685D2006BBC90 /* Phrase.swift in Sources */,
 				EC09B6842888535400632D72 /* NurseMainTableHeader.swift in Sources */,
 				71002E59289110FC00E7399A /* PatientPillBagTableViewCell.swift in Sources */,
 				ECF246C2289118B20025581F /* XibUIViewExtension.swift in Sources */,
@@ -518,7 +522,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = L3A22T43UF;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Dear/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -546,7 +550,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = L3A22T43UF;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Dear/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
