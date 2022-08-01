@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ZSR-aD-y6O">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Hospital View Controller-->
+        <scene sceneID="3QJ-7v-2yP">
+            <objects>
+                <viewController storyboardIdentifier="HospitalView" id="ZSR-aD-y6O" customClass="HospitalViewController" customModule="Dear" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MRu-cF-Rid">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="병원을 선택해주세요" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EXr-95-boG">
+                                <rect key="frame" x="20" y="184" width="192" height="29"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="처방전 목적지를 선택해주세요" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="alx-I4-Qer">
+                                <rect key="frame" x="20" y="233" width="142" height="14.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" systemColor="secondaryLabelColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="선택해 주신 곳으로 처방전이 배송될 예정이에요~!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8bZ-QZ-jFM">
+                                <rect key="frame" x="20" y="247.5" width="236" height="14.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" systemColor="secondaryLabelColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="qNa-LL-BfN">
+                                <rect key="frame" x="20" y="282" width="374" height="50"/>
+                                <color key="backgroundColor" name="pink_03"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="jhq-Ht-bYD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no"/>
+                            </textField>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="0uI-Mq-mKX"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="qNa-LL-BfN" firstAttribute="top" secondItem="8bZ-QZ-jFM" secondAttribute="bottom" constant="20" id="FCk-KY-Miu"/>
+                            <constraint firstItem="EXr-95-boG" firstAttribute="leading" secondItem="0uI-Mq-mKX" secondAttribute="leading" constant="20" id="Nm2-8G-ZD8"/>
+                            <constraint firstItem="alx-I4-Qer" firstAttribute="top" secondItem="EXr-95-boG" secondAttribute="bottom" constant="20" id="hDh-p7-q9v"/>
+                            <constraint firstItem="alx-I4-Qer" firstAttribute="leading" secondItem="0uI-Mq-mKX" secondAttribute="leading" constant="20" id="lFv-tm-KGZ"/>
+                            <constraint firstItem="8bZ-QZ-jFM" firstAttribute="top" secondItem="alx-I4-Qer" secondAttribute="bottom" id="lgh-W0-fzv"/>
+                            <constraint firstItem="qNa-LL-BfN" firstAttribute="leading" secondItem="0uI-Mq-mKX" secondAttribute="leading" constant="20" id="qG7-4U-2Wj"/>
+                            <constraint firstItem="0uI-Mq-mKX" firstAttribute="trailing" secondItem="qNa-LL-BfN" secondAttribute="trailing" constant="20" id="vp1-Vd-ah3"/>
+                            <constraint firstItem="8bZ-QZ-jFM" firstAttribute="leading" secondItem="0uI-Mq-mKX" secondAttribute="leading" constant="20" id="w3l-Bc-Nxb"/>
+                            <constraint firstItem="EXr-95-boG" firstAttribute="top" secondItem="0uI-Mq-mKX" secondAttribute="top" constant="140" id="y7i-Td-0o4"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="tcw-MK-ltd"/>
+                    <connections>
+                        <outlet property="hospitalTextField" destination="qNa-LL-BfN" id="bfs-er-lei"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="snt-8a-NG1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1853.6231884057972" y="347.54464285714283"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="pink_03">
+            <color red="0.99199998378753662" green="0.96100002527236938" blue="0.94900000095367432" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

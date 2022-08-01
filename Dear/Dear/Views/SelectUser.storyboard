@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="8wS-7f-iV2">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Select User View Controller-->
+        <scene sceneID="6tp-EM-h51">
+            <objects>
+                <viewController id="kWm-IB-VGt" customClass="SelectUserViewController" customModule="Dear" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xME-RU-aT1">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="사용자를 선택해주세요" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xsB-F9-ylI">
+                                <rect key="frame" x="20" y="228" width="213" height="28.666666666666686"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="G0x-v5-7rL">
+                                <rect key="frame" x="20" y="319.66666666666669" width="350" height="200.00000000000006"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hjt-6N-G0t">
+                                        <rect key="frame" x="0.0" y="0.0" width="170" height="200"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="L8G-Pg-zPX">
+                                                <rect key="frame" x="48.333333333333336" y="55.333333333333307" width="73.333333333333314" height="89.333333333333314"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="NurseCharacter" translatesAutoresizingMaskIntoConstraints="NO" id="oOe-0R-YT3">
+                                                        <rect key="frame" x="0.0" y="0.0" width="73.333333333333329" height="67"/>
+                                                        <color key="tintColor" systemColor="systemGrayColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="70" id="Mma-Xa-hT5"/>
+                                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="63" id="bvQ-Mn-YP8"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="병원 관계자" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qhs-qw-Hco">
+                                                        <rect key="frame" x="0.0" y="70" width="73.333333333333329" height="19.333333333333329"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" name="pink_03"/>
+                                        <constraints>
+                                            <constraint firstItem="L8G-Pg-zPX" firstAttribute="centerY" secondItem="Hjt-6N-G0t" secondAttribute="centerY" id="aEp-Z5-HGe"/>
+                                            <constraint firstItem="L8G-Pg-zPX" firstAttribute="centerX" secondItem="Hjt-6N-G0t" secondAttribute="centerX" id="dF3-u5-aKx"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v90-2O-uLq">
+                                        <rect key="frame" x="180" y="0.0" width="170" height="200"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="e9a-Zu-mjC">
+                                                <rect key="frame" x="39.666666666666664" y="57.333333333333307" width="90.666666666666686" height="85.333333333333314"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PatientCharacter" translatesAutoresizingMaskIntoConstraints="NO" id="5gO-mL-9QP">
+                                                        <rect key="frame" x="0.0" y="0.0" width="90.666666666666671" height="63"/>
+                                                        <color key="tintColor" systemColor="systemGrayColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="63" id="Joa-XG-enV"/>
+                                                            <constraint firstAttribute="width" constant="90.670000000000002" id="PZe-QU-TPY"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="환자 및 보호자" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fNJ-4U-t4f">
+                                                        <rect key="frame" x="0.0" y="66" width="90.666666666666671" height="19.333333333333329"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" name="pink_03"/>
+                                        <constraints>
+                                            <constraint firstItem="e9a-Zu-mjC" firstAttribute="centerY" secondItem="v90-2O-uLq" secondAttribute="centerY" id="BJV-M6-CIN"/>
+                                            <constraint firstItem="e9a-Zu-mjC" firstAttribute="centerX" secondItem="v90-2O-uLq" secondAttribute="centerX" id="VXf-cA-e4c"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="Mnx-bv-vaH"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Ul7-6M-KOk"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="G0x-v5-7rL" firstAttribute="top" secondItem="xsB-F9-ylI" secondAttribute="bottom" constant="63" id="Fgf-3h-BcK"/>
+                            <constraint firstItem="Ul7-6M-KOk" firstAttribute="trailing" secondItem="G0x-v5-7rL" secondAttribute="trailing" constant="20" id="JQs-RW-kXO"/>
+                            <constraint firstItem="xsB-F9-ylI" firstAttribute="top" secondItem="Ul7-6M-KOk" secondAttribute="top" constant="140" id="Mbg-Fn-fvU"/>
+                            <constraint firstItem="xsB-F9-ylI" firstAttribute="leading" secondItem="Ul7-6M-KOk" secondAttribute="leading" constant="20" id="Ty6-aA-aZW"/>
+                            <constraint firstItem="G0x-v5-7rL" firstAttribute="leading" secondItem="Ul7-6M-KOk" secondAttribute="leading" constant="20" id="ymy-f9-tnm"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Zxb-qm-LGr"/>
+                    <connections>
+                        <outlet property="selectionNurseView" destination="Hjt-6N-G0t" id="FCT-wz-Gqr"/>
+                        <outlet property="selectionPatientView" destination="v90-2O-uLq" id="b8J-St-rEB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TEq-1j-RBL" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1970.7692307692307" y="98.104265402843595"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="aoE-gk-aex">
+            <objects>
+                <navigationController storyboardIdentifier="UINavigationController" automaticallyAdjustsScrollViewInsets="NO" id="8wS-7f-iV2" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="uvW-TW-Sdd">
+                        <rect key="frame" x="0.0" y="44" width="390" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="kWm-IB-VGt" kind="relationship" relationship="rootViewController" id="Sw8-Sx-9Z2"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eHI-kP-wDB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1041.5384615384614" y="98.104265402843595"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="NurseCharacter" width="70" height="67"/>
+        <image name="PatientCharacter" width="70" height="63"/>
+        <namedColor name="pink_03">
+            <color red="0.99199998378753662" green="0.96100002527236938" blue="0.94900000095367432" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		71002E59289110FC00E7399A /* PatientPillBagTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71002E58289110FC00E7399A /* PatientPillBagTableViewCell.swift */; };
+		711EB701288FBE4B00468B89 /* PatientPillBagView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 711EB700288FBE4B00468B89 /* PatientPillBagView.storyboard */; };
+		7139C349288FC60700783A28 /* PatientPillBagViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7139C348288FC60700783A28 /* PatientPillBagViewController.swift */; };
+		8E30720F289018C7007F6CB1 /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E30720E289018C7007F6CB1 /* Color+Extension.swift */; };
+		B92EF31E2886888B00AEC6E9 /* Letter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92EF31D2886888B00AEC6E9 /* Letter.swift */; };
+		B92EF3202886889500AEC6E9 /* Hospital.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92EF31F2886889500AEC6E9 /* Hospital.swift */; };
+		B92EF32328868AE500AEC6E9 /* FirebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92EF32228868AE500AEC6E9 /* FirebaseService.swift */; };
 		B94C2D5B287FFBC300B3C442 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94C2D5A287FFBC300B3C442 /* AppDelegate.swift */; };
 		B94C2D5D287FFBC300B3C442 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94C2D5C287FFBC300B3C442 /* SceneDelegate.swift */; };
 		B94C2D5F287FFBC300B3C442 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94C2D5E287FFBC300B3C442 /* ViewController.swift */; };
@@ -17,12 +24,37 @@
 		B94C2D722880002200B3C442 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = B94C2D712880002200B3C442 /* FirebaseAnalytics */; };
 		B94C2D742880002200B3C442 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = B94C2D732880002200B3C442 /* FirebaseAuth */; };
 		B94C2D762880002200B3C442 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = B94C2D752880002200B3C442 /* FirebaseDatabase */; };
+		B97645EC2887F0500093FDAA /* SelectUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97645EB2887F0500093FDAA /* SelectUserViewController.swift */; };
+		B97EACA7288FB64900DA8A93 /* WriteLetter.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B97EACA6288FB64900DA8A93 /* WriteLetter.storyboard */; };
+		B9A271E22887EAB100B504B1 /* SelectHospital.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B9A271E12887EAB100B504B1 /* SelectHospital.storyboard */; };
+		B9A271E62887EAE200B504B1 /* HospitalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9A271E52887EAE200B504B1 /* HospitalViewController.swift */; };
+		B9A271E82887EAE700B504B1 /* LetterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9A271E72887EAE700B504B1 /* LetterViewController.swift */; };
+		B9A271EA2887ECF400B504B1 /* SelectUser.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B9A271E92887ECF400B504B1 /* SelectUser.storyboard */; };
 		B9BAD976288153D900EE530F /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = B9BAD975288153D900EE530F /* FirebaseAnalytics */; };
 		B9BAD978288153D900EE530F /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = B9BAD977288153D900EE530F /* FirebaseAuth */; };
 		B9BAD97A288153D900EE530F /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = B9BAD979288153D900EE530F /* FirebaseFirestore */; };
+		E15AC77928904D9A004BE3E8 /* NursePillBagView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E15AC77828904D9A004BE3E8 /* NursePillBagView.storyboard */; };
+		E15AC77B28904DFB004BE3E8 /* NursePillBagViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15AC77A28904DFB004BE3E8 /* NursePillBagViewController.swift */; };
+		E15AC7A7289114B2004BE3E8 /* NursePillBagViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15AC7A6289114B2004BE3E8 /* NursePillBagViewCell.swift */; };
+		E183BD1F28922E52000A21A1 /* DashedLineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E183BD1E28922E52000A21A1 /* DashedLineView.swift */; };
+		EC36482A289685D2006BBC90 /* Phrase.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC364829289685D2006BBC90 /* Phrase.swift */; };
+		EC622BC32892B05500F60D95 /* NursePrescriptionView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC622BC22892B05500F60D95 /* NursePrescriptionView.storyboard */; };
+		EC7767902895328700C62E0C /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC77678F2895328700C62E0C /* UIViewController+Extension.swift */; };
+		EC9633B32892BF3F0064E1BA /* NursePrescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9633B22892BF3F0064E1BA /* NursePrescriptionViewController.swift */; };
+		EC9633B72893AA730064E1BA /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9633B62893AA730064E1BA /* Date+Extension.swift */; };
+		ECE52228288FBC7200B3C509 /* NurseMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECE52227288FBC7200B3C509 /* NurseMain.storyboard */; };
+		ECF246B2289039770025581F /* NurseMainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF246B1289039770025581F /* NurseMainController.swift */; };
+		ECF246B4289039A00025581F /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF246B3289039A00025581F /* UIView+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		71002E58289110FC00E7399A /* PatientPillBagTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientPillBagTableViewCell.swift; sourceTree = "<group>"; };
+		711EB700288FBE4B00468B89 /* PatientPillBagView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PatientPillBagView.storyboard; sourceTree = "<group>"; };
+		7139C348288FC60700783A28 /* PatientPillBagViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientPillBagViewController.swift; sourceTree = "<group>"; };
+		8E30720E289018C7007F6CB1 /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
+		B92EF31D2886888B00AEC6E9 /* Letter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Letter.swift; sourceTree = "<group>"; };
+		B92EF31F2886889500AEC6E9 /* Hospital.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hospital.swift; sourceTree = "<group>"; };
+		B92EF32228868AE500AEC6E9 /* FirebaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseService.swift; sourceTree = "<group>"; };
 		B94C2D57287FFBC300B3C442 /* Dear.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dear.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B94C2D5A287FFBC300B3C442 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B94C2D5C287FFBC300B3C442 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -32,6 +64,24 @@
 		B94C2D66287FFBC400B3C442 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B94C2D68287FFBC400B3C442 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B94C2D6E287FFD5000B3C442 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		B97645EB2887F0500093FDAA /* SelectUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectUserViewController.swift; sourceTree = "<group>"; };
+		B97EACA6288FB64900DA8A93 /* WriteLetter.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WriteLetter.storyboard; sourceTree = "<group>"; };
+		B9A271E12887EAB100B504B1 /* SelectHospital.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SelectHospital.storyboard; sourceTree = "<group>"; };
+		B9A271E52887EAE200B504B1 /* HospitalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HospitalViewController.swift; sourceTree = "<group>"; };
+		B9A271E72887EAE700B504B1 /* LetterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LetterViewController.swift; sourceTree = "<group>"; };
+		B9A271E92887ECF400B504B1 /* SelectUser.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SelectUser.storyboard; sourceTree = "<group>"; };
+		E15AC77828904D9A004BE3E8 /* NursePillBagView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NursePillBagView.storyboard; sourceTree = "<group>"; };
+		E15AC77A28904DFB004BE3E8 /* NursePillBagViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NursePillBagViewController.swift; sourceTree = "<group>"; };
+		E15AC7A6289114B2004BE3E8 /* NursePillBagViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NursePillBagViewCell.swift; sourceTree = "<group>"; };
+		E183BD1E28922E52000A21A1 /* DashedLineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashedLineView.swift; sourceTree = "<group>"; };
+		EC364829289685D2006BBC90 /* Phrase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Phrase.swift; sourceTree = "<group>"; };
+		EC622BC22892B05500F60D95 /* NursePrescriptionView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NursePrescriptionView.storyboard; sourceTree = "<group>"; };
+		EC77678F2895328700C62E0C /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		EC9633B22892BF3F0064E1BA /* NursePrescriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NursePrescriptionViewController.swift; sourceTree = "<group>"; };
+		EC9633B62893AA730064E1BA /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
+		ECE52227288FBC7200B3C509 /* NurseMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NurseMain.storyboard; sourceTree = "<group>"; };
+		ECF246B1289039770025581F /* NurseMainController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NurseMainController.swift; sourceTree = "<group>"; };
+		ECF246B3289039A00025581F /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +101,36 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8E30720D289018A5007F6CB1 /* Resoures */ = {
+			isa = PBXGroup;
+			children = (
+				8E30720E289018C7007F6CB1 /* Color+Extension.swift */,
+				ECF246B3289039A00025581F /* UIView+Extension.swift */,
+				EC9633B62893AA730064E1BA /* Date+Extension.swift */,
+				EC77678F2895328700C62E0C /* UIViewController+Extension.swift */,
+				E183BD1E28922E52000A21A1 /* DashedLineView.swift */,
+			);
+			path = Resoures;
+			sourceTree = "<group>";
+		};
+		B92EF31C2886886800AEC6E9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B92EF31D2886888B00AEC6E9 /* Letter.swift */,
+				B92EF31F2886889500AEC6E9 /* Hospital.swift */,
+				EC364829289685D2006BBC90 /* Phrase.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		B92EF32128868AD100AEC6E9 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				B92EF32228868AE500AEC6E9 /* FirebaseService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		B94C2D4E287FFBC300B3C442 = {
 			isa = PBXGroup;
 			children = (
@@ -70,6 +150,12 @@
 		B94C2D59287FFBC300B3C442 /* Dear */ = {
 			isa = PBXGroup;
 			children = (
+				8E30720D289018A5007F6CB1 /* Resoures */,
+				EC09B67C288838A600632D72 /* Cell */,
+				B92EF32128868AD100AEC6E9 /* Services */,
+				B9A271E02887EA0400B504B1 /* Views */,
+				B9A271DF2887E9F400B504B1 /* Controllers */,
+				B92EF31C2886886800AEC6E9 /* Models */,
 				B94C2D5A287FFBC300B3C442 /* AppDelegate.swift */,
 				B94C2D5C287FFBC300B3C442 /* SceneDelegate.swift */,
 				B94C2D5E287FFBC300B3C442 /* ViewController.swift */,
@@ -80,6 +166,43 @@
 				B94C2D6E287FFD5000B3C442 /* GoogleService-Info.plist */,
 			);
 			path = Dear;
+			sourceTree = "<group>";
+		};
+		B9A271DF2887E9F400B504B1 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				B9A271E52887EAE200B504B1 /* HospitalViewController.swift */,
+				B9A271E72887EAE700B504B1 /* LetterViewController.swift */,
+				B97645EB2887F0500093FDAA /* SelectUserViewController.swift */,
+				7139C348288FC60700783A28 /* PatientPillBagViewController.swift */,
+				E15AC77A28904DFB004BE3E8 /* NursePillBagViewController.swift */,
+				ECF246B1289039770025581F /* NurseMainController.swift */,
+				EC9633B22892BF3F0064E1BA /* NursePrescriptionViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		B9A271E02887EA0400B504B1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				ECE52227288FBC7200B3C509 /* NurseMain.storyboard */,
+				B9A271E12887EAB100B504B1 /* SelectHospital.storyboard */,
+				B9A271E92887ECF400B504B1 /* SelectUser.storyboard */,
+				B97EACA6288FB64900DA8A93 /* WriteLetter.storyboard */,
+				711EB700288FBE4B00468B89 /* PatientPillBagView.storyboard */,
+				E15AC77828904D9A004BE3E8 /* NursePillBagView.storyboard */,
+				EC622BC22892B05500F60D95 /* NursePrescriptionView.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		EC09B67C288838A600632D72 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				71002E58289110FC00E7399A /* PatientPillBagTableViewCell.swift */,
+				E15AC7A6289114B2004BE3E8 /* NursePillBagViewCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,7 +259,6 @@
 			mainGroup = B94C2D4E287FFBC300B3C442;
 			packageReferences = (
 				B94C2D702880002200B3C442 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
-				B9BAD974288153D900EE530F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = B94C2D58287FFBC300B3C442 /* Products */;
 			projectDirPath = "";
@@ -152,10 +274,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC622BC32892B05500F60D95 /* NursePrescriptionView.storyboard in Resources */,
 				B94C2D67287FFBC400B3C442 /* LaunchScreen.storyboard in Resources */,
+				711EB701288FBE4B00468B89 /* PatientPillBagView.storyboard in Resources */,
+				ECE52228288FBC7200B3C509 /* NurseMain.storyboard in Resources */,
 				B94C2D6F287FFD5000B3C442 /* GoogleService-Info.plist in Resources */,
 				B94C2D64287FFBC400B3C442 /* Assets.xcassets in Resources */,
 				B94C2D62287FFBC300B3C442 /* Main.storyboard in Resources */,
+				B97EACA7288FB64900DA8A93 /* WriteLetter.storyboard in Resources */,
+				B9A271E22887EAB100B504B1 /* SelectHospital.storyboard in Resources */,
+				B9A271EA2887ECF400B504B1 /* SelectUser.storyboard in Resources */,
+				E15AC77928904D9A004BE3E8 /* NursePillBagView.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -166,9 +295,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC7767902895328700C62E0C /* UIViewController+Extension.swift in Sources */,
+				E15AC77B28904DFB004BE3E8 /* NursePillBagViewController.swift in Sources */,
 				B94C2D5F287FFBC300B3C442 /* ViewController.swift in Sources */,
 				B94C2D5B287FFBC300B3C442 /* AppDelegate.swift in Sources */,
+				7139C349288FC60700783A28 /* PatientPillBagViewController.swift in Sources */,
+				EC9633B72893AA730064E1BA /* Date+Extension.swift in Sources */,
+				ECF246B2289039770025581F /* NurseMainController.swift in Sources */,
+				B97645EC2887F0500093FDAA /* SelectUserViewController.swift in Sources */,
+				E15AC7A7289114B2004BE3E8 /* NursePillBagViewCell.swift in Sources */,
+				B9A271E62887EAE200B504B1 /* HospitalViewController.swift in Sources */,
+				ECF246B4289039A00025581F /* UIView+Extension.swift in Sources */,
+				EC36482A289685D2006BBC90 /* Phrase.swift in Sources */,
+				71002E59289110FC00E7399A /* PatientPillBagTableViewCell.swift in Sources */,
 				B94C2D5D287FFBC300B3C442 /* SceneDelegate.swift in Sources */,
+				B92EF3202886889500AEC6E9 /* Hospital.swift in Sources */,
+				EC9633B32892BF3F0064E1BA /* NursePrescriptionViewController.swift in Sources */,
+				B92EF32328868AE500AEC6E9 /* FirebaseService.swift in Sources */,
+				B9A271E82887EAE700B504B1 /* LetterViewController.swift in Sources */,
+				B92EF31E2886888B00AEC6E9 /* Letter.swift in Sources */,
+				E183BD1F28922E52000A21A1 /* DashedLineView.swift in Sources */,
+				8E30720F289018C7007F6CB1 /* Color+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -244,7 +391,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -298,7 +445,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -321,7 +468,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -332,7 +479,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -349,7 +496,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -360,7 +507,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -389,14 +536,6 @@
 
 /* Begin XCRemoteSwiftPackageReference section */
 		B94C2D702880002200B3C442 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 9.0.0;
-			};
-		};
-		B9BAD974288153D900EE530F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
 			requirement = {

@@ -37,7 +37,7 @@ Insert gif or link to demo
 
 
 ## :sparkles: Skills & Tech Stack
-swiftUI ...
+Swift, UIKit, SwiftUI, Firebase
 
 ## :books: Documentation
 
