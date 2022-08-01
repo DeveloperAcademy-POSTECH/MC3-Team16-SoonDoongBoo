@@ -20,10 +20,9 @@ class NursePillBagViewController: UIViewController {
         self.tableView.delegate = self
 
         titleView.layer.backgroundColor = UIColor.pink_01.cgColor
-        let hospitalName = UserDefaults.standard.string(forKey: "hospital")
-        
         Task {
-            letters = try await firebaseService.fetchLettersByHospital(hospitalName: "hospitalName")
+            let hospitalName = UserDefaults.standard.string(forKey: "hospital") ?? ""
+            letters = try await firebaseService.fetchLettersByHospital(hospitalName: hospitalName)
             tableView.reloadData()
         }
         
