@@ -62,11 +62,35 @@ class PatientPillBagViewController: UIViewController, UITableViewDataSource {
         cell.selectionStyle = .none
         
         let letter = self.letters[indexPath.row]
+        let colorRandom = Int(arc4random_uniform(3)) //0~2난수 발생
+        let color = [[UIColor.craft_02, UIColor.craft_01],[UIColor.pink_03, UIColor.pink_02],[UIColor.purple_03, UIColor.purple_02]]
+        
+        cell.cellStackView.backgroundColor = color[colorRandom][1]
+        cell.borderView.borderColor = color[colorRandom][1]
+        cell.background.backgroundColor = color[colorRandom][0]
+     
+
 
         //아래의 더미 데이터들을 파이어베이스에서 불러오는 데이터로 바꿔줘야함
-        cell.month.text = letter.date
+        //String -> Date
+        let dateString:String = letter.date
+        let dateFormatter = DateFormatter()
+
+        dateFormatter.dateFormat = "yyyy.MM.dd"
+        
+        let date:Date = dateFormatter.date(from: dateString)!
+        dateFormatter.locale = Locale(identifier: "us")
+        dateFormatter.dateFormat = "MMM d"
+
+        cell.selectionStyle = UITableViewCell.SelectionStyle.none
+    
+        //Date -> String
+        cell.month.text = dateFormatter.string(from: date)
+        
+        dateFormatter.dateFormat = "EEEE"
+        cell.day.text = dateFormatter.string(from: date)
+        
         //cell.date.text = "24"
-        cell.day.text = "Sunday"
         cell.title.text = "기분이 좋아지는 약"
         cell.toNurse.text = letter.letterTo
         
@@ -95,7 +119,7 @@ class PatientPillBagViewController: UIViewController, UITableViewDataSource {
 //테이블 뷰 셀의 크기를 키워주는 익스텐션
 extension PatientPillBagViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 260
+        return 277
     }
 }
 

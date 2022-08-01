@@ -16,7 +16,9 @@ class PatientPillBagTableViewCell: UITableViewCell {
     @IBOutlet weak var title: UILabel!
     @IBOutlet weak var toNurse: UILabel!
     @IBOutlet weak var moreButton: UIButton!
-    @IBOutlet weak var borderView: UIView!
+    @IBOutlet weak var borderView: UIViewExtension!
+    
+    @IBOutlet weak var background: UIViewExtension!
     
     // 테이블 뷰 셀 시작시 동작하는 함수
     override func awakeFromNib() {
