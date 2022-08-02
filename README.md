@@ -1,6 +1,6 @@
 # MC3-Team16-SoonDoongBoo
 
-![screenshot](https://user-images.githubusercontent.com/33242880/182334310-2645e2d9-2c6a-4124-ae28-0d2002867024.jpg)
+![screenshot](https://user-images.githubusercontent.com/33242880/182334569-28d395c0-c0c0-411d-bff7-27f2a61fa78e.jpg)
 
 
 # :iphone: Dear
