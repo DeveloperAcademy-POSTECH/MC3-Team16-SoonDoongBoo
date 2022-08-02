@@ -1,4 +1,4 @@
-# MC3-Team16-SoonDoongBoo
+## MC3-Team16-SoonDoongBoo
 
 # :iphone: Dear
 
