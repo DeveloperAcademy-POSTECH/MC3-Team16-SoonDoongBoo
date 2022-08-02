@@ -1,12 +1,6 @@
 # MC3-Team16-SoonDoongBoo
 
-![screenshot](https://user-images.githubusercontent.com/33242880/182334569-28d395c0-c0c0-411d-bff7-27f2a61fa78e.jpg)
-
-
-# :iphone: Dear
-
-The app to raise the nurses’ self-esteem
-with letters from patients 💌
+![screenshot](https://user-images.githubusercontent.com/33242880/182335241-99019dac-bcdf-4c04-9ff4-effc2fe2ab71.jpg)
 
 ## :pushpin: Features
 
