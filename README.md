@@ -27,7 +27,7 @@ The app to raise the nurses’ self-esteem with letters from patients
 
 https://testflight.apple.com/join/1Yzwlb1F
 
-<img width="242" alt="image" src="https://user-images.githubusercontent.com/16621556/182324431-af282935-3239-4774-b52a-b3c4b5d25865.png">
+![QR](https://user-images.githubusercontent.com/33242880/182339739-15c47812-81ae-42f9-8485-82177f82c6c5.jpg)
 
 
 ## :fireworks: Screenshots
