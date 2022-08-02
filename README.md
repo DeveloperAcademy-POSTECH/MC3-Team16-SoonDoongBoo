@@ -1,8 +1,8 @@
 ## MC3-Team16-SoonDoongBoo
 
 # :iphone: Dear
-- Prescribe support to the nurses
-- The app to raise the nurses’ self-esteem with letters from patients
+Prescribe support to the nurses <br>
+The app to raise the nurses’ self-esteem with letters from patients
 
 ![screenshot](https://user-images.githubusercontent.com/33242880/182335241-99019dac-bcdf-4c04-9ff4-effc2fe2ab71.jpg)
 
