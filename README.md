@@ -1,6 +1,6 @@
 # MC3-Team16-SoonDoongBoo
 
-<img width="996" alt="스크린샷 2022-08-02 오후 5 00 54" src="https://user-images.githubusercontent.com/16621556/182323723-d65d3ab9-eb96-4d7d-b913-a7ff7bee2051.png">
+![screenshot](https://user-images.githubusercontent.com/33242880/182334310-2645e2d9-2c6a-4124-ae28-0d2002867024.jpg)
 
 
 # :iphone: Dear
