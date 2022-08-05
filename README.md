@@ -25,9 +25,9 @@ The app to raise the nurses’ self-esteem with letters from patients
 
 ## :framed_picture: Demo
 
-https://testflight.apple.com/join/1Yzwlb1F
+https://apps.apple.com/kr/app/dear/id1637404656
 
-![QR](https://user-images.githubusercontent.com/33242880/182339739-15c47812-81ae-42f9-8485-82177f82c6c5.jpg)
+![app](https://user-images.githubusercontent.com/33242880/183069507-3733a108-5816-40d1-a73b-1bd302f85047.jpg)
 
 
 ## :fireworks: Screenshots
